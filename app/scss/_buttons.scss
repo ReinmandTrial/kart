@@ -1,0 +1,36 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    &:hover {
+    }
+    &:focus {
+    }
+    &:active {
+    }
+    &-primary {
+        padding: 19px;
+        border: 1px solid $middleGreen;
+        background: $middleGreen;
+        color: $white;
+        &:hover {
+        }
+    }
+    &-secondary {
+        &:hover {
+        }
+    }
+    &-contour {
+        padding: 17px;
+        border: 1px solid $middleGreen;
+        &:hover {
+        }
+    }
+    &-filter {
+        &:hover {
+        }
+    }
+}

@@ -1,0 +1,151 @@
+// popup
+.popup {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 99999;
+   width: 100vw;
+   height: 100%;
+   min-height: 100%;
+   overflow-y: auto;
+   &__body {
+      background: rgba(0, 0, 0, 0.29);
+      width: 100%;
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+   }
+   &__content {
+      background: $white;
+      position: relative;
+   }
+   .popup-close {
+      cursor: pointer;
+      font-size: 18px;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      top: 14px;
+      right: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
+// popup end
+
+.popup-search {
+   // display: block;
+   &.find {
+      .popup-search__body {
+         display: block;
+      }
+   }
+   &.fill {
+      .popup-search__input-to-clear {
+         display: block;
+      }
+   }
+   .popup__body {
+      display: block;
+   }
+   .popup__content {
+      max-width: unset;
+      width: 100%;
+   }
+   &__head {
+      padding: 87px 0 53px;
+   }
+
+   &__input-box {
+      position: relative;
+      width: 100%;
+      display: block;
+      .icon-search {
+         font-size: 22px;
+         padding: 2px;
+         position: absolute;
+         top: 6px;
+         left: 0;
+      }
+   }
+
+   &__input {
+      width: 100%;
+      font-size: 24px;
+      padding-bottom: 33px;
+      border-bottom: 1px solid #ececec;
+   }
+
+   &__input-to-clear {
+      font-size: 18px;
+      padding: 3px;
+      position: absolute;
+      left: 70px;
+      top: 6px;
+      color: #8d8d8d;
+      display: none;
+      &::after {
+         content: "";
+         height: 24px;
+         width: 1px;
+         position: absolute;
+         top: 0;
+         background: rgba(0, 0, 0, 0.1);
+         right: calc(100% + 23px);
+      }
+   }
+
+   &__body {
+      display: none;
+      padding: 60px 0 157px;
+      .container {
+         display: flex;
+         justify-content: space-between;
+         column-gap: 10px;
+      }
+   }
+
+   &__item {
+      flex: 0 1 400px;
+      @media (max-width: 1099.98px) {
+         column-gap: 10px;
+      }
+   }
+}
+.card-product-row {
+   display: flex;
+   align-items: center;
+   column-gap: 28px;
+   &__img {
+      width: 162px;
+      height: 162px;
+      flex: none;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+      }
+   }
+
+   &__text-block {
+   }
+
+   &__type {
+      color: $gray;
+      font-size: 12px;
+      margin-bottom: 12px;
+   }
+
+   &__name {
+      font-size: 14px;
+      margin-bottom: 12px;
+   }
+
+   &__price {
+      font-size: 14px;
+   }
+}
