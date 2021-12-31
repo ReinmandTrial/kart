@@ -105,4 +105,51 @@ $(document).ready(function () {
       $('.popup-search').removeClass('fill');
    });
    // search end
+
+   // sliders
+   if ($(document).width() <= 768) {
+
+      new Swiper('.slider-team', {
+         pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+         },
+         breakpoints: {
+            320: {
+               slidesPerView: 2,
+               spaceBetween: 12,
+            }
+         },
+         // spaceBetween: 30,
+         // slidesPerView: 4,
+      })
+   }
+
+   var swiperPagin = new Swiper(".slider-innovation-tabs__pagination", {
+      slidesPerView: 'auto',
+      watchSlidesProgress: true,
+   });
+
+   new Swiper('.slider-innovation-tabs__container', {
+      navigation: {
+         prevEl: '.slider-innovation-tabs__prev',
+         nextEl: '.slider-innovation-tabs__next',
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      simulateTouch: false,
+      thumbs: {
+         swiper: swiperPagin,
+      },
+      pagination: {
+         el: '.slider-innovation-tabs__pagination--mobile',
+         type: 'bullets',
+      },
+   })
+
+
+   // sliders end
+
+
+
 })
