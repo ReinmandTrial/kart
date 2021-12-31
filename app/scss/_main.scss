@@ -2089,6 +2089,7 @@
    }
 }
 .card-post {
+   display: block;
    &__img {
       position: relative;
       padding-bottom: 82%;
@@ -2265,4 +2266,327 @@
    }
 }
 .icon {
+}
+
+.subscription {
+   position: relative;
+   padding: 135px 0;
+   @media (max-width: 575.98px) {
+      padding: 75px 0 65px;
+   }
+   &__bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__content {
+      position: relative;
+      z-index: 20;
+      color: $white;
+   }
+
+   &__title {
+      margin-bottom: 10px;
+      @media (max-width: 575.98px) {
+         font-size: 32px;
+         margin-bottom: unset;
+      }
+   }
+
+   &__descr {
+      margin-bottom: 40px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 65px;
+      }
+   }
+
+   &__input-box {
+      position: relative;
+      max-width: 580px;
+      z-index: 20;
+   }
+
+   &__input {
+      width: 100%;
+      padding: 0 0 29px;
+      border-bottom: 1px solid $white;
+      color: $white;
+      font-size: 24px;
+      font-weight: 300;
+      @media (max-width: 575.98px) {
+         padding-bottom: 20px;
+      }
+      &::placeholder {
+         color: $white;
+      }
+   }
+
+   &__send {
+      font-size: 30px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      color: $white;
+      z-index: 20;
+   }
+}
+
+.page-post {
+   margin-bottom: 140px;
+   @media (max-width: 575.98px) {
+      margin-bottom: 85px;
+   }
+   &__content {
+   }
+}
+.post {
+   max-width: 950px;
+   margin: 0 auto;
+   &__main {
+      color: #1b1b1b;
+      margin-bottom: 100px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 40px;
+      }
+   }
+
+   &__img--large {
+      width: 100%;
+      margin-bottom: 40px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 24px;
+      }
+      img {
+         width: 100%;
+      }
+   }
+   &__title {
+      margin-bottom: 14px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 7px;
+      }
+   }
+
+   &__date {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      color: #868686;
+      margin-bottom: 40px;
+      .icon {
+         font-size: 13px;
+         width: unset;
+         height: unset;
+      }
+      @media (max-width: 575.98px) {
+         margin-bottom: 24px;
+         font-size: 12px;
+      }
+   }
+
+   &__text {
+      max-width: 760px;
+      margin-bottom: 40px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 24px;
+         font-size: 14px;
+      }
+   }
+
+   &__images {
+      display: flex;
+      column-gap: 30px;
+      margin-bottom: 40px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 24px;
+         column-gap: 10px;
+      }
+   }
+
+   &__img--medium {
+      flex: 1 1 50%;
+      padding-bottom: 30%;
+      position: relative;
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         bottom: 0;
+         right: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__quote {
+      margin-bottom: 40px;
+      position: relative;
+      padding-right: 20px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 24px;
+      }
+      &:before {
+         content: "";
+         position: absolute;
+         top: 7px;
+         bottom: 7px;
+         right: 0;
+         width: 1px;
+         background: #1b1b1b;
+      }
+   }
+
+   &__list {
+      margin-bottom: 40px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 24px;
+      }
+   }
+
+   &__list-item {
+      padding-right: 13px;
+      position: relative;
+      @media (max-width: 575.98px) {
+         font-size: 14px;
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         top: 11px;
+         right: 0;
+         width: 3px;
+         height: 3px;
+         background: $middleGreen;
+         border-radius: 50%;
+      }
+      &:not(:last-child) {
+         margin-bottom: 24px;
+         @media (max-width: 575.98px) {
+            margin-bottom: 15px;
+         }
+      }
+   }
+
+   &__to-share {
+      display: flex;
+      align-items: center;
+      column-gap: 13px;
+   }
+
+   &__to-share-text {
+   }
+
+   &__to-share-socials {
+      display: flex;
+      column-gap: 12px;
+      @media (max-width: 575.98px) {
+         column-gap: 9px;
+      }
+   }
+   &__to-share-link {
+      @media (max-width: 575.98px) {
+         width: 38px;
+         height: 38px;
+      }
+   }
+
+   &__others-posts {
+   }
+   &__others-posts-item {
+      margin: 0 15px;
+      width: calc(100% - 30px);
+      @media (max-width: 575.98px) {
+         width: 100%;
+         margin: 0;
+         &:not(:last-child) {
+            margin-bottom: 24px;
+         }
+      }
+   }
+
+   &__subtitle {
+      margin-bottom: 30px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 20px;
+         font-size: 24px;
+      }
+   }
+
+   &__others-posts-wrapper {
+      display: flex;
+      margin: 0 -15px 100px;
+      @media (max-width: 575.98px) {
+         flex-direction: column;
+         margin: 0 0 40px;
+      }
+   }
+
+   &__comments {
+   }
+
+   &__comments-content {
+   }
+
+   &__comments-input {
+      margin-bottom: 70px;
+      max-width: 525px;
+      @media (max-width: 575.98px) {
+         margin-bottom: 25px;
+      }
+   }
+
+   &__comments-items {
+      max-width: 667px;
+   }
+
+   &__comments-item {
+      @media (max-width: 575.98px) {
+         max-width: 250px;
+      }
+      &:not(:last-child) {
+         margin-bottom: 25px;
+         @media (max-width: 575.98px) {
+            margin-bottom: 18px;
+         }
+      }
+   }
+}
+.comment {
+   &__name {
+      margin-bottom: 12px;
+      font-weight: 400;
+      text-transform: none;
+   }
+
+   &__date {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      color: #868686;
+      margin-bottom: 12px;
+      .icon {
+         font-size: 13px;
+      }
+   }
+
+   &__text {
+      @media (max-width: 575.98px) {
+         font-size: 14px;
+      }
+   }
 }
