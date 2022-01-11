@@ -5,6 +5,14 @@ $lightGreen: #b0d303;
 $middleGreen: #94c05b;
 $gray: #a7a7a7;
 $darkGray: #868686;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+}
 .h1 {
    font-size: 56px;
 }

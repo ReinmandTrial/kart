@@ -1,6 +1,6 @@
 // calc(210px + (295 - 210) * ((100vw - 320px) / (1920 - 320)))
 
-$maxWidthContainer: 1400;
+$maxWidthContainer: 1460;
 
 @mixin adaptiv($property, $startSize, $minSize, $type: 1, $maxWidth: 1920, $minWidth: 320) {
    @if $type==2 {
