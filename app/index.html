@@ -15,7 +15,7 @@
 
 		<!-- HEADER start  -->
 
-		<header class="header">
+		<header id="top" class="header">
 			<div class="header__topline">
 				<div class="container">
 					<div class="header__topline-content">
@@ -988,21 +988,23 @@
 						<h3 class="novelty__title"> מגוון מוצריםלפי תחומים</h3>
 						<p class="novelty__description">קארט קוסמטיקס מזמינה אותך להכיר מוצרים חדשניים עם תוצאות מוכחות </p>
 						<div class="novelty__content">
-							<div class="novelty__card">
+							<div class="novelty__card novelty__card--legs">
 								<div class="novelty__card-content">
 									<h4 class="novelty__card-title">פדיקור</h4>
 									<div class="novelty__card-img"><img src="images/novelty1.svg" alt=""></div>
 								</div>
 								<div class="novelty__bg"><img src="images/novelty1.png" alt=""></div>
 							</div>
-							<div class="novelty__card">
+							<div class="novelty__card novelty__card--face">
 								<div class="novelty__card-content">
 									<h4 class="novelty__card-title">קוסמטיקה</h4>
 									<div class="novelty__card-img"><img src="images/novelty2.svg" alt=""></div>
 								</div>
-								<div class="novelty__bg"><img src="images/novelty2.png" alt=""></div>
+								<div class="novelty__bg novelty__bg--not-mobile"><img src="images/novelty2.png" alt=""></div>
+								<div class="novelty__bg novelty__bg--mobile"><img src="images/novelty2--mobile.png" alt="">
+								</div>
 							</div>
-							<div class="novelty__card">
+							<div class="novelty__card novelty__card--hands">
 								<div class="novelty__card-content">
 									<h4 class="novelty__card-title">מניקור</h4>
 									<div class="novelty__card-img"><img src="images/novelty.svg" alt=""></div>
@@ -1014,7 +1016,7 @@
 				</div>
 
 
-				<div class="rebate">
+				<div class="rebate" style="display: none;">
 					<div class="container">
 						<div class="rebate__ball">
 							<div class="rebate__ball-content">
@@ -1193,7 +1195,7 @@
 						<div class="known__form">
 							<input class="known__input" type="text" placeholder="טלפון">
 							<button class="btn btn-primary known__btn" type="text">שליחה<span
-									class="icon icon-arrow-left"></span></button>
+									class="icon icon-arrow-left --desktop"></span></button>
 						</div>
 					</div>
 				</div>

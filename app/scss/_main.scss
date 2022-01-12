@@ -3799,6 +3799,10 @@
 //  main page maxim
 
 .novelty {
+   margin-bottom: 262px;
+   @media (max-width: 575.98px) {
+      margin-bottom: 65px;
+   }
    .container {
    }
    &__title {
@@ -3807,7 +3811,10 @@
       line-height: 110%;
       color: $main;
       text-align: center;
-      font-weight: 300;
+      @media (max-width: 575.98px) {
+         font-size: 24px;
+         margin-bottom: 12px;
+      }
    }
    &__description {
       font-size: 16px;
@@ -3815,26 +3822,34 @@
       color: $main;
       margin-bottom: 73px;
       text-align: center;
+      @media (max-width: 575.98px) {
+         max-width: 263px;
+         margin: 0 auto 30px;
+         font-size: 12px;
+      }
    }
    &__content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-bottom: -40px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 40px;
+      @media (max-width: 991.98px) {
+         gap: 15px;
+      }
+      @media (max-width: 767.98px) {
+         display: flex;
+         flex-direction: column;
+      }
+      @media (max-width: 575.98px) {
+         row-gap: 6px;
+      }
    }
    &__card {
-      width: calc(100% / 3 - 27px);
-      background: #f8f8f8;
-      padding: 49px 0px 67px 61px;
-      height: 410px;
+      background: #fafafa;
+      padding-bottom: 91%;
       position: relative;
-      display: flex;
-      justify-content: end;
-      margin-bottom: 40px;
-      &:nth-child(2n) {
-         .novelty__card-content {
-            justify-content: start;
-         }
+      @media (max-width: 767.98px) {
+         padding-bottom: 43%;
       }
    }
    &__card-title {
@@ -3843,23 +3858,125 @@
       margin-bottom: 32px;
       color: $main;
       font-weight: 300;
+      text-align: center;
+      @media (max-width: 575.98px) {
+         font-size: 20px;
+         margin-bottom: 5px;
+      }
    }
    &__card-img {
    }
    &__card-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: max-content;
+      position: absolute;
       z-index: 2;
-      position: relative;
-      justify-content: end;
+      @media (max-width: 767.98px) {
+         top: 50% !important;
+         transform: translateY(-50%);
+      }
    }
    &__bg {
       z-index: 1;
       position: absolute;
-      top: 0;
-      right: 0;
+      // top: 0;
+      // right: 0;
+      @media (max-width: 767.98px) {
+         left: unset !important;
+         width: unset !important;
+      }
+      &--not-mobile {
+         @media (max-width: 767.98px) {
+            display: none;
+         }
+      }
+      &--mobile {
+         @media (min-width: 768px) {
+            display: none;
+         }
+      }
+   }
+   &__card--legs {
+      .novelty__bg {
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         right: 0;
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+      .novelty__card-content {
+         position: absolute;
+         left: 14%;
+         bottom: 17%;
+         @media (max-width: 575.98px) {
+            left: 45px;
+         }
+      }
+      .novelty__card-img {
+         @media (max-width: 575.98px) {
+            width: 65px;
+         }
+      }
+   }
+   &__card--face {
+      .novelty__bg {
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         right: 0;
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+      .novelty__card-content {
+         position: absolute;
+         top: 12%;
+         left: 14%;
+         @media (max-width: 575.98px) {
+            left: 30px;
+         }
+      }
+      .novelty__card-img {
+         @media (max-width: 575.98px) {
+            width: 100px;
+         }
+      }
+   }
+   &__card--hands {
+      .novelty__bg {
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         right: 0;
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+      .novelty__card-content {
+         position: absolute;
+         left: 14%;
+         bottom: 17%;
+         @media (max-width: 575.98px) {
+            left: 35px;
+         }
+      }
+      .novelty__card-img {
+         @media (max-width: 575.98px) {
+            width: 84px;
+         }
+      }
    }
 }
 
@@ -3942,11 +4059,18 @@
 }
 
 .known {
-   margin-bottom: 118px;
-   margin-top: 142px;
+   margin-bottom: 115px;
+   @media (max-width: 575.98px) {
+      margin-bottom: 71px;
+   }
    .container {
       display: flex;
       justify-content: space-between;
+      column-gap: 30px;
+      @media (max-width: 1099.98px) {
+         flex-direction: column;
+         row-gap: 25px;
+      }
    }
    &__description {
       margin-bottom: 24px;
@@ -3954,18 +4078,33 @@
    &__title {
       color: $main;
       line-height: 53px;
-      font-weight: 300;
+      @media (max-width: 575.98px) {
+         font-size: 24px;
+         margin-bottom: 10px;
+         line-height: 35px;
+         text-align: center;
+      }
    }
    &__subtitle {
       font-size: 16px;
       color: $main;
       line-height: 24px;
-      font-weight: 300;
       max-width: 705px;
+      @media (max-width: 575.98px) {
+         text-align: center;
+         max-width: 240px;
+         margin: 0 auto;
+         font-size: 12px;
+         line-height: 18px;
+      }
    }
    &__form {
       display: flex;
       align-items: center;
+      @media (max-width: 575.98px) {
+         flex-direction: column;
+         row-gap: 24px;
+      }
    }
    &__input {
       margin-left: 23px;
@@ -3976,6 +4115,10 @@
       color: $main;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       width: 350px;
+      @media (max-width: 575.98px) {
+         width: 100%;
+         margin-left: unset;
+      }
    }
    &__btn {
       font-size: 16px;
@@ -3984,6 +4127,10 @@
       padding: 20px 38px;
       max-height: 64px;
       color: $white;
+      @media (max-width: 575.98px) {
+         width: 100%;
+         padding: 14px;
+      }
       .icon {
          margin-right: 79px;
          font-size: 24px;
