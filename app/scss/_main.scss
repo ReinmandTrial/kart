@@ -4238,3 +4238,425 @@
       }
    }
 }
+
+.page-marketing {
+   // Banner
+   &-banner {
+      padding-top: 165px;
+      padding-bottom: 160px;
+      color: $white;
+      background: url("../images/marketing-banner-bg.jpg") no-repeat center / cover;
+      @media (max-width: 990px) {
+         padding-top: 145px;
+         padding-bottom: 140px;
+         background-position: 35% center;
+      }
+      @media (max-width: 575px) {
+         padding-top: 265px;
+         padding-bottom: 50px;
+         background-position: 25% center;
+      }
+      &__title {
+         font-size: 64px;
+         font-weight: 300;
+         max-width: 835px;
+         line-height: 1.25;
+         margin-bottom: 70px;
+         @media (max-width: 990px) {
+            font-size: 44px;
+            max-width: 550px;
+         }
+         @media (max-width: 767px) {
+            font-size: 41px;
+            max-width: 500px;
+         }
+         @media (max-width: 575px) {
+            font-size: 24px;
+            margin-bottom: 15px;
+            max-width: 279px;
+         }
+      }
+      &__btn {
+         font-weight: 400;
+         padding: 24px 47px;
+         @media (max-width: 575px) {
+            display: none;
+         }
+         &_mobile {
+            display: none;
+            @media (max-width: 575px) {
+               display: block;
+               padding: 15px 45px;
+            }
+         }
+      }
+   }
+
+   // Benefits
+   &-benefits {
+      padding-top: 120px;
+      padding-bottom: 160px;
+      @media (max-width: 575px) {
+         padding-top: 35px;
+         padding-bottom: 80px;
+      }
+      &__title {
+         max-width: 341px;
+         margin-bottom: 80px;
+         @media (max-width: 575px) {
+            max-width: 200px;
+            margin-bottom: 45px;
+         }
+      }
+      &__list {
+         display: flex;
+         justify-content: space-between;
+         @media (max-width: 1339px) {
+            justify-content: normal;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 70px;
+         }
+         @media (max-width: 767px) {
+            grid-template-columns: repeat(2, 1fr);
+         }
+         @media (max-width: 575px) {
+            gap: 42px 30px;
+         }
+      }
+      &__item {
+         max-width: 210px;
+         &__item:not(:last-child) {
+            margin-right: 130px;
+         }
+         @media (max-width: 1339px) {
+            &__item {
+               margin-right: 0;
+            }
+         }
+         @media (max-width: 767px) {
+            &_mobile-none {
+               display: none;
+            }
+         }
+      }
+      &__icon {
+         width: 80px;
+         height: 80px;
+         margin-bottom: 30px;
+         @media (max-width: 575px) {
+            margin-bottom: 11px;
+            width: 64px;
+            height: 64px;
+         }
+      }
+      @for $i from 1 through 5 {
+         &__icon_#{$i} {
+            background: url("../images/svg-icons/marketing-benefits-#{$i}.svg") no-repeat center;
+         }
+      }
+      &__benefit {
+         display: block;
+         font-size: 20px;
+      }
+   }
+
+   // Post
+   &-post {
+      margin-bottom: 100px;
+      @media (max-width: 575px) {
+         margin-bottom: 65px;
+      }
+      &__container {
+         max-width: 1470px;
+         display: flex;
+         justify-content: space-between;
+         align-items: flex-start;
+         @media (max-width: 990px) {
+            flex-direction: column;
+         }
+      }
+      &__img {
+         width: 700px;
+         height: 715px;
+         &_left,
+         &_right {
+            background: url("../images/page-marketing-post.jpg") no-repeat center / cover;
+         }
+         &_left {
+            margin-left: auto;
+            @media (max-width: 990px) {
+               order: 1;
+               margin: 0;
+            }
+         }
+         @media (max-width: 1399px) {
+            width: 40%;
+            height: 650px;
+         }
+         @media (max-width: 990px) {
+            width: 100%;
+         }
+         @media (max-width: 575px) {
+            height: 248px;
+         }
+      }
+      &__text-block {
+         padding-top: 105px;
+         max-width: 545px;
+         &_left {
+            padding-left: 35px;
+         }
+         &_right {
+            margin-left: auto;
+            padding-right: 35px;
+         }
+         @media (max-width: 990px) {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 25px;
+         }
+      }
+      &__title {
+         &_left {
+            margin-bottom: 40px;
+         }
+         &_right {
+            margin-bottom: 13px;
+         }
+         @media (max-width: 575px) {
+            margin-bottom: 20px;
+         }
+      }
+      &__desc {
+         font-size: 18px;
+      }
+   }
+
+   //   Info
+   &-info {
+      padding-top: 80px;
+      padding-bottom: 200px;
+      @media (max-width: 575px) {
+         padding-top: 0;
+         padding-bottom: 50px;
+      }
+      &__text-wrap {
+         margin-bottom: 80px;
+         @media (max-width: 575px) {
+            margin-bottom: 30px;
+         }
+      }
+      &__title {
+         max-width: 580px;
+         margin-bottom: 34px;
+         @media (max-width: 575px) {
+            margin-bottom: 12px;
+         }
+      }
+      &__desc {
+         max-width: 358px;
+      }
+      &__step-list {
+         position: relative;
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 115px;
+         &::before {
+            position: absolute;
+            z-index: -1;
+            top: 53px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: "";
+            width: 100vw;
+            height: 1px;
+            background-color: $middleGreen;
+            @media (max-width: 990px) {
+               content: none;
+            }
+         }
+         @media (max-width: 990px) {
+            flex-direction: column;
+            margin-bottom: 40px;
+         }
+         @media (max-width: 767px) {
+            margin-bottom: 70px;
+         }
+         @media (max-width: 575px) {
+            margin: 0;
+         }
+      }
+      &__step-item {
+         position: relative;
+         @media (max-width: 990px) {
+            display: flex;
+            align-items: flex-start;
+            &:not(:last-child) {
+               margin-bottom: 70px;
+               @media (max-width: 575px) {
+                  margin-bottom: 32px;
+               }
+            }
+         }
+         @media (max-width: 990px) {
+            &:not(:last-child)::before {
+               content: "";
+               position: absolute;
+               top: 0;
+               right: 53px;
+               z-index: -1;
+               width: 1px;
+               height: calc(100% + 70px);
+               background-color: $middleGreen;
+            }
+         }
+         @media (max-width: 575px) {
+            &:not(:last-child)::before {
+               right: 16px;
+               height: calc(100% + 32px);
+            }
+         }
+      }
+      &__step-number {
+         font-size: 24px;
+         font-weight: 400;
+         line-height: 1;
+         display: flex;
+         align-items: center;
+         width: 107px;
+         height: 107px;
+         justify-content: center;
+         background-color: $white;
+         border: 1px solid $middleGreen;
+         border-radius: 50%;
+         margin-bottom: 27px;
+         @media (max-width: 990px) {
+            margin-left: 70px;
+         }
+         @media (max-width: 575px) {
+            width: 32px;
+            min-width: 32px;
+            height: 32px;
+            font-size: 12px;
+            margin-left: 40px;
+         }
+      }
+      &__step-text-block {
+         max-width: 282px;
+         @media (max-width: 1199px) and (min-width: 991px) {
+            max-width: 235px;
+         }
+      }
+      &__step-title {
+         font-size: 24px;
+         font-weight: 300;
+         line-height: 1.1;
+         margin-bottom: 28px;
+         @media (max-width: 1199px) and (min-width: 991px) {
+            font-size: 20px;
+         }
+         @media (max-width: 575px) {
+            font-size: 20px;
+            margin-bottom: 12px;
+         }
+      }
+      &__step-desc {
+         @media (max-width: 1199px) and (min-width: 991px) {
+            font-size: 14px;
+         }
+      }
+      &__btn {
+         display: block;
+         font-weight: 400;
+         margin-right: auto;
+         padding-left: 32px;
+         padding-right: 32px;
+         @media (max-width: 575px) {
+            display: none;
+         }
+      }
+   }
+
+   // About
+   &-about {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 120px;
+      @media (max-width: 575px) {
+         margin-bottom: 50px;
+      }
+      @media (max-width: 990px) {
+         flex-direction: column;
+      }
+      &__container {
+         @media (max-width: 990px) {
+            width: 100%;
+         }
+      }
+      &__content {
+         padding-top: 110px;
+         @media (max-width: 990px) {
+            margin-left: auto;
+            margin-bottom: 30px;
+            padding-top: 0;
+         }
+      }
+      &__img {
+         background: url("../images/page-marketing-about.jpg") no-repeat center / cover;
+         width: 57%;
+         height: 679px;
+         @media (max-width: 1399px) {
+            width: 47%;
+         }
+         @media (max-width: 990px) {
+            width: 100%;
+            height: 620px;
+         }
+         @media (max-width: 767px) {
+            height: 570px;
+         }
+         @media (max-width: 575px) {
+            height: 263px;
+         }
+      }
+      &__title {
+         margin-bottom: 40px;
+         @media (max-width: 990px) {
+            margin-bottom: 11px;
+            max-width: 216px;
+         }
+      }
+      &__desc {
+         font-size: 18px;
+         max-width: 413px;
+         margin-bottom: 40px;
+      }
+      &__btn {
+         padding-left: 16px;
+         padding-right: 16px;
+         font-weight: 500;
+      }
+   }
+
+   // Blank
+   &-banner__container,
+   &-benefits__container {
+      max-width: 1420px;
+   }
+   &-title {
+      font-size: 48px;
+      line-height: 1.2;
+      font-weight: 300;
+      @media (max-width: 575px) {
+         font-size: 24px;
+      }
+   }
+   &-text {
+      font-weight: 300;
+      line-height: 1.5;
+      @media (max-width: 575px) {
+         font-size: 14px;
+      }
+   }
+}
