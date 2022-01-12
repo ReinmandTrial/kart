@@ -3981,13 +3981,32 @@
 }
 
 .rebate {
-   .container {
+   position: relative;
+   margin-bottom: 147px;
+   @media (max-width: 575.98px) {
+      margin-bottom: 53px;
+   }
+   &__content {
       background-color: #f8f8f8;
       background-image: url(../images/rebate-bg.png);
       padding: 13px 52px 14px 72px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media (max-width: 767.98px) {
+         background-image: url(../images/rebate-bg-mobile.png);
+         flex-direction: column;
+         background-repeat: no-repeat;
+         background-size: cover;
+         padding: 48px 0px 60px 0px;
+      }
+   }
+   .container {
+      @media (max-width: 1460px) {
+         padding: unset;
+      }
+      @media (max-width: 767.98px) {
+      }
    }
 
    &__ball {
@@ -3996,17 +4015,35 @@
       border: 1px solid #ffce88;
       width: 142px;
       height: 140px;
+      display: flex;
+      justify-content: center;
+      @media (max-width: 767.98px) {
+         order: 2;
+         margin-left: 23px;
+         margin-right: auto;
+         padding: 12px;
+      }
    }
 
    &__ball-title {
       font-size: 17.933px;
       line-height: 96.38%;
       color: $white;
+
+      @media (max-width: 575.98px) {
+         font-size: 17.2645px;
+         line-height: 25px;
+      }
    }
    &__ball-amount {
       color: $white;
       font-size: 36.4349px;
       line-height: 54px;
+
+      @media (max-width: 575.98px) {
+         font-size: 24.2307px;
+         line-height: 36px;
+      }
    }
 
    &__ball-content {
@@ -4018,6 +4055,12 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-top: 50%;
+      transform: translate(0, -50%);
+      @media (max-width: 767.98px) {
+         width: 102px;
+         height: 102px;
+      }
    }
    &__description {
       display: flex;
@@ -4030,23 +4073,46 @@
       line-height: 23px;
       color: $main;
       margin-bottom: 6px;
+      @media (max-width: 767.98px) {
+         margin-bottom: 25px;
+      }
+      @media (max-width: 575.98px) {
+         font-size: 11.9262px;
+         line-height: 96.38%;
+      }
    }
    &__real {
       font-size: 14px;
       line-height: 21px;
       color: rgba(0, 0, 0, 0.5);
+
+      @media (max-width: 575.98px) {
+         font-size: 12px;
+         line-height: 18px;
+      }
    }
    &__real-before {
       color: rgba(0, 0, 0, 0.5);
+      @media (max-width: 767.98px) {
+         margin: 0px 13px;
+      }
    }
    &__now {
       font-size: 14px;
       line-height: 21px;
       color: $main;
+
+      @media (max-width: 575.98px) {
+         font-size: 12px;
+         line-height: 18px;
+      }
    }
 
    &__info {
       display: flex;
+      @media (max-width: 767.98px) {
+         display: block;
+      }
    }
    &__btn {
       height: max-content;
@@ -4055,6 +4121,41 @@
       line-height: 21px;
       color: $white;
       padding: 15px 47px 16px 46px;
+      @media (max-width: 767.98px) {
+         margin-right: 11px;
+         margin-bottom: 25px;
+         padding: 14px 40px 13px 46px;
+      }
+      @media (max-width: 575.98px) {
+         font-size: 14px;
+         line-height: 21px;
+      }
+   }
+   &__amount {
+      @media (max-width: 767.98px) {
+         margin-bottom: 23px;
+      }
+   }
+   &__name {
+      display: none;
+      font-size: 17.2645px;
+      line-height: 25px;
+      text-align: center;
+      color: rgba(55, 55, 55, 0.5);
+      margin-bottom: 9px;
+      @media (max-width: 767.98px) {
+         display: block;
+      }
+   }
+   &__bottle {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 25px;
+      @media (max-width: 767.98px) {
+         display: block;
+      }
    }
 }
 
