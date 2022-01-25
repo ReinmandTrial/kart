@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body class="post-type-archive-product">
 
 	<!-- WRAPPER start -->
 	<div class="wrapper page-main">
@@ -463,6 +463,22 @@
 						</div>
 					</div>
 				</div>
+
+				<select name="orderby" class="orderby" aria-label="Shop order">
+					<option value="menu_order">Default sorting</option>
+					<option value="popularity" selected="selected">Sort by popularity</option>
+					<option value="rating">Sort by average rating</option>
+					<option value="date">Sort by latest</option>
+					<option value="price">Sort by price: low to high</option>
+					<option value="price-desc">Sort by price: high to low</option>
+				</select>
+
+				<select class="select" name="language">
+					<option disabled>Выбрать</option>
+					<option value="HTML">HTML</option>
+					<option value="JavaScript">JavaScript</option>
+					<option value="PHP">PHP</option>
+				</select>
 
 				<div class="page-main__tags-circles tags-circles">
 					<div class="container">

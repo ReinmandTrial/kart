@@ -576,11 +576,21 @@ textarea {
 	}
 }
 
-.breadcrumbs {
-	margin-top: 40px;
-	font-size: 12px;
+.breadcrumbs,
+.woocommerce-breadcrumb {
+	margin-top: 40px !important;
+	font-size: 12px !important;
+	font-size: 12px !important;
+	max-width: 1460px;
+	margin: 40px auto 0 !important;
+	padding: 0px 15px !important;
+	position: relative;
+	z-index: 30;
 	@media (max-width: 575.98px) {
-		margin: 22px 0 22px;
+		margin: 22px 0 22px !important;
+	}
+	& a {
+		color: $main !important;
 	}
 	&__link {
 	}
@@ -743,5 +753,25 @@ textarea {
 		margin-left: unset;
 		margin-bottom: -250px;
 		margin-top: 310px;
+	}
+}
+.mCSB_scrollTools {
+	.mCSB_inside > .mCSB_container {
+		margin-right: 14px;
+	}
+
+	.mCSB_dragger_bar {
+		height: 0 !important;
+	}
+
+	.mCSB_container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.mCSB_draggerRail {
+		width: 3px;
+		background: #eaeaea;
+		border-radius: 8px;
 	}
 }
