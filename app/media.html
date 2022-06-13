@@ -4,14 +4,14 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Главная</title>
+   <title>Media</title>
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 
    <!-- WRAPPER start -->
-   <div class="wrapper contact-us-page">
+   <div class="wrapper">
 
       <!-- HEADER start  -->
 
@@ -136,7 +136,14 @@
                            </div>
                         </div>
                         <a href="#" class="header__favorites icon icon-heart-blank"></a>
-                        <button class="header__search btn-popup btn-popup-search icon icon-search"></button>
+                        <div class="header__search">
+                           <button class="header__search-btn icon icon-search"></button>
+                           <div class="header__search-input-box">
+                              <input type="text" class="header__search-input">
+                              <span class="header__search-input-icon icon icon-search"></span>
+                           </div>
+                        </div>
+
                      </div>
                      <div class="header__select select-header js-select">
                         <div class="select-header__head js-select-head">
@@ -393,145 +400,144 @@
 
          <!-- CONTENT start  -->
          <div class="content">
-            <div class="page-contact-us">
+            <div class="page-media">
+               <div class="breadcrumbs">
+                  <a href="#" class="breadcrumbs__link">קטגוריות</a>
+                  <span class="breadcrumbs__divide">/</span>
+                  <a href="#" class="breadcrumbs__link">בית</a>
+               </div>
                <div class="container">
-                  <div class="page-contact-us__content">
-                     <div class="breadcrumbs">
-                        <a href="#" class="breadcrumbs__link">קטגוריות</a>
-                        <span class="breadcrumbs__divide">/</span>
-                        <a href="#" class="breadcrumbs__link">בית</a>
-                     </div>
-                     <p class="page-contact-us__title h2">יצירת קשר</p>
-                     <div class="page-contact-us__main">
-                        <div class="page-contact-us__contacts-line">
-                           <div data-aos="fade-left" class="page-contact-us__contacts">
-                              <a href="#" class="page-contact-us__contacts-item h7">
-                                 <span class="icon icon-phone"></span>
-                                 03-5050660
-                              </a>
-                              <p class="page-contact-us__contacts-item h7">
-                                 <span class="icon icon-mark"></span>
-                                 סחרוב דוד 11, ראשון לציון
-                              </p>
-                              <p class="page-contact-us__contacts-item h7">
-                                 <span class="icon icon-clock"></span>
-                                 שעות מענה: א'-ה' 9:00-17:00
-                              </p>
-                              <a href="#" class="page-contact-us__contacts-item h7">
-                                 <span class="icon icon-call"></span>
-                                 פנייה בווטסאפ
-                              </a>
-                           </div>
-                           <div data-aos="fade-right" class="page-contact-us__socials">
-                              <a href="#" class="page-contact-us__socials-link socials-link icon icon-pint"></a>
-                              <a href="#" class="page-contact-us__socials-link socials-link icon icon-inst"></a>
-                              <a href="#" class="page-contact-us__socials-link socials-link icon icon-facebook"></a>
-                           </div>
+                  <div class="page-media__content">
+                     <h1 class="page-media__title h2">גלריה</h1>
+                     <div class="page-media__tabs tabs js-tabs">
+                        <div class="tabs__head js-tabs-head">
+                           <button type="button" class="tabs__item active js-tabs-head-item">תמונות</button>
+                           <button type="button" class="tabs__item js-tabs-head-item">סרטונים</button>
                         </div>
-                        <div class="page-contact-us__nav">
-                           <div class="page-contact-us__map">
-                              <img src="images/map-contact-us.png" alt="">
-                           </div>
-                           <div class="page-contact-us__office">
-                              <img src="images/office-contact-us.png" alt="">
-                           </div>
-                        </div>
-                        <form action="" class="page-contact-us__form">
-                           <p class="page-contact-us__form-title h3">לכל שאלה, אנחנו כאן בשבילך</p>
-                           <p class="page-contact-us__form-descr">אם יש לך שאלות, מעוניין\ת בפרטים על מוצר או כל פנייה
-                              אחרת - ניתן להשאיר פרטים ונשמח ליצור קשר </p>
-                           <div class="page-contact-us__form-inputs">
-                              <div class="page-contact-us__form-input-row">
-                                 <div class="page-contact-us__input input__box">
-                                    <input type="text" class="input" placeholder="שם*">
+                        <div class="tabs__body js-tabs-body">
+                           <div data-aos="fade-left" class="tabs__body-item active js-tabs-body-item js-anim-left">
+                              <div class="page-media__tabs-content">
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-article-img1.png" alt="">
                                  </div>
-                                 <div class="page-contact-us__input input__box">
-                                    <input type="text" class="input" placeholder="טלפון*">
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-article-img2.png" alt="">
                                  </div>
-                                 <div class="page-contact-us__input input__box">
-                                    <input type="text" class="input" placeholder="מייל*">
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-article-img3.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-article-img4.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-post-img3.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-post-img2.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-post-img1.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-article-img3.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-article-img4.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-post-img3.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-post-img2.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-post-img1.png" alt="">
                                  </div>
                               </div>
-                              <label class="page-contact-us__textarea textarea__box">
-                                 <p class="textarea__title">ההודעה שלך</p>
-                                 <textarea class="textarea"></textarea>
-                              </label>
-
+                              <div class="page-media__paginatiom pagination">
+                                 <div class="pagination__list">
+                                    <a href="#" class="pagination__item">3</a>
+                                    <a href="#" class="pagination__item">2</a>
+                                    <a href="#" class="pagination__item active">1</a>
+                                 </div>
+                                 <button type="button"
+                                    class="pagination__item pagination__btn-left icon icon-arrow-left"></button>
+                              </div>
                            </div>
-                           <button type="button" class="page-contact-us__form-btn btn btn-primary">שליחה</button>
-                        </form>
+                           <div data-aos="fade-left" class="tabs__body-item js-tabs-body-item js-anim-left">
+                              <div class="page-media__tabs-content">
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-article-img1.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-article-img2.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-article-img3.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-article-img4.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-post-img3.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-post-img2.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-post-img1.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-article-img3.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-article-img4.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-post-img3.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-post-img2.png" alt="">
+                                 </div>
+                                 <div class="page-media__item btn-popup card-media">
+                                    <img src="images/card-post-img1.png" alt="">
+                                 </div>
+                              </div>
+                              <div class="page-media__paginatiom pagination">
+                                 <div class="pagination__list">
+                                    <a href="#" class="pagination__item">3</a>
+                                    <a href="#" class="pagination__item">2</a>
+                                    <a href="#" class="pagination__item active">1</a>
+                                 </div>
+                                 <button type="button"
+                                    class="pagination__item pagination__btn-left icon icon-arrow-left"></button>
+                              </div>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
-
             </div>
          </div>
-         <!-- CONTENT end -->
+         <!-- CONTENT end  -->
 
          <!-- POPUP  -->
-         <div class="popup popup-search">
+         <div class="popup popup-media">
             <div class="popup__body">
                <div class="popup__content">
-                  <div class="popup-search__head">
-                     <div class="container">
-                        <button type="button" class="popup-search__close popup-close icon icon-close"></button>
-                        <label class="popup-search__input-box">
-                           <input type="text" class="popup-search__input" placeholder="חיפוש">
-                           <span class="icon icon-search"></span>
-                           <button type="button" class="popup-search__input-to-clear icon icon-close"></button>
-                        </label>
-                     </div>
-                  </div>
-                  <div class="popup-search__body">
-                     <div class="container">
-                        <a href="#" class="popup-search__item card-product-row">
-                           <div class="card-product-row__img">
-                              <img src="images/card-product-row__img1.png" alt="">
-                           </div>
-                           <div class="card-product-row__text-block">
-                              <p class="card-product-row__type">FEETO CARE</p>
-                              <p class="card-product-row__name">Soa Treatment ילופיט ןובס</p>
-                              <p class="card-product-row__price"> 4.00 ₪</p>
-                           </div>
-                        </a>
-                        <a href="#" class="popup-search__item card-product-row">
-                           <div class="card-product-row__img">
-                              <img src="images/card-product-row__img1.png" alt="">
-                           </div>
-                           <div class="card-product-row__text-block">
-                              <p class="card-product-row__type">FEETO CARE</p>
-                              <p class="card-product-row__name">Soa Treatment ילופיט ןובס</p>
-                              <p class="card-product-row__price"> 4.00 ₪</p>
-                           </div>
-                        </a>
-                        <a href="#" class="popup-search__item card-product-row">
-                           <div class="card-product-row__img">
-                              <img src="images/card-product-row__img1.png" alt="">
-                           </div>
-                           <div class="card-product-row__text-block">
-                              <p class="card-product-row__type">FEETO CARE</p>
-                              <p class="card-product-row__name">Soa Treatment ילופיט ןובס</p>
-                              <p class="card-product-row__price"> 4.00 ₪</p>
-                           </div>
-                        </a>
-                     </div>
+                  <button type="button" class="popup-close icon icon-close"></button>
+                  <div class="popup-media__item">
+                     <img src="images/promotion-large-img1.png" alt="">
                   </div>
                </div>
             </div>
          </div>
          <!-- POPUP END  -->
 
-         <!-- POPUP  -->
-         <div class="popup">
-            <div class="popup__body">
-               <div class="popup__content">
-               </div>
-            </div>
-         </div>
-         <!-- POPUP END  -->
 
       </main>
-      <!-- MAIN end -->
+      <!-- MAIN end  -->
+
 
       <!-- FOOTER start  -->
       <footer class="footer">

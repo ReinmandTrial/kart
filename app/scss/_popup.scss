@@ -5,18 +5,18 @@
    top: 0;
    left: 0;
    z-index: 99999;
-   width: 100vw;
+   width: 100%;
    height: 100%;
    min-height: 100%;
    overflow-y: auto;
    &__body {
       background: rgba(0, 0, 0, 0.29);
       width: 100%;
-      min-height: 100%;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      min-height: 100%;
    }
    &__content {
       background: $white;
@@ -147,5 +147,40 @@
 
    &__price {
       font-size: 14px;
+   }
+}
+.popup-media {
+   .popup-close {
+      @media (max-width: 575.98px) {
+         top: 5px;
+         right: 5px;
+         font-size: 14px;
+      }
+   }
+   .popup__content {
+      max-width: 1400px;
+      padding: 40px 60px;
+      margin: 40px 20px;
+      @media (min-width: 992px) {
+         // max-height: calc(100vh - 80px);
+      }
+      // overflow: hidden;
+      @media (max-width: 991.98px) {
+         padding: 20px;
+      }
+      @media (max-width: 575.98px) {
+         margin: 30px 15px;
+         padding: 10px;
+      }
+   }
+   &__item {
+      // overflow: hidden;
+      // height: 100%;
+      // max-height: calc(100vh - 160px);
+      img {
+         // height: 100%;
+         max-height: 100%;
+         object-fit: contain;
+      }
    }
 }

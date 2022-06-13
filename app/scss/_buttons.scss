@@ -6,6 +6,7 @@
     font-weight: 400;
     text-align: center;
     box-sizing: border-box;
+    transition: 0.2s ease-out;
     &:hover {
     }
     &:focus {
@@ -17,7 +18,9 @@
         border: 1px solid $middleGreen;
         background: $middleGreen;
         color: $white;
-        &:hover {
+        &:hover,
+        &:active {
+            background: #79ae36 !important;
         }
     }
     &-secondary {
@@ -27,7 +30,10 @@
     &-contour {
         padding: 17px;
         border: 1px solid $middleGreen;
-        &:hover {
+        &:hover,
+        &:active {
+            background: #93c05b;
+            color: $white;
         }
     }
     &-filter {

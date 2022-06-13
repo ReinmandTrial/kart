@@ -8,20 +8,24 @@
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="post-type-archive-product">
+<body>
 
 	<!-- WRAPPER start -->
 	<div class="wrapper page-main">
 
 		<!-- HEADER start  -->
 
-		<header id="top" class="header">
+		<header data-aos="fade-down" data-aos-anchor-placement="center-bottom" id="top" class="header">
 			<div class="header__topline">
 				<div class="container">
 					<div class="header__topline-content">
 						<div class="header__topline-right">
 							<div class="header__burger burger js-burger-block">
-								<button type="button" class="burger__head js-burger icon icon-burger"></button>
+								<button type="button" class="burger__head js-burger burger-icon">
+									<span class="burger-icon__line burger-icon__line-1"></span>
+									<span class="burger-icon__line burger-icon__line-2"></span>
+									<span class="burger-icon__line burger-icon__line-3"></span>
+								</button>
 								<div class="burger__body">
 									<div class="container">
 										<div class="burger__content">
@@ -393,17 +397,22 @@
 
 			<!-- CONTENT start  -->
 			<div class="content">
+
 				<div class="page-main__banner banner">
 					<div class="banner__content">
 						<div class="banner__text-block">
-							<h1 class="banner__title">YOUR SKIN <br> DESERVES <br> KART</h1>
-							<p class="banner__descr"> להרגיש את העור שלך מחדש
+							<h1 data-aos="fade-down" class="banner__title">YOUR SKIN <br> DESERVES <br> KART</h1>
+							<p data-aos="fade-down" class="banner__descr"> להרגיש את העור שלך מחדש
 							</p>
-							<a href="#" class="banner__btn btn btn-primary">גולטקל רבעמ</a>
+							<a data-aos="fade-up" href="#" class="banner__btn btn btn-primary">גולטקל רבעמ</a>
 						</div>
 					</div>
 					<div class="banner__slider slider-banner swiper-container">
 						<div class="slider-banner__wrapper swiper-wrapper">
+							<div class="slider-banner__slide swiper-slide">
+								<!-- <img src="images/slider-banner__img1-1.png" alt=""> -->
+
+							</div>
 							<div class="slider-banner__slide swiper-slide">
 								<div class="slider-banner__item slider-banner__item-right">
 									<img src="images/slider-banner__img1-2.png" alt="">
@@ -464,23 +473,7 @@
 					</div>
 				</div>
 
-				<select name="orderby" class="orderby" aria-label="Shop order">
-					<option value="menu_order">Default sorting</option>
-					<option value="popularity" selected="selected">Sort by popularity</option>
-					<option value="rating">Sort by average rating</option>
-					<option value="date">Sort by latest</option>
-					<option value="price">Sort by price: low to high</option>
-					<option value="price-desc">Sort by price: high to low</option>
-				</select>
-
-				<select class="select" name="language">
-					<option disabled>Выбрать</option>
-					<option value="HTML">HTML</option>
-					<option value="JavaScript">JavaScript</option>
-					<option value="PHP">PHP</option>
-				</select>
-
-				<div class="page-main__tags-circles tags-circles">
+				<div data-aos="fade-up" class="page-main__tags-circles tags-circles">
 					<div class="container">
 						<div class="tags-circles__content">
 							<a href="#" class="tags-circles__item">
@@ -537,17 +530,18 @@
 
 				<div class="novelty">
 					<div class="container">
-						<h3 class="novelty__title"> מגוון מוצריםלפי תחומים</h3>
-						<p class="novelty__description">קארט קוסמטיקס מזמינה אותך להכיר מוצרים חדשניים עם תוצאות מוכחות </p>
+						<h3 data-aos="fade-up" class="novelty__title"> מגוון מוצריםלפי תחומים</h3>
+						<p data-aos="fade-up" class="novelty__description">קארט קוסמטיקס מזמינה אותך להכיר מוצרים חדשניים עם
+							תוצאות מוכחות </p>
 						<div class="novelty__content">
-							<div class="novelty__card novelty__card--legs">
+							<div data-aos="fade-up" class="novelty__card novelty__card--legs">
 								<div class="novelty__card-content">
 									<h4 class="novelty__card-title">פדיקור</h4>
 									<div class="novelty__card-img"><img src="images/novelty1.svg" alt=""></div>
 								</div>
 								<div class="novelty__bg"><img src="images/novelty1.png" alt=""></div>
 							</div>
-							<div class="novelty__card novelty__card--face">
+							<div data-aos="fade-up" data-aos-delay="100" class="novelty__card novelty__card--face">
 								<div class="novelty__card-content">
 									<h4 class="novelty__card-title">קוסמטיקה</h4>
 									<div class="novelty__card-img"><img src="images/novelty2.svg" alt=""></div>
@@ -556,7 +550,7 @@
 								<div class="novelty__bg novelty__bg--mobile"><img src="images/novelty2--mobile.png" alt="">
 								</div>
 							</div>
-							<div class="novelty__card novelty__card--hands">
+							<div data-aos="fade-up" data-aos-delay="200" class="novelty__card novelty__card--hands">
 								<div class="novelty__card-content">
 									<h4 class="novelty__card-title">מניקור</h4>
 									<div class="novelty__card-img"><img src="images/novelty.svg" alt=""></div>
@@ -568,7 +562,7 @@
 				</div>
 
 
-				<div class="page-main__slider-right slider-right">
+				<div data-aos="fade-up" class="page-main__slider-right slider-right">
 					<div class="container">
 						<div class="slider-right__content">
 							<div class="slider-right__container swiper-container">
@@ -602,7 +596,15 @@
 								<p class="slider-right__descr">מגוון פתרונות ייחודיים בתחום הקוסמטיקה, פדיקור ומניקור</p>
 								<div class="slider-right__btns-block">
 									<button type="button"
-										class="slider-right__btn slider-right__btn-next icon icon-triangle-right"></button>
+										class="slider-right__btn slider-right__btn-next icon icon-triangle-right">
+										<span class="timer again">
+											<span class="timer__bd-white"></span>
+											<span class="timer__bd-gray"></span>
+											<span class="timer__bd-fixed"></span>
+											<span class="timer__line"></span>
+											<span class="timer__body icon icon-triangle-right"></span>
+										</span>
+									</button>
 									<button type="button"
 										class="slider-right__btn slider-right__btn-prev icon icon-triangle-left"></button>
 								</div>
@@ -611,7 +613,7 @@
 					</div>
 				</div>
 
-				<div class="page-main__products page-main-products">
+				<div data-aos="fade-up" data-aos-offset="-500" class="page-main__products page-main-products">
 					<div class="container">
 						<div class="page-main-products__content">
 							<h2 class="page-main-products__title">קטלוג מוצרי KART</h2>
@@ -775,7 +777,7 @@
 				</div>
 
 				<div class="page-main__promotion-large promotion-large">
-					<div class="promotion-large__rightside">
+					<div data-aos="fade-left" data-aos-offset="-500" class="promotion-large__rightside">
 
 						<div class="promotion-large__slider swiper-container">
 							<div class="promotion-large__timer">
@@ -869,14 +871,22 @@
 							</div>
 							<div class="promotion-large__nav">
 								<button type="button"
-									class="promotion-large__btn promotion-large__btn-left icon icon-triangle-right"></button>
+									class="promotion-large__btn promotion-large__btn-left icon icon-triangle-left"></button>
 								<button type="button"
-									class="promotion-large__btn promotion-large__btn-right icon icon-triangle-left"></button>
+									class="promotion-large__btn promotion-large__btn-right icon icon-triangle-right">
+									<span class="timer again">
+										<span class="timer__bd-white"></span>
+										<span class="timer__bd-gray"></span>
+										<span class="timer__bd-fixed"></span>
+										<span class="timer__line"></span>
+										<span class="timer__body icon icon-triangle-right"></span>
+									</span>
+								</button>
 							</div>
 							<div class="promotion-large__pagin swiper-pagination-main"></div>
 						</div>
 					</div>
-					<div class="promotion-large__leftside">
+					<div data-aos="fade-right" data-aos-offset="-500" class="promotion-large__leftside">
 						<img src="images/promotion-large-img1.png" alt="">
 					</div>
 				</div>
@@ -884,7 +894,7 @@
 				<div class="page-main__academy block-academy">
 					<div class="container">
 						<div class="block-academy__content">
-							<div class="block-academy__images-block">
+							<div data-aos="fade-left" data-aos-offset="-500" class="block-academy__images-block">
 								<div class="block-academy__img block-academy__img-small">
 									<img src="images/block-academy-img1.png" alt="">
 								</div>
@@ -893,14 +903,14 @@
 								</div>
 							</div>
 
-							<div class="block-academy__text-block">
+							<div data-aos="fade-up" data-aos-offset="-500" class="block-academy__text-block">
 								<h2 class="block-academy__title h1">KART באקדמיית מתמקצעים </h2>
 								<p class="block-academy__descr">מגוון הדרכות, הכשרות, השתלמויות וקורסים מחכים לך באתר</p>
 								<a href="#" class="block-academy__btn block-academy__btn--desktop btn btn-primary">מעבר
 									להדרכות</a>
 							</div>
 
-							<div class="block-academy__images-block">
+							<div data-aos="fade-right" data-aos-offset="-500" class="block-academy__images-block">
 								<div class="block-academy__img block-academy__img-large">
 									<img src="images/block-academy-img3.png" alt="">
 								</div>
@@ -914,82 +924,10 @@
 				</div>
 
 
-				<div class="page-main__slider-articles slider-articles">
-					<div class="container">
-						<div class="slider-articles__content">
-							<div class="slider-articles__swiper	swiper-container">
-								<div class="slider-articles__head">
-									<div class="slider-articles__text-block">
-										<h2 class="slider-articles__title h1">הדרכות מומלצות</h2>
-										<p class="slider-articles__descr"> דוחל רוקידפו דוחל הקיטמסוקל הדרפה תושעל ךירצ</p>
-									</div>
-									<div class="slider-articles__nav">
-										<button type="button"
-											class="slider-articles__btn slider-articles__btn-next icon icon-triangle-right"></button>
-										<button type="button"
-											class="slider-articles__btn slider-articles__btn-prev icon icon-triangle-left"></button>
-									</div>
-								</div>
-								<div class="slider-articles__wrapper swiper-wrapper">
-									<div class="slider-articles__slide swiper-slide card-article">
-										<div class="card-article__img">
-											<img src="images/card-article-img1.png" alt="">
-										</div>
-										<div class="card-article__text-block">
-											<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
-											<p class="card-article__time">
-												<span class="icon icon-clock"></span>
-												3.5 שעות הדרכה
-											</p>
-										</div>
-									</div>
-									<div class="slider-articles__slide swiper-slide card-article">
-										<div class="card-article__img">
-											<img src="images/card-article-img2.png" alt="">
-										</div>
-										<div class="card-article__text-block">
-											<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
-											<p class="card-article__time">
-												<span class="icon icon-clock"></span>
-												3.5 שעות הדרכה
-											</p>
-										</div>
-									</div>
-									<div class="slider-articles__slide swiper-slide card-article">
-										<div class="card-article__img">
-											<img src="images/card-article-img3.png" alt="">
-										</div>
-										<div class="card-article__text-block">
-											<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
-											<p class="card-article__time">
-												<span class="icon icon-clock"></span>
-												3.5 שעות הדרכה
-											</p>
-										</div>
-									</div>
-									<div class="slider-articles__slide swiper-slide card-article">
-										<div class="card-article__img">
-											<img src="images/card-article-img4.png" alt="">
-										</div>
-										<div class="card-article__text-block">
-											<p class="card-article__type">פדיקור</p>
-											<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
-											<p class="card-article__time">
-												<span class="icon icon-clock"></span>
-												3.5 שעות הדרכה
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="slider-articles__pagin swiper-pagination-main"></div>
-							</div>
-						</div>
-					</div>
-				</div>
 
 
 
-				<div class="rebate">
+				<div data-aos="flip-left" data-aos-offset="-500" class="rebate">
 					<div class="rebate__bottle"><img src="images/rebate-bottle.png" alt=""></div>
 					<div class="container">
 						<div class="rebate__content">
@@ -1015,7 +953,8 @@
 					</div>
 				</div>
 
-				<div class="page-main__slider-articles slider-articles slider-articles--tabs">
+				<div data-aos="fade-up" data-aos-offset="-500"
+					class="page-main__slider-articles slider-articles slider-articles--tabs">
 					<div class="container">
 						<div class="slider-articles__content">
 							<div class="slider-articles__head">
@@ -1035,7 +974,15 @@
 										<div class="slider-articles__swiper	swiper-container">
 											<div class="slider-articles__nav">
 												<button type="button"
-													class="slider-articles__btn slider-articles__btn-next icon icon-triangle-right"></button>
+													class="slider-articles__btn slider-articles__btn-next icon icon-triangle-right">
+													<span class="timer again">
+														<span class="timer__bd-white"></span>
+														<span class="timer__bd-gray"></span>
+														<span class="timer__bd-fixed"></span>
+														<span class="timer__line"></span>
+														<span class="timer__body icon icon-triangle-right"></span>
+													</span>
+												</button>
 												<button type="button"
 													class="slider-articles__btn slider-articles__btn-prev icon icon-triangle-left"></button>
 											</div>
@@ -1097,7 +1044,15 @@
 										<div class="slider-articles__swiper	swiper-container">
 											<div class="slider-articles__nav">
 												<button type="button"
-													class="slider-articles__btn slider-articles__btn-next icon icon-triangle-right"></button>
+													class="slider-articles__btn slider-articles__btn-next icon icon-triangle-right">
+													<span class="timer again">
+														<span class="timer__bd-white"></span>
+														<span class="timer__bd-gray"></span>
+														<span class="timer__bd-fixed"></span>
+														<span class="timer__line"></span>
+														<span class="timer__body icon icon-triangle-right"></span>
+													</span>
+												</button>
 												<button type="button"
 													class="slider-articles__btn slider-articles__btn-prev icon icon-triangle-left"></button>
 											</div>
@@ -1162,7 +1117,7 @@
 				</div>
 
 
-				<div class="known">
+				<div data-aos="fade-up" data-aos-offset="-200" class="known">
 					<div class="container">
 						<div class="known__description">
 							<h3 class="known__title h3">מועדון המקצועיות של KART</h3>
