@@ -44,7 +44,8 @@ function scripts() {
     'node_modules/swiper/swiper-bundle.min.js',
     'node_modules/aos/dist/aos.js',
     'app/js/jquery.mCustomScrollbar.concat.min.js',
-    'app/js/main.js'
+    'app/js/main.js',
+    'app/js/profile.js'
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
