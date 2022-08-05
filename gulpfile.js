@@ -43,6 +43,7 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/swiper/swiper-bundle.min.js',
     'node_modules/aos/dist/aos.js',
+    'app/js/jquery.mCustomScrollbar.concat.min.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
@@ -62,6 +63,17 @@ function styles() {
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
+function stylesProfile() {
+  return src('app/scss/profile.scss')
+    .pipe(scss({ outputStyle: 'compressed' }))
+    .pipe(concat('profile.min.css'))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 version'],
+      grid: true
+    }))
+    .pipe(dest('app/css'))
+    .pipe(browserSync.stream())
+}
 
 function build() {
   return src([
@@ -74,12 +86,14 @@ function build() {
 }
 
 function watching() {
-  watch(['app/scss/**/*.scss'], styles);
+  watch(['app/scss/style.scss'], styles);
+  watch(['app/scss/profile.scss'], stylesProfile);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/*.html']).on('change', browserSync.reload);
 }
 
 exports.styles = styles;
+exports.stylesProfile = stylesProfile;
 exports.watching = watching;
 exports.browsersync = browsersync;
 exports.scripts = scripts;
@@ -87,6 +101,6 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(stylesProfile, styles, scripts, browsersync, watching);
 
 
