@@ -679,10 +679,54 @@
 	line-height: 18px;
 }
 
-
 }
 
+//ORDER HISTORY EMPTY STYLES
+.order-empty {
+	width: 100%;
+	display: flex;
+	&__inner {
+		display: block;
+		width: 100%;
+	}
+	&__title {
+		@media (max-width: 575.98px ) {
+			font-size: 24px;
+			line-height: 110%;
+		}
+	}
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: 208px;
+		@media (max-width: 575.98px ) {
+			padding-top: 100px;
+		}	
+	}
+	&__img {
+		width: 107px;
+		height: 107px;
+		object-fit: cover;
+		margin-bottom: 34px;
+		@media (max-width: 575.98px ) {
+			width: 70px;
+			height: 70px;
+			margin-bottom: 20px;
+		}
+	}
+	&__text {
+		word-wrap: break-word;
+		text-align: center;
+		line-height: 134.88%;
+		@media (max-width: 575.98px ) {
+			font-size: 14px;
+		}
+	}
+}
 /** ORDER HISTORY STYLES end*/
+
 /** KART ACADEMY STYLES start*/
 .academy {
 	max-width: 824px;
