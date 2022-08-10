@@ -1,10 +1,14 @@
+
 /** ANIMATION STYLES start */
 @keyframes fade {
-	from {opacity: 0;}
-	to {opacity: 1;}
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 /** ANIMATION STYLES end */
-
 
 /** ALL STYLES start */
 .page-main {
@@ -31,7 +35,7 @@
 /** ALL STYLES end */
 
 /** RIGHT SIDEBAR MENU STYLES start */
-.sidebar{
+.sidebar {
 	max-width: 330px;
 	width: 100%;
 	margin-left: 120px;
@@ -74,7 +78,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border: 1px solid #8DC349;
+		border: 1px solid #8dc349;
 		border-radius: 30px;
 		margin-bottom: 25px;
 		min-width: 168px;
@@ -91,6 +95,8 @@
 		color: #A7A7A7;
 		transition: all .2s ease-in-out;
 		cursor: pointer;
+		color: #a7a7a7;
+		transition: all 0.2s ease-in-out;
 	}
 	&__points-icon:hover {
 		color: #373737;
@@ -99,8 +105,8 @@
 		align-self: start;
 		display: flex;
 		justify-content: center;
-		align-items:center;
-		background-color: #8DC349;
+		align-items: center;
+		background-color: #8dc349;
 		border-top-right-radius: 30px;
 		border-bottom-right-radius: 30px;
 		padding: 9px 17px 9px 12px;
@@ -132,20 +138,20 @@
 		justify-content: start;
 		align-items: center;
 		line-height: 134.88%;
-		color: #A7A7A7;
-		transition: all .2s ease-in-out;
+		color: #a7a7a7;
+		transition: all 0.2s ease-in-out;
 	}
 	&__out-link:hover {
-		color: #373737; 
+		color: #373737;
 	}
 	&__out-icon {
 		font-size: 14px;
-		padding-left: 11px;	
-		color: #A7A7A7;
-		transition: all .2s ease-in-out;
+		padding-left: 11px;
+		color: #a7a7a7;
+		transition: all 0.2s ease-in-out;
 	}
 	&__out-link:hover > .sidebar__out-icon {
-		color: #373737; 
+		color: #373737;
 		transform: translateX(-4px);
 	}
 	&__referal {
@@ -162,6 +168,7 @@
 		color: #373737;
 		margin-right: 6px;
 		transition: all .2s ease-in-out;	
+		transition: all 0.2s ease-in-out;
 	}
 	&__referal-icon {
 		font-size: 14px;
@@ -221,8 +228,6 @@
 	}
 }
 /** RIGHT SIDEBAR MENU STYLES end*/
-
-
 
 /** ORDER HISTORY STYLES start*/
 .order {
@@ -286,6 +291,7 @@
 		}
 	}
 
+
 .order-top__item {
 	margin-left: 25px;
 	font-weight: 300;
@@ -308,15 +314,15 @@
 
 .accord {
 	.accord__item {
-		border-bottom: 1px solid #ECECEC;
+		border-bottom: 1px solid #ececec;
 		&.accord__active {
 			.accord__content {
 				display: block;
-				transition: .3s all ease;
+				transition: 0.3s all ease;
 			}
-			.trigger__icon{
+			.trigger__icon {
 				transform: rotate(90deg);
-				transition: .2s all ease;
+				transition: 0.2s all ease;
 			}
 		}
 
@@ -355,7 +361,7 @@
 				word-break: break-word;
 				color: #373737;
 			}
-			
+
 			.trigger__category {
 				max-width: 165px;
 				width: 100%;
@@ -368,15 +374,15 @@
 				word-break: break-word;
 				color: #1E8E29;
 				padding: 6px 35px 8px 35px;
-				background: rgba(148, 192, 91, .2);
+				background: rgba(148, 192, 91, 0.2);
 				border-radius: 29px;
 			}
-			
+
 			.trigger__category--red {
-				color: #DD6915;
-				background-color: rgba(250, 169, 95, .2);
+				color: #dd6915;
+				background-color: rgba(250, 169, 95, 0.2);
 			}
-			
+
 			.trigger__icon {
 				display: flex;
 				transition: .2s all ease;
@@ -390,7 +396,7 @@
 
 		.accord__content {
 			display: none;
-			animation: fade .3s ease;
+			animation: fade 0.3s ease;
 			.content-top {
 				display: grid;
 				grid-template-columns: 325px 130px 120px 150px 99px;
@@ -419,7 +425,7 @@
 			.content-top__name{
 				margin: 0 64px 0 0;
 			}
-			
+
 			.content-top__name,
 			.content-top__id,
 			.content-top__price,
@@ -434,7 +440,7 @@
 				word-break: break-word;
 				color: #868686;
 			}
-			
+
 			.content {
 				display: grid;
 				grid-template-columns: 325px 130px 120px 150px 99px;
@@ -459,13 +465,13 @@
 					grid-template-columns: 240px 100px 60px 60px 60px;
 				}
 			}
-			
+
 			.content__link {
 				display: flex;
 				align-items: center;
 				justify-content: flex-start;
 			}
-			
+
 			.content__img {
 				width: 48px;
 				height: 48px;
@@ -484,7 +490,7 @@
 				word-break: break-word;
 				margin-left: 15px;
 			}
-			
+
 			.content__text {
 				font-weight: 300;
 				font-size: 12px;
@@ -492,7 +498,7 @@
 				text-transform: uppercase;
 				color: #373737;
 			}
-			
+
 			.content__allprice,
 			.content__count,
 			.content__price,
@@ -501,7 +507,7 @@
 				font-size: 14px;
 				line-height: 21px;
 				text-align: right;
-				color: #1B1B1B;
+				color: #1b1b1b;
 			}
 		}
 	}
@@ -663,8 +669,6 @@
 }
 
 /** ORDER HISTORY STYLES end*/
-
-
 /** KART ACADEMY STYLES start*/
 .academy {
 	max-width: 824px;
@@ -679,7 +683,7 @@
 		display: flex;
 		justify-content: flex-start;
 		position: relative;
-		border-bottom: 1px solid #ECECEC;
+		border-bottom: 1px solid #ececec;
 	}
 	&__header-item {
 		display: block;
@@ -687,7 +691,7 @@
 		font-weight: 300;
 		font-size: 24px;
 		line-height: 134.88%;
-		color: #A7A7A7;
+		color: #a7a7a7;
 		padding: 0 10px;
 		cursor: pointer;
 		&.active {
@@ -734,7 +738,6 @@
 		&:hover .blog__pic img{
 			transform: scale(1.05);
 		}
-	}
 	&__box {
 		margin-left: 30px;
 		width: 100%;
@@ -757,7 +760,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		align-items:flex-start;
+		align-items: flex-start;
 	}
 	&__info-link {
 		max-width: 150px;
@@ -765,9 +768,9 @@
 		font-size: 12px;
 		line-height: 18px;
 		padding: 3px 20px;
-		background: #F5F5F5;
+		background: #f5f5f5;
 		border-radius: 26px;
-		transition: all .2s ease;
+		transition: all 0.2s ease;
 	}
 	&__info-link:hover {
 		background: #d8d8d8;
@@ -818,9 +821,9 @@
 		font-size: 12px;
 		line-height: 18px;
 		padding: 3px 20px;
-		background: #F5F5F5;
+		background: #f5f5f5;
 		border-radius: 26px;
-		transition: all .2s ease;
+		transition: all 0.2s ease;
 		cursor: pointer;
 	}
 	&__subtitle:hover {
@@ -832,7 +835,7 @@
 		line-height: 134.88%;
 		color: #101423;
 		margin: 6px 0 0 0;
-		transition: all .2s ease;
+		transition: all 0.2s ease;
 	}
 	&__title:hover {
 		color: #8DC449;
@@ -920,7 +923,6 @@
 }
 /** KART ACADEMY STYLES end*/
 
-
 /** FAVORITE PRODUCTS STYLES start */
 .products-box {
 	max-width: 824px;
@@ -935,7 +937,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding-bottom: 20px;
-	border-bottom: 1px solid #ECECEC;
+	border-bottom: 1px solid #ececec;
 }
 
 .product-items {
@@ -954,13 +956,12 @@
 	font-size: 14px;
 	line-height: 21px;
 	text-transform: uppercase;
-	color: #FFFFFF;
-	background-color: #94C05B;
+	color: #ffffff;
+	background-color: #94c05b;
 	padding: 1px 8px;
 	border-radius: 100%;
 	margin-left: 9px;
 }
-
 
 .products-btn-close {
 	display: flex;
@@ -968,19 +969,19 @@
 	align-items: center;
 	line-height: 21px;
 	color: #000000;
-	transition: all .2s ease;
+	transition: all 0.2s ease;
 	cursor: pointer;
 }
 
-.products-btn-close:hover > .products-top-icon{
+.products-btn-close:hover > .products-top-icon {
 	color: #000000;
 }
 
 .products-top-icon {
 	font-size: 11px;
-	color: #A7A7A7;
+	color: #a7a7a7;
 	margin-right: 12px;
-	transition: all .2s ease;
+	transition: all 0.2s ease;
 }
 
 .products-content {
@@ -1035,7 +1036,7 @@
 	font-size: 12px;
 	line-height: 18px;
 	text-transform: uppercase;
-	color: #A7A7A7;
+	color: #a7a7a7;
 	margin-bottom: 5px;
 	word-break: break-word;
 }
@@ -1055,7 +1056,8 @@
 	padding: 0 20px;
 	font-weight: 400;
 	font-size: 14px;
-	line-height: 21px;text-transform: uppercase;
+	line-height: 21px;
+	text-transform: uppercase;
 	color: #373737;
 	margin-bottom: 22px;
 	word-break: break-word;
@@ -1067,8 +1069,8 @@
 	right: 4px;
 	font-size: 12px;
 	margin: 4px;
-	color:  #A7A7A7;
-	transition: all .2s ease;
+	color: #a7a7a7;
+	transition: all 0.2s ease;
 	cursor: pointer;
 }
 
@@ -1077,18 +1079,16 @@
 	font-size: 16px;
 	line-height: 24px;
 	text-transform: uppercase;
-	color: #FFFFFF;
+	color: #ffffff;
 	padding: 20px 45px;
-	background-color: #8DC449;
-	transition: all .2s ease;
+	background-color: #8dc449;
+	transition: all 0.2s ease;
 }
 
 .products-btn__link:hover {
 	background-color: #79ae36;
 }
 /** FAVORITE PRODUCTS STYLES end */
-
-
 
 /** INFORMATION ABOUT OUTLETS + COUPONS STYLES start */
 .outlet {
@@ -1300,3 +1300,4 @@
 }
 
 /** INFORMATION ABOUT OUTLETS + COUPONS STYLES end */
+
