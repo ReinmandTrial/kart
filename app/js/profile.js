@@ -17,3 +17,14 @@ function accordion() {
 	})
 }
 accordion() 
+
+// $('.saved-tabs__head').on('click', function (e) {
+// 	let block = $(this).closest('.saved-tabs')
+
+// 	block.toggleClass('open')
+// 	if (block.hasClass('open')) {
+// 		 block.find('.saved-tabs__body').slideDown(500)
+// 	} else {
+// 		 block.find('.saved-tabs__body').slideUp(500)
+// 	}
+// })

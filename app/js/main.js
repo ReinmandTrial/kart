@@ -1,8 +1,8 @@
 jQuery(document).ready(function ($) {
-   // $(".js-scroll").mCustomScrollbar({
-   //    scrollInertia: 0,
-   //    mouseWheel: { scrollAmount: 40 },
-   // });
+   $(".js-scroll").mCustomScrollbar({
+      scrollInertia: 0,
+      mouseWheel: { scrollAmount: 40 },
+   });
    AOS.init({});
 
 
