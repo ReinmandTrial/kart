@@ -198,6 +198,7 @@
 		}
 	}
 	&__link-item {
+		position: relative;
 		margin-bottom: 25px;
 		@media (max-width: 767.98px) {
 			justify-self: center;
@@ -211,6 +212,7 @@
 		line-height: 134.88%;
 		color: #A7A7A7;
 		transition: all .2s ease-in-out;
+		
 		@media (max-width: 767.98px) {
 			width: 100%;
 		}
@@ -225,6 +227,18 @@
 	&__link--active {
 		position: relative;
 		color: #373737;
+	}
+	&__link--active::after{
+		// display: none;
+		@media (max-width: 767.98px) {
+			content: '';
+				position: absolute;
+				bottom: -9px;
+				left: 0;
+				background-color: #373737;
+				height: 1px;
+				width: 100%;
+		}
 	}
 }
 /** RIGHT SIDEBAR MENU STYLES end*/
@@ -802,6 +816,7 @@
 		transition: all .2s ease;
 	}
 }
+}
 
 .videos {
 	width: 100%;
@@ -1300,4 +1315,3 @@
 }
 
 /** INFORMATION ABOUT OUTLETS + COUPONS STYLES end */
-
