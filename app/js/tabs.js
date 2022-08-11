@@ -1,4 +1,4 @@
-function tabs(headerSelector, tabSelector, contentSelector, activeClass, display='flex') {
+function tabs(headerSelector, tabSelector, contentSelector, activeClass, display='block') {
 	const header = document.querySelector(headerSelector),
 				tab = document.querySelectorAll(tabSelector),
 				content = document.querySelectorAll(contentSelector)
@@ -30,4 +30,6 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass, display
 	})
 }
 
-tabs( '.tabs__header' ,'.tabs__header-item', '.tabs__content-item', 'active')
+// tabs( '.tabs-academy__header' ,'.tabs-academy__header-item', '.tabs-academy__content-item', 'tabs-academy__header-item--active')
+
+tabs( '.tabs-outlet__header' ,'.tabs-outlet__header-item', '.tabs-outlet__content-item', 'tabs-outlet__header-item--active')
