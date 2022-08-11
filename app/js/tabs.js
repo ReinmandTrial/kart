@@ -32,4 +32,6 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass, display
 
 // tabs( '.tabs-academy__header' ,'.tabs-academy__header-item', '.tabs-academy__content-item', 'tabs-academy__header-item--active')
 
-tabs( '.tabs-outlet__header' ,'.tabs-outlet__header-item', '.tabs-outlet__content-item', 'tabs-outlet__header-item--active')
+// tabs( '.tabs-outlet__header' ,'.tabs-outlet__header-item', '.tabs-outlet__content-item', 'tabs-outlet__header-item--active')
+
+tabs( '.tabs-protocol__header' ,'.tabs-protocol__header-item', '.tabs-protocol__content-item', 'tabs-protocol__header-item--active')
