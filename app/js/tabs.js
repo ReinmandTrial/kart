@@ -1,4 +1,4 @@
-function tabs(headerSelector, tabSelector, contentSelector, activeClass, display='block') {
+function tabs(headerSelector, tabSelector, contentSelector, activeClass, display='flex') {
 	const header = document.querySelector(headerSelector),
 				tab = document.querySelectorAll(tabSelector),
 				content = document.querySelectorAll(contentSelector)
@@ -10,8 +10,9 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass, display
 					item.classList.remove(activeClass)
 			});
 	}
+	
 	function showTabContent(i = 0) {
-		 content[i].style.display = display
+		 content[i].style.display = 'block'
 		 tab[i].classList.add(activeClass)
 	}
 	hideTabContent()
@@ -30,8 +31,5 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass, display
 	})
 }
 
-// tabs( '.tabs-academy__header' ,'.tabs-academy__header-item', '.tabs-academy__content-item', 'tabs-academy__header-item--active')
 
-// tabs( '.tabs-outlet__header' ,'.tabs-outlet__header-item', '.tabs-outlet__content-item', 'tabs-outlet__header-item--active')
-
-tabs( '.tabs-protocol__header' ,'.tabs-protocol__header-item', '.tabs-protocol__content-item', 'tabs-protocol__header-item--active')
+tabs('.tabs__header' ,'.tabs__header-item', '.tabs__content-item', 'active');
