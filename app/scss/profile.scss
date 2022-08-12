@@ -1,28 +1,4 @@
 
-/** ANIMATION STYLES start */
-@keyframes fadeIn {
-	0% {
-			opacity: 0;
-			transform: translateY(startYposition);
-	} 
-	100% {
-			opacity: 1;
-			transform: translateY(endYposition);
-	}
-}
-
-@keyframes fadeOut {
-	0% {
-			opacity: 1;
-			transform: translateY(startYposition);
-	} 
-	100% {
-			opacity: 0;
-			transform: translateY(endYposition);
-	}
-}
-/** ANIMATION STYLES end */
-
 /** ALL STYLES start */
 .tabs {
 	&__header {
@@ -188,6 +164,7 @@
 		}
 	}
 	&__out {
+		display: flex;
 		margin-bottom: 25px;
 	}
 	&__out-link {
@@ -211,23 +188,33 @@
 		transform: translateX(-4px);
 	}
 	&__referal {
+		display: flex;
+		align-items: center;
 		line-height: 134.88%;
 		color: #101423;
 		text-transform: none;
 		margin-bottom: 49px;
 	}
 	&__referal-link {
+		display: flex;
+		align-items: baseline;
 		font-weight: 400;
-		text-decoration-line: underline;
-		color: #373737;
+		text-decoration: none;
 		margin-right: 6px;
-		transition: all .2s ease-in-out;	
-		transition: all 0.2s ease-in-out;
+		transition: all .15s ease;
+		&:hover {
+			color: #8DC349;
+		}
 	}
-	&__referal-icon {
+	&__referal-link-text {
+		text-decoration: underline;
+	}
+	&__referal-link-icon {
 		font-size: 14px;
 		margin-right: 4px;
-		color: #373737;
+		cursor: pointer;
+		text-decoration: none;
+		transition: all .05s ease;	
 	}
 	&__link-list {
 		margin-bottom: 20px;
@@ -629,7 +616,6 @@
 
 
 // //ORDER HISTORY EMPTY STYLES
-
 .order-empty {
 	max-width: 824px;
 	width: 100%;
