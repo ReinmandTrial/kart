@@ -347,15 +347,6 @@
 	&-top__item--four {
 		justify-self: center;
 	}
-	&__item {
-		&.active {
-			.js-trigger {
-				.accord__trigger-icon img{
-					transform: rotate(-90deg);
-				}
-			}
-		}
-	}
 	&__item:last-child {
 		border-bottom: 1px solid #ececec;
 	}
@@ -525,6 +516,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items:center;
+		
 	}
 	&__trigger-box-icon {
 		display: flex;
@@ -545,6 +537,7 @@
 		font-size: 14px;
 		line-height: 21px;
 		color: #868686;
+		white-space: nowrap;
 	}
 	&__trigger-value-id,
 	&__trigger-value-date,
@@ -606,14 +599,12 @@
 		color: #868686;
 		white-space: nowrap;
 	}
-	&__content-value-name {
-		padding-right: 50px;
-	}
 	&__content-value-name,
 	&__content-value-id,
 	&__content-value-price,
 	&__content-value-count,
 	&__content-value-allprice {
+		padding-right: 50px;
 		font-size: 12px;
 		line-height: 18px;
 		text-align: end;
@@ -1140,9 +1131,9 @@
 	border-bottom: 1px solid #ececec;
 	margin-bottom: 47px;
 	@media (max-width:575.98px) { 
-				border: none;
-				padding-bottom: 0;
-				margin-bottom: 30px;
+		border: none;
+		padding-bottom: 0;
+		margin-bottom: 30px;
 	}
 }
 
@@ -1466,13 +1457,6 @@
 	}
 	&__item-top:last-child {
 		margin: 0;
-	}
-	&__list-body {
-		// max-height: 360px;
-		// overflow-y: scroll;
-		// transform:scaleX(-1);
-		// padding-right: 30px;
-		// margin-right: -30px;
 	}
 	&__item-body {
 		display: grid;
