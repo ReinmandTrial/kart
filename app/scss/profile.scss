@@ -604,6 +604,10 @@
 		font-size: 14px;
 		line-height: 21px;
 		color: #868686;
+		white-space: nowrap;
+	}
+	&__content-value-name {
+		padding-right: 50px;
 	}
 	&__content-value-name,
 	&__content-value-id,
@@ -612,6 +616,8 @@
 	&__content-value-allprice {
 		font-size: 12px;
 		line-height: 18px;
+		white-space: normal;
+		text-align: end;
 	}
 }
 
