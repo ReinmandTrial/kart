@@ -69,168 +69,180 @@ button {
 }
 @font-face {
   font-family: "icon";
-  src: url("../fonts/icon/fonts/icon.ttf?q4incx") format("truetype"),
-    url("../fonts/icon/fonts/icon.woff?q4incx") format("woff"),
-    url("../fonts/icon/fonts/icon.svg?q4incx#icon") format("svg");
+  src: url("../fonts/icon/fonts/icon.ttf?97ag8c") format("truetype"),
+  url("../fonts/icon/fonts/icon.woff?97ag8c") format("woff"),
+  url("../fonts/icon/fonts/icon.svg?97ag8c#icon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 .icon {
-  font-family: "icon" !important;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.icon-triangle-blank:before {
+  content: "\e930";
+}
+.icon-copy:before {
+  content: "\e931";
+}
 .icon-eye:before {
-  content: "";
+  content: "\e92e";
 }
 .icon-eye-off:before {
-  content: "";
+  content: "\e92f";
 }
 .icon-twitter:before {
-  content: "";
+  content: "\e92c";
 }
 .icon-telegram:before {
-  content: "";
+  content: "\e92d";
 }
 .icon-arrow-bottom:before {
-  content: "";
+  content: "\e900";
 }
 .icon-arrow-left:before {
-  content: "";
+  content: "\e901";
 }
 .icon-arrow-top:before {
-  content: "";
+  content: "\e902";
 }
 .icon-bell:before {
-  content: "";
+  content: "\e903";
 }
 .icon-box:before {
-  content: "";
+  content: "\e904";
 }
 .icon-burger:before {
-  content: "";
+  content: "\e905";
 }
 .icon-calendar:before {
-  content: "";
+  content: "\e906";
 }
 .icon-call:before {
-  content: "";
+  content: "\e907";
 }
 .icon-cart:before {
-  content: "";
+  content: "\e908";
 }
 .icon-check:before {
-  content: "";
+  content: "\e909";
 }
 .icon-clock:before {
-  content: "";
+  content: "\e90a";
 }
 .icon-close:before {
-  content: "";
+  content: "\e90b";
 }
 .icon-diamond:before {
-  content: "";
+  content: "\e90c";
 }
 .icon-download:before {
-  content: "";
+  content: "\e90d";
 }
 .icon-email:before {
-  content: "";
+  content: "\e90e";
 }
 .icon-exit:before {
-  content: "";
+  content: "\e90f";
 }
 .icon-facebook:before {
-  content: "";
+  content: "\e910";
 }
 .icon-file:before {
-  content: "";
+  content: "\e911";
 }
 .icon-filter:before {
-  content: "";
+  content: "\e912";
 }
 .icon-gift:before {
-  content: "";
+  content: "\e913";
 }
 .icon-globe:before {
-  content: "";
+  content: "\e914";
 }
 .icon-heart-blank:before {
-  content: "";
+  content: "\e915";
 }
 .icon-info:before {
-  content: "";
+  content: "\e916";
 }
 .icon-inst:before {
-  content: "";
+  content: "\e917";
 }
 .icon-list:before {
-  content: "";
+  content: "\e918";
 }
 .icon-mark:before {
-  content: "";
+  content: "\e919";
 }
 .icon-message:before {
-  content: "";
+  content: "\e91a";
 }
 .icon-minus:before {
-  content: "";
+  content: "\e91b";
 }
 .icon-pan:before {
-  content: "";
+  content: "\e91c";
 }
 .icon-person:before {
-  content: "";
+  content: "\e91d";
 }
 .icon-person-secondary:before {
-  content: "";
+  content: "\e91e";
 }
 .icon-phone:before {
-  content: "";
+  content: "\e91f";
 }
 .icon-pint:before {
-  content: "";
+  content: "\e920";
 }
 .icon-plus:before {
-  content: "";
+  content: "\e921";
 }
 .icon-save:before {
-  content: "";
+  content: "\e922";
 }
 .icon-search:before {
-  content: "";
+  content: "\e923";
 }
 .icon-sliders:before {
-  content: "";
+  content: "\e924";
 }
 .icon-star:before {
-  content: "";
+  content: "\e925";
 }
 .icon-ticket:before {
-  content: "";
+  content: "\e926";
 }
 .icon-triangle-down:before {
-  content: "";
+  content: "\e927";
 }
 .icon-triangle-fill:before {
-  content: "";
+  content: "\e928";
 }
 .icon-triangle-left:before {
-  content: "";
+  content: "\e929";
 }
 .icon-triangle-right:before {
-  content: "";
+  content: "\e92a";
 }
 .icon-youtube:before {
-  content: "";
+  content: "\e92b";
 }
+
+
 @font-face {
   font-family: "swiper-icons";
   src: url("data:application/font-woff;charset=utf-8;base64, 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")
