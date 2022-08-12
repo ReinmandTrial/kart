@@ -1,22 +1,40 @@
 
-// Аккордеон
-function accordion() {
-	const items = document.querySelectorAll('.accord__trigger')
-	items.forEach(item => {
-			item.addEventListener('click', () => {
-					const parent = item.parentNode
-					if (parent.classList.contains('accord__active')) {
-							parent.classList.remove('accord__active')
-					} else {
-							document
-									.querySelectorAll('.accord__item')
-									.forEach(child => child.classList.remove('accord__active'))   
-							parent.classList.add('accord__active')
-					}
-			})
-	})
-}
-accordion() 
+// // Аккордеон
+// function accordion() {
+// 	const items = document.querySelectorAll('.accord__trigger')
+// 	items.forEach(item => {
+// 			item.addEventListener('click', () => {
+// 					const parent = item.parentNode
+// 					if (parent.classList.contains('active')) {
+// 							parent.classList.remove('active')
+// 					} else {
+// 							document
+// 									.querySelectorAll('.accord__item')
+// 									.forEach(child => child.classList.remove('active'))   
+// 							parent.classList.add('active')
+// 					}
+// 			})
+// 	})
+// }
+// accordion() 
+
+
+//accordion mobile & desktop
+	$(".js-trigger").on("click", function(e) {
+
+		e.preventDefault();
+		var $this = $(this);
+
+		if (!$this.hasClass("active")) {
+			$(".js-content").slideUp(400);
+			$(".js-trigger").removeClass("active");
+			$('.js-img').removeClass('js-img--rotate');
+		}
+
+		$this.toggleClass("active");
+		$this.next().slideToggle();
+		$('.js-img',this).toggleClass('js-img--rotate');
+	});
 
 // load more btn 
 $('.products-content').ready(function(){
