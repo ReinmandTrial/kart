@@ -17,3 +17,15 @@ function accordion() {
 	})
 }
 accordion() 
+
+// load more btn 
+$('.products-content').ready(function(){
+  $(".products-card").slice(0, 3).show();
+  $("#products-btn").on("click", function(e){
+    e.preventDefault();
+    $(".products-card:hidden").slice(0, 3).slideDown();
+    if($(".products-card:hidden").length == 0) {
+      $("#products-btn").addClass("lock-btn");
+    }
+  });
+});

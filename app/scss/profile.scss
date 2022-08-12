@@ -28,21 +28,17 @@
 	&__header {
 		display: flex;
 		border-bottom: 1px solid #ececec;
-		margin-bottom: 20px;
 		//horizontal scroll tabs
 		&::-webkit-scrollbar { 
 			width: 0 !important;
-		}
-		@media (max-width: 575.98px) {
-			border: none;
 		}
 		@media (max-width: 767.98px) {
 			width: 100%;
 			overflow: hidden;
     	overflow-x: scroll;
     	white-space: nowrap;
-			
-		}	
+			border: none;
+		}
 	}
 	&__header { 
 		-ms-overflow-style: none; 
@@ -77,15 +73,28 @@
 		}
 	}
 	&__content {
-		max-height: 530px;
+		margin-top: 35px;
+		max-height: 525px;
 		overflow-y: auto;
+		margin-left: -29px;
+		@media (max-width: 767.98px) {
+			margin-top: 0;
+			max-height: inherit;
+			overflow-y: inherit;
+			margin-left: 0;
+		}
+	}
+	&__content-item {
+		margin-left: 29px;
+		@media (max-width: 767.98px) {
+			margin-left: 0;
+		}
 	}
 }
 
 .account {
 	margin: 50px 0 80px 0;
 	display: flex;
-	justify-content: space-between;
 	width: 100%;
 	@media (max-width: 767.98px) {
 		flex-direction: column;
@@ -296,6 +305,16 @@
 	// display: flex;
 	// max-width: 824px;
 	// width: 100%;
+	// margin-right: 150px;
+	// @media (max-width: 1199.98px) {
+	// 	margin-right: 100px;
+	// }
+	// @media (max-width: 1099.98px) {
+	// 	margin-right: 50px;
+	// }
+	// @media (max-width: 991.98px) {
+	// 	margin-right: 0;
+	// }
 	&__title {
 		margin-bottom: 69px;
 		@media (max-width: 991.98px) {
@@ -778,6 +797,16 @@
 .academy {
 	max-width: 824px;
 	width: 100%;
+	margin-right: 150px;
+	@media (max-width: 1199.98px) {
+		margin-right: 100px;
+	}
+	@media (max-width: 1099.98px) {
+		margin-right: 50px;
+	}
+	@media (max-width: 991.98px) {
+		margin-right: 0;
+	}
 	&__title {
 		margin-bottom: 45px;
 		@media (max-width: 991.98px) {
@@ -790,7 +819,6 @@
 	
 }
 
-//items-blog 
 .blogs {
 
 	.blog {
@@ -816,6 +844,120 @@
 				transform: rotate(0deg);
 			}
 			&:hover .blog__pic img{
+				transform: scale(1.05);
+			}
+		}
+		&__inner {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;		
+		}
+		&__box {
+			display: flex;
+			align-items: center;
+		}
+		&__pic {
+			max-width: 215px;
+			width: 100%;
+			max-height: 145px;
+			height: 100%;
+			object-fit: cover;
+			margin-left: 30px;
+			overflow: hidden;
+			& img {
+				transition: all .2s ease;
+			}
+			@media (max-width: 575.98px) {
+				max-width: 175px;
+				margin-left: 10px;
+			}
+		}
+		&__info-link {
+			max-width: 150px;
+			width: 100%;
+			word-break: break-word;
+			font-size: 12px;
+			line-height: 18px;
+			padding: 3px 20px;
+			background: #f5f5f5;
+			border-radius: 26px;
+			transition: all 0.2s ease;
+			&:hover {
+				background: #d8d8d8;
+			}
+			@media (max-width: 575.98px) {
+				font-size: 10px;
+				line-height: 15px;
+				margin-bottom: 7px;
+			}
+		}
+		&__info-title {
+			font-size: 24px;
+			line-height: 35px;
+			margin: 13px 0 36px 20px;
+			word-break: break-word;
+			@media (max-width: 575.98px) {
+				margin: 0 0 7px 0;
+				font-size: 16px;
+				line-height: 24px;
+			}
+		}
+		&__info-box {
+			display: flex;
+			align-items: center;
+			font-size: 14px;
+			line-height: 110%;
+			@media (max-width: 575.98px) {
+				font-size: 12px;
+				line-height: 18px;
+			}
+		}
+		&__info-box-menu {
+			margin-left: 22px;
+		}
+		&__info-box-time,
+		&__info-box-menu {
+			display: flex;
+			align-items: center;
+		}
+		&__info-box-icon {
+			font-size: 14px;
+		}
+		&__arrow-img {
+			width: 30px;
+			height: 32px;
+			transform: rotate(45deg);
+			transition: all .2s ease;
+		}
+	}
+}
+
+//items-blog 
+.live-box {
+
+	.live {
+		padding: 25px 0;
+		border-bottom: 1px solid #ECECEC;
+		&:last-child {
+			border: none;
+		}
+		@media (max-width: 575.98px) {
+			padding: 15px 0;
+			border: none;
+		}
+		@media (max-width: 359.98px) {
+			padding: 10px 0;
+		}
+		&__link {
+			cursor: pointer;
+			transition: all .2s ease;
+			&:hover .live__info-title {
+				text-decoration: underline;
+			}
+			&:hover .live__arrow-img {
+				transform: rotate(0deg);
+			}
+			&:hover .live__pic img{
 				transform: scale(1.05);
 			}
 		}
@@ -1060,11 +1202,19 @@
 		height: 107px;
 		object-fit: cover;
 		margin-bottom: 34px;
+		@media (max-width: 575.98px ) {
+			width: 70px;
+			height: 70px;
+			margin-bottom: 20px;
+		}
 	}
 	&__text {
 		word-wrap: break-word;
 		text-align: center;
 		line-height: 134.88%;
+		@media (max-width: 575.98px ) {
+			font-size: 14px;
+		}
 	}
 }
 /** KART ACADEMY STYLES end*/
@@ -1073,6 +1223,16 @@
 .products {
 	max-width: 824px;
 	width: 100%;
+	margin-right: 150px;
+	@media (max-width: 1199.98px) {
+		margin-right: 100px;
+	}
+	@media (max-width: 1099.98px) {
+		margin-right: 50px;
+	}
+	@media (max-width: 991.98px) {
+		margin-right: 0;
+	}
 	&__title {
 		margin-bottom: 50px;
 		@media (max-width: 991.98px) {
@@ -1141,22 +1301,23 @@
 
 .products-content {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
-	flex-wrap: nowrap;
-	@media (max-width: 819.98px) {
-		flex-wrap: wrap;
-	}
-	@media (max-width: 767.98px) {
-		flex-wrap: nowrap;
-	}
-	@media (max-width: 599.98px) {
-		justify-content: center;
-		flex-wrap: wrap;
-	}
+	flex-wrap: wrap;
+	// @media (max-width: 819.98px) {
+	// 	flex-wrap: wrap;
+	// }
+	// @media (max-width: 767.98px) {
+	// 	flex-wrap: nowrap;
+	// }
+	// @media (max-width: 599.98px) {
+	// 	justify-content: center;
+	// 	flex-wrap: wrap;
+	// }
 }
 
 .products-card {
+	display: none;
 	max-width: 255px;
 	width: 100%;
 	position: relative;
@@ -1244,7 +1405,7 @@
 	display: flex;
 	justify-content: flex-start;
 	margin-bottom: 76px;
-	@media (max-width:575.98px) { 
+	@media (max-width:767.98px) { 
 		justify-content: center;
 	}
 }
@@ -1267,10 +1428,27 @@
 	background-color: #79ae36;
 }
 
+.lock-btn {
+	cursor: default;
+	pointer-events: none;
+	opacity: .5;
+}
+
 // FAVORITE PRODUCTS EMPTY STYLES start
 .products-empty {
+	max-width: 824px;
 	width: 100%;
 	display: flex;
+	margin-right: 150px;
+	@media (max-width: 1199.98px) {
+		margin-right: 100px;
+	}
+	@media (max-width: 1099.98px) {
+		margin-right: 50px;
+	}
+	@media (max-width: 991.98px) {
+		margin-right: 0;
+	}
 	&__inner {
 		display: block;
 		width: 100%;
@@ -1317,6 +1495,16 @@
 .outlet {
 	max-width: 824px;
 	width: 100%;
+	margin-right: 150px;
+	@media (max-width: 1199.98px) {
+		margin-right: 100px;
+	}
+	@media (max-width: 1099.98px) {
+		margin-right: 50px;
+	}
+	@media (max-width: 991.98px) {
+		margin-right: 0;
+	}
 	&__title {
 		margin-bottom: 50px;
 		@media (max-width: 991.98px) {
@@ -1331,12 +1519,15 @@
 
 .diamonds {
 	&__points {
+		position: sticky;
+		top: -1px;
 		display: flex;
 		align-items:center;
 		justify-content: flex-start;
 		font-size: 36px;
 		line-height: 134.88%;
 		margin-bottom: 45px;
+		background: #fff;
 		@media (max-width: 575.98px) {
 			font-size: 	28px;
 			margin-bottom: 25px;
@@ -1378,6 +1569,9 @@
 		}
 	}
 	&__list-top {
+		position: sticky;
+		top: 47px;
+		background: #fff;
 		display: grid;
 		grid-template-columns: 1fr 1fr 2fr .6fr;
 		grid-template-rows: 1fr;
@@ -1458,7 +1652,8 @@
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-		gap: 25px;
+		gap: 10px;
+		padding: 15px 0;
 	}
 	&__item {
 		max-width: 396px;
@@ -1602,11 +1797,19 @@
 		height: 107px;
 		object-fit: cover;
 		margin-bottom: 34px;
+		@media (max-width: 575.58px) {
+			width: 70px;
+			height: 70px;
+			margin-bottom: 20px;
+		}
 	}
 	&__text {
 		word-wrap: break-word;
 		text-align: center;
 		line-height: 134.88%;
+		@media (max-width: 575.58px) {
+			font-size: 14px;
+		}
 	}
 }
 /** INFORMATION ABOUT OUTLETS + COUPONS STYLES end */
@@ -1616,6 +1819,13 @@
 .protocol {
 	max-width: 824px;
 	width: 100%;
+	margin-right: 150px;
+	@media (max-width: 1199.98px) {
+		margin-right: 50px;
+	}
+	@media (max-width: 991.98px) {
+		margin-right: 0;
+	}
 	&__title {
 		margin-bottom: 50px;
 		@media (max-width: 991.98px) {
@@ -1855,11 +2065,19 @@
 		height: 107px;
 		object-fit: cover;
 		margin-bottom: 34px;
+		@media (max-width: 575.58px) {
+			width: 70px;
+			height: 70px;
+			margin-bottom: 20px;
+		}
 	}
 	&__text {
 		word-wrap: break-word;
 		text-align: center;
 		line-height: 134.88%;
+		@media (max-width: 575.58px) {
+			font-size: 14px;
+		}
 	}
 }
 /** PROTOCOLS STYLES end */
