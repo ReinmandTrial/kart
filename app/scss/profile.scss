@@ -89,8 +89,7 @@
 		font-size: 24px;
 	}
 }
-
-
+//tooltip 
 .prompt {
 	display: none;
 	position: absolute;
@@ -106,7 +105,6 @@
 	color: #8dc349;
 	padding: 12px 26px;
 }
-
 .prompt.active {
 	display: block;
 }
@@ -420,8 +418,6 @@
 		align-items: center;
 	}
 	&__trigger-icon img{
-		width: 32px;
-		height: 30px;
 		transition: .3s all ease;
 	}
 	&__content {
