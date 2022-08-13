@@ -1,29 +1,9 @@
 
-// // Аккордеон
-// function accordion() {
-// 	const items = document.querySelectorAll('.accord__trigger')
-// 	items.forEach(item => {
-// 			item.addEventListener('click', () => {
-// 					const parent = item.parentNode
-// 					if (parent.classList.contains('active')) {
-// 							parent.classList.remove('active')
-// 					} else {
-// 							document
-// 									.querySelectorAll('.accord__item')
-// 									.forEach(child => child.classList.remove('active'))   
-// 							parent.classList.add('active')
-// 					}
-// 			})
-// 	})
-// }
-// accordion() 
-
-
 //accordion mobile & desktop
 	$(".js-trigger").on("click", function(e) {
 
 		e.preventDefault();
-		var $this = $(this);
+		let $this = $(this);
 
 		if (!$this.hasClass("active")) {
 			$(".js-content").slideUp(400);
@@ -46,4 +26,13 @@ $('.products-content').ready(function(){
       $("#products-btn").addClass("lock-btn");
     }
   });
+});
+
+// tooltip copy id
+$('.sidebar__referal-link').on('click', function () {
+	$('.prompt').fadeIn('active');
+
+	setTimeout(function() {
+    $(".prompt").fadeOut('active');
+	}, 3000);
 });
