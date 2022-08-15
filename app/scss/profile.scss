@@ -48,26 +48,26 @@
 			}
 		}
 	}
-	&__content {
-		margin-top: 15px;
-		max-height: 525px;
-		overflow-y: auto;
-		margin-right: -45px;
-		transform: scale(-1);
-		@media (max-width: 767.98px) {
-			margin-top: 0;
-		}
-		@media (max-width: 575.98px) {
-			margin-right: -30px;
-		}
-	}
-	&__content-item {
-		margin-left: 15px;
-		transform: scale(-1);
-		@media (max-width: 767.98px) {
-			margin-left: 0;
-		}
-	}
+	// &__content {
+	// 	margin-top: 15px;
+	// 	max-height: 525px;
+	// 	overflow-y: auto;
+	// 	margin-right: -45px;
+	// 	transform: scale(-1);
+	// 	@media (max-width: 767.98px) {
+	// 		margin-top: 0;
+	// 	}
+	// 	@media (max-width: 575.98px) {
+	// 		margin-right: -30px;
+	// 	}
+	// }
+	// &__content-item {
+	// 	margin-left: 15px;
+	// 	transform: scale(-1);
+	// 	@media (max-width: 767.98px) {
+	// 		margin-left: 0;
+	// 	}
+	// }
 }
 
 .account {
@@ -1498,6 +1498,9 @@
 	@media (max-width: 991.98px) {
 		margin-right: 40px;
 	}
+	@media (max-width: 767.98px) {
+		margin-right: 0;
+	}
 	&__title {
 		margin-bottom: 50px;
 		@media (max-width: 991.98px) {
@@ -1635,15 +1638,30 @@
 .coupons {
 	max-height: 470px;
 	transform: scale(-1);
+	margin-top: 39px;
+	margin-right: -30px;
+	@media (max-width: 767.98px) {
+		margin-top: 30px;
+	}
+	@media (max-width: 575.98px) {
+		margin-top: 15px;
+	}
 	&__items {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: 24px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 24px;
 		padding: 15px 0;
 		transform: scale(-1);
-	}
+		@media (max-width: 991.98px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		@media (max-width: 767.98px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: 699.98px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+ 	}
 	&__item {
 		max-width: 396px;
 		width: 100%;
@@ -1677,13 +1695,25 @@
 		max-width: 284px;
 		width: 100%;
 		margin: 40px 47px 15px 0;
+		@media (max-width: 1099.98px) {
+			margin-right: 20px;
+		}
+		@media (max-width: 991.98px) {
+			margin-right: 47px;
+		}
+		@media (max-width: 767.98px) {
+			margin-right: 20px;
+		}
+		@media (max-width: 699.98px) {
+			margin-right: 40px;
+		}
 		@media (max-width: 419.98px) {
 			margin-right: 35px;
 		}
 		@media (max-width: 399.98px) {
-			max-width: 220px;
-			margin-right: 25px;
-			margin-top: 30px;
+			max-width: 240px;
+			margin-right: 15px;
+			margin-top: 25px;
 		}
 	}
 	
@@ -1702,6 +1732,7 @@
 		line-height: 110%;
 		margin-left: 17px;
 		@media (max-width: 575.98px) {
+			margin-left: 0;
 			font-size: 70px;
 		}
 	}
