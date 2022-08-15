@@ -1496,7 +1496,7 @@
 		margin-right: 50px;
 	}
 	@media (max-width: 991.98px) {
-		margin-right: 0;
+		margin-right: 40px;
 	}
 	&__title {
 		margin-bottom: 50px;
@@ -1633,6 +1633,7 @@
 
 //coupon items 
 .coupons {
+	max-height: 470px;
 	&__items {
 		display: flex;
 		justify-content: center;
