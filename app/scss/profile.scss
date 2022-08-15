@@ -1253,18 +1253,27 @@
 }
 
 .products-content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(255px, 1fr));
+	grid-gap: 30px;
+	margin-bottom: 49px;
+	@media(max-width: 1099.98px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@media(max-width: 991.98px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media(max-width: 575.98px) {
+		grid-gap: 8px;
+	}
 }
 
 .products-card {
 	display: none;
+	justify-self: center;
 	max-width: 255px;
 	width: 100%;
 	position: relative;
-	margin-bottom: 49px;
 	transition: all .2s ease;
 }
 
