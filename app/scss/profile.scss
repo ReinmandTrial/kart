@@ -28,7 +28,6 @@
 		margin-left: 15px;
 		margin-right: 19px;
 		color: #a7a7a7;
-		// padding: 0 10px;
 		cursor: pointer;
 		@media (max-width: 991.98px) {
 			font-size: 20px;
@@ -52,13 +51,15 @@
 		margin-top: 15px;
 		max-height: 525px;
 		overflow-y: auto;
-		margin-left: -29px;
+		margin-right: -45px;
+		transform: scale(-1);
 		@media (max-width: 767.98px) {
 			margin-top: 0;
 		}
 	}
 	&__content-item {
-		margin-left: 29px;
+		margin-left: 15px;
+		transform: scale(-1);
 		@media (max-width: 767.98px) {
 			margin-left: 0;
 		}
