@@ -1904,7 +1904,7 @@
 		direction: rtl;
 		@media (max-width: 991.98px) {
 			grid-template-columns: repeat(1, 1fr);
-			padding: 15px 10px;
+			padding: 15px 15px;
 		}
 		@media (max-width: 767.98px) {
 			grid-template-columns: repeat(2, 1fr);
@@ -1916,7 +1916,10 @@
 			grid-template-columns: repeat(1, 1fr);
 		}
 		@media (max-width: 575.98px) {
-			grid-template-columns: repeat(1, minmax(288px, 1fr));
+			grid-template-columns: repeat(1, 288px);
+		}
+		@media (max-width: 329.98px) {
+			grid-template-columns: repeat(1, 260px);
 		}
  	}
 	&__item {
