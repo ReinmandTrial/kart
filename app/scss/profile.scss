@@ -2098,6 +2098,12 @@
 			font-size: 14px;
 		}
 	}
+	&__text-link {
+		transition: all .2s ease;
+	}
+	&__text-link:hover {
+		color: #94C05B;
+	}
 }
 /** INFORMATION ABOUT OUTLETS + COUPONS STYLES end */
 
@@ -2392,6 +2398,12 @@
 		@media (max-width: 575.58px) {
 			font-size: 14px;
 		}
+	}
+	&__text-link {
+		transition: all .2s ease;
+	}
+	&__text-link:hover {
+		color: #94C05B;
 	}
 }
 /** PROTOCOLS STYLES end */
