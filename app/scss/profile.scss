@@ -1902,8 +1902,9 @@
 
 //coupon items 
 .coupons {
+	overflow-y: scroll;
 	max-height: 470px;
-	transform: scale(-1);
+	direction: ltr;
 	margin-top: 39px;
 	margin-right: -30px;
 	@media (max-width: 767.98px) {
@@ -1917,7 +1918,7 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 24px;
 		padding: 15px 0;
-		transform: scale(-1);
+		direction: rtl;
 		@media (max-width: 991.98px) {
 			grid-template-columns: repeat(1, 1fr);
 		}
