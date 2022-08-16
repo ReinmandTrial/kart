@@ -30,12 +30,15 @@
 		color: #a7a7a7;
 		cursor: pointer;
 		word-wrap:normal;
-		@media (max-width: 1099.98px) {
+		@media (max-width: 1299.98px) {
 			margin-right: 0;
 		}
+		@media (max-width: 1099.98px) {
+			font-size: 22px;
+		}
 		@media (max-width: 991.98px) {
-			font-size: 20px;
-			line-height: 110%;
+			font-size: 18px;
+			margin-left: 12px;
 		}
 		@media (max-width: 767.98px) {
 			padding: 0;
@@ -2103,6 +2106,7 @@
 		}
 	}
 	&__text-link {
+		font-weight: 400;
 		transition: all .2s ease;
 	}
 	&__text-link:hover {
