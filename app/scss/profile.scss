@@ -2149,6 +2149,9 @@
 	&__item:hover .protocol-box__text {
 		text-decoration: underline;
 	}
+	&__item-right {
+		padding-left: 10px;
+	}
 	&__item-left,
 	&__item-right{
 		display: flex;
@@ -2230,6 +2233,9 @@
 	&__item:hover .price-box__text {
 		text-decoration: underline;
 	}
+	&__item-right {
+		padding-left: 10px;
+	}
 	&__item-left,
 	&__item-right{
 		display: flex;
@@ -2298,7 +2304,7 @@
 	&__item:hover .marketing-box__text {
 		text-decoration: underline;
 	}
-	&__item-right{ 
+	&__item-right {
 		padding-left: 10px;
 	}
 	&__item-left,
