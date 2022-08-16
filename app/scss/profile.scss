@@ -728,7 +728,7 @@
 .blogs {
 	margin-top: 45px;
 	max-height: 500px;
-	transform: scale(-1);
+	direction: ltr;
 	margin-right: -30px;
 	@media (max-width: 767.98px) {
 		margin-top: 20px;
@@ -737,7 +737,7 @@
 		display: none;
 	}
 	.blog {
-		transform: scale(-1);
+		direction: rtl;
 		padding: 25px 0;
 		border-bottom: 1px solid #ECECEC;
 		&:last-child {
@@ -832,13 +832,13 @@
 .blogs-mobile {
 	margin-top: 20px;
 	max-height: 500px;
-	transform: scale(-1);
+	direction: ltr;
 	margin-right: -30px;
 	@media(min-width: 575.98px) {
 		display: none;
 	}
 	.blog-mobile{
-		transform: scale(-1);
+		direction: rtl;
 		padding-bottom: 35px;
 		&__inner {
 			max-width: 288px;
@@ -911,7 +911,7 @@
 .lives {
 	margin-top: 45px;
 	max-height: 500px;
-	transform: scale(-1);
+	direction: ltr;
 	margin-right: -30px;
 	@media (max-width: 767.98px) {
 		margin-top: 20px;
@@ -920,7 +920,7 @@
 		display: none;
 	}
 	.live {
-		transform: scale(-1);
+		direction: rtl;
 		padding: 25px 0;
 		border-bottom: 1px solid #ECECEC;
 		&:last-child {
@@ -1042,13 +1042,13 @@
 .lives-mobile {
 	margin-top: 20px;
 	max-height: 500px;
-	transform: scale(-1);
+	direction: ltr;
 	margin-right: -30px;
 	@media(min-width: 575.98px) {
 		display: none;
 	}
 	.live-mobile {
-		transform: scale(-1);
+		direction: rtl;
 		padding-bottom: 35px;
 		&__inner {
 			max-width: 288px;
@@ -1106,7 +1106,7 @@
 .videos {
 	margin-top: 45px;
 	max-height: 500px;
-	transform: scale(-1);
+	direction: ltr;
 	margin-right: -30px;
 	@media (max-width: 767.98px) {
 		margin-top: 20px;
@@ -1115,7 +1115,7 @@
 		display: none;
 	}
 	.video {
-		transform: scale(-1);
+		direction: rtl;
 		margin-top: 25px;
 		border-bottom: 1px solid #ECECEC;
 		&:last-child {
@@ -1279,13 +1279,13 @@
 .videos-mobile {
 	margin-top: 20px;
 	max-height: 500px;
-	transform: scale(-1);
+	direction: ltr;
 	margin-right: -30px;
 	@media (min-width: 575.98px) {
 		display: none;
 	}
 	.video-mobile {
-		transform: scale(-1);
+		direction: rtl;
 		margin-top: 25px;
 		@media (max-width: 575.98px) {
 			margin-top: 10px;
@@ -1770,8 +1770,6 @@
 		margin-top: 30px;
 	}
 	&__points {
-		position: sticky;
-		top: -1px;
 		display: flex;
 		align-items:center;
 		justify-content: flex-start;
@@ -1917,10 +1915,11 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 24px;
-		padding: 15px 0;
+		padding: 15px 20px;
 		direction: rtl;
 		@media (max-width: 991.98px) {
 			grid-template-columns: repeat(1, 1fr);
+			padding: 15px 10px;
 		}
 		@media (max-width: 767.98px) {
 			grid-template-columns: repeat(2, 1fr);
