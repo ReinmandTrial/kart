@@ -1908,6 +1908,12 @@
 		@media (max-width: 699.98px) {
 			grid-template-columns: repeat(1, 1fr);
 		}
+		@media (max-width: 699.98px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		@media (max-width: 575.98px) {
+			grid-template-columns: repeat(1, minmax(288px, 1fr));
+		}
  	}
 	&__item {
 		max-width: 396px;
@@ -1954,13 +1960,13 @@
 		@media (max-width: 699.98px) {
 			margin-right: 40px;
 		}
+		@media (max-width: 575.98px) {
+			max-width: 210px;
+			margin-right: 33px;
+			margin-top: 29px;
+		}
 		@media (max-width: 419.98px) {
 			margin-right: 35px;
-		}
-		@media (max-width: 399.98px) {
-			max-width: 240px;
-			margin-right: 15px;
-			margin-top: 25px;
 		}
 	}
 	
@@ -1971,6 +1977,9 @@
 		padding-bottom: 25px;
 		border-bottom: 1px solid #E3E3E3;
 		margin-bottom: 13px;
+		@media (max-width: 575.98px) {
+			padding-bottom: 19px;
+		}
 	}
 	
 	&__number {
@@ -1980,7 +1989,7 @@
 		margin-left: 17px;
 		@media (max-width: 575.98px) {
 			margin-left: 0;
-			font-size: 70px;
+			font-size: 59.943px;
 		}
 	}
 	
@@ -2011,7 +2020,7 @@
 		font-size: 30px;
 		line-height: 135%;
 		@media (max-width: 575.98px) {
-			font-size: 24px;
+			font-size: 21.2154px;
 		}
 	}
 	
@@ -2019,11 +2028,18 @@
 		font-size: 12px;
 		line-height: 135%;
 		margin-bottom: 10px;
+		@media(max-width: 575.98px) {
+			font-size: 8.64846px;
+			margin-bottom: 7px;
+		}
 	}
 	 
 	&__article {
 		font-size: 12px;
 		line-height: 135%;
+		@media(max-width: 575.98px) {
+			font-size: 8.64846px;
+		}
 	}
 	
 	&__date {
@@ -2031,6 +2047,9 @@
 		justify-content: center;
 		align-items: center;
 		font-size: 14px;
+		@media(max-width: 575.98px) {
+			font-size: 10.1878px;
+		}
 	}
 	
 	&__date-from {
