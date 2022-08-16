@@ -2123,11 +2123,13 @@
 		margin-right: 0;
 	}
 	&__title {
+		margin-top: 50px;
 		margin-bottom: 50px;
 		@media (max-width: 991.98px) {
 			margin-bottom: 40px;
 		}
 		@media (max-width: 575.98px) {
+			margin-top: 0;
 			margin-bottom: 26px;
 		}
 	}
