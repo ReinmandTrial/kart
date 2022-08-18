@@ -1727,7 +1727,7 @@
 
 /** INFORMATION ABOUT OUTLETS + COUPONS STYLES start */
 .outlet {
-	max-width: 824px;
+	max-width: 864px;
 	width: 100%;
 	margin-right: 150px;
 	@media (max-width: 1199.98px) {
@@ -1891,7 +1891,7 @@
 
 //coupon items 
 .coupons {
-	overflow-y: scroll;
+	// overflow-y: scroll;
 	max-height: 470px;
 	direction: ltr;
 	margin-top: 39px;
@@ -1903,13 +1903,14 @@
 		margin-top: 15px;
 	}
 	&__items {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		gap: 24px;
-		// display: grid;
-		// grid-template-columns: repeat(2, 1fr);
-		// grid-gap: 24px;
+		// display: flex;
+		// flex-wrap: wrap;
+		// justify-content: flex-start;
+		// gap: 24px;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(288px, 1fr));
+		grid-template-rows: repeat(auto, minmax(146px, 1fr));
+		grid-gap: 24px;
 		padding: 15px 20px;
 		direction: rtl;
 		// @media (max-width: 991.98px) {
@@ -1934,11 +1935,12 @@
  	}
 	&__item {
 		max-width: 396px;
-		width: 100%;
+		// width: 100%;
 		position: relative;
 		overflow: hidden;
 		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 		cursor: pointer;
+		padding: 2.4rem 2.9rem .9rem 0;
 	}
 	&__item--circle {
 		position: absolute;
@@ -1962,30 +1964,34 @@
 		border: 1px dashed #ececec;
 	}
 	&__content {
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: center;
+		// align-items: center;
 		max-width: 284px;
-		width: 100%;
-		margin: 40px 47px 15px 0;
+		// width: 100%;
+		// margin: 40px 47px 15px 0;
 		word-break: break-all;
-		@media (max-width: 1099.98px) {
-			margin-right: 20px;
-		}
-		@media (max-width: 991.98px) {
-			margin-right: 47px;
-		}
-		@media (max-width: 767.98px) {
-			margin-right: 20px;
-		}
-		@media (max-width: 699.98px) {
-			margin-right: 40px;
-		}
-		@media (max-width: 575.98px) {
-			max-width: 210px;
-			margin-right: 33px;
-			margin-top: 29px;
-		}
-		@media (max-width: 419.98px) {
-			margin-right: 35px;
-		}
+		// @media (max-width: 1099.98px) {
+		// 	margin-right: 20px;
+		// }
+		// @media (max-width: 991.98px) {
+		// 	margin-right: 47px;
+		// }
+		// @media (max-width: 767.98px) {
+		// 	margin-right: 20px;
+		// }
+		// @media (max-width: 699.98px) {
+		// 	margin-right: 40px;
+		// }
+		// @media (max-width: 575.98px) {
+		// 	max-width: 210px;
+		// 	margin-right: 33px;
+		// 	margin-top: 29px;
+		// }
+		// @media (max-width: 419.98px) {
+		// 	margin-right: 35px;
+		// }
 	}
 	
 	&__box {
