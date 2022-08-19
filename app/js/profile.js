@@ -36,3 +36,12 @@ $('.sidebar__referal-link').on('click', function () {
     $(".prompt").fadeOut('active');
 	}, 3000);
 });
+
+// tooltip info id
+$( ".sidebar__points-icon" ).mouseenter(function() {
+	$('.sidebar__points-info').fadeIn('active');
+});
+
+$( ".sidebar__points-icon" ).mouseleave(function() {
+	$('.sidebar__points-info').fadeOut('active');
+});
