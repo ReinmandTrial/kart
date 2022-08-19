@@ -845,14 +845,14 @@
 
 .blogs-mobile {
   margin-top: 20px;
-  max-height: 500px;
-  direction: ltr;
-  margin-right: -30px;
+  // max-height: 500px;
+  // direction: ltr;
+  // margin-right: -30px;
   @media (min-width: 575.98px) {
     display: none;
   }
   .blog-mobile {
-    direction: rtl;
+    // direction: rtl;
     padding-bottom: 35px;
     &__inner {
       max-width: 288px;
@@ -1020,14 +1020,14 @@
 
 .lives-mobile {
   margin-top: 20px;
-  max-height: 500px;
-  direction: ltr;
-  margin-right: -30px;
+  // max-height: 500px;
+  // direction: ltr;
+  // margin-right: -30px;
   @media (min-width: 575.98px) {
     display: none;
   }
   .live-mobile {
-    direction: rtl;
+    // direction: rtl;
     padding-bottom: 35px;
     &__inner {
       max-width: 288px;
@@ -1083,12 +1083,12 @@
 
 //items-video
 .videos {
+	overflow-y: scroll;
   margin-top: 45px;
   max-height: 470px;
   direction: ltr;
   margin-right: -30px;
   @media (max-width: 767.98px) {
-		margin-right: 0;
 		max-height: 100%;
     margin-top: 20px;
   }
@@ -1096,6 +1096,8 @@
     display: none;
   }
   .video {
+		overflow-x: hidden;
+		overflow-y: scroll;
     direction: rtl;
     margin-top: 25px;
     border-bottom: 1px solid #ececec;
@@ -1259,14 +1261,14 @@
 
 .videos-mobile {
   margin-top: 20px;
-  max-height: 500px;
-  direction: ltr;
-  margin-right: -30px;
+  // max-height: 500px;
+  // direction: ltr;
+  // margin-right: -30px;
   @media (min-width: 575.98px) {
     display: none;
   }
   .video-mobile {
-    direction: rtl;
+    // direction: rtl;
     margin-top: 25px;
     @media (max-width: 575.98px) {
       margin-top: 10px;
