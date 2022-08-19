@@ -41,7 +41,6 @@ $('.sidebar__referal-link').on('click', function () {
 $( ".sidebar__points-icon" ).mouseenter(function() {
 	$('.sidebar__points-info').fadeIn('active');
 });
-
 $( ".sidebar__points-icon" ).mouseleave(function() {
 	$('.sidebar__points-info').fadeOut('active');
 });
