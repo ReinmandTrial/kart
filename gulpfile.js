@@ -89,7 +89,7 @@ function build() {
 
 function watching() {
   watch(['app/scss/style.scss'], styles);
-  watch(['app/scss/search.scss'], stylesProfile);
+  watch(['app/scss/search.scss'], stylesSearch);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/*.html']).on('change', browserSync.reload);
 }
