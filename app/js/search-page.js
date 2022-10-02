@@ -1,21 +1,29 @@
 const swiper = new Swiper('.no-search__slider ', {
   // Optional parameters
-	slidesPerView: 5,
+	slidesPerView: 2,
 	slidesPerGroup: 1,
 	// centeredSlides: true,
 	loop: true,
-	spaceBetween: 30,
-	// watchOverflow: true,
-	// observer: true,
-  //     observeParents: true,
-  // If we need pagination
+	spaceBetween: 15,
+	breakpoints: {
+    600: {
+      slidesPerView: 2,
+			spaceBetween: 30,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+		1100: {
+      slidesPerView: 4,
+    },
+  },
   pagination: {
     el: '.no-search__slider-pagination',
 		clickable: true,
   },
 
 	autoplay: {
-		delay: 3000,
+		delay: 5000,
 	},
 
   // Navigation arrows
@@ -23,6 +31,7 @@ const swiper = new Swiper('.no-search__slider ', {
     nextEl: '.no-search__slider-button-next',
     prevEl: '.no-search__slider-button-prev',
   },
+
 });
 
 
