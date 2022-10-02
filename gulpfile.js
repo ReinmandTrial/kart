@@ -45,7 +45,8 @@ function scripts() {
     'node_modules/aos/dist/aos.js',
     'app/js/jquery.mCustomScrollbar.concat.min.js',
     'app/js/main.js',
-    'app/js/profile.js'
+    'app/js/profile.js',
+		'app/js/search-page.js'
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
@@ -64,10 +65,10 @@ function styles() {
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
-function stylesProfile() {
-  return src('app/scss/profile.scss')
+function stylesSearch() {
+  return src('app/scss/search.scss')
     .pipe(scss({ outputStyle: 'compressed' }))
-    .pipe(concat('profile.min.css'))
+    .pipe(concat('search.min.css'))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 version'],
       grid: true
@@ -88,13 +89,13 @@ function build() {
 
 function watching() {
   watch(['app/scss/style.scss'], styles);
-  watch(['app/scss/profile.scss'], stylesProfile);
+  watch(['app/scss/search.scss'], stylesSearch);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/*.html']).on('change', browserSync.reload);
 }
 
 exports.styles = styles;
-exports.stylesProfile = stylesProfile;
+exports.stylesSearch = stylesSearch;
 exports.watching = watching;
 exports.browsersync = browsersync;
 exports.scripts = scripts;
@@ -102,6 +103,6 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(stylesProfile, styles, scripts, browsersync, watching);
+exports.default = parallel(stylesSearch, styles, scripts, browsersync, watching);
 
 
