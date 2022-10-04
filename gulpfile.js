@@ -46,7 +46,8 @@ function scripts() {
     'app/js/jquery.mCustomScrollbar.concat.min.js',
     'app/js/main.js',
     'app/js/profile.js',
-		'app/js/search-page.js'
+		'app/js/search-page.js',
+		'app/js/digital.js',
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
@@ -65,10 +66,10 @@ function styles() {
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
-function stylesSearch() {
-  return src('app/scss/search.scss')
+function stylesDigital() {
+  return src('app/scss/digital.scss')
     .pipe(scss({ outputStyle: 'compressed' }))
-    .pipe(concat('search.min.css'))
+    .pipe(concat('digital.min.css'))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 version'],
       grid: true
@@ -89,13 +90,13 @@ function build() {
 
 function watching() {
   watch(['app/scss/style.scss'], styles);
-  watch(['app/scss/search.scss'], stylesSearch);
+  watch(['app/scss/digital.scss'], stylesDigital);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/*.html']).on('change', browserSync.reload);
 }
 
 exports.styles = styles;
-exports.stylesSearch = stylesSearch;
+exports.stylesDigital = stylesDigital;
 exports.watching = watching;
 exports.browsersync = browsersync;
 exports.scripts = scripts;
@@ -103,6 +104,6 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(stylesSearch, styles, scripts, browsersync, watching);
+exports.default = parallel(stylesDigital, styles, scripts, browsersync, watching);
 
 
