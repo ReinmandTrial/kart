@@ -78,6 +78,18 @@ function stylesDigital() {
     .pipe(browserSync.stream())
 }
 
+function stylesSearch() {
+  return src('app/scss/search.scss')
+    .pipe(scss({ outputStyle: 'compressed' }))
+    .pipe(concat('search.min.css'))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 version'],
+      grid: true
+    }))
+    .pipe(dest('app/css'))
+    .pipe(browserSync.stream())
+}
+
 function build() {
   return src([
     'app/css/style.min.css',
@@ -91,11 +103,13 @@ function build() {
 function watching() {
   watch(['app/scss/style.scss'], styles);
   watch(['app/scss/digital.scss'], stylesDigital);
+	watch(['app/scss/search.scss'], stylesSearch);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/*.html']).on('change', browserSync.reload);
 }
 
 exports.styles = styles;
+exports.stylesSearch = stylesSearch;
 exports.stylesDigital = stylesDigital;
 exports.watching = watching;
 exports.browsersync = browsersync;
@@ -104,6 +118,6 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(stylesDigital, styles, scripts, browsersync, watching);
+exports.default = parallel(stylesSearch, stylesDigital, styles, scripts, browsersync, watching);
 
 
