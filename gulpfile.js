@@ -38,6 +38,8 @@ function images() {
     .pipe(dest('dist/images'))
 }
 
+/* 'app/js/profile.js',
+		'app/js/search-page.js', */
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
@@ -45,8 +47,6 @@ function scripts() {
     'node_modules/aos/dist/aos.js',
     'app/js/jquery.mCustomScrollbar.concat.min.js',
     'app/js/main.js',
-    'app/js/profile.js',
-		'app/js/search-page.js',
 		'app/js/digital.js',
   ])
     .pipe(concat('main.min.js'))
