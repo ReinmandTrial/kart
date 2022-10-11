@@ -711,9 +711,9 @@
 						<div class="container">
 							<div class="digital-sale-slider__inner">
 								<h2 class="slider__title">הדרכות מומלצות</h2>
-								<div class="slider">
-									<div class="slider-wrapper">
-										<div class="slider-slide">
+								<div class="slider swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
 											<div class="card-slide">
 												<a class="card-slide__link" href="#">
 													<div class="card-slide__previous">
@@ -749,7 +749,7 @@
 												</a>
 											</div>
 										</div>
-										<div class="slider-slide">
+										<div class="swiper-slide">
 											<div class="card-slide">
 												<a class="card-slide__link" href="#">
 													<div class="card-slide__previous">
@@ -785,7 +785,7 @@
 												</a>
 											</div>
 										</div>
-										<div class="slider-slide">
+										<div class="swiper-slide">
 											<div class="card-slide">
 												<a class="card-slide__link" href="#">
 													<div class="card-slide__previous">
@@ -821,7 +821,7 @@
 												</a>
 											</div>
 										</div>
-										<div class="slider-slide">
+										<div class="swiper-slide">
 											<div class="card-slide">
 												<a class="card-slide__link" href="#">
 													<div class="card-slide__previous">
@@ -857,7 +857,7 @@
 												</a>
 											</div>
 										</div>
-										<div class="slider-slide">
+										<div class="swiper-slide">
 											<div class="card-slide">
 												<a class="card-slide__link" href="#">
 													<div class="card-slide__previous">
@@ -894,11 +894,15 @@
 											</div>
 										</div>
 									</div>
-									<div class="slider-pagination"></div>
+									<div class="slider-pagination swiper-pagination"></div>
 
 									<!-- If we need navigation buttons -->
-									<div class="slider-button-prev"></div>
-									<div class="slider-button-next"></div>
+									<div class="slider-button-prev button-prev swiper-button-prev">
+										<i class="button-prev_icon icon icon-triangle-left"></i>
+									</div>
+									<div class="slider-button-next button-next swiper-button-next">
+										<i class="button-next_icon icon icon-triangle-right"></i>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -924,8 +928,8 @@
 
 
    <!-- SCRIPTS start  -->
-   <!-- <script src="js/main.min.js"></script> -->
-	 <script src="js/digital.js"></script>
+   <script src="js/main.min.js"></script>
+	 <!-- <script src="js/digital.js"></script> -->
 </body>
 
 </html>

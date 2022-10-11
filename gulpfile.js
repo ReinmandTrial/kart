@@ -38,7 +38,7 @@ function images() {
     .pipe(dest('dist/images'))
 }
 
-/* 'app/js/profile.js',
+/*  'app/js/profile.js',
 		'app/js/search-page.js', */
 function scripts() {
   return src([
@@ -46,7 +46,7 @@ function scripts() {
     'node_modules/swiper/swiper-bundle.min.js',
     'node_modules/aos/dist/aos.js',
     'app/js/jquery.mCustomScrollbar.concat.min.js',
-    'app/js/main.js',
+		'app/js/main.js',
 		'app/js/digital.js',
   ])
     .pipe(concat('main.min.js'))
