@@ -1,39 +1,3 @@
-
-// function tabs(headerSelector, tabSelector, contentSelector, activeClass, display='flex') {
-// 	const header = document.querySelector(headerSelector),
-// 				tab = document.querySelectorAll(tabSelector),
-// 				content = document.querySelectorAll(contentSelector)
-// 	function hideTabContent() {
-// 			content.forEach(item => {
-// 					item.style.display = 'none'
-// 			});
-// 			tab.forEach(item => {
-// 					item.classList.remove(activeClass)
-// 			});
-// 	}
-// 	function showTabContent(i = 0) {
-// 		 content[i].style.display = display
-// 		 tab[i].classList.add(activeClass)
-// 	}
-// 	hideTabContent()
-// 	showTabContent()
-// 	header.addEventListener('click', e => {
-// 			const target = e.target
-// 			if (target.classList.contains(tabSelector.replace(/\./, '')) || 
-// 			target.parentNode.classList.contains(tabSelector.replace(/\./, ''))) {
-// 					tab.forEach((item, i) => {
-// 							if ( target == item || target.parentNode == item ) {
-// 									hideTabContent()
-// 									showTabContent(i)
-// 							}
-// 					});
-// 			}
-// 	})
-// }
-
-// tabs( '.tabs-digital__header' ,'.tabs-digital__header-item', '.tabs-digital__content-item', 'active');
-
-
 function tabs(headerSelector, tabSelector, contentSelector, activeClass, display='flex') {
 	const header = document.querySelector(headerSelector),
 				tab = document.querySelectorAll(tabSelector),
@@ -66,7 +30,7 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass, display
 	})
 }
 
-tabs( '.js-tabs-header' ,'.js-tabs-header-item', '.js-tabs-content-item', 'active')
+tabs( '.js-tabs-header' ,'.js-tabs-header-item', '.js-tabs-content-item', 'active');
 tabs( '.location__tabs-header' ,'.location__tabs-header-item', '.location__tabs-content-item', 'location__tabs-header-item--active');
 
 
@@ -88,9 +52,13 @@ function accordion() {
 }
 accordion();
 
-const swiper = new Swiper('.slider', {
+const swiperBanner = new Swiper('.slider', {
   // Optional parameters
-  loop: true,
+	slidesPerView: 3,
+	slidesPerGroup: 1,
+	// centeredSlides: true,
+	loop: true,
+	spaceBetween: 30,
 
   // If we need pagination
   pagination: {
@@ -102,5 +70,43 @@ const swiper = new Swiper('.slider', {
     nextEl: '.slider-button-next',
     prevEl: '.slider-button-prev',
   },
-	
 });
+
+const swiperReviews = new Swiper('.reviews-slider', {
+  // Optional parameters
+	slidesPerView: 3,
+	// centeredSlides: true,
+	loop: true,
+	spaceBetween: 100,
+
+  // If we need pagination
+  pagination: {
+    el: '.reviews-slider__pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.reviews-slider__btn-next',
+    prevEl: '.reviews-slider__btn-prev',
+  },
+});
+
+// const swiperRewies = new Swiper('.product__slider', {
+//   // Optional parameters
+// 	slidesPerView: 3,
+// 	slidesPerGroup: 1,
+// 	// centeredSlides: true,
+// 	loop: true,
+// 	spaceBetween: 100,
+
+//   // If we need pagination
+//   pagination: {
+//     el: '.reviews-slider__pagination',
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.reviews-slider__btn-next',
+//     prevEl: '.reviews-slider__btn-prev',
+//   },
+// });
