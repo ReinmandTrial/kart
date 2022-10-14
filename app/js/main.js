@@ -159,7 +159,9 @@ jQuery(document).ready(function ($) {
 
 	// popup media
 	$('.page-media__item').on('click', function () {
-		$('.popup-media').fadeIn(200);
+		let id = $(this).attr('data-id')
+
+		$('#' + id).fadeIn(200);
 	})
 	// popup media end
 
