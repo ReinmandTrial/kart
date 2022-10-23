@@ -21,11 +21,11 @@ jQuery(document).ready(function ($) {
 
 	const anchor = document.querySelector('.btn-top')
 
-	if(anchor){ 
-			anchor.addEventListener('click', function (e) {
-				e.preventDefault()
+	if (anchor) {
+		anchor.addEventListener('click', function (e) {
+			e.preventDefault()
 
-				const blockID = anchor.getAttribute('href').substr(1)
+			const blockID = anchor.getAttribute('href').substr(1)
 
 			document.getElementById(blockID).scrollIntoView({
 				behavior: 'smooth',
@@ -33,7 +33,7 @@ jQuery(document).ready(function ($) {
 			})
 		})
 	}
-	
+
 
 
 	let btnTop = document.querySelector('.btn-top')
@@ -1708,7 +1708,11 @@ jQuery(document).ready(function ($) {
 
 	// position for header dropdown
 	function setPos() {
-		let posFromLeft = document.querySelector('.dropdown-pos-from').getBoundingClientRect().right
+		let selectorPos = document.querySelector('.dropdown-pos-from')
+
+		if (!selectorPos) return
+
+		let posFromLeft = selectorPos.getBoundingClientRect().right
 
 		let rightFromContainer = (window.innerWidth - 1430) / 2
 		if (window.innerWidth < 1460) {
@@ -1765,7 +1769,9 @@ jQuery(document).ready(function ($) {
 	$(document).ready(function () {
 		var show = true;
 		var countbox = ".page-dimonds__amount dimonds-amount";
+		if (!document.querySelector('.dimonds-amount__num')) return
 		$('.dimonds-amount__num').css('opacity', '1');
+
 		$('.dimonds-amount__num').spincrement({
 			// thousandSeparator: "",
 			duration: 1200
@@ -1836,37 +1842,41 @@ jQuery(document).ready(function ($) {
 
 
 
-	$('#contact-form').validate({
-		rules: {
-			emailContact: {
-				required: true,
-				email: true
+	if (document.getElementById('contact-form')) {
+		console.log("🚀 ~ $('#contact-form')", $('#contact-form'))
+
+		$('#contact-form').validate({
+			rules: {
+				emailContact: {
+					required: true,
+					email: true
+				},
+				telContact: {
+					required: true,
+					minlength: 15
+				}
 			},
-			telContact: {
-				required: true,
-				minlength: 15
-			}
-		},
-		messages: {
-			emailContact: "אנא הזן כתובת דוא ל תקנית.",
-			telContact: "נא להזין לפחות 15 תווים."
-		},
-		errorPlacement: function (error, element) {
-			element.after(error);
-		},
-	});
+			messages: {
+				emailContact: "אנא הזן כתובת דוא ל תקנית.",
+				telContact: "נא להזין לפחות 15 תווים."
+			},
+			errorPlacement: function (error, element) {
+				element.after(error);
+			},
+		});
+	}
+	if (document.getElementById('nameContact')) {
+		$("#nameContact").attr('maxlength', '15');
 
-	$("#nameContact").attr('maxlength', '15');
-
-
-	$("#nameContact").on('input', function (e) {
-		this.value = this.value.replace(/[^a-z]/g, '');
-	});
-
-	$("#telContact").on('input', function (e) {
-		this.value = this.value.replace(/[^0-9+()-\^]/g, '');
-	});
-
+		$("#nameContact").on('input', function (e) {
+			this.value = this.value.replace(/[^a-z]/g, '');
+		});
+	}
+	if (document.getElementById('telContact')) {
+		$("#telContact").on('input', function (e) {
+			this.value = this.value.replace(/[^0-9+()-\^]/g, '');
+		});
+	}
 
 
 
@@ -1878,11 +1888,11 @@ jQuery(document).ready(function ($) {
 	// });
 
 	let policyItem = document.querySelectorAll('.page-private-policy__aside-item')
-	if(policyItem){
+	if (policyItem) {
 		let identif = '#policy-block'
 		let count = 1
 		policyItem.forEach(el => {
-			el.setAttribute('href',identif + '-'+count)
+			el.setAttribute('href', identif + '-' + count)
 			count++
 		});
 	}
@@ -1890,16 +1900,16 @@ jQuery(document).ready(function ($) {
 
 	let policyBlock = document.querySelector('.page-private-policy__post')
 	let policyBlockItem = policyBlock.querySelectorAll('.text-post__block .anchor')
-	if(policyBlockItem){
+	if (policyBlockItem) {
 		let identif = 'policy-block'
 		let count = 1
 		policyBlockItem.forEach(el => {
-			el.setAttribute('id',identif + '-'+count)
+			el.setAttribute('id', identif + '-' + count)
 			count++
 		});
 	}
 
-	const policyAnchor = document.querySelector('.anchor') 
+	const policyAnchor = document.querySelector('.anchor')
 
 	policyAnchor.addEventListener('click', function (e) {
 		e.preventDefault()
