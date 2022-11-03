@@ -49,16 +49,16 @@ jQuery(document).ready(function ($) {
 
 
 
-	$(document).on('scroll', function () {
-		toTop();
+	// $(document).on('scroll', function () {
+	// 	toTop();
 
-		if ($(this).scrollTop() > 32) {
-			$('.header').addClass('fixed-on');
-		}
-		else if ($(this).scrollTop() < 50) {
-			$('.header').removeClass('fixed-on');
-		}
-	})
+	// 	if ($(this).scrollTop() > 32) {
+	// 		$('.header').addClass('fixed-on');
+	// 	}
+	// 	else if ($(this).scrollTop() < 50) {
+	// 		$('.header').removeClass('fixed-on');
+	// 	}
+	// })
 
 	// burger
 
@@ -1759,7 +1759,7 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
-	///////Slider Banner Shop page
+	/////Slider Banner Shop page
 	const swiperShop = new Swiper('.shop-slider__container', {
 		speed: 400,
 		slidesPerView: 1,
@@ -1887,40 +1887,40 @@ jQuery(document).ready(function ($) {
 	// 	$('#preloader').fadeOut(400);
 	// });
 
-	let policyItem = document.querySelectorAll('.page-private-policy__aside-item')
-	if (policyItem) {
-		let identif = '#policy-block'
-		let count = 1
-		policyItem.forEach(el => {
-			el.setAttribute('href', identif + '-' + count)
-			count++
-		});
-	}
+	// let policyItem = document.querySelectorAll('.page-private-policy__aside-item')
+	// if (policyItem) {
+	// 	let identif = '#policy-block'
+	// 	let count = 1
+	// 	policyItem.forEach(el => {
+	// 		el.setAttribute('href', identif + '-' + count)
+	// 		count++
+	// 	});
+	// }
 
 
-	let policyBlock = document.querySelector('.page-private-policy__post')
-	let policyBlockItem = policyBlock.querySelectorAll('.text-post__block .anchor')
-	if (policyBlockItem) {
-		let identif = 'policy-block'
-		let count = 1
-		policyBlockItem.forEach(el => {
-			el.setAttribute('id', identif + '-' + count)
-			count++
-		});
-	}
+	// let policyBlock = document.querySelector('.page-private-policy__post')
+	// let policyBlockItem = policyBlock.querySelectorAll('.text-post__block .anchor')
+	// if (policyBlockItem) {
+	// 	let identif = 'policy-block'
+	// 	let count = 1
+	// 	policyBlockItem.forEach(el => {
+	// 		el.setAttribute('id', identif + '-' + count)
+	// 		count++
+	// 	});
+	// }
 
-	const policyAnchor = document.querySelector('.anchor')
+	// const policyAnchor = document.querySelector('.anchor')
 
-	policyAnchor.addEventListener('click', function (e) {
-		e.preventDefault()
+	// policyAnchor.addEventListener('click', function (e) {
+	// 	e.preventDefault()
 
-		let policyBlockID = policyAnchor.getAttribute('href').substr(1)
+	// 	let policyBlockID = policyAnchor.getAttribute('href').substr(1)
 
-		document.getElementById(blockID).scrollIntoView({
-			behavior: 'smooth',
-			block: 'start'
-		})
-	})
+	// 	document.getElementById(blockID).scrollIntoView({
+	// 		behavior: 'smooth',
+	// 		block: 'start'
+	// 	})
+	// })
 
 })
 
