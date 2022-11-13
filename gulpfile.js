@@ -46,6 +46,7 @@ function scripts() {
       'app/js/main.js',
       'app/js/academy.js',
       'app/js/discount-page.js',
+      'app/js/favorites-new.js',
    ])
       .pipe(concat('main.min.js'))
       .pipe(uglify())
@@ -101,6 +102,7 @@ function build() {
 function watching() {
    watch(['app/scss/style.scss'], styles);
    watch(['app/scss/discount-page.scss'], styles);
+   watch(['app/scss/favorites-new.scss'], styles);
    watch(['app/scss/academy.scss'], stylesAcademy);
    watch(['app/scss/search.scss'], stylesSearch);
    watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);

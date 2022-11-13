@@ -204,6 +204,20 @@
          transform: scale(1);
       }
    }
+   @keyframes noFavorite {
+      0% {
+         transform: translate(0px, 0px);
+      }
+      33% {
+         transform: translate(3px, 0px);
+      }
+      66% {
+         transform: translate(-3px, 0px);
+      }
+      100% {
+         transform: translate(0px, 0px);
+      }
+   }
    &__link {
       display: flex;
       flex-direction: column;
@@ -371,20 +385,6 @@
          visibility: hidden;
          font-size: 20px;
          transition: all 0.3s ease 0s;
-      }
-   }
-   @keyframes noFavorite {
-      0% {
-         transform: translate(0px, 0px);
-      }
-      33% {
-         transform: translate(3px, 0px);
-      }
-      66% {
-         transform: translate(-3px, 0px);
-      }
-      100% {
-         transform: translate(0px, 0px);
       }
    }
 }
