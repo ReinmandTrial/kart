@@ -29,17 +29,18 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass, display
       }
    });
 }
-function accordion(accItem, accBtn, body) {
+function spolers(accItem, accBtn, body) {
    const accItemEl = document.querySelectorAll('.' + accItem);
    if (accItemEl) {
       accItemEl.forEach((item) => {
          item.addEventListener('click', (el) => {
-            _slideToggleVinil(item.querySelector('.' + body));
-            if (el.target.classList.contains(accBtn) && !item.classList.contains('_active')) {
+            const spolerBody = item.querySelector('.' + body);
+            if (el.target.classList.contains(accBtn) && spolerBody.hasAttribute('hidden')) {
                item.classList.add('_active');
             } else {
                item.classList.remove('_active');
             }
+            _slideToggleVinil(spolerBody);
          });
       });
    }
@@ -93,7 +94,7 @@ const swiperRecordedReviews = new Swiper('.reviews-slider', {
    observer: true,
    observeParents: true,
    observeSlideChildren: true,
-   grabCursor: true,
+   // grabCursor: true,
 
    breakpoints: {
       320: {
@@ -193,8 +194,8 @@ if (copyBtn && copuLabel) {
 
 //========================================================================================================================================================
 tabs('.js-tabs-header', '.js-tabs-header-item', '.js-tabs-content-item', 'active', 'block');
-accordion('accordion-location__item', 'accordion-location__head', 'accordion-location__body');
-accordion('accordion-transport__item', 'accordion-transport__head', 'accordion-transport__body');
+spolers('accordion-location__item', 'accordion-location__head', 'accordion-location__body');
+spolers('accordion-transport__item', 'accordion-transport__head', 'accordion-transport__body');
 //========================================================================================================================================================
 const swiperLiveDown = new Swiper('.digital-sale-slider__slider', {
    loop: true,

@@ -816,6 +816,12 @@
       height: 54px;
       border-radius: 100%;
       background-color: #fff;
+      transition: all 0.3s ease 0s;
+      &:hover {
+         background-color: #94c05b;
+         color: #fff;
+         transition: all 0.3s ease 0s;
+      }
       @media (max-width: 575.98px) {
          width: 34px;
          height: 34px;
@@ -3527,7 +3533,7 @@
    }
 
    &__questions-accordion-item {
-      padding: 32px 0;
+      padding: 32px 0px 17px 0px;
       border-bottom: 1px solid #ececec;
       &:first-child {
          border-top: 1px solid #ececec;
@@ -3535,6 +3541,7 @@
    }
 
    &__questions-accordion-trigger {
+      margin-bottom: 15px;
       display: flex;
       align-items: center;
       cursor: pointer;
