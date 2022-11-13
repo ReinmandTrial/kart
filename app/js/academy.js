@@ -29,25 +29,18 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass, display
       }
    });
 }
-function accordion(accItem, accBtn) {
+function accordion(accItem, accBtn, body) {
    const accItemEl = document.querySelectorAll('.' + accItem);
    if (accItemEl) {
       accItemEl.forEach((item) => {
          item.addEventListener('click', (el) => {
+            _slideToggleVinil(item.querySelector('.' + body));
             if (el.target.classList.contains(accBtn) && !item.classList.contains('_active')) {
-               closeAllItems();
                item.classList.add('_active');
-               return;
-            }
-            if (el.target.classList.contains(accBtn) && item.classList.contains('_active')) {
+            } else {
                item.classList.remove('_active');
             }
          });
-      });
-   }
-   function closeAllItems() {
-      accItemEl.forEach((item) => {
-         item.classList.remove('_active');
       });
    }
 }
@@ -163,18 +156,11 @@ const recordFaqItems = document.querySelectorAll('.product-after__questions-acco
 if (recordFaqItems) {
    recordFaqItems.forEach((item) => {
       item.addEventListener('click', (el) => {
-         if (el.target.classList.contains('questions-accordion-trigger') && !item.classList.contains('_active')) {
-            closeAllFqa();
-            item.classList.add('_active');
-         } else {
-            item.classList.remove('_active');
+         if (el.target.classList.contains('questions-accordion-trigger')) {
+            _slideToggleVinil(item.querySelector('.questions-accordion-content__text'), 500);
+            item.classList.toggle('_active');
          }
       });
-   });
-}
-function closeAllFqa() {
-   recordFaqItems.forEach((item) => {
-      item.classList.remove('_active');
    });
 }
 //========================================================================================================================================================
@@ -206,9 +192,9 @@ if (copyBtn && copuLabel) {
 }
 
 //========================================================================================================================================================
-tabs('.js-tabs-header', '.js-tabs-header-item', '.js-tabs-content-item', 'active', 'grid');
-accordion('accordion-location__item', 'accordion-location__head');
-accordion('accordion-transport__item', 'accordion-transport__head');
+tabs('.js-tabs-header', '.js-tabs-header-item', '.js-tabs-content-item', 'active', 'block');
+accordion('accordion-location__item', 'accordion-location__head', 'accordion-location__body');
+accordion('accordion-transport__item', 'accordion-transport__head', 'accordion-transport__body');
 //========================================================================================================================================================
 const swiperLiveDown = new Swiper('.digital-sale-slider__slider', {
    loop: true,
@@ -242,3 +228,83 @@ const swiperLiveDown = new Swiper('.digital-sale-slider__slider', {
    },
 });
 //academy-live========================================================================================================================================================
+
+let _slideUpVinil = (target, duration = 500, showmore = 0) => {
+   if (!target.classList.contains('_slide')) {
+      target.classList.add('_slide');
+      target.style.transitionProperty = 'height, margin, padding';
+      target.style.transitionDuration = duration + 'ms';
+      target.style.height = `${target.offsetHeight}px`;
+      target.offsetHeight;
+      target.style.overflow = 'hidden';
+      target.style.height = showmore ? `${showmore}px` : `0px`;
+      target.style.paddingTop = 0;
+      target.style.paddingBottom = 0;
+      target.style.marginTop = 0;
+      target.style.marginBottom = 0;
+      window.setTimeout(() => {
+         target.hidden = !showmore ? true : false;
+         !showmore ? target.style.removeProperty('height') : null;
+         target.style.removeProperty('padding-top');
+         target.style.removeProperty('padding-bottom');
+         target.style.removeProperty('margin-top');
+         target.style.removeProperty('margin-bottom');
+         !showmore ? target.style.removeProperty('overflow') : null;
+         target.style.removeProperty('transition-duration');
+         target.style.removeProperty('transition-property');
+         target.classList.remove('_slide');
+         // Создаем событие
+         document.dispatchEvent(
+            new CustomEvent('slideUpDone', {
+               detail: {
+                  target: target,
+               },
+            })
+         );
+      }, duration);
+   }
+};
+let _slideDownVinil = (target, duration = 500, showmore = 0) => {
+   if (!target.classList.contains('_slide')) {
+      target.classList.add('_slide');
+      target.hidden = target.hidden ? false : null;
+      showmore ? target.style.removeProperty('height') : null;
+      let height = target.offsetHeight;
+      target.style.overflow = 'hidden';
+      target.style.height = showmore ? `${showmore}px` : `0px`;
+      target.style.paddingTop = 0;
+      target.style.paddingBottom = 0;
+      target.style.marginTop = 0;
+      target.style.marginBottom = 0;
+      target.offsetHeight;
+      target.style.transitionProperty = 'height, margin, padding';
+      target.style.transitionDuration = duration + 'ms';
+      target.style.height = height + 'px';
+      target.style.removeProperty('padding-top');
+      target.style.removeProperty('padding-bottom');
+      target.style.removeProperty('margin-top');
+      target.style.removeProperty('margin-bottom');
+      window.setTimeout(() => {
+         target.style.removeProperty('height');
+         target.style.removeProperty('overflow');
+         target.style.removeProperty('transition-duration');
+         target.style.removeProperty('transition-property');
+         target.classList.remove('_slide');
+         // Создаем событие
+         document.dispatchEvent(
+            new CustomEvent('slideDownDone', {
+               detail: {
+                  target: target,
+               },
+            })
+         );
+      }, duration);
+   }
+};
+let _slideToggleVinil = (target, duration = 500) => {
+   if (target.hidden) {
+      return _slideDownVinil(target, duration);
+   } else {
+      return _slideUpVinil(target, duration);
+   }
+};
