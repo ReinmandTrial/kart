@@ -1362,7 +1362,7 @@
          max-width: 24px;
       }
       a {
-         font-weight: 300;
+         font-weight: 200;
          &:hover {
             text-decoration: underline;
          }
@@ -1538,7 +1538,6 @@
    width: 100%;
    display: flex;
    justify-content: space-between;
-   align-items: center;
    gap: 30px;
    @media (max-width: 991.98px) {
       flex-direction: column-reverse;
@@ -1549,7 +1548,7 @@
    display: flex;
    justify-content: space-between;
    flex: 0 0 50%;
-   gap: 100px;
+   gap: 117px;
    @media (max-width: 1200px) {
       gap: 60px;
    }
@@ -1584,7 +1583,6 @@
 
    &__list-item {
       font-size: 16px;
-      padding-right: 22px;
       display: flex;
       gap: 10px;
       @media (max-width: 767.98px) {
@@ -2012,11 +2010,11 @@
       @media (max-width: 575.98px) {
          font-size: 16px;
       }
-      .icon {
-         font-size: 24px;
-         @media (max-width: 575.98px) {
-            font-size: 19px;
-         }
+      .icon-bus {
+         font-size: 17px;
+      }
+      .icon-parking {
+         font-size: 19px;
       }
 
       &.location__tabs-header-item--active {
@@ -2282,6 +2280,8 @@
 
 //========================================================================================================================================================
 .digital-sale-slider {
+   padding: 0px 15px;
+   margin: 0px -15px;
    &__inner {
       overflow: hidden;
       padding-bottom: 120px;
@@ -2311,7 +2311,7 @@
       transition: all 0.3s ease 0s;
       &:hover {
          transition: all 0.3s ease 0s;
-         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+         box-shadow: 0px 4px 20px rgb(0 0 0 / 8%);
       }
    }
    &__pagination {
@@ -3171,6 +3171,9 @@
    }
 
    &__pagination {
+      @media (min-width: 767.98px) {
+         display: none;
+      }
       display: flex;
       justify-content: center;
       gap: 10px;

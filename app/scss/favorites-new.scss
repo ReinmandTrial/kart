@@ -117,7 +117,7 @@
    transition: all 0.3s ease 0s;
    cursor: pointer;
    &:hover {
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.06);
       transition: all 0.3s ease 0s;
       .new-favorites-item__actions-block {
          transition: all 0.3s ease 0s;
@@ -156,9 +156,10 @@
    &._favorites {
       .new-favorites-item__add-to-favorites {
          animation: favorite 0.3s 1 ease-in-out;
+         background: #e64646;
          g {
-            fill: #000;
-            stroke: #000;
+            fill: #e64646;
+            stroke: #ffffff;
             transition: all 0.3s ease 0s;
          }
          &:hover {
@@ -291,7 +292,7 @@
             width: 16px;
          }
          g {
-            fill: #fff;
+            fill: #f5f5f5;
             stroke: #000;
             transition: all 0.3s ease 0s;
             @media (max-width: 767.98px) {
@@ -301,8 +302,10 @@
       }
       &:hover {
          background: #93c05b;
+         box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.06);
          g {
             stroke: #fff;
+            fill: #93c05b;
          }
       }
    }
@@ -323,6 +326,7 @@
       &:hover {
          background: #93c05b;
          transition: all 0.3s ease 0s;
+         box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.06);
          .icon {
             color: #fff;
             transition: all 0.3s ease 0s;
