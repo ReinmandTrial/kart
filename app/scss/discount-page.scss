@@ -1,5 +1,8 @@
+//COMMON========================================================================================================================================================
+
 .breadcrumb {
    display: flex;
+   font-size: 12px;
    &__item {
       cursor: pointer;
       &:not(:last-child) {
@@ -12,14 +15,16 @@
 
    &__link {
       &:hover {
-         text-decoration: underline;
+         color: #94c05b;
       }
    }
 }
+//COMMON========================================================================================================================================================
 .discount-top-line {
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
+   align-items: center;
    gap: 70px;
    @media (max-width: 991.98px) {
       flex-direction: column-reverse;
@@ -61,6 +66,7 @@
       font-weight: 300;
       font-size: 16px;
       transition: all 0.3s ease 0s;
+      text-transform: none;
       @media (max-width: 991.98px) {
          padding: 6px 8px;
          font-size: 12px;
@@ -85,21 +91,31 @@
       gap: 20px;
    }
    &__search-icon {
+      order: 1;
       color: #a7a7a7;
-      font-size: 18px;
+      font-size: 14px;
       display: flex;
       align-items: center;
       cursor: pointer;
+      position: relative;
+      top: -4px;
       @media (max-width: 991.98px) {
          font-size: 24px;
       }
    }
 
    &__input {
+      order: 2;
       width: 100%;
+      padding-bottom: 10px;
+      font-size: 17px;
+      &:focus ~ span {
+         color: #000;
+      }
    }
 
    &__close-icon {
+      order: 3;
       color: #a7a7a7;
       font-size: 12px;
       display: flex;
@@ -108,31 +124,12 @@
       visibility: hidden;
       transition: all 0.3s ease 0s;
       cursor: pointer;
+      position: relative;
+      top: -4px;
       &._active {
          opacity: 1;
          visibility: visible;
          transition: all 0.3s ease 0s;
-      }
-   }
-   &__label {
-      display: flex;
-      align-items: center;
-      position: absolute;
-      font-weight: 300;
-      font-size: 17px;
-      color: #a7a7a7;
-      top: 0px;
-      right: 24px;
-      transition: all 0.3s ease 0s;
-      pointer-events: none;
-      @media (max-width: 991.98px) {
-         right: 50px;
-      }
-      &._focus {
-         transition: all 0.3s ease 0s;
-         top: -25px;
-         color: #000;
-         font-size: 20px;
       }
    }
 }
@@ -140,7 +137,7 @@
    transition: all 0.3s ease 0s;
    position: relative;
    &:hover {
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.06);
       transition: all 0.3s ease 0s;
       .discount-card-item__actions-block {
          transition: all 0.3s ease 0s;
@@ -150,14 +147,18 @@
       }
       .discount-card-item__image {
          img {
-            transform: scale(1.02);
             transition: all 0.3s ease 0s;
+            opacity: 0.3;
          }
          &::after {
             transition: all 0.3s ease 0s;
             visibility: visible;
             opacity: 1;
          }
+      }
+      .discount-card-item__named {
+         text-decoration: underline;
+         transition: all 0.3s ease 0s;
       }
    }
    &._basket {
@@ -180,16 +181,13 @@
    &._favorites {
       .discount-card-item__add-to-favorites {
          animation: favorite 0.3s 1 ease-in-out;
-         g {
-            fill: #000;
-            stroke: #000;
+         background: #e64646;
+         path {
+            fill: #e64646;
+            stroke: #ffffff;
             transition: all 0.3s ease 0s;
          }
          &:hover {
-            g {
-               fill: #000;
-               stroke: #000;
-            }
          }
       }
    }
@@ -223,9 +221,9 @@
       flex-direction: column;
    }
    &__image {
-      height: 300px;
       position: relative;
       overflow: hidden;
+      height: 300px;
       &::after {
          content: '';
          position: absolute;
@@ -241,10 +239,10 @@
       img {
          object-fit: cover;
          width: 100%;
+         height: 268px;
          height: 100%;
          pointer-events: none;
          transition: all 0.5s ease 0s;
-         transform: scale(1);
       }
    }
 
@@ -271,6 +269,7 @@
       color: #a7a7a7;
       font-size: 12px;
       font-weight: 300;
+      text-transform: none;
       &:hover {
          text-decoration: underline;
       }
@@ -281,6 +280,7 @@
       font-size: 14px;
       font-weight: 300;
       text-align: center;
+      transition: all 0.3s ease 0s;
    }
 
    &__price-block {
@@ -302,7 +302,9 @@
 
    &__amount-discount {
       position: absolute;
-      right: 25px;
+      right: 32px;
+      top: 32px;
+      right: 20px;
       top: 16px;
       background: #ffa100;
       border-radius: 39px;
@@ -321,23 +323,26 @@
       opacity: 0;
       visibility: hidden;
       top: 250px;
+      top: 140px;
       transition: all 0.3s ease 0s;
    }
 
    &__add-to-favorites {
       width: 60px;
       height: 60px;
-      background-color: #f5f5f5;
+      background-color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
       transition: all 0.3s ease 0s;
       animation: noFavorite 0.1s 3 ease-in-out;
+      box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.06);
       svg {
-         width: 22px;
+         width: 18px;
+         height: 16px;
          pointer-events: none;
-         g {
+         path {
             fill: #fff;
             stroke: #000;
             transition: all 0.3s ease 0s;
@@ -345,8 +350,9 @@
       }
       &:hover {
          background: #93c05b;
-         g {
+         path {
             stroke: #fff;
+            fill: #93c05b;
          }
       }
    }
@@ -354,11 +360,12 @@
    &__add-to-basket {
       width: 60px;
       height: 60px;
-      background-color: #f5f5f5;
+      background-color: #ffffff;
       display: flex;
       border-radius: 50%;
       position: relative;
       animation: noFavorite 0.1s 3 ease-in-out;
+      box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.06);
       &:hover {
          background: #93c05b;
          transition: all 0.3s ease 0s;
@@ -369,7 +376,7 @@
          }
       }
       .icon-cart {
-         font-size: 20px;
+         font-size: 16px;
          transition: all 0.3s ease 0s;
          position: absolute;
          top: 50%;
@@ -383,7 +390,7 @@
          transform: translate(-50%, -50%) scale(0);
          opacity: 0;
          visibility: hidden;
-         font-size: 20px;
+         font-size: 16px;
          transition: all 0.3s ease 0s;
       }
    }
@@ -461,9 +468,9 @@
 
    &__card-list {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 330px));
+      grid-template-columns: repeat(auto-fill, minmax(290px, 335px));
       justify-content: center;
-      gap: 32px;
+      gap: 30px;
       margin-bottom: 92px;
    }
 

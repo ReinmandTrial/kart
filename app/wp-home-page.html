@@ -1,0 +1,608 @@
+
+	<!-- MAIN start  -->
+	<main class="main">
+		<!-- CONTENT start  -->
+		<div class="content">
+			<div class="page-main__banner banner">
+				<div class="banner__slider slider-banner swiper-container">
+					<div class="slider-banner__wrapper swiper-wrapper">
+						<?php
+						get_template_part('template-parts/homepage/homepage-slider');
+						?>
+					</div>
+				</div>
+			</div>
+			<div class="page-main__tags-circles tags-circles">
+				<div class="container">
+					<div class="tags-circles__content">
+						<?php
+						$taxonomyName = "product_cat";
+						$terms = get_terms("product_cat", array("hide_empty" => true));
+						foreach ($terms as $term) :
+							if ($term->parent != 0) :
+								echo '
+                   <a href="' .   site_url('/shop/?filter_cat_list_1=')  . $term->term_id  . ' " class="tags-circles__item">
+                   <div class="tags-circles__img" style="border: 1px solid ' . get_field('color_for_subcategory', $term) . ';">
+                   <img src="' . get_field('image_subcategory_for_homepage', $term) . '" alt="' . $term->name . '">
+                </div>
+                <p class="tags-circles__text">' . $term->name . '</p>
+                </a>';
+						?>
+						<?php
+							endif;
+						endforeach;
+						wp_reset_postdata();
+						?>
+					</div>
+				</div>
+			</div>
+
+			<div class="novelty">
+				<div class="container">
+					<h3 class="novelty__title"><?= $main_categories_title;  ?></h3>
+					<p class="novelty__description"><?= $main_categories_description; ?> </p>
+					<div class="novelty__content">
+						<?php
+						$taxonomyName = "product_cat";
+						$terms = get_terms($taxonomyName, array('parent' => 0, 'hide_empty' => 1));
+						if (!empty($terms)) :
+							foreach ($terms as $term) :
+								$thumb_id = get_term_meta($term->term_id, 'thumbnail_id', true);
+								$term_img = wp_get_attachment_url($thumb_id);
+								$category_name_in_english = get_field("parent_category_name_in_english", $term);
+						?>
+								<div class="novelty__card novelty__card--legs novelty__card--<?= $term->slug; ?>">
+									<a href="<?php echo site_url('/shop/?filter_cat_2=') . $term->term_id; ?>">
+										<div class="novelty__card-content">
+											<h4 class="novelty__card-title"><?= $term->name; ?></h4>
+											<div class="novelty__card-img"><img src="<?php echo $term_img; ?>" alt=""></div>
+										</div>
+										<div class="novelty__bg">
+											<?php echo $category_name_in_english;  ?>
+										</div>
+									</a>
+								</div>
+						<?php
+							endforeach;
+						endif;
+						?>
+					</div>
+				</div>
+			</div>
+
+			<div class="page-main__slider-right slider-right">
+				<div class="container">
+					<div class="slider-right__content">
+						<div class="slider-right__container swiper-container">
+							<div class="slider-right__wrapper swiper-wrapper">
+								<?php
+								$taxonomyName = "product_cat";
+								$terms = get_terms($taxonomyName);
+								foreach ($terms as $term) :
+									if ($term->parent != 0) :
+										$thumb_id = get_term_meta($term->term_id, 'thumbnail_id', true);
+										$term_img = wp_get_attachment_url($thumb_id);
+										$term_link = get_term_link($term);
+										echo '
+                   <div class="slider-right__slide swiper-slide">
+                       <div class="slider-right__slide-img">
+                   <a href="' . site_url('/shop/?filter_cat_list_1=') . $term->term_id . '" >
+                   <img src="' .  $term_img  . '" alt="">
+                   </a>
+                   </div>
+                <a href="' . site_url('/shop/?filter_cat_list_1=') . $term->term_id . '" class="slider-right__slide-name h4">' . $term->name . '</a>
+                <p class="slider-right__slide-amount h7">' . $term->count . ' מוצרים</p>
+                </div>';
+								?>
+								<?php
+									endif;
+								endforeach;
+								wp_reset_postdata();
+								?>
+							</div>
+							<div class="slider-right__pagination"></div>
+						</div>
+						<div class="slider-right__text-block">
+							<h2 class="slider-right__title h2"><?php
+																echo $title_series_subcategories;
+																?></h2>
+							<p class="slider-right__descr">
+								<?php echo $description_series_subcategories; ?>
+							</p>
+							<div class="slider-right__btns-block">
+								<button type="button" class="slider-right__btn slider-right__btn-next icon icon-triangle-right"></button>
+								<button type="button" class="slider-right__btn slider-right__btn-prev icon icon-triangle-left"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page-main__products page-main-products">
+				<div class="container">
+					<div class="page-main-products__content">
+						<h2 class="page-main-products__title">
+							<?php
+							echo $title_of_main_products;
+							?>
+						</h2>
+						<p class="page-main-products__descr">
+							<?php
+							echo $description_of_main_products;
+							?>
+						</p>
+						<div class="page-main-products__grid-wrapper">
+							<?php
+							if (is_user_logged_in()) {
+								get_template_part('template-parts/homepage/homepage-products');
+							} else {
+								$selected_products_homepage_not_logged = get_field('selected_products_homepage_not_logged',  false, false);
+								$loop = new WP_Query([
+									'post_type' => 'product',
+									'post__in' => $selected_products_homepage_not_logged,
+									'orderby' =>  'post__in',
+									'posts_per_page' => 12,
+								]);
+								if ($loop->have_posts()) {
+									while ($loop->have_posts()) : $loop->the_post();
+										wc_get_template_part('content', 'product');
+									endwhile;
+								}
+								wp_reset_postdata();
+							}
+							?>
+						</div>
+						<!--/.products-->
+						<?php
+						if (is_user_logged_in()) {
+							echo '<a href="' . site_url('/shop') . '" class="page-main-products__btn-to-kart btn btn-contour">
+               KART מעבר לחנות
+            </a>';
+						} else {
+							echo '<a href="' . site_url('/shop') . '" class="page-main-products__btn-to-kart btn btn-contour">
+               KART מעבר לקטלוג
+            </a>';
+						}
+						?>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="page-main__promotion-large promotion-large">
+				<div class="promotion-large__rightside">
+
+					<div class="promotion-large__slider swiper-container">
+						<div class="promotion-large__timer">
+							<h6 class="promotion-large__timer-title">מוצרי החודש</h6>
+							<p class="promotion-large__timer-nums">
+								10
+								<span class="promotion-large__timer-divide">:</span>
+								30
+								<span class="promotion-large__timer-divide">:</span>
+								08
+								<span class="promotion-large__timer-divide">:</span>
+								43
+							</p>
+						</div>
+						<div class="promotion-large__wrapper swiper-wrapper">
+							<div class="promotion-large__slide swiper-slide">
+								<div class="promotion-large__card product-card-promotion">
+									<div class="product-card-promotion__image-block">
+										<div class="product-card-promotion__img">
+											<img src="<?php echo get_template_directory_uri(); ?>/images/card-product-row__img1.png" alt="">
+										</div>
+										<div class="product-card-promotion__discount">
+											<p class="product-card-promotion__discount-text">הנחה</p>
+											<p class="product-card-promotion__discount-amount">25%</p>
+										</div>
+										<div class="product-card-promotion__brand">UNICARE
+										</div>
+									</div>
+									<div class="product-card-promotion__text-block">
+										<p class="product-card-promotion__type">פדיקור</p>
+										<p class="product-card-promotion__name">Soa Treatment סבון טיפולי </p>
+										<p class="product-card-promotion__price">
+											<span class="product-card-promotion__price-old"> 5.00 ₪</span>
+											<span class="product-card-promotion__price-new"> 4.00 ₪</span>
+										</p>
+									</div>
+								</div>
+								<button type="button" class="promotion-large__btn-add-to-cart btn btn-primary">הוספה
+									לסל</button>
+							</div>
+							<div class="promotion-large__slide swiper-slide">
+								<div class="promotion-large__card product-card-promotion">
+									<div class="product-card-promotion__image-block">
+										<div class="product-card-promotion__img">
+											<img src="<?php echo get_template_directory_uri(); ?>/images/product-card-row-img3.png" alt="">
+										</div>
+										<div class="product-card-promotion__discount">
+											<p class="product-card-promotion__discount-text">הנחה</p>
+											<p class="product-card-promotion__discount-amount">25%</p>
+										</div>
+										<div class="product-card-promotion__brand">UNICARE
+										</div>
+									</div>
+									<div class="product-card-promotion__text-block">
+										<p class="product-card-promotion__type">פדיקור</p>
+										<p class="product-card-promotion__name">Soa Treatment סבון טיפולי </p>
+										<p class="product-card-promotion__price">
+											<span class="product-card-promotion__price-old"> 5.00 ₪</span>
+											<span class="product-card-promotion__price-new"> 4.00 ₪</span>
+										</p>
+									</div>
+								</div>
+								<button type="button" class="promotion-large__btn-add-to-cart btn btn-primary">הוספה
+									לסל</button>
+							</div>
+							<div class="promotion-large__slide swiper-slide">
+								<div class="promotion-large__card product-card-promotion">
+									<div class="product-card-promotion__image-block">
+										<div class="product-card-promotion__img">
+											<img src="<?php echo get_template_directory_uri(); ?>/images/product-card-row-img3.png" alt="">
+										</div>
+										<div class="product-card-promotion__discount">
+											<p class="product-card-promotion__discount-text">הנחה</p>
+											<p class="product-card-promotion__discount-amount">25%</p>
+										</div>
+										<div class="product-card-promotion__brand">UNICARE
+										</div>
+									</div>
+									<div class="product-card-promotion__text-block">
+										<p class="product-card-promotion__type">פדיקור</p>
+										<p class="product-card-promotion__name">Soa Treatment סבון טיפולי </p>
+										<p class="product-card-promotion__price">
+											<span class="product-card-promotion__price-old"> 5.00 ₪</span>
+											<span class="product-card-promotion__price-new"> 4.00 ₪</span>
+										</p>
+									</div>
+								</div>
+								<button type="button" class="promotion-large__btn-add-to-cart btn btn-primary">הוספה
+									לסל</button>
+							</div>
+						</div>
+						<div class="promotion-large__nav">
+							<button type="button" class="promotion-large__btn promotion-large__btn-left icon icon-triangle-right"></button>
+							<button type="button" class="promotion-large__btn promotion-large__btn-right icon icon-triangle-left"></button>
+						</div>
+						<div class="promotion-large__pagin swiper-pagination-main"></div>
+					</div>
+				</div>
+				<div class="promotion-large__leftside">
+					<img src="<?php echo $recommended_products_photo; ?>" alt="">
+				</div>
+			</div>
+
+			<div class="page-main__academy block-academy">
+				<div class="container">
+					<div class="block-academy__content">
+						<div class="block-academy__images-block">
+							<div class="block-academy__img block-academy__img-small">
+								<img src="<?php echo $kart_academy_left_side_small_image;  ?>" alt="">
+							</div>
+							<div class="block-academy__img block-academy__img-large">
+								<img src="<?php echo $kart_academy_left_side_large_image; ?>" alt="">
+							</div>
+						</div>
+						<div class="block-academy__text-block">
+							<h2 class="block-academy__title h1"><?php echo $kart_academy_title ?> </h2>
+							<p class="block-academy__descr"><?php echo $kart_academy_description ?></p>
+							<?php if (is_user_logged_in()) : ?>
+								<a href="<?php echo site_url('/kart-academy') ?>" class="block-academy__btn block-academy__btn--desktop btn btn-primary">
+									<?= $kart_academy_button_text_for_logged_users ?>
+								</a>
+							<?php else : ?>
+								<a href="<?php echo site_url('/marketing-kart-academy') ?>" class="block-academy__btn block-academy__btn--desktop btn btn-primary">
+									<?= $kart_academy_button_text_for_unlogged_users; ?>
+								</a>
+							<?php endif; ?>
+						</div>
+						<div class="block-academy__images-block">
+							<div class="block-academy__img block-academy__img-large">
+								<img src="<?php echo $kart_academy_right_side_small_image;  ?>" alt="">
+							</div>
+							<div class="block-academy__img block-academy__img-small">
+								<img src="<?php echo  $kart_academy_right_side_large_image; ?>" alt="">
+							</div>
+						</div>
+						<?php if (is_user_logged_in()) : ?>
+							<a href="<?php echo site_url('/kart-academy') ?>" class="block-academy__btn block-academy__btn--mobile btn btn-primary">
+								<?= $kart_academy_button_text_for_logged_users ?>
+							</a>
+						<?php else : ?>
+							<a href="<?php echo site_url('/marketing-kart-academy') ?>" class="block-academy__btn block-academy__btn--mobile btn btn-primary">
+								<?= $kart_academy_button_text_for_unlogged_users; ?>
+							</a>
+						<?php endif; ?>
+
+					</div>
+				</div>
+			</div>
+
+
+			<?php if (!is_user_logged_in()) : ?>
+				<div class="page-main__slider-articles slider-articles">
+					<div class="container">
+						<div class="slider-articles__content">
+							<div class="slider-articles__swiper	swiper-container">
+								<div class="slider-articles__head">
+									<div class="slider-articles__text-block">
+										<h2 class="slider-articles__title h1 2222"><?php echo $blog_article_title; ?></h2>
+										<p class="slider-articles__descr"> <?php echo $blog_article_description; ?></p>
+									</div>
+									<div class="slider-articles__nav">
+										<button type="button" class="slider-articles__btn slider-articles__btn-next icon icon-triangle-right"></button>
+										<button type="button" class="slider-articles__btn slider-articles__btn-prev icon icon-triangle-left"></button>
+									</div>
+								</div>
+								<div class="slider-articles__wrapper swiper-wrapper">
+									<?php
+									$blog_articles = get_field('choose_article_for_homepage');
+									if ($blog_articles) :
+										foreach ($blog_articles as $blog_article) :
+											$postID = $blog_article->ID;
+											$featured_img_article = wp_get_attachment_url(get_post_thumbnail_id($postID));
+											$post_date =  get_the_date()
+									?>
+											<div class="slider-articles__slide swiper-slide card-article">
+												<div class="card-article__img">
+													<a href="<?= get_permalink($postID); ?>">
+														<img src="<?php echo $featured_img_article;  ?>" alt="">
+													</a>
+												</div>
+												<div class="card-article__text-block">
+													<a href="<?= get_permalink($postID); ?>" class="card-article__name"><?php echo  $blog_article->post_title; ?></a>
+													<p class="card-article__time">
+														<span class="icon icon-clock"></span>
+														<?php echo $post_date; ?>
+													</p>
+												</div>
+											</div>
+									<?php
+										endforeach;
+									endif;
+									?>
+								</div>
+								<div class="slider-articles__pagin swiper-pagination-main"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php endif; ?>
+			<section class="banners">
+				<?php
+				get_template_part('template-parts/homepage/homepage-banner');
+				?>
+			</section>
+
+
+
+			<?php if (!is_user_logged_in()) : ?>
+				<div class="find-specialists">
+					<div class="container">
+						<h1><?php echo $title_find_specialist; ?></h1>
+						<p><?php echo $description_find_specialist; ?></p>
+					</div>
+				</div>
+				<div class="page-main__find-a-specialist find-a-specialist">
+					<div class="container">
+						<h2 class="find-a-specialist__title h1"><?php echo $title_find_specialist; ?> </h2>
+						<p class="find-a-specialist__descr"><?php echo $description_find_specialist; ?></p>
+						<?php if (have_rows('find_specialist_elements')) : ?>
+							<div class="find-a-specialist__wrapper">
+								<?php while (have_rows('find_specialist_elements')) :
+									the_row();
+									$featured_img_spec = get_sub_field('image_specialist');
+									$title_specialist = get_sub_field('title_specialist');
+									$link_specialist = get_sub_field('link_specialist');
+
+									$link_specialist_url = $link_specialist['url'];
+									$link_specialist_text = $link_specialist['title'];
+									$link_specialist_target = $link_specialist['target'] ? $link_specialist['target'] : "_self";
+								?>
+									<div class="find-a-specialist__item card-specialist">
+										<div class="card-specialist__img">
+											<img src="<?php echo esc_url($featured_img_spec['url']); ?>" alt="<?php echo esc_attr($featured_img_spec['alt']); ?>">
+										</div>
+										<div class="card-specialist__text-block">
+											<h5 class="card-specialist__title">
+												<?php
+												echo $title_specialist;
+												?></h5>
+											<a href="<?php echo esc_url($link_specialist_url); ?>" target="
+											<?php
+											echo esc_attr($link_specialist_target);
+											?>" class="card-specialist__link">
+												<?php echo esc_html($link_specialist_text); ?>
+												<span class="icon icon-arrow-left"></span>
+											</a>
+										</div>
+									</div>
+								<?php endwhile; ?>
+							</div>
+						<?php endif; ?>
+					</div>
+				</div>
+			<?php endif; ?>
+
+			<?php if (is_user_logged_in()) : ?>
+				<div class="page-main__slider-articles slider-articles slider-articles--tabs">
+					<div class="container">
+						<div class="slider-articles__content">
+							<div class="slider-articles__head">
+								<div class="slider-articles__text-block">
+									<h2 class="slider-articles__title h1"> <?php echo get_field('recommended_tutorials_title', $page_ID); ?></h2>
+									<p class="slider-articles__descr"> <?php echo get_field('recommended_tutorials_sub_title', $page_ID); ?></p>
+								</div>
+							</div>
+							<div class="slider-articles__tabs js-tabs">
+								<div class="slider-articles__tabs-head js-tabs-head">
+									<button type="button" class="slider-articles__tabs-item js-tabs-item">מניקור</button>
+									<button type="button" class="slider-articles__tabs-item active js-tabs-item">קוסמטיקה</button>
+								</div>
+								<div class="slider-articles__tabs-body js-tabs-body">
+									<div class="slider-articles__tabs-body-item js-tabs-body-item">
+										<div class="slider-articles__swiper	swiper-container">
+											<div class="slider-articles__nav">
+												<button type="button" class="slider-articles__btn slider-articles__btn-next icon icon-triangle-right"></button>
+												<button type="button" class="slider-articles__btn slider-articles__btn-prev icon icon-triangle-left"></button>
+											</div>
+											<div class="slider-articles__wrapper swiper-wrapper">
+												<div class="slider-articles__slide swiper-slide card-article">
+													<div class="card-article__img">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/card-article-img1.png" alt="">
+													</div>
+													<div class="card-article__text-block">
+														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
+														<p class="card-article__time">
+															<span class="icon icon-clock"></span>
+															3.5 שעות הדרכה
+														</p>
+													</div>
+												</div>
+												<div class="slider-articles__slide swiper-slide card-article">
+													<div class="card-article__img">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/card-article-img2.png" alt="">
+													</div>
+													<div class="card-article__text-block">
+														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
+														<p class="card-article__time">
+															<span class="icon icon-clock"></span>
+															3.5 שעות הדרכה
+														</p>
+													</div>
+												</div>
+												<div class="slider-articles__slide swiper-slide card-article">
+													<div class="card-article__img">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/card-article-img3.png" alt="">
+													</div>
+													<div class="card-article__text-block">
+														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
+														<p class="card-article__time">
+															<span class="icon icon-clock"></span>
+															3.5 שעות הדרכה
+														</p>
+													</div>
+												</div>
+												<div class="slider-articles__slide swiper-slide card-article">
+													<div class="card-article__img">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/card-article-img4.png" alt="">
+													</div>
+													<div class="card-article__text-block">
+														<p class="card-article__type">פדיקור</p>
+														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
+														<p class="card-article__time">
+															<span class="icon icon-clock"></span>
+															3.5 שעות הדרכה
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="slider-articles__pagin swiper-pagination-main"></div>
+										</div>
+									</div>
+									<div class="slider-articles__tabs-body-item active js-tabs-body-item">
+										<div class="slider-articles__swiper	swiper-container">
+											<div class="slider-articles__nav">
+												<button type="button" class="slider-articles__btn slider-articles__btn-next icon icon-triangle-right"></button>
+												<button type="button" class="slider-articles__btn slider-articles__btn-prev icon icon-triangle-left"></button>
+											</div>
+											<div class="slider-articles__wrapper swiper-wrapper">
+												<div class="slider-articles__slide swiper-slide card-article">
+													<div class="card-article__img">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/card-article-img1.png" alt="">
+													</div>
+													<div class="card-article__text-block">
+														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
+														<p class="card-article__time">
+															<span class="icon icon-clock"></span>
+															3.5 שעות הדרכה
+														</p>
+													</div>
+												</div>
+												<div class="slider-articles__slide swiper-slide card-article">
+													<div class="card-article__img">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/card-article-img2.png" alt="">
+													</div>
+													<div class="card-article__text-block">
+														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
+														<p class="card-article__time">
+															<span class="icon icon-clock"></span>
+															3.5 שעות הדרכה
+														</p>
+													</div>
+												</div>
+												<div class="slider-articles__slide swiper-slide card-article">
+													<div class="card-article__img">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/card-article-img3.png" alt="">
+													</div>
+													<div class="card-article__text-block">
+														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
+														<p class="card-article__time">
+															<span class="icon icon-clock"></span>
+															3.5 שעות הדרכה
+														</p>
+													</div>
+												</div>
+												<div class="slider-articles__slide swiper-slide card-article">
+													<div class="card-article__img">
+														<img src="<?php echo get_template_directory_uri(); ?>/images/card-article-img4.png" alt="">
+													</div>
+													<div class="card-article__text-block">
+														<p class="card-article__type">פדיקור</p>
+														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
+														<p class="card-article__time">
+															<span class="icon icon-clock"></span>
+															3.5 שעות הדרכה
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="slider-articles__pagin swiper-pagination-main"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php endif; ?>
+			<?php if (!is_user_logged_in()) : ?>
+				<div class="known">
+					<div class="container">
+						<div class="known__description">
+							<h3 class="known__title h3">מועדון המקצועיות של KART</h3>
+							<p class="known__subtitle">מקצועית יקרה, על המועדון של KART כבר שמעת? השאירי טלפון ונשמח לחזור
+								אלייך עם כל הפרטים</p>
+						</div>
+						<div class="known__form">
+							<input class="known__input" type="text" placeholder="טלפון">
+							<button class="btn btn-primary known__btn" type="text">שליחה<span class="icon icon-arrow-left --desktop"></span></button>
+						</div>
+					</div>
+				</div>
+			<?php endif; ?>
+		</div>
+		<!-- CONTENT end -->
+
+
+
+	</main>
+	<!-- MAIN end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -17,3 +17,18 @@ function favoritesItemLogic() {
 }
 
 //favorites========================================================================================================================================================
+//popup========================================================================================================================================================
+const favoriteClearBtn = document.querySelector('.favorites-new__cancel-all');
+const favoritePopup = document.querySelector('.favorites-new-popup');
+
+favoriteClearBtn.addEventListener('click', (el) => {
+   favoritePopup.classList.add('_active');
+});
+
+favoritePopup.addEventListener('click', (el) => {
+   if (el.target.classList.contains('favorites-new-popup__body') || el.target.classList.contains('favorites-new-popup__close-btn')) {
+      favoritePopup.classList.remove('_active');
+   }
+});
+
+//popup========================================================================================================================================================
