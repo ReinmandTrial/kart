@@ -453,6 +453,7 @@
    }
 
    &__body-item {
+      max-width: fit-content;
       &:not(:last-child) {
          margin-bottom: 10px;
       }
@@ -500,6 +501,7 @@
       line-height: 150%;
       text-transform: uppercase;
       color: #373737;
+      flex: none;
    }
 }
 .mob-radio {
@@ -543,6 +545,7 @@
       line-height: 150%;
       text-transform: uppercase;
       color: #373737;
+      flex: none;
       .mob-radio__input:checked ~ & {
          font-weight: 400;
       }
