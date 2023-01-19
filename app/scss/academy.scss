@@ -440,6 +440,11 @@
       & .icon {
          font-size: 24px;
          pointer-events: none;
+         transition: all 0.3s ease 0s;
+         ._active & {
+            transition: all 0.3s ease 0s;
+            transform: rotate(-90deg);
+         }
       }
    }
 
