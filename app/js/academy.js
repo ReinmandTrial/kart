@@ -1,92 +1,95 @@
 function tabs(headerSelector, tabSelector, contentSelector, activeClass, display = 'flex') {
    const header = document.querySelector(headerSelector),
       tab = document.querySelectorAll(tabSelector),
-      content = document.querySelectorAll(contentSelector);
-   if (!header) return;
+      content = document.querySelectorAll(contentSelector)
+   if (!header) return
    function hideTabContent() {
       content.forEach((item) => {
-         item.style.display = 'none';
-      });
+         item.style.display = 'none'
+      })
       tab.forEach((item) => {
-         item.classList.remove(activeClass);
-      });
+         item.classList.remove(activeClass)
+      })
    }
    function showTabContent(i = 0) {
-      content[i].style.display = display;
-      tab[i].classList.add(activeClass);
+      content[i].style.display = display
+      tab[i].classList.add(activeClass)
    }
-   hideTabContent();
-   showTabContent();
+   hideTabContent()
+   showTabContent()
    header.addEventListener('click', (e) => {
-      const target = e.target;
+      const target = e.target
       if (target.classList.contains(tabSelector.replace(/\./, '')) || target.parentNode.classList.contains(tabSelector.replace(/\./, ''))) {
          tab.forEach((item, i) => {
             if (target == item || target.parentNode == item) {
-               hideTabContent();
-               showTabContent(i);
+               hideTabContent()
+               showTabContent(i)
             }
-         });
+         })
       }
-   });
+   })
 }
 function spolers(accItem, accBtn, body) {
-   const accItemEl = document.querySelectorAll('.' + accItem);
+   const accItemEl = document.querySelectorAll('.' + accItem)
    if (accItemEl) {
       accItemEl.forEach((item) => {
          item.addEventListener('click', (el) => {
-            const spolerBody = item.querySelector('.' + body);
+            const spolerBody = item.querySelector('.' + body)
             if (el.target.classList.contains(accBtn) && spolerBody.hasAttribute('hidden')) {
-               item.classList.add('_active');
+               item.classList.add('_active')
             } else {
-               item.classList.remove('_active');
+               item.classList.remove('_active')
             }
-            _slideToggleVinil(spolerBody);
-         });
-      });
+            if (el.target.classList.contains(accBtn)) {
+               _slideToggleVinil(spolerBody)
+            }
+         })
+      })
    }
 }
+
 //========================================================================================================================================================
 //academy-recorded========================================================================================================================================================
-tabs('.location__tabs-header', '.location__tabs-header-item', '.location__tabs-content-item', 'location__tabs-header-item--active');
+tabs('.location__tabs-header', '.location__tabs-header-item', '.location__tabs-content-item', 'location__tabs-header-item--active')
 function closeDropdowns() {
-   const openDropdown = document.querySelectorAll('._active');
+   const openDropdown = document.querySelectorAll('._active')
    openDropdown.forEach((sel) => {
-      sel.classList.remove('_active');
-   });
+      sel.classList.remove('_active')
+   })
 }
-const sortByAcademy = document.querySelector('.sort-by');
+const sortByAcademy = document.querySelector('.sort-by')
 if (sortByAcademy) {
    sortByAcademy.addEventListener('click', (el) => {
       if (el.target.classList.contains('sort-by__head') && sortByAcademy.classList.contains('_active')) {
-         sortByAcademy.classList.remove('_active');
+         sortByAcademy.classList.remove('_active')
       } else {
-         closeDropdowns();
-         sortByAcademy.classList.add('_active');
+         closeDropdowns()
+         sortByAcademy.classList.add('_active')
       }
-   });
+   })
 }
-const allSelect = document.querySelectorAll('.select');
+const allSelect = document.querySelectorAll('.select')
 allSelect.forEach((select) => {
    select.addEventListener('click', (el) => {
       if (el.target.classList.contains('select__header') && select.classList.contains('_active')) {
-         select.classList.remove('_active');
+         select.classList.remove('_active')
       } else {
-         closeDropdowns();
-         select.classList.add('_active');
+         closeDropdowns()
+         select.classList.add('_active')
       }
-   });
-});
-const academyPlayBtn = document.querySelector('.product-top__btn-play');
+   })
+})
+const academyPlayBtn = document.querySelector('.product-top__btn-play')
 if (academyPlayBtn) {
    academyPlayBtn.addEventListener('click', () => {
-      document.body.classList.add('_popup-open');
-   });
+      document.body.classList.add('_popup-open')
+   })
 }
-const popupBody = document.querySelector('.academy-popup__body');
+const popupBody = document.querySelector('.academy-popup__body')
 if (popupBody) {
    popupBody.addEventListener('click', () => {
-      document.body.classList.remove('_popup-open');
-   });
+      document.body.classList.remove('_popup-open')
+   })
 }
 const swiperRecordedReviews = new Swiper('.reviews-slider', {
    // centeredSlides: true,
@@ -118,7 +121,7 @@ const swiperRecordedReviews = new Swiper('.reviews-slider', {
       nextEl: '.reviews-slider__btn-next',
       prevEl: '.reviews-slider__btn-prev',
    },
-});
+})
 
 const swiperRecordedDown = new Swiper('.product__slider', {
    loop: true,
@@ -150,52 +153,52 @@ const swiperRecordedDown = new Swiper('.product__slider', {
       nextEl: '.product__btn-next',
       prevEl: '.product__btn-prev',
    },
-});
+})
 //academy-recorded========================================================================================================================================================
 //academy-recorded-sale========================================================================================================================================================
-const recordFaqItems = document.querySelectorAll('.product-after__questions-accordion-item');
+const recordFaqItems = document.querySelectorAll('.product-after__questions-accordion-item')
 if (recordFaqItems) {
    recordFaqItems.forEach((item) => {
       item.addEventListener('click', (el) => {
          if (el.target.classList.contains('questions-accordion-trigger')) {
-            _slideToggleVinil(item.querySelector('.questions-accordion-content__text'), 500);
-            item.classList.toggle('_active');
+            _slideToggleVinil(item.querySelector('.questions-accordion-content__text'), 500)
+            item.classList.toggle('_active')
          }
-      });
-   });
+      })
+   })
 }
 //========================================================================================================================================================
 
-const allRecordSalebtn = document.querySelectorAll('.product-after__playlist-btn , .product-after__play');
+const allRecordSalebtn = document.querySelectorAll('.product-after__playlist-btn , .product-after__play')
 if (allRecordSalebtn) {
    allRecordSalebtn.forEach((btn) => {
       btn.addEventListener('click', () => {
-         document.body.classList.add('_popup-open');
-      });
-   });
+         document.body.classList.add('_popup-open')
+      })
+   })
 }
 //academy-recorded-sale========================================================================================================================================================
 
 //academy-live========================================================================================================================================================
-const copyBtn = document.querySelector('.top-digital__coupons-code');
-const copuLabel = document.querySelector('.top-digital__copy-label');
+const copyBtn = document.querySelector('.top-digital__coupons-code')
+const copuLabel = document.querySelector('.top-digital__copy-label')
 if (copyBtn && copuLabel) {
    copyBtn.addEventListener('click', () => {
-      copuLabel.classList.add('_active');
+      copuLabel.classList.add('_active')
       setTimeout(() => {
-         copuLabel.classList.add('_disactive');
-      }, 1000);
+         copuLabel.classList.add('_disactive')
+      }, 1000)
       setTimeout(() => {
-         copuLabel.classList.remove('_disactive', '_active');
-      }, 1500);
-      navigator.clipboard.writeText(copyBtn.textContent);
-   });
+         copuLabel.classList.remove('_disactive', '_active')
+      }, 1500)
+      navigator.clipboard.writeText(copyBtn.textContent)
+   })
 }
 
 //========================================================================================================================================================
-tabs('.js-tabs-header', '.js-tabs-header-item', '.js-tabs-content-item', 'active', 'block');
-spolers('accordion-location__item', 'accordion-location__head', 'accordion-location__body');
-spolers('accordion-transport__item', 'accordion-transport__head', 'accordion-transport__body');
+tabs('.js-tabs-header', '.js-tabs-header-item', '.js-tabs-content-item', 'active', 'block')
+spolers('accordion-location__item', 'accordion-location__head', 'accordion-location__body')
+spolers('accordion-transport__item', 'accordion-transport__head', 'accordion-transport__body')
 //========================================================================================================================================================
 const swiperLiveDown = new Swiper('.digital-sale-slider__slider', {
    loop: true,
@@ -227,33 +230,49 @@ const swiperLiveDown = new Swiper('.digital-sale-slider__slider', {
       nextEl: '.digital-sale-slider__button-next',
       prevEl: '.digital-sale-slider__button-prev',
    },
-});
-//academy-live========================================================================================================================================================
+})
+
+//academy Mob Filter========================================================================================================================================================
+spolers('sort-mob-item', 'sort-mob-item__head', 'sort-mob-item__body')
+
+const mobFilter = document.querySelector('.mob-sort-box')
+mobFilter &&
+   mobFilter.addEventListener('click', (el) => {
+      const t = el.target
+      if (t.classList.contains('mob-sort-box__head-item')) {
+         mobFilter.classList.add('_filter-open')
+      }
+      if (t.classList.contains('sort-mob-body__close') || t.classList.contains('sort-mob-body')) {
+         mobFilter.classList.remove('_filter-open')
+      }
+   })
+
+//Ititility========================================================================================================================================================
 
 let _slideUpVinil = (target, duration = 500, showmore = 0) => {
    if (!target.classList.contains('_slide')) {
-      target.classList.add('_slide');
-      target.style.transitionProperty = 'height, margin, padding';
-      target.style.transitionDuration = duration + 'ms';
-      target.style.height = `${target.offsetHeight}px`;
-      target.offsetHeight;
-      target.style.overflow = 'hidden';
-      target.style.height = showmore ? `${showmore}px` : `0px`;
-      target.style.paddingTop = 0;
-      target.style.paddingBottom = 0;
-      target.style.marginTop = 0;
-      target.style.marginBottom = 0;
+      target.classList.add('_slide')
+      target.style.transitionProperty = 'height, margin, padding'
+      target.style.transitionDuration = duration + 'ms'
+      target.style.height = `${target.offsetHeight}px`
+      target.offsetHeight
+      target.style.overflow = 'hidden'
+      target.style.height = showmore ? `${showmore}px` : `0px`
+      target.style.paddingTop = 0
+      target.style.paddingBottom = 0
+      target.style.marginTop = 0
+      target.style.marginBottom = 0
       window.setTimeout(() => {
-         target.hidden = !showmore ? true : false;
-         !showmore ? target.style.removeProperty('height') : null;
-         target.style.removeProperty('padding-top');
-         target.style.removeProperty('padding-bottom');
-         target.style.removeProperty('margin-top');
-         target.style.removeProperty('margin-bottom');
-         !showmore ? target.style.removeProperty('overflow') : null;
-         target.style.removeProperty('transition-duration');
-         target.style.removeProperty('transition-property');
-         target.classList.remove('_slide');
+         target.hidden = !showmore ? true : false
+         !showmore ? target.style.removeProperty('height') : null
+         target.style.removeProperty('padding-top')
+         target.style.removeProperty('padding-bottom')
+         target.style.removeProperty('margin-top')
+         target.style.removeProperty('margin-bottom')
+         !showmore ? target.style.removeProperty('overflow') : null
+         target.style.removeProperty('transition-duration')
+         target.style.removeProperty('transition-property')
+         target.classList.remove('_slide')
          // Создаем событие
          document.dispatchEvent(
             new CustomEvent('slideUpDone', {
@@ -261,36 +280,36 @@ let _slideUpVinil = (target, duration = 500, showmore = 0) => {
                   target: target,
                },
             })
-         );
-      }, duration);
+         )
+      }, duration)
    }
-};
+}
 let _slideDownVinil = (target, duration = 500, showmore = 0) => {
    if (!target.classList.contains('_slide')) {
-      target.classList.add('_slide');
-      target.hidden = target.hidden ? false : null;
-      showmore ? target.style.removeProperty('height') : null;
-      let height = target.offsetHeight;
-      target.style.overflow = 'hidden';
-      target.style.height = showmore ? `${showmore}px` : `0px`;
-      target.style.paddingTop = 0;
-      target.style.paddingBottom = 0;
-      target.style.marginTop = 0;
-      target.style.marginBottom = 0;
-      target.offsetHeight;
-      target.style.transitionProperty = 'height, margin, padding';
-      target.style.transitionDuration = duration + 'ms';
-      target.style.height = height + 'px';
-      target.style.removeProperty('padding-top');
-      target.style.removeProperty('padding-bottom');
-      target.style.removeProperty('margin-top');
-      target.style.removeProperty('margin-bottom');
+      target.classList.add('_slide')
+      target.hidden = target.hidden ? false : null
+      showmore ? target.style.removeProperty('height') : null
+      let height = target.offsetHeight
+      target.style.overflow = 'hidden'
+      target.style.height = showmore ? `${showmore}px` : `0px`
+      target.style.paddingTop = 0
+      target.style.paddingBottom = 0
+      target.style.marginTop = 0
+      target.style.marginBottom = 0
+      target.offsetHeight
+      target.style.transitionProperty = 'height, margin, padding'
+      target.style.transitionDuration = duration + 'ms'
+      target.style.height = height + 'px'
+      target.style.removeProperty('padding-top')
+      target.style.removeProperty('padding-bottom')
+      target.style.removeProperty('margin-top')
+      target.style.removeProperty('margin-bottom')
       window.setTimeout(() => {
-         target.style.removeProperty('height');
-         target.style.removeProperty('overflow');
-         target.style.removeProperty('transition-duration');
-         target.style.removeProperty('transition-property');
-         target.classList.remove('_slide');
+         target.style.removeProperty('height')
+         target.style.removeProperty('overflow')
+         target.style.removeProperty('transition-duration')
+         target.style.removeProperty('transition-property')
+         target.classList.remove('_slide')
          // Создаем событие
          document.dispatchEvent(
             new CustomEvent('slideDownDone', {
@@ -298,14 +317,14 @@ let _slideDownVinil = (target, duration = 500, showmore = 0) => {
                   target: target,
                },
             })
-         );
-      }, duration);
+         )
+      }, duration)
    }
-};
+}
 let _slideToggleVinil = (target, duration = 500) => {
    if (target.hidden) {
-      return _slideDownVinil(target, duration);
+      return _slideDownVinil(target, duration)
    } else {
-      return _slideUpVinil(target, duration);
+      return _slideUpVinil(target, duration)
    }
-};
+}
