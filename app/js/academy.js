@@ -37,9 +37,11 @@ function spolers(accItem, accBtn, body) {
             const spolerBody = item.querySelector('.' + body)
             if (el.target.classList.contains(accBtn) && spolerBody.hasAttribute('hidden')) {
                item.classList.add('_active')
-            } else {
+            }
+            if (el.target.classList.contains(accBtn) && !spolerBody.hasAttribute('hidden')) {
                item.classList.remove('_active')
             }
+
             if (el.target.classList.contains(accBtn)) {
                _slideToggleVinil(spolerBody)
             }
@@ -239,11 +241,11 @@ const mobFilter = document.querySelector('.mob-sort-box')
 mobFilter &&
    mobFilter.addEventListener('click', (el) => {
       const t = el.target
-      if (t.classList.contains('mob-sort-box__head-item')) {
-         mobFilter.classList.add('_filter-open')
+      if (t.dataset.sortHead) {
+         mobFilter.querySelector(`[data-sort-body = ${t.dataset.sortHead}]`).classList.add('_filter-open')
       }
       if (t.classList.contains('sort-mob-body__close') || t.classList.contains('sort-mob-body')) {
-         mobFilter.classList.remove('_filter-open')
+         mobFilter.querySelector('.sort-mob-body._filter-open').classList.remove('_filter-open')
       }
    })
 
