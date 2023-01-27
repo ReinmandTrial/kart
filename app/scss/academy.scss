@@ -779,6 +779,8 @@
    &__item {
       position: relative;
       transition: all 0.25s ease-in-out;
+      display: flex;
+      flex-direction: column;
       &:hover {
          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
          .courses__preview-img {
@@ -813,6 +815,9 @@
       position: relative;
       border: 1px solid #eeeeee;
       padding: 24px 30px 30px 30px;
+      flex: auto;
+      display: flex;
+      flex-direction: column;
       @media (max-width: 991.98px) {
          padding: 15px 20px 20px 20px;
       }
@@ -845,7 +850,7 @@
       font-size: 24px;
       text-transform: uppercase;
       color: #373737;
-
+      flex: auto;
       @media (max-width: 991.98px) {
          margin-top: 6px;
          margin-bottom: 16px;
@@ -1665,14 +1670,23 @@
       position: relative;
    }
 
+   &__coupons-title {
+      flex: none;
+      font-size: 14px;
+   }
    &__coupons-code {
-      padding: 8px 28px;
+      flex: auto;
+      padding: 8px;
+      text-align: center;
       font-weight: 400;
       font-size: 16px;
       background-color: #fff;
       border-radius: 38px;
       margin-right: 12px;
       transition: all 0.25s ease;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
       &:hover {
          background-color: #94c05b;
          color: #ffffff;
@@ -1742,22 +1756,16 @@
 
    &__box {
       margin-top: 60px;
-      height: 580px;
+      height: auto;
       max-width: 580px;
       width: 100%;
       margin-right: auto;
       margin-left: 0;
       @media (max-width: 991.98px) {
          position: static;
-         height: 500px;
+         height: auto;
          margin-top: 0;
          max-width: none;
-      }
-      @media (max-width: 767.98px) {
-         height: 380px;
-      }
-      @media (max-width: 475.98px) {
-         height: 290px;
       }
       img {
          object-fit: cover;
@@ -2588,9 +2596,11 @@
    }
 
    &__slide {
+      height: auto;
    }
 
    &__card {
+      height: 100%;
       transition: all 0.3s ease 0s;
       &:hover {
          transition: all 0.3s ease 0s;
@@ -2622,7 +2632,7 @@
 
    &__button-prev {
       position: absolute;
-      left: 0;
+      left: 15px;
       top: 0px;
       @media (max-width: 767.98px) {
          display: none;
@@ -2631,7 +2641,7 @@
 
    &__button-next {
       position: absolute;
-      left: 58px;
+      left: 75px;
       top: 0px;
       @media (max-width: 767.98px) {
          display: none;
@@ -2641,6 +2651,9 @@
 .card-slide {
    cursor: pointer;
    &__link {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       &:hover {
          img {
             transform: scale(1.1);
@@ -2650,14 +2663,8 @@
    }
 
    &__previous {
-      height: 458px;
+      height: auto;
       overflow: hidden;
-      @media (max-width: 1200px) {
-         height: 350px;
-      }
-      @media (max-width: 400px) {
-         height: 285px;
-      }
    }
 
    &__img {
@@ -2670,6 +2677,9 @@
    &__content {
       padding: 24px 30px 24px 30px;
       border: 1px solid rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      flex: auto;
       @media (max-width: 575.98px) {
          padding: 14px 20px 20px 20px;
       }
@@ -2684,6 +2694,7 @@
    }
 
    &__title {
+      flex: auto;
       font-size: 24px;
       line-height: 134.88%;
       margin-top: 8px;
@@ -3534,7 +3545,7 @@
       }
       &.mobile {
          padding: 0px 0px 0px 0px;
-         background: rgba(196, 196, 196, 0.2);
+         background: #fafafa;
          margin: 0px -15px;
          padding: 20px 15px;
          margin-bottom: 30px;
@@ -3581,6 +3592,9 @@
       border-radius: 100%;
       margin-left: 35px;
       transition: all 0.25s ease-in;
+      @media (max-width: 991.98px) {
+         margin-left: 12px;
+      }
       &:hover {
          background-color: #94c05b;
          .icon {
@@ -3692,9 +3706,8 @@
    &__title {
       font-size: 48px;
       line-height: 134.88%;
-      @media (max-width: 575.98px) {
-         font-size: 24px;
-         margin-bottom: 10px;
+      @media (max-width: 991.98px) {
+         font-size: 32px;
       }
    }
 
@@ -3718,9 +3731,9 @@
       max-width: 465px;
       font-size: 16px;
       margin-bottom: 45px;
-      @media (max-width: 575.98px) {
+      @media (max-width: 991.98px) {
          font-size: 14px;
-         margin-bottom: 15px;
+         margin-bottom: 35px;
       }
    }
 
@@ -3728,8 +3741,8 @@
       font-size: 32px;
       line-height: 134.88%;
       margin-bottom: 10px;
-      @media (max-width: 575.98px) {
-         font-size: 22px;
+      @media (max-width: 991.98px) {
+         font-size: 24px;
       }
    }
 
@@ -3739,7 +3752,7 @@
       margin-bottom: 45px;
       @media (max-width: 575.98px) {
          font-size: 14px;
-         margin-bottom: 30px;
+         margin-bottom: 35px;
       }
    }
 
@@ -3754,10 +3767,18 @@
    &__item {
       padding: 35px 0;
       display: flex;
-      gap: 15px;
+      gap: 5px 15px;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #ececec;
+      @media (max-width: 991.98px) {
+         padding: 8px 0;
+         flex-direction: column;
+         align-items: start;
+         &:first-child {
+            border-top: 1px solid #ececec;
+         }
+      }
    }
 
    &__item-box {
@@ -3796,9 +3817,8 @@
       border-radius: 100%;
       cursor: pointer;
       transition: all 0.25s ease-in;
-      @media (max-width: 575.98px) {
-         width: 30px;
-         height: 30px;
+      @media (max-width: 991.98px) {
+         align-self: flex-end;
       }
       &:hover {
          background-color: #94c05b;
@@ -3815,6 +3835,9 @@
 
    &__questions {
       margin-bottom: 100px;
+      @media (max-width: 991.98px) {
+         margin-bottom: 32px;
+      }
    }
 
    &__questions-title {
@@ -3831,15 +3854,17 @@
    }
 
    &__questions-accordion-item {
-      padding: 32px 0px 17px 0px;
+      padding: 30px 0px;
       border-bottom: 1px solid #ececec;
+      @media (max-width: 991.98px) {
+         padding: 10px 0px;
+      }
       &:first-child {
          border-top: 1px solid #ececec;
       }
    }
 
    &__questions-accordion-trigger {
-      margin-bottom: 15px;
       display: flex;
       align-items: center;
       cursor: pointer;
@@ -3886,6 +3911,7 @@
       position: relative;
       display: flex;
       align-items: center;
+
       ._active & {
          &::after {
             visibility: visible;
@@ -3911,11 +3937,17 @@
          visibility: hidden;
          transition: all 0.3s ease 0s;
          background-color: #000000;
+         @media (max-width: 991.98px) {
+            height: 2px;
+         }
       }
       &_icon {
          font-size: 15px;
          pointer-events: none;
          transition: all 0.3s ease 0s;
+         @media (max-width: 991.98px) {
+            font-weight: 700;
+         }
       }
    }
 
@@ -3927,6 +3959,9 @@
       visibility: visible;
       opacity: 1;
       transition: all 0.3s ease 0s;
+      @media (max-width: 991.98px) {
+         font-weight: 400;
+      }
       @media (max-width: 575.98px) {
          font-size: 20px;
       }
@@ -3934,6 +3969,7 @@
 }
 .questions-accordion-content {
    &__text {
+      margin-top: 15px;
       padding: 0 50px 0 20px;
       transition: all 0.5s cubic-bezier(0, 1, 0, 1) 0s;
       overflow: hidden;

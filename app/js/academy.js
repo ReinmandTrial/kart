@@ -87,6 +87,18 @@ if (academyPlayBtn) {
       document.body.classList.add('_popup-open')
    })
 }
+const marketingBtn = document.querySelectorAll('.marketing__item-play')
+marketingBtn.forEach((btn) => {
+   btn.addEventListener('click', () => {
+      document.body.classList.add('_popup-open')
+   })
+})
+const discriptionBtn = document.querySelectorAll('.description-video__play')
+discriptionBtn.forEach((btn) => {
+   btn.addEventListener('click', () => {
+      document.body.classList.add('_popup-open')
+   })
+})
 const popupBody = document.querySelector('.academy-popup__body')
 if (popupBody) {
    popupBody.addEventListener('click', () => {
@@ -169,16 +181,7 @@ if (recordFaqItems) {
       })
    })
 }
-//========================================================================================================================================================
 
-const allRecordSalebtn = document.querySelectorAll('.product-after__playlist-btn , .product-after__play')
-if (allRecordSalebtn) {
-   allRecordSalebtn.forEach((btn) => {
-      btn.addEventListener('click', () => {
-         document.body.classList.add('_popup-open')
-      })
-   })
-}
 //academy-recorded-sale========================================================================================================================================================
 
 //academy-live========================================================================================================================================================
