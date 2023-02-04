@@ -333,3 +333,17 @@ let _slideToggleVinil = (target, duration = 500) => {
       return _slideUpVinil(target, duration)
    }
 }
+//========================================================================================================================================================
+
+document.addEventListener('click', (el) => {
+   console.log(el.target)
+   if (el.target.classList.contains('marketing__item-previous') && el.target.closest('._not-btn')) {
+      document.querySelector('.academy-popup-img').classList.add('_popup-open')
+   }
+   if (el.target.classList.contains('description-video__play') || el.target.classList.contains('marketing__item-play')) {
+      document.querySelector('.academy-popup').classList.add('_popup-open')
+   }
+   if (el.target.classList.contains('academy-popup__body') || el.target.classList.contains('academy-popup-img__body')) {
+      document.querySelector('._popup-open').classList.remove('_popup-open')
+   }
+})
