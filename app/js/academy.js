@@ -334,9 +334,7 @@ let _slideToggleVinil = (target, duration = 500) => {
    }
 }
 //========================================================================================================================================================
-
 document.addEventListener('click', (el) => {
-   console.log(el.target)
    if (el.target.classList.contains('marketing__item-previous') && el.target.closest('._not-btn')) {
       document.querySelector('.academy-popup-img').classList.add('_popup-open')
    }
