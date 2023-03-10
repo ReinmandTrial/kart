@@ -1157,6 +1157,7 @@
          justify-content: center;
          align-items: center;
          font-size: 11px;
+         pointer-events: none;
          @media (max-width: 575.98px) {
             font-size: 9px;
          }
