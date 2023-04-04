@@ -769,6 +769,12 @@
 
    &__content {
    }
+   &__item-filter {
+      margin-bottom: 35px;
+      @media (max-width: 991.98px) {
+         margin-bottom: 25px;
+      }
+   }
 
    &__content-item {
    }

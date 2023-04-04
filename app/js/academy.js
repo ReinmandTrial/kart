@@ -59,17 +59,20 @@ function closeDropdowns() {
       sel.classList.remove('_active')
    })
 }
-const sortByAcademy = document.querySelector('.sort-by')
-if (sortByAcademy) {
-   sortByAcademy.addEventListener('click', (el) => {
-      if (el.target.classList.contains('sort-by__head') && sortByAcademy.classList.contains('_active')) {
-         sortByAcademy.classList.remove('_active')
-      } else {
-         closeDropdowns()
-         sortByAcademy.classList.add('_active')
-      }
+const sortByAcademy = [...document.querySelectorAll('.sort-by')]
+if (sortByAcademy.length) {
+   sortByAcademy.forEach((sortItem) => {
+      sortItem.addEventListener('click', (el) => {
+         if (el.target.classList.contains('sort-by__head') && sortItem.classList.contains('_active')) {
+            sortItem.classList.remove('_active')
+         } else {
+            closeDropdowns()
+            sortItem.classList.add('_active')
+         }
+      })
    })
 }
+
 const allSelect = document.querySelectorAll('.select')
 allSelect.forEach((select) => {
    select.addEventListener('click', (el) => {
@@ -240,16 +243,18 @@ const swiperLiveDown = new Swiper('.digital-sale-slider__slider', {
 //academy Mob Filter========================================================================================================================================================
 spolers('sort-mob-item', 'sort-mob-item__head', 'sort-mob-item__body')
 
-const mobFilter = document.querySelector('.mob-sort-box')
-mobFilter &&
-   mobFilter.addEventListener('click', (el) => {
-      const t = el.target
-      if (t.dataset.sortHead) {
-         mobFilter.querySelector(`[data-sort-body = ${t.dataset.sortHead}]`).classList.add('_filter-open')
-      }
-      if (t.classList.contains('sort-mob-body__close') || t.classList.contains('sort-mob-body')) {
-         mobFilter.querySelector('.sort-mob-body._filter-open').classList.remove('_filter-open')
-      }
+const mobFilter = [...document.querySelectorAll('.mob-sort-box')]
+mobFilter.length &&
+   mobFilter.forEach((mobileFilterItem) => {
+      mobileFilterItem.addEventListener('click', (el) => {
+         const t = el.target
+         if (t.dataset.sortHead) {
+            mobileFilterItem.querySelector(`[data-sort-body = ${t.dataset.sortHead}]`).classList.add('_filter-open')
+         }
+         if (t.classList.contains('sort-mob-body__close') || t.classList.contains('sort-mob-body')) {
+            mobileFilterItem.querySelector('.sort-mob-body._filter-open').classList.remove('_filter-open')
+         }
+      })
    })
 
 //Ititility========================================================================================================================================================
