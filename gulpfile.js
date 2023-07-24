@@ -96,12 +96,21 @@ function stylesSearch() {
 }
 
 function build() {
-   return src(['app/css/style.min.css', 'app/fonts/**/*', 'app/js/main.min.js', 'app/*.html'], { base: 'app' }).pipe(dest('dist'));
+   return src(
+      [
+         'app/css/style.min.css',
+         'app/fonts/**/*',
+         'app/js/main.min.js',
+         'app/*.html',
+      ],
+      { base: 'app' }
+   ).pipe(dest('dist'));
 }
 
 function watching() {
    watch(['app/scss/style.scss'], styles);
    watch(['app/scss/discount-page.scss'], styles);
+   watch(['app/scss/profile.scss'], styles);
    watch(['app/scss/favorites-new.scss'], styles);
    watch(['app/scss/academy.scss'], stylesAcademy);
    watch(['app/scss/search.scss'], stylesSearch);
@@ -119,4 +128,11 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(stylesSearch, stylesAcademy, styles, scripts, browsersync, watching);
+exports.default = parallel(
+   stylesSearch,
+   stylesAcademy,
+   styles,
+   scripts,
+   browsersync,
+   watching
+);
