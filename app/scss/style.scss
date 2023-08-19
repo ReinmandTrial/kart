@@ -6,56 +6,56 @@
 @import './profile.scss';
 
 .page-discount-screen__title {
-   margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 @media (max-width: 575.98px) {
-   .page-discount-screen__title {
-      margin-bottom: 10px;
-   }
+  .page-discount-screen__title {
+    margin-bottom: 10px;
+  }
 }
 
 .page-discount-screen {
-   padding-bottom: 223px;
-   @media (max-width: 575.98px) {
-      padding-bottom: 30px;
-   }
-   &__content {
-   }
+  padding-bottom: 223px;
+  @media (max-width: 575.98px) {
+    padding-bottom: 30px;
+  }
+  &__content {
+  }
 
-   &__breadcrumbs {
-   }
+  &__breadcrumbs {
+  }
 
-   &__title {
-   }
+  &__title {
+  }
 
-   &__descr {
-      max-width: 590px;
-      margin-bottom: 55px;
-      font-size: 14px;
-      line-height: 150%;
-      @media (max-width: 575.98px) {
-         font-size: 12px;
-         line-height: 18px;
-         margin-bottom: 20px;
-      }
-   }
+  &__descr {
+    max-width: 590px;
+    margin-bottom: 55px;
+    font-size: 14px;
+    line-height: 150%;
+    @media (max-width: 575.98px) {
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 20px;
+    }
+  }
 
-   &__body {
-   }
+  &__body {
+  }
 
-   &__coupons {
-      margin-bottom: 115px;
-      @media (max-width: 575.98px) {
-         margin-bottom: 25px;
-      }
-   }
+  &__coupons {
+    margin-bottom: 115px;
+    @media (max-width: 575.98px) {
+      margin-bottom: 25px;
+    }
+  }
 
-   &__dropdowns {
-      max-width: 825px;
-   }
+  &__dropdowns {
+    max-width: 825px;
+  }
 
-   &__accordion {
-   }
+  &__accordion {
+  }
 }
 
 // .coupons {
