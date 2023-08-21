@@ -1,4 +1,4 @@
-const tabs = function () {
+const reviewTabs = function () {
   const tabsTitle = document.querySelectorAll('.personal-area__tab');
   const tabsContent = document.querySelectorAll('.personal-area__tab-content');
 
@@ -31,7 +31,7 @@ const tabs = function () {
     .classList.remove('personal-area__tab-content-hidden');
 };
 
-const accordeon = function () {
+!(function reviewAccordeon() {
   const titles = document.querySelectorAll('.spoiler-title');
   const contents = document.querySelectorAll('.spoiler-content');
 
@@ -54,7 +54,6 @@ const accordeon = function () {
       }
     })
   );
-};
+})();
 
-tabs();
-accordeon();
+reviewTabs();
