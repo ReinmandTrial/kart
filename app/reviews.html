@@ -154,451 +154,1010 @@
                 <div class="personal-area__body">
                   <h2 class="personal-area__title">הביקורות שלי</h2>
 
-                  <div class="personal-area__tabs">
-                    <button class="personal-area__tab">ביקורות בהמתנה</button>
-                    <button
-                      class="personal-area__tab personal-area__tab_active"
-                    >
-                      היסטוריית ביקורות
-                    </button>
-                  </div>
+                  <div class="tabs-container">
+                    <div class="personal-area__tabs">
+                      <button data-tab="tab-1" class="personal-area__tab">
+                        ביקורות בהמתנה
+                      </button>
+                      <button data-tab="tab-2" class="personal-area__tab">
+                        היסטוריית ביקורות
+                      </button>
+                    </div>
 
-                  <div class="personal-area__items js-scroll">
-                    <div class="personal-area__item item-personal">
-                      <div class="item-personal__image">
-                        <img src="./images/review/logo.svg" alt="logo" />
-                      </div>
-                      <div class="item-personal__number">32123232 №</div>
-                      <div class="item-personal__date">12.03.2022</div>
+                    <div class="tabs-wrapper">
                       <div
-                        class="item-personal__status status-order status-order_green"
+                        id="tab-1"
+                        class="personal-area__items personal-area__tab-content personal-area__tab-content-hidden js-scroll"
                       >
-                        <span class="status-order__mark"></span>
-                        <div class="status-order__text">תרשואמ תרוקיבה</div>
-                      </div>
-                      <div class="item-personal__diamonds">
-                        <div class="diamonds-wrapper">
-                          <span class="diamond__amount">12/80</span>
-                          <img
-                            src="./images/review/icons/diamond.svg"
-                            alt="diamond"
-                          />
-                        </div>
-                      </div>
-                      <div class="item-personal__amount">
-                        <span>6</span>
-                      </div>
-                      <button class="item-personal__arrow">
-                        <img
-                          src="./images/review/icons/arrow.svg"
-                          alt="arrow"
-                        />
-                      </button>
-                    </div>
-
-                    <div class="personal-area__products">
-                      <div class="personal-area__product product-personal">
-                        <div class="product-personal__image">
-                          <img
-                            src="./images/review/product.png"
-                            alt="product"
-                          />
-                        </div>
-                        <div class="product-personal__name">
-                          Treatment Soa ילופיט ןובס
-                        </div>
-                        <div class="product-personal__date">12.03.2022</div>
-                        <div class="product-personal__status status-order">
-                          <span class="status-order__mark"></span>
-                          <div class="status-order__text"></div>
-                        </div>
-
-                        <div class="product-personal__diamonds">
-                          <div class="diamonds-wrapper">
-                            <span class="diamond__amount">23+</span>
+                        <div
+                          data-tab="spoiler-1"
+                          class="personal-area__item item-personal spoiler-title"
+                        >
+                          <div class="item-personal__image">
+                            <img src="./images/review/logo.svg" alt="logo" />
+                          </div>
+                          <div class="item-personal__number">32123232 №</div>
+                          <div class="item-personal__date">12.03.2022</div>
+                          <div
+                            class="item-personal__status status-order status-order_green"
+                          >
+                            <span class="status-order__mark"></span>
+                            <div class="status-order__text">תרשואמ תרוקיבה</div>
+                          </div>
+                          <div class="item-personal__diamonds">
+                            <div class="diamonds-wrapper">
+                              <span class="diamond__amount">12/80</span>
+                              <img
+                                src="./images/review/icons/diamond.svg"
+                                alt="diamond"
+                              />
+                            </div>
+                          </div>
+                          <div class="item-personal__amount">
+                            <span>6</span>
+                          </div>
+                          <button class="item-personal__arrow">
                             <img
-                              src="./images/review/icons/diamond.svg"
-                              alt="diamond"
+                              src="./images/review/icons/arrow.svg"
+                              alt="arrow"
                             />
-                          </div>
+                          </button>
                         </div>
 
-                        <div class="product-personal__label">הוספת ביקורת</div>
+                        <div
+                          id="spoiler-1"
+                          class="personal-area__products spoiler-content"
+                        >
+                          <div class="personal-area__product product-personal">
+                            <div class="product-personal__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
+                            <div class="product-personal__name">
+                              Treatment Soa ילופיט ןובס
+                            </div>
+                            <div class="product-personal__date">12.03.2022</div>
+                            <div class="product-personal__status status-order">
+                              <span class="status-order__mark"></span>
+                              <div class="status-order__text"></div>
+                            </div>
 
-                        <button class="product-personal__message">
-                          <div class="product-personal__button">
-                            <span>הוספת ביקורת</span>
-                            <img
-                              src="./images/review/message.svg"
-                              alt="message"
-                            />
-                          </div>
-                        </button>
-                      </div>
-
-                      <div class="personal-area__product product-personal">
-                        <div class="product-personal__image">
-                          <img
-                            src="./images/review/product.png"
-                            alt="product"
-                          />
-                        </div>
-                        <div class="product-personal__name">
-                          Treatment Soa ילופיט ןובס
-                        </div>
-                        <div class="product-personal__date">12.03.2022</div>
-                        <div class="product-personal__status status-order">
-                          <span class="status-order__mark"></span>
-                          <div class="status-order__text">
-                            <span></span>
-                          </div>
-                        </div>
-                        <div class="product-personal__diamonds">
-                          <div class="diamonds-wrapper">
-                            <span class="diamond__amount">23+</span>
-                            <img
-                              src="./images/review/icons/diamond.svg"
-                              alt="diamond"
-                            />
-                          </div>
-                        </div>
-                        <div class="product-personal__label">הוספת ביקורת</div>
-                        <button class="product-personal__message">
-                          <div class="product-personal__button">
-                            <span>הוספת ביקורת</span>
-                            <img
-                              src="./images/review/message.svg"
-                              alt="message"
-                            />
-                          </div>
-                        </button>
-                      </div>
-
-                      <div class="personal-area__product product-personal">
-                        <div class="product-personal__image">
-                          <img
-                            src="./images/review/product.png"
-                            alt="product"
-                          />
-                        </div>
-                        <div class="product-personal__name">
-                          Treatment Soa ילופיט ןובס
-                        </div>
-                        <div class="product-personal__date">12.03.2022</div>
-                        <div class="product-personal__status status-order">
-                          <span class="status-order__mark"></span>
-                          <div class="status-order__text"></div>
-                        </div>
-                        <div class="product-personal__diamonds">
-                          <div class="diamonds-wrapper">
-                            <span class="diamond__amount">23+</span>
-                            <img
-                              src="./images/review/icons/diamond.svg"
-                              alt="diamond"
-                            />
-                          </div>
-                        </div>
-                        <div class="product-personal__label">הוספת ביקורת</div>
-                        <button class="product-personal__message">
-                          <div class="product-personal__button">
-                            <span>הוספת ביקורת</span>
-                            <img
-                              src="./images/review/message.svg"
-                              alt="message"
-                            />
-                          </div>
-                        </button>
-                      </div>
-                    </div>
-
-                    <div class="personal-area__item item-personal">
-                      <div class="item-personal__image">
-                        <img src="./images/review/logo.svg" alt="logo" />
-                      </div>
-                      <div class="item-personal__number">32123232 №</div>
-                      <div class="item-personal__date">12.03.2022</div>
-                      <div
-                        class="item-personal__status status-order status-order_red"
-                      >
-                        <span class="status-order__mark"></span>
-                        <div class="status-order__text">
-                          הביקורת לא אושרה
-                          <span>(לפרטים יש לפנות לצוות התמיכה)</span>
-                        </div>
-                      </div>
-                      <div class="item-personal__diamonds">
-                        <div class="diamonds-wrapper">
-                          <span class="diamond__amount">12/80</span>
-                          <img
-                            src="./images/review/icons/diamond.svg"
-                            alt="diamond"
-                          />
-                        </div>
-                      </div>
-                      <div class="item-personal__amount"><span>6</span></div>
-                      <button class="item-personal__arrow">
-                        <img
-                          src="./images/review/icons/arrow.svg"
-                          alt="arrow"
-                        />
-                      </button>
-                    </div>
-                    <div class="personal-area__item item-personal">
-                      <div class="item-personal__image">
-                        <img src="./images/review/logo.svg" alt="logo" />
-                      </div>
-                      <div class="item-personal__number">32123232 №</div>
-                      <div class="item-personal__date">12.03.2022</div>
-                      <div
-                        class="item-personal__status status-order status-order_yellow"
-                      >
-                        <span class="status-order__mark"></span>
-                        <div class="status-order__text">הקידבב תרוקיבה</div>
-                      </div>
-                      <div class="item-personal__diamonds">
-                        <div class="diamonds-wrapper">
-                          <span class="diamond__amount">12/80</span>
-                          <img
-                            src="./images/review/icons/diamond.svg"
-                            alt="diamond"
-                          />
-                        </div>
-                      </div>
-                      <div class="item-personal__amount"><span>6</span></div>
-                      <button class="item-personal__arrow">
-                        <img
-                          src="./images/review/icons/arrow.svg"
-                          alt="arrow"
-                        />
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="personal-area__added js-scroll">
-                    <div class="personal-area__item item-personal">
-                      <div class="item-personal__image">
-                        <img src="./images/review/logo.svg" alt="logo" />
-                      </div>
-                      <div class="item-personal__number">32123232 №</div>
-                      <div class="item-personal__date">12.03.2022</div>
-                      <div
-                        class="item-personal__status status-order status-order_green"
-                      >
-                        <span class="status-order__mark"></span>
-                        <div class="status-order__text">תרשואמ תרוקיבה</div>
-                      </div>
-                      <div class="item-personal__diamonds">
-                        <div class="diamonds-wrapper">
-                          <span class="diamond__amount">23/80 +</span>
-                          <img
-                            src="./images/review/icons/diamond.svg"
-                            alt="diamond"
-                          />
-                        </div>
-                      </div>
-                      <div class="item-personal__amount">
-                        <span>6</span>
-                      </div>
-                      <button class="item-personal__arrow">
-                        <img
-                          src="./images/review/icons/arrow.svg"
-                          alt="arrow"
-                        />
-                      </button>
-                    </div>
-
-                    <div class="personal-area__feedback">
-                      <button type="button" class="personal-area__correct">
-                        <img
-                          src="./images/review/icons/correct.svg"
-                          alt="correct"
-                        />
-                      </button>
-
-                      <div class="feedback-card">
-                        <div class="feedback-card__image">
-                          <img
-                            src="./images/review/product.png"
-                            alt="product"
-                          />
-                        </div>
-
-                        <div class="feedback-card__item">
-                          <div class="feedback-card__name">
-                            Soa Treatment ילופיט ןובס
-                          </div>
-                          <div class="feedback-card__info">
-                            <div class="feedback-card__diamond">
+                            <div class="product-personal__diamonds">
                               <div class="diamonds-wrapper">
+                                <span class="diamond__amount">23+</span>
                                 <img
                                   src="./images/review/icons/diamond.svg"
                                   alt="diamond"
                                 />
-                                <span class="diamond__amount">23+</span>
                               </div>
                             </div>
-                            <div
-                              class="feedback-card__status status-order status-order_green"
-                            >
+
+                            <div class="product-personal__label">
+                              הוספת ביקורת
+                            </div>
+
+                            <button class="product-personal__message">
+                              <div class="product-personal__button">
+                                <span>הוספת ביקורת</span>
+                                <img
+                                  src="./images/review/message.svg"
+                                  alt="message"
+                                />
+                              </div>
+                            </button>
+                          </div>
+
+                          <div class="personal-area__product product-personal">
+                            <div class="product-personal__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
+                            <div class="product-personal__name">
+                              Treatment Soa ילופיט ןובס
+                            </div>
+                            <div class="product-personal__date">12.03.2022</div>
+                            <div class="product-personal__status status-order">
                               <span class="status-order__mark"></span>
                               <div class="status-order__text">
-                                תרשואמ תרוקיבה
+                                <span></span>
                               </div>
                             </div>
-                          </div>
-                          <div class="feedback-card__text">
-                            .הנתמל תידי תיקשו ,הפלחה קתפ חולשמל ףיסונ ונא הנמזהב
-                            תאז ןייצל שי הנתמל םיטירפ ןימזהל יצרתו הדימב ,תגתוממ
-                            היולג ףוריצב טרסב הרושק הפי הנתמ תספוקב םיזורא
-                            םיעיגמ ונלש םיטישכתה לכ
-                          </div>
-                          <div class="feedback-card__photos">
-                            <div class="feedback-card__photo">
-                              <img
-                                src="./images/review/photos/1.png"
-                                alt="photo"
-                              />
-                            </div>
-                            <div class="feedback-card__photo">
-                              <img
-                                src="./images/review/photos/2.png"
-                                alt="photo"
-                              />
-                            </div>
-                            <div class="feedback-card__photo">
-                              <img
-                                src="./images/review/photos/3.png"
-                                alt="photo"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="feedback-card">
-                        <div class="feedback-card__image">
-                          <img
-                            src="./images/review/product.png"
-                            alt="product"
-                          />
-                        </div>
-
-                        <div class="feedback-card__item">
-                          <div class="feedback-card__name">
-                            Soa Treatment ילופיט ןובס
-                          </div>
-                          <div class="feedback-card__info">
-                            <div class="feedback-card__diamond">
+                            <div class="product-personal__diamonds">
                               <div class="diamonds-wrapper">
+                                <span class="diamond__amount">23+</span>
                                 <img
                                   src="./images/review/icons/diamond.svg"
                                   alt="diamond"
                                 />
-                                <span class="diamond__amount">23+</span>
                               </div>
                             </div>
-                            <div
-                              class="feedback-card__status status-order status-order_red"
-                            >
+                            <div class="product-personal__label">
+                              הוספת ביקורת
+                            </div>
+                            <button class="product-personal__message">
+                              <div class="product-personal__button">
+                                <span>הוספת ביקורת</span>
+                                <img
+                                  src="./images/review/message.svg"
+                                  alt="message"
+                                />
+                              </div>
+                            </button>
+                          </div>
+
+                          <div class="personal-area__product product-personal">
+                            <div class="product-personal__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
+                            <div class="product-personal__name">
+                              Treatment Soa ילופיט ןובס
+                            </div>
+                            <div class="product-personal__date">12.03.2022</div>
+                            <div class="product-personal__status status-order">
+                              <span class="status-order__mark"></span>
+                              <div class="status-order__text"></div>
+                            </div>
+                            <div class="product-personal__diamonds">
+                              <div class="diamonds-wrapper">
+                                <span class="diamond__amount">23+</span>
+                                <img
+                                  src="./images/review/icons/diamond.svg"
+                                  alt="diamond"
+                                />
+                              </div>
+                            </div>
+                            <div class="product-personal__label">
+                              הוספת ביקורת
+                            </div>
+                            <button class="product-personal__message">
+                              <div class="product-personal__button">
+                                <span>הוספת ביקורת</span>
+                                <img
+                                  src="./images/review/message.svg"
+                                  alt="message"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+
+                        <div
+                          data-tab="spoiler-2"
+                          class="personal-area__item item-personal spoiler-title"
+                        >
+                          <div class="item-personal__image">
+                            <img src="./images/review/logo.svg" alt="logo" />
+                          </div>
+                          <div class="item-personal__number">32123232 №</div>
+                          <div class="item-personal__date">12.03.2022</div>
+                          <div
+                            class="item-personal__status status-order status-order_red"
+                          >
+                            <span class="status-order__mark"></span>
+                            <div class="status-order__text">
+                              הביקורת לא אושרה
+                              <span>(לפרטים יש לפנות לצוות התמיכה)</span>
+                            </div>
+                          </div>
+                          <div class="item-personal__diamonds">
+                            <div class="diamonds-wrapper">
+                              <span class="diamond__amount">12/80</span>
+                              <img
+                                src="./images/review/icons/diamond.svg"
+                                alt="diamond"
+                              />
+                            </div>
+                          </div>
+                          <div class="item-personal__amount">
+                            <span>6</span>
+                          </div>
+                          <button class="item-personal__arrow">
+                            <img
+                              src="./images/review/icons/arrow.svg"
+                              alt="arrow"
+                            />
+                          </button>
+                        </div>
+
+                        <div
+                          id="spoiler-2"
+                          class="personal-area__products spoiler-content"
+                        >
+                          <div class="personal-area__product product-personal">
+                            <div class="product-personal__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
+                            <div class="product-personal__name">
+                              Treatment Soa ילופיט ןובס
+                            </div>
+                            <div class="product-personal__date">12.03.2022</div>
+                            <div class="product-personal__status status-order">
+                              <span class="status-order__mark"></span>
+                              <div class="status-order__text"></div>
+                            </div>
+
+                            <div class="product-personal__diamonds">
+                              <div class="diamonds-wrapper">
+                                <span class="diamond__amount">23+</span>
+                                <img
+                                  src="./images/review/icons/diamond.svg"
+                                  alt="diamond"
+                                />
+                              </div>
+                            </div>
+
+                            <div class="product-personal__label">
+                              הוספת ביקורת
+                            </div>
+
+                            <button class="product-personal__message">
+                              <div class="product-personal__button">
+                                <span>הוספת ביקורת</span>
+                                <img
+                                  src="./images/review/message.svg"
+                                  alt="message"
+                                />
+                              </div>
+                            </button>
+                          </div>
+
+                          <div class="personal-area__product product-personal">
+                            <div class="product-personal__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
+                            <div class="product-personal__name">
+                              Treatment Soa ילופיט ןובס
+                            </div>
+                            <div class="product-personal__date">12.03.2022</div>
+                            <div class="product-personal__status status-order">
                               <span class="status-order__mark"></span>
                               <div class="status-order__text">
-                                הביקורת לא אושרה
-                                <span>(לפרטים יש לפנות לצוות התמיכה)</span>
+                                <span></span>
+                              </div>
+                            </div>
+                            <div class="product-personal__diamonds">
+                              <div class="diamonds-wrapper">
+                                <span class="diamond__amount">23+</span>
+                                <img
+                                  src="./images/review/icons/diamond.svg"
+                                  alt="diamond"
+                                />
+                              </div>
+                            </div>
+                            <div class="product-personal__label">
+                              הוספת ביקורת
+                            </div>
+                            <button class="product-personal__message">
+                              <div class="product-personal__button">
+                                <span>הוספת ביקורת</span>
+                                <img
+                                  src="./images/review/message.svg"
+                                  alt="message"
+                                />
+                              </div>
+                            </button>
+                          </div>
+
+                          <div class="personal-area__product product-personal">
+                            <div class="product-personal__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
+                            <div class="product-personal__name">
+                              Treatment Soa ילופיט ןובס
+                            </div>
+                            <div class="product-personal__date">12.03.2022</div>
+                            <div class="product-personal__status status-order">
+                              <span class="status-order__mark"></span>
+                              <div class="status-order__text"></div>
+                            </div>
+                            <div class="product-personal__diamonds">
+                              <div class="diamonds-wrapper">
+                                <span class="diamond__amount">23+</span>
+                                <img
+                                  src="./images/review/icons/diamond.svg"
+                                  alt="diamond"
+                                />
+                              </div>
+                            </div>
+                            <div class="product-personal__label">
+                              הוספת ביקורת
+                            </div>
+                            <button class="product-personal__message">
+                              <div class="product-personal__button">
+                                <span>הוספת ביקורת</span>
+                                <img
+                                  src="./images/review/message.svg"
+                                  alt="message"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+
+                        <div
+                          data-tab="spoiler-3"
+                          class="personal-area__item item-personal spoiler-title"
+                        >
+                          <div class="item-personal__image">
+                            <img src="./images/review/logo.svg" alt="logo" />
+                          </div>
+                          <div class="item-personal__number">32123232 №</div>
+                          <div class="item-personal__date">12.03.2022</div>
+                          <div
+                            class="item-personal__status status-order status-order_yellow"
+                          >
+                            <span class="status-order__mark"></span>
+                            <div class="status-order__text">הקידבב תרוקיבה</div>
+                          </div>
+                          <div class="item-personal__diamonds">
+                            <div class="diamonds-wrapper">
+                              <span class="diamond__amount">12/80</span>
+                              <img
+                                src="./images/review/icons/diamond.svg"
+                                alt="diamond"
+                              />
+                            </div>
+                          </div>
+                          <div class="item-personal__amount">
+                            <span>6</span>
+                          </div>
+                          <button class="item-personal__arrow">
+                            <img
+                              src="./images/review/icons/arrow.svg"
+                              alt="arrow"
+                            />
+                          </button>
+                        </div>
+
+                        <div
+                          id="spoiler-3"
+                          class="personal-area__products spoiler-content"
+                        >
+                          <div class="personal-area__product product-personal">
+                            <div class="product-personal__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
+                            <div class="product-personal__name">
+                              Treatment Soa ילופיט ןובס
+                            </div>
+                            <div class="product-personal__date">12.03.2022</div>
+                            <div class="product-personal__status status-order">
+                              <span class="status-order__mark"></span>
+                              <div class="status-order__text"></div>
+                            </div>
+
+                            <div class="product-personal__diamonds">
+                              <div class="diamonds-wrapper">
+                                <span class="diamond__amount">23+</span>
+                                <img
+                                  src="./images/review/icons/diamond.svg"
+                                  alt="diamond"
+                                />
+                              </div>
+                            </div>
+
+                            <div class="product-personal__label">
+                              הוספת ביקורת
+                            </div>
+
+                            <button class="product-personal__message">
+                              <div class="product-personal__button">
+                                <span>הוספת ביקורת</span>
+                                <img
+                                  src="./images/review/message.svg"
+                                  alt="message"
+                                />
+                              </div>
+                            </button>
+                          </div>
+
+                          <div class="personal-area__product product-personal">
+                            <div class="product-personal__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
+                            <div class="product-personal__name">
+                              Treatment Soa ילופיט ןובס
+                            </div>
+                            <div class="product-personal__date">12.03.2022</div>
+                            <div class="product-personal__status status-order">
+                              <span class="status-order__mark"></span>
+                              <div class="status-order__text">
+                                <span></span>
+                              </div>
+                            </div>
+                            <div class="product-personal__diamonds">
+                              <div class="diamonds-wrapper">
+                                <span class="diamond__amount">23+</span>
+                                <img
+                                  src="./images/review/icons/diamond.svg"
+                                  alt="diamond"
+                                />
+                              </div>
+                            </div>
+                            <div class="product-personal__label">
+                              הוספת ביקורת
+                            </div>
+                            <button class="product-personal__message">
+                              <div class="product-personal__button">
+                                <span>הוספת ביקורת</span>
+                                <img
+                                  src="./images/review/message.svg"
+                                  alt="message"
+                                />
+                              </div>
+                            </button>
+                          </div>
+
+                          <div class="personal-area__product product-personal">
+                            <div class="product-personal__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
+                            <div class="product-personal__name">
+                              Treatment Soa ילופיט ןובס
+                            </div>
+                            <div class="product-personal__date">12.03.2022</div>
+                            <div class="product-personal__status status-order">
+                              <span class="status-order__mark"></span>
+                              <div class="status-order__text"></div>
+                            </div>
+                            <div class="product-personal__diamonds">
+                              <div class="diamonds-wrapper">
+                                <span class="diamond__amount">23+</span>
+                                <img
+                                  src="./images/review/icons/diamond.svg"
+                                  alt="diamond"
+                                />
+                              </div>
+                            </div>
+                            <div class="product-personal__label">
+                              הוספת ביקורת
+                            </div>
+                            <button class="product-personal__message">
+                              <div class="product-personal__button">
+                                <span>הוספת ביקורת</span>
+                                <img
+                                  src="./images/review/message.svg"
+                                  alt="message"
+                                />
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        id="tab-2"
+                        class="personal-area__added personal-area__tab-content personal-area__tab-content-hidden js-scroll"
+                      >
+                        <div
+                          data-tab="spoiler1"
+                          class="personal-area__item item-personal spoiler-title"
+                        >
+                          <div class="item-personal__image">
+                            <img src="./images/review/logo.svg" alt="logo" />
+                          </div>
+                          <div class="item-personal__number">32123232 №</div>
+                          <div class="item-personal__date">12.03.2022</div>
+                          <div
+                            class="item-personal__status status-order status-order_green"
+                          >
+                            <span class="status-order__mark"></span>
+                            <div class="status-order__text">תרשואמ תרוקיבה</div>
+                          </div>
+                          <div class="item-personal__diamonds">
+                            <div class="diamonds-wrapper">
+                              <span class="diamond__amount">23/80 +</span>
+                              <img
+                                src="./images/review/icons/diamond.svg"
+                                alt="diamond"
+                              />
+                            </div>
+                          </div>
+                          <div class="item-personal__amount">
+                            <span>6</span>
+                          </div>
+                          <button class="item-personal__arrow">
+                            <img
+                              src="./images/review/icons/arrow.svg"
+                              alt="arrow"
+                            />
+                          </button>
+                        </div>
+
+                        <div
+                          id="spoiler1"
+                          class="personal-area__feedback spoiler-content"
+                        >
+                          <button type="button" class="personal-area__correct">
+                            <img
+                              src="./images/review/icons/correct.svg"
+                              alt="correct"
+                            />
+                          </button>
+
+                          <div class="feedback-card">
+                            <div class="feedback-card__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
+
+                            <div class="feedback-card__item">
+                              <div class="feedback-card__name">
+                                Soa Treatment ילופיט ןובס
+                              </div>
+                              <div class="feedback-card__info">
+                                <div class="feedback-card__diamond">
+                                  <div class="diamonds-wrapper">
+                                    <img
+                                      src="./images/review/icons/diamond.svg"
+                                      alt="diamond"
+                                    />
+                                    <span class="diamond__amount">23+</span>
+                                  </div>
+                                </div>
+                                <div
+                                  class="feedback-card__status status-order status-order_green"
+                                >
+                                  <span class="status-order__mark"></span>
+                                  <div class="status-order__text">
+                                    תרשואמ תרוקיבה
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="feedback-card__text">
+                                .הנתמל תידי תיקשו ,הפלחה קתפ חולשמל ףיסונ ונא
+                                הנמזהב תאז ןייצל שי הנתמל םיטירפ ןימזהל יצרתו
+                                הדימב ,תגתוממ היולג ףוריצב טרסב הרושק הפי הנתמ
+                                תספוקב םיזורא םיעיגמ ונלש םיטישכתה לכ
+                              </div>
+                              <div class="feedback-card__photos">
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/1.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/2.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/3.png"
+                                    alt="photo"
+                                  />
+                                </div>
                               </div>
                             </div>
                           </div>
-                          <div class="feedback-card__text">
-                            .הנתמל תידי תיקשו ,הפלחה קתפ חולשמל ףיסונ ונא הנמזהב
-                            תאז ןייצל שי הנתמל םיטירפ ןימזהל יצרתו הדימב ,תגתוממ
-                            היולג ףוריצב טרסב הרושק הפי הנתמ תספוקב םיזורא
-                            םיעיגמ ונלש םיטישכתה לכ
-                          </div>
-                          <div class="feedback-card__photos">
-                            <div class="feedback-card__photo">
-                              <img
-                                src="./images/review/photos/1.png"
-                                alt="photo"
-                              />
-                            </div>
-                            <div class="feedback-card__photo">
-                              <img
-                                src="./images/review/photos/2.png"
-                                alt="photo"
-                              />
-                            </div>
-                            <div class="feedback-card__photo">
-                              <img
-                                src="./images/review/photos/3.png"
-                                alt="photo"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
 
-                    <div class="personal-area__item item-personal">
-                      <div class="item-personal__image">
-                        <img src="./images/review/logo.svg" alt="logo" />
-                      </div>
-                      <div class="item-personal__number">32123232 №</div>
-                      <div class="item-personal__date">12.03.2022</div>
-                      <div
-                        class="item-personal__status status-order status-order_green"
-                      >
-                        <span class="status-order__mark"></span>
-                        <div class="status-order__text">תרשואמ תרוקיבה</div>
-                      </div>
-                      <div class="item-personal__diamonds">
-                        <div class="diamonds-wrapper">
-                          <span class="diamond__amount">23+</span>
-                          <img
-                            src="./images/review/icons/diamond.svg"
-                            alt="diamond"
-                          />
-                        </div>
-                      </div>
-                      <div class="item-personal__amount">
-                        <span>6</span>
-                      </div>
-                      <button class="item-personal__arrow">
-                        <img
-                          src="./images/review/icons/arrow.svg"
-                          alt="arrow"
-                        />
-                      </button>
-                    </div>
+                          <div class="feedback-card">
+                            <div class="feedback-card__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
 
-                    <div class="personal-area__item item-personal">
-                      <div class="item-personal__image">
-                        <img src="./images/review/logo.svg" alt="logo" />
-                      </div>
-                      <div class="item-personal__number">32123232 №</div>
-                      <div class="item-personal__date">12.03.2022</div>
-                      <div
-                        class="item-personal__status status-order status-order_green"
-                      >
-                        <span class="status-order__mark"></span>
-                        <div class="status-order__text">תרשואמ תרוקיבה</div>
-                      </div>
-                      <div class="item-personal__diamonds">
-                        <div class="diamonds-wrapper">
-                          <span class="diamond__amount">23+</span>
-                          <img
-                            src="./images/review/icons/diamond.svg"
-                            alt="diamond"
-                          />
+                            <div class="feedback-card__item">
+                              <div class="feedback-card__name">
+                                Soa Treatment ילופיט ןובס
+                              </div>
+                              <div class="feedback-card__info">
+                                <div class="feedback-card__diamond">
+                                  <div class="diamonds-wrapper">
+                                    <img
+                                      src="./images/review/icons/diamond.svg"
+                                      alt="diamond"
+                                    />
+                                    <span class="diamond__amount">23+</span>
+                                  </div>
+                                </div>
+                                <div
+                                  class="feedback-card__status status-order status-order_red"
+                                >
+                                  <span class="status-order__mark"></span>
+                                  <div class="status-order__text">
+                                    הביקורת לא אושרה
+                                    <span>(לפרטים יש לפנות לצוות התמיכה)</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="feedback-card__text">
+                                .הנתמל תידי תיקשו ,הפלחה קתפ חולשמל ףיסונ ונא
+                                הנמזהב תאז ןייצל שי הנתמל םיטירפ ןימזהל יצרתו
+                                הדימב ,תגתוממ היולג ףוריצב טרסב הרושק הפי הנתמ
+                                תספוקב םיזורא םיעיגמ ונלש םיטישכתה לכ
+                              </div>
+                              <div class="feedback-card__photos">
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/1.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/2.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/3.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          data-tab="spoiler2"
+                          class="personal-area__item item-personal spoiler-title"
+                        >
+                          <div class="item-personal__image">
+                            <img src="./images/review/logo.svg" alt="logo" />
+                          </div>
+                          <div class="item-personal__number">32123232 №</div>
+                          <div class="item-personal__date">12.03.2022</div>
+                          <div
+                            class="item-personal__status status-order status-order_green"
+                          >
+                            <span class="status-order__mark"></span>
+                            <div class="status-order__text">תרשואמ תרוקיבה</div>
+                          </div>
+                          <div class="item-personal__diamonds">
+                            <div class="diamonds-wrapper">
+                              <span class="diamond__amount">23+</span>
+                              <img
+                                src="./images/review/icons/diamond.svg"
+                                alt="diamond"
+                              />
+                            </div>
+                          </div>
+                          <div class="item-personal__amount">
+                            <span>6</span>
+                          </div>
+                          <button class="item-personal__arrow">
+                            <img
+                              src="./images/review/icons/arrow.svg"
+                              alt="arrow"
+                            />
+                          </button>
+                        </div>
+
+                        <div
+                          id="spoiler2"
+                          class="personal-area__feedback spoiler-content"
+                        >
+                          <button type="button" class="personal-area__correct">
+                            <img
+                              src="./images/review/icons/correct.svg"
+                              alt="correct"
+                            />
+                          </button>
+
+                          <div class="feedback-card">
+                            <div class="feedback-card__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
+
+                            <div class="feedback-card__item">
+                              <div class="feedback-card__name">
+                                Soa Treatment ילופיט ןובס
+                              </div>
+                              <div class="feedback-card__info">
+                                <div class="feedback-card__diamond">
+                                  <div class="diamonds-wrapper">
+                                    <img
+                                      src="./images/review/icons/diamond.svg"
+                                      alt="diamond"
+                                    />
+                                    <span class="diamond__amount">23+</span>
+                                  </div>
+                                </div>
+                                <div
+                                  class="feedback-card__status status-order status-order_green"
+                                >
+                                  <span class="status-order__mark"></span>
+                                  <div class="status-order__text">
+                                    תרשואמ תרוקיבה
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="feedback-card__text">
+                                .הנתמל תידי תיקשו ,הפלחה קתפ חולשמל ףיסונ ונא
+                                הנמזהב תאז ןייצל שי הנתמל םיטירפ ןימזהל יצרתו
+                                הדימב ,תגתוממ היולג ףוריצב טרסב הרושק הפי הנתמ
+                                תספוקב םיזורא םיעיגמ ונלש םיטישכתה לכ
+                              </div>
+                              <div class="feedback-card__photos">
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/1.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/2.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/3.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="feedback-card">
+                            <div class="feedback-card__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
+
+                            <div class="feedback-card__item">
+                              <div class="feedback-card__name">
+                                Soa Treatment ילופיט ןובס
+                              </div>
+                              <div class="feedback-card__info">
+                                <div class="feedback-card__diamond">
+                                  <div class="diamonds-wrapper">
+                                    <img
+                                      src="./images/review/icons/diamond.svg"
+                                      alt="diamond"
+                                    />
+                                    <span class="diamond__amount">23+</span>
+                                  </div>
+                                </div>
+                                <div
+                                  class="feedback-card__status status-order status-order_red"
+                                >
+                                  <span class="status-order__mark"></span>
+                                  <div class="status-order__text">
+                                    הביקורת לא אושרה
+                                    <span>(לפרטים יש לפנות לצוות התמיכה)</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="feedback-card__text">
+                                .הנתמל תידי תיקשו ,הפלחה קתפ חולשמל ףיסונ ונא
+                                הנמזהב תאז ןייצל שי הנתמל םיטירפ ןימזהל יצרתו
+                                הדימב ,תגתוממ היולג ףוריצב טרסב הרושק הפי הנתמ
+                                תספוקב םיזורא םיעיגמ ונלש םיטישכתה לכ
+                              </div>
+                              <div class="feedback-card__photos">
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/1.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/2.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/3.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          data-tab="spoiler3"
+                          class="personal-area__item item-personal spoiler-title"
+                        >
+                          <div class="item-personal__image">
+                            <img src="./images/review/logo.svg" alt="logo" />
+                          </div>
+                          <div class="item-personal__number">32123232 №</div>
+                          <div class="item-personal__date">12.03.2022</div>
+                          <div
+                            class="item-personal__status status-order status-order_green"
+                          >
+                            <span class="status-order__mark"></span>
+                            <div class="status-order__text">תרשואמ תרוקיבה</div>
+                          </div>
+                          <div class="item-personal__diamonds">
+                            <div class="diamonds-wrapper">
+                              <span class="diamond__amount">23+</span>
+                              <img
+                                src="./images/review/icons/diamond.svg"
+                                alt="diamond"
+                              />
+                            </div>
+                          </div>
+                          <div class="item-personal__amount">
+                            <span>6</span>
+                          </div>
+                          <button class="item-personal__arrow">
+                            <img
+                              src="./images/review/icons/arrow.svg"
+                              alt="arrow"
+                            />
+                          </button>
+                        </div>
+
+                        <div
+                          id="spoiler3"
+                          class="personal-area__feedback spoiler-content"
+                        >
+                          <button type="button" class="personal-area__correct">
+                            <img
+                              src="./images/review/icons/correct.svg"
+                              alt="correct"
+                            />
+                          </button>
+
+                          <div class="feedback-card">
+                            <div class="feedback-card__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
+
+                            <div class="feedback-card__item">
+                              <div class="feedback-card__name">
+                                Soa Treatment ילופיט ןובס
+                              </div>
+                              <div class="feedback-card__info">
+                                <div class="feedback-card__diamond">
+                                  <div class="diamonds-wrapper">
+                                    <img
+                                      src="./images/review/icons/diamond.svg"
+                                      alt="diamond"
+                                    />
+                                    <span class="diamond__amount">23+</span>
+                                  </div>
+                                </div>
+                                <div
+                                  class="feedback-card__status status-order status-order_green"
+                                >
+                                  <span class="status-order__mark"></span>
+                                  <div class="status-order__text">
+                                    תרשואמ תרוקיבה
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="feedback-card__text">
+                                .הנתמל תידי תיקשו ,הפלחה קתפ חולשמל ףיסונ ונא
+                                הנמזהב תאז ןייצל שי הנתמל םיטירפ ןימזהל יצרתו
+                                הדימב ,תגתוממ היולג ףוריצב טרסב הרושק הפי הנתמ
+                                תספוקב םיזורא םיעיגמ ונלש םיטישכתה לכ
+                              </div>
+                              <div class="feedback-card__photos">
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/1.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/2.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/3.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="feedback-card">
+                            <div class="feedback-card__image">
+                              <img
+                                src="./images/review/product.png"
+                                alt="product"
+                              />
+                            </div>
+
+                            <div class="feedback-card__item">
+                              <div class="feedback-card__name">
+                                Soa Treatment ילופיט ןובס
+                              </div>
+                              <div class="feedback-card__info">
+                                <div class="feedback-card__diamond">
+                                  <div class="diamonds-wrapper">
+                                    <img
+                                      src="./images/review/icons/diamond.svg"
+                                      alt="diamond"
+                                    />
+                                    <span class="diamond__amount">23+</span>
+                                  </div>
+                                </div>
+                                <div
+                                  class="feedback-card__status status-order status-order_red"
+                                >
+                                  <span class="status-order__mark"></span>
+                                  <div class="status-order__text">
+                                    הביקורת לא אושרה
+                                    <span>(לפרטים יש לפנות לצוות התמיכה)</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="feedback-card__text">
+                                .הנתמל תידי תיקשו ,הפלחה קתפ חולשמל ףיסונ ונא
+                                הנמזהב תאז ןייצל שי הנתמל םיטירפ ןימזהל יצרתו
+                                הדימב ,תגתוממ היולג ףוריצב טרסב הרושק הפי הנתמ
+                                תספוקב םיזורא םיעיגמ ונלש םיטישכתה לכ
+                              </div>
+                              <div class="feedback-card__photos">
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/1.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/2.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                                <div class="feedback-card__photo">
+                                  <img
+                                    src="./images/review/photos/3.png"
+                                    alt="photo"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="item-personal__amount">
-                        <span>6</span>
-                      </div>
-                      <button class="item-personal__arrow">
-                        <img
-                          src="./images/review/icons/arrow.svg"
-                          alt="arrow"
-                        />
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -976,4 +1535,7 @@
 
     <!-- SCRIPTS start  -->
   </body>
+
+  <script src="js/review-tabs.js"></script>
+  <script src="js/review-accordeon.js"></script>
 </html>
