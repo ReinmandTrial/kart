@@ -1,4 +1,4 @@
 /node_modules/
 dist
 css
-app/js/main.min.js
+main.min.js
