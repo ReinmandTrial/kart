@@ -1,7 +1,7 @@
-// Табы
+//Табы========================================================================================================================================================
 !(function initReviewTabs() {
    const ACTIVE_CLASS = {
-      BUTTON: 'personal-area__tab_active',
+      BUTTON: '_active',
       BODY: '_active',
    };
    const tabsListEl = document.querySelectorAll('[data-tabs]');
@@ -32,34 +32,13 @@
    }
 })();
 
-!(function reviewAccordeon() {
-   const titles = document.querySelectorAll('.spoiler-title');
-   const contents = document.querySelectorAll('.spoiler-content');
-
-   titles.forEach((item) =>
-      item.addEventListener('click', () => {
-         const activeContent = document.querySelector('#' + item.dataset.tab);
-
-         if (activeContent.classList.contains('active')) {
-            activeContent.classList.remove('active');
-            item.classList.remove('active');
-            activeContent.style.maxHeight = 0;
-         } else {
-            contents.forEach((element) => {
-               element.classList.remove('active');
-               element.style.maxHeight = 0;
-            });
-
-            activeContent.classList.add('active');
-            activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
-         }
-      })
-   );
-})();
+//Спойлеры========================================================================================================================================================
 
 const openPopupReview = function () {
    let page = document.querySelector('html');
-   const btnsReview = document.querySelectorAll('.product-personal__message');
+   const btnsReview = document.querySelectorAll(
+      '.review-new-feetback__message'
+   );
    const popup = document.querySelector('.review-popup');
    const closeBtn = document.querySelector('.review-popup__close');
    const surePopup = document.querySelector('.sure-popup');
