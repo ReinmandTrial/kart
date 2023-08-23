@@ -1,235 +1,161 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Шаблон</title>
-    <link rel="stylesheet" href="css/style.min.css" />
-    <link rel="stylesheet" href="css/review.min.css" />
-    <script defer src="js/main.min.js"></script>
-  </head>
 
-  <body>
-    <!-- WRAPPER start -->
-    <div class="wrapper">
-      <!-- HEADER start  -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Шаблон</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/review.min.css" />
+  <script defer src="js/main.min.js"></script>
+</head>
 
-      <header class="header"></header>
-
-      <!-- HEADER end  -->
-
-      <!-- MAIN start  -->
-      <main class="main">
-        <!-- CONTENT start  -->
-        <div class="content">
-          <div class="page-main">
-            <div class="container">
-              <!-- ACCOUNT start -->
-              <section class="personal-area">
-                <!--SIDEBAR start-->
-                <aside class="sidebar">
-                  <h1
-                    class="sidebar__title"
-                    data-aos="fade-down"
-                    data-aos-delay="100"
-                  >
-                    Devon Lane
-                  </h1>
-                  <div
-                    class="sidebar__points"
-                    data-aos="fade-left"
-                    data-aos-delay="150"
-                  >
-                    <i class="sidebar__points-icon icon icon-info"></i>
-                    <div class="sidebar__icon">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g clip-path="url(#clip0_1012_24507)">
-                          <path
-                            d="M23.9071 6.54397L19.9072 1.74404C19.8312 1.65324 19.7188 1.60046 19.6 1.60046H4.40018C4.2814 1.60046 4.169 1.65287 4.09297 1.74404L0.0930382 6.54397C-0.00656985 6.66318 -0.0281789 6.82916 0.0378202 6.96955C0.103819 7.10994 0.245005 7.19993 0.400206 7.19993H23.5999C23.7551 7.19993 23.8963 7.10994 23.9623 6.96955C24.0279 6.82958 24.0067 6.66355 23.9071 6.54397ZM1.25426 6.39998L4.5874 2.40005H19.4124L22.7455 6.39998H1.25426Z"
-                            fill="#373737"
-                          />
-                          <path
-                            d="M12.3697 1.84689C12.3076 1.69732 12.1617 1.6001 12 1.6001H4.40017C4.25697 1.6001 4.12497 1.6765 4.05339 1.80091C3.98181 1.92531 3.98219 2.0777 4.05461 2.20168L6.85456 7.00162C6.91695 7.1084 7.02537 7.18082 7.14855 7.19681C7.16575 7.19882 7.18296 7.19999 7.19974 7.19999C7.30535 7.19999 7.40735 7.15842 7.48295 7.08281L12.2829 2.28287C12.3973 2.1685 12.4317 1.99647 12.3697 1.84689ZM7.28374 6.15043L5.09616 2.4001H11.0341L7.28374 6.15043Z"
-                            fill="#373737"
-                          />
-                          <path
-                            d="M23.9578 6.62233C23.8906 6.48593 23.7514 6.39954 23.5994 6.39954H0.399727C0.247714 6.39954 0.108919 6.48593 0.041326 6.62233C-0.0258919 6.75873 -0.0102827 6.92153 0.0821067 7.04232L11.682 22.2421C11.7576 22.3413 11.8752 22.3997 12 22.3997C12.1247 22.3997 12.2423 22.3413 12.3172 22.2421L23.917 7.04232C24.0094 6.92153 24.025 6.75873 23.9578 6.62233ZM12 21.3405L1.2085 7.19996H22.7914L12 21.3405Z"
-                            fill="#373737"
-                          />
-                          <path
-                            d="M12.3812 21.8789L7.58125 6.67914C7.52847 6.51274 7.37444 6.39954 7.19965 6.39954H0.399727C0.247714 6.39954 0.108919 6.48593 0.041326 6.62233C-0.0258919 6.75873 -0.0102827 6.92153 0.0821066 7.04232L11.682 22.2421C11.7595 22.3441 11.8784 22.3997 12 22.3997C12.0623 22.3997 12.1255 22.3853 12.1839 22.3541C12.3564 22.265 12.4395 22.0641 12.3812 21.8789ZM1.20812 7.19996H6.90645L10.9288 19.9374L1.20812 7.19996Z"
-                            fill="#373737"
-                          />
-                          <path
-                            d="M19.9503 1.80091C19.8791 1.6765 19.7467 1.6001 19.6035 1.6001H12.0036C11.842 1.6001 11.696 1.69732 11.634 1.84689C11.572 1.99647 11.6064 2.1685 11.7208 2.28287L16.5207 7.08281C16.5959 7.15842 16.6979 7.19999 16.8035 7.19999C16.8207 7.19999 16.8379 7.19878 16.8551 7.19681C16.978 7.18082 17.0868 7.10882 17.1491 7.00162L19.9491 2.20168C20.0211 2.0777 20.0215 1.92531 19.9503 1.80091ZM16.7195 6.15043L12.9692 2.4001H18.9071L16.7195 6.15043Z"
-                            fill="#373737"
-                          />
-                          <path
-                            d="M23.9619 6.62355C23.8947 6.48715 23.7555 6.40076 23.6035 6.40076H16.8036C16.6288 6.40076 16.4744 6.51396 16.422 6.68036L11.6221 21.8802C11.5637 22.0649 11.6469 22.2658 11.8193 22.3554C11.8777 22.3858 11.9409 22.4002 12.0033 22.4002C12.1245 22.4002 12.2432 22.3446 12.3212 22.2434L23.9211 7.04359C24.0135 6.9227 24.0291 6.75991 23.9619 6.62355ZM13.0741 19.9377L17.0964 7.20029H22.7948L13.0741 19.9377Z"
-                            fill="#373737"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_1012_24507">
-                            <rect width="24" height="24" fill="white" />
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    </div>
-                    <div class="sidebar__count">2344</div>
-                    <div class="sidebar__points-info">
-                      <p class="sidebar__points-text">
-                        הפי הנתמ תספוקב םיזורא םיעיגמ ונלש םיטישכתה לכ ןימזהל
-                        יצרתו הדימב ,תגתוממ היולג ףוריצב טרסב הרושק חולשמל ףיסונ
-                        ונא הנמזהב תאז ןייצל שי הנתמל םיטירפ .הנתמל תידי תיקשו
-                        ,הפלחה קתפ
-                      </p>
-                    </div>
+<body>
+  <div class="wrapper">
+    <header class="header"></header>
+    <main class="main">
+      <div class="content">
+        <div class="page-main">
+          <div class="container">
+            <section class="reviews-page">
+              <aside class="sidebar">
+                <h1 class="sidebar__title" data-aos="fade-down" data-aos-delay="100">
+                  Devon Lane
+                </h1>
+                <div class="sidebar__points" data-aos="fade-left" data-aos-delay="150">
+                  <i class="sidebar__points-icon icon icon-info"></i>
+                  <div class="sidebar__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_1012_24507)">
+                        <path
+                          d="M23.9071 6.54397L19.9072 1.74404C19.8312 1.65324 19.7188 1.60046 19.6 1.60046H4.40018C4.2814 1.60046 4.169 1.65287 4.09297 1.74404L0.0930382 6.54397C-0.00656985 6.66318 -0.0281789 6.82916 0.0378202 6.96955C0.103819 7.10994 0.245005 7.19993 0.400206 7.19993H23.5999C23.7551 7.19993 23.8963 7.10994 23.9623 6.96955C24.0279 6.82958 24.0067 6.66355 23.9071 6.54397ZM1.25426 6.39998L4.5874 2.40005H19.4124L22.7455 6.39998H1.25426Z"
+                          fill="#373737" />
+                        <path
+                          d="M12.3697 1.84689C12.3076 1.69732 12.1617 1.6001 12 1.6001H4.40017C4.25697 1.6001 4.12497 1.6765 4.05339 1.80091C3.98181 1.92531 3.98219 2.0777 4.05461 2.20168L6.85456 7.00162C6.91695 7.1084 7.02537 7.18082 7.14855 7.19681C7.16575 7.19882 7.18296 7.19999 7.19974 7.19999C7.30535 7.19999 7.40735 7.15842 7.48295 7.08281L12.2829 2.28287C12.3973 2.1685 12.4317 1.99647 12.3697 1.84689ZM7.28374 6.15043L5.09616 2.4001H11.0341L7.28374 6.15043Z"
+                          fill="#373737" />
+                        <path
+                          d="M23.9578 6.62233C23.8906 6.48593 23.7514 6.39954 23.5994 6.39954H0.399727C0.247714 6.39954 0.108919 6.48593 0.041326 6.62233C-0.0258919 6.75873 -0.0102827 6.92153 0.0821067 7.04232L11.682 22.2421C11.7576 22.3413 11.8752 22.3997 12 22.3997C12.1247 22.3997 12.2423 22.3413 12.3172 22.2421L23.917 7.04232C24.0094 6.92153 24.025 6.75873 23.9578 6.62233ZM12 21.3405L1.2085 7.19996H22.7914L12 21.3405Z"
+                          fill="#373737" />
+                        <path
+                          d="M12.3812 21.8789L7.58125 6.67914C7.52847 6.51274 7.37444 6.39954 7.19965 6.39954H0.399727C0.247714 6.39954 0.108919 6.48593 0.041326 6.62233C-0.0258919 6.75873 -0.0102827 6.92153 0.0821066 7.04232L11.682 22.2421C11.7595 22.3441 11.8784 22.3997 12 22.3997C12.0623 22.3997 12.1255 22.3853 12.1839 22.3541C12.3564 22.265 12.4395 22.0641 12.3812 21.8789ZM1.20812 7.19996H6.90645L10.9288 19.9374L1.20812 7.19996Z"
+                          fill="#373737" />
+                        <path
+                          d="M19.9503 1.80091C19.8791 1.6765 19.7467 1.6001 19.6035 1.6001H12.0036C11.842 1.6001 11.696 1.69732 11.634 1.84689C11.572 1.99647 11.6064 2.1685 11.7208 2.28287L16.5207 7.08281C16.5959 7.15842 16.6979 7.19999 16.8035 7.19999C16.8207 7.19999 16.8379 7.19878 16.8551 7.19681C16.978 7.18082 17.0868 7.10882 17.1491 7.00162L19.9491 2.20168C20.0211 2.0777 20.0215 1.92531 19.9503 1.80091ZM16.7195 6.15043L12.9692 2.4001H18.9071L16.7195 6.15043Z"
+                          fill="#373737" />
+                        <path
+                          d="M23.9619 6.62355C23.8947 6.48715 23.7555 6.40076 23.6035 6.40076H16.8036C16.6288 6.40076 16.4744 6.51396 16.422 6.68036L11.6221 21.8802C11.5637 22.0649 11.6469 22.2658 11.8193 22.3554C11.8777 22.3858 11.9409 22.4002 12.0033 22.4002C12.1245 22.4002 12.2432 22.3446 12.3212 22.2434L23.9211 7.04359C24.0135 6.9227 24.0291 6.75991 23.9619 6.62355ZM13.0741 19.9377L17.0964 7.20029H22.7948L13.0741 19.9377Z"
+                          fill="#373737" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1012_24507">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
                   </div>
-                  <div
-                    class="sidebar-box"
-                    data-aos="fade-left"
-                    data-aos-delay="200"
-                  >
-                    <div class="sidebar__out">
-                      <a class="sidebar__out-link" href="#">
-                        <i class="sidebar__out-icon icon icon-exit"></i>
-                        להתנתק
+                  <div class="sidebar__count">2344</div>
+                  <div class="sidebar__points-info">
+                    <p class="sidebar__points-text">
+                      הפי הנתמ תספוקב םיזורא םיעיגמ ונלש םיטישכתה לכ ןימזהל
+                      יצרתו הדימב ,תגתוממ היולג ףוריצב טרסב הרושק חולשמל ףיסונ
+                      ונא הנמזהב תאז ןייצל שי הנתמל םיטירפ .הנתמל תידי תיקשו
+                      ,הפלחה קתפ
+                    </p>
+                  </div>
+                </div>
+                <div class="sidebar-box" data-aos="fade-left" data-aos-delay="200">
+                  <div class="sidebar__out">
+                    <a class="sidebar__out-link" href="#">
+                      <i class="sidebar__out-icon icon icon-exit"></i>
+                      להתנתק
+                    </a>
+                  </div>
+                  <div class="sidebar__referal">
+                    Referral link:
+                    <a class="sidebar__referal-link" href="#">
+                      <p class="sidebar__referal-link-text">def23d32323</p>
+                      <i class="sidebar__referal-link-icon icon icon-copy"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="sidebar__link" data-aos="fade-left" data-aos-delay="300">
+                  <ul class="sidebar__link-list">
+                    <li class="sidebar__link-item">
+                      <a class="sidebar__link" href="#"> היסטוריית הזמנות </a>
+                    </li>
+                    <li class="sidebar__link-item">
+                      <a class="sidebar__link" href="#"> סלים שמורים </a>
+                    </li>
+                    <li class="sidebar__link-item">
+                      <a class="sidebar__link" href="#"> מועדפים </a>
+                    </li>
+                    <li class="sidebar__link-item">
+                      <a class="sidebar__link" href="#"> קופונים ויהלומים </a>
+                    </li>
+                    <li class="sidebar__link-item">
+                      <a class="sidebar__link" href="#"> אקדמיית KART </a>
+                    </li>
+                    <li class="sidebar__link-item">
+                      <a class="sidebar__link" href="#"> פרוטוקולים </a>
+                    </li>
+                    <li class="sidebar__link-item">
+                      <a class="sidebar__link sidebar__link--active" href="#">
+                        הביקורות שלי
                       </a>
+                    </li>
+                    <li class="sidebar__link-item">
+                      <a class="sidebar__link" href="#"> פרטי חשבון </a>
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+              <div class="reviews-page__body">
+                <h2 class="reviews-page__title">הביקורות שלי</h2>
+                <div data-tabs class="reviews-tabs">
+                  <div class="reviews-tabs__head">
+                    <button data-tab-button='1' class="reviews-tabs__button _active">
+                      ביקורות בהמתנה
+                    </button>
+                    <button data-tab-button='2' class="reviews-tabs__button">
+                      היסטוריית ביקורות
+                    </button>
+                  </div>
+                  <div class="reviews-tabs__body">
+                    <div data-tab-body='1' class="reviews-tabs__body-item review-empty-tab _active ">
+                      <button class="review-empty-tab__content">
+                        <div class="review-empty-tab__image">
+                          <img src="./images/review/empty-page.svg" alt="empty">
+                        </div>
+                        <div class="review-empty-tab__text">
+                          בושמ ןיידע ךל ןיא
+                        </div>
+                      </button>
                     </div>
-                    <div class="sidebar__referal">
-                      Referral link:
-                      <a class="sidebar__referal-link" href="#">
-                        <p class="sidebar__referal-link-text">def23d32323</p>
-                        <i
-                          class="sidebar__referal-link-icon icon icon-copy"
-                        ></i>
-                      </a>
+                    <div data-tab-body='2' class="reviews-tabs__body-item review-empty-tab">
+                      <button class="review-empty-tab__content">
+                        <div class="review-empty-tab__image">
+                          <img src="./images/review/empty-page.svg" alt="empty">
+                        </div>
+                        <div class="review-empty-tab__text">
+                          בושמ ןיידע ךל ןיא
+                        </div>
+                      </button>
                     </div>
                   </div>
-                  <div
-                    class="sidebar__link"
-                    data-aos="fade-left"
-                    data-aos-delay="300"
-                  >
-                    <ul class="sidebar__link-list">
-                      <li class="sidebar__link-item">
-                        <a class="sidebar__link" href="#"> היסטוריית הזמנות </a>
-                      </li>
-                      <li class="sidebar__link-item">
-                        <a class="sidebar__link" href="#"> סלים שמורים </a>
-                      </li>
-                      <li class="sidebar__link-item">
-                        <a class="sidebar__link" href="#"> מועדפים </a>
-                      </li>
-                      <li class="sidebar__link-item">
-                        <a class="sidebar__link" href="#"> קופונים ויהלומים </a>
-                      </li>
-                      <li class="sidebar__link-item">
-                        <a class="sidebar__link" href="#"> אקדמיית KART </a>
-                      </li>
-                      <li class="sidebar__link-item">
-                        <a class="sidebar__link" href="#"> פרוטוקולים </a>
-                      </li>
-                      <li class="sidebar__link-item">
-                        <a class="sidebar__link sidebar__link--active" href="#">
-                          הביקורות שלי
-                        </a>
-                      </li>
-                      <li class="sidebar__link-item">
-                        <a class="sidebar__link" href="#"> פרטי חשבון </a>
-                      </li>
-                    </ul>
-                  </div>
-                </aside>
-                <!--SIDEBAR end-->
-
-                <!-- Reviews Content -->
-                <div class="personal-area__body">
-                  <h2 class="personal-area__title">הביקורות שלי</h2>
-
-                 <div class="personal-area__tabs">
-                      <button data-tab="tab-1" class="personal-area__tab">
-                        ביקורות בהמתנה
-                      </button>
-                      <button data-tab="tab-2" class="personal-area__tab">
-                        היסטוריית ביקורות
-                      </button>
-                    </div>
-
-
-
-                    <div class="tabs-wrapper">
-                        
-
-                      <div id="tab-1" class="personal-area__tab-content personal-area__tab-content-hidden empty-personal">
-                          <button class="empty-personal__content">
-                              <div class="empty-personal__image">
-                            <img src="./images/review/empty-page.svg" alt="empty">
-                        </div>
-                        <div class="empty-personal__text">
-                            בושמ ןיידע ךל ןיא
-                        </div>
-                      </button>
-                    </div>
-
-                    <div id="tab-2" class="personal-area__tab-content personal-area__tab-content-hidden empty-personal">
-                          <button class="empty-personal__content">
-                              <div class="empty-personal__image">
-                            <img src="./images/review/empty-page.svg" alt="empty">
-                        </div>
-                        <div class="empty-personal__text">
-                            בושמ ןיידע ךל ןיא
-                        </div>
-                      </button>
-                    </div>
-
-
-                     
-                    </div>
-
-
-
-
-                <!-- END Reviews Content -->
-              </section>
-
-              <div class="prompt">
-                <p class="prompt-text">הקישור הועתק</p>
+                </div>
               </div>
-
-              <!-- ACCOUNT end -->
-            </div>
+            </section>
           </div>
         </div>
-        <!-- CONTENT end -->
+      </div>
 
-        <!-- POPUP  -->
-        <div class="popup">
-          <div class="popup__body">
-            <div class="popup__content"></div>
-          </div>
-        </div>
-        <!-- POPUP END  -->
-      </main>
-      <!-- MAIN end -->
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content"></div>
+      </div>
+    </footer>
+  </div>
+</body>
 
-      <!-- FOOTER start  -->
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__content"></div>
-        </div>
-      </footer>
-      <!-- FOOTER end -->
-    </div>
-    <!-- WRAPPER end -->
-
-    <!-- SCRIPTS start  -->
-  </body>
 </html>

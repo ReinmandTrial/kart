@@ -619,7 +619,44 @@
       }
    }
 }
-//Review page========================================================================================================================================================
+.review-empty-tab {
+   margin: 0 auto;
+   padding: 156px 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   @media (max-width: 992px) {
+      padding: 144px 0;
+   }
+
+   @media (max-width: 767px) {
+      padding: 136px 0;
+   }
+
+   @media (max-width: 479px) {
+      padding: 124px 0;
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__image {
+      width: 107px;
+      height: 107px;
+   }
+
+   &__text {
+      font-size: 16px;
+      line-height: 134.875%;
+      margin-top: 34px;
+   }
+}
+//Page========================================================================================================================================================
 .reviews-page {
    display: flex;
    align-items: flex-start;
@@ -672,45 +709,6 @@
       }
    }
 }
-//Review Empty page========================================================================================================================================================
-.empty-personal {
-   margin: 0 auto;
-   padding: 156px 0;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-
-   @media (max-width: 992px) {
-      padding: 144px 0;
-   }
-
-   @media (max-width: 767px) {
-      padding: 136px 0;
-   }
-
-   @media (max-width: 479px) {
-      padding: 124px 0;
-   }
-
-   &__content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-   }
-
-   &__image {
-      width: 107px;
-      height: 107px;
-   }
-
-   &__text {
-      font-size: 16px;
-      line-height: 134.875%;
-      margin-top: 34px;
-   }
-}
-
 //Popups========================================================================================================================================================
 //1.Общие стили для попапов
 .review-popup {
