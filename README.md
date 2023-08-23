@@ -1,7 +1,5 @@
 # adel
 
-// npm i
-// gulp
-// gulp build
+// npm i // gulp // gulp build
 
-#mnemonik
+#mnemonik test
