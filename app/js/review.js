@@ -31,37 +31,3 @@
       list.length && list.forEach((item) => item.classList.remove(selector));
    }
 })();
-
-//Спойлеры========================================================================================================================================================
-
-// const openPopupReview = function () {
-//    let page = document.querySelector('html');
-//    const btnsReview = document.querySelectorAll(
-//       '.review-new-feetback__message'
-//    );
-//    const popup = document.querySelector('.review-popup');
-//    const closeBtn = document.querySelector('.review-popup__close');
-//    const surePopup = document.querySelector('.sure-popup');
-
-//    btnsReview.forEach((btn) =>
-//       btn.addEventListener('click', () => {
-//          popup.classList.add('open');
-//          page.style.overflow = 'hidden';
-//       })
-//    );
-
-//    closeBtn.addEventListener('click', () => {
-//       surePopup.classList.add('open');
-//    });
-
-//    document.onclick = function (event) {
-//       let target = event.target;
-
-//       if (target === popup) {
-//          popup.classList.remove('open');
-//          page.style.overflow = '';
-//       }
-//    };
-// };
-
-// openPopupReview();
