@@ -689,11 +689,9 @@ html {
       }
       @media (max-width: 479px) {
       }
+
       img {
-         @media (max-width: 992px) {
-         }
-         @media (max-width: 767px) {
-         }
+         transition: all 0.3s ease 0s;
       }
    }
 }
@@ -1029,6 +1027,13 @@ html {
 
    @media (max-width: 479px) {
       padding-top: 12px;
+   }
+}
+
+.spoiler-title.active .item-personal__arrow {
+   img {
+      transition: all 0.3s ease 0s;
+      transform: rotate(-180deg);
    }
 }
 

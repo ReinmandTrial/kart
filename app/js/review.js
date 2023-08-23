@@ -32,6 +32,8 @@
    }
 })();
 
+// Аккордеон
+
 !(function reviewAccordeon() {
    const titles = document.querySelectorAll('.spoiler-title');
    const contents = document.querySelectorAll('.spoiler-content');
@@ -39,7 +41,7 @@
    titles.forEach((item) =>
       item.addEventListener('click', () => {
          const activeContent = document.querySelector('#' + item.dataset.tab);
-
+         item.classList.toggle('active');
          if (activeContent.classList.contains('active')) {
             activeContent.classList.remove('active');
             item.classList.remove('active');
