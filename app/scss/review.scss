@@ -713,59 +713,64 @@
 
 //Popups========================================================================================================================================================
 //1.Общие стили для попапов
-//2.Стили для попапа редактирования
-//3.Стили для попапа подтверждения
-//4.Стили для попапа об успешном редактировании
-
 .review-popup {
-   visibility: hidden;
-   opacity: 0;
-   transition: all 0.6s ease-out 0s;
-
-   display: flex;
-   width: 100%;
-   height: 100%;
    position: fixed;
-   left: 0;
    top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
    z-index: 1000;
-   background-color: rgba(0, 0, 0, 0.2);
-   align-items: center;
-   justify-content: center;
-
+   width: 100%;
+   min-height: 100%;
+   overflow-y: auto;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease 0s;
+   &._popup-open {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease 0s;
+   }
    &__body {
-      align-items: flex-start;
+      min-height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.29);
+      display: flex;
+      align-items: center;
       justify-content: center;
-
-      opacity: 0;
-      transition: all 0.6s ease-out 0s;
-      transform: translate(-100%, 0);
+      padding: 30px 0px;
    }
 
    &__content {
-      width: 23%;
-      min-width: 448px;
-      margin: 76px 0;
-      padding: 39px 52.5px 50px 52.5px;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      max-height: 899px;
+      max-width: 450px;
+      width: 100%;
+      padding: 20px 30px;
+      transform: scale(0);
+      transition: all 0.3s ease 0s;
       background-color: #fff;
-
-      @media (max-width: 479px) {
-         width: 100%;
-         min-width: none;
-         margin-top: 72px;
-         margin-bottom: 0;
-         padding: 32px 16px 16px 16px;
-         max-width: 100%;
-         min-width: 320px;
+      ._popup-open & {
+         transform: scale(1);
+         transition: all 0.3s ease 0s;
       }
    }
 
+   &__close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+   }
+   &__action-button {
+      background-color: #94c05b;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: normal;
+      text-align: center;
+      width: 100%;
+   }
+}
+//2.Стили для попапа редактирования
+.review-edit-popup {
    &__title {
       font-size: 24px;
       margin-bottom: 20px;
@@ -1050,9 +1055,6 @@
       z-index: 10;
    }
 
-   &__close {
-   }
-
    &__button {
       padding: 19px 0;
       width: 100%;
@@ -1062,168 +1064,13 @@
       }
    }
 }
-
-.review-popup.open {
-   visibility: visible;
-   opacity: 1;
-}
-
-.review-popup.open .review-popup__body {
-   opacity: 1;
-   transform: translate(0, 0);
-}
-
-.review-close {
-   position: absolute;
-   top: 10px;
-   right: 10px;
-}
-
-.review-button {
-   background-color: #94c05b;
-   color: #ffffff;
-   font-size: 14px;
-   font-weight: 500;
-   line-height: normal;
-   text-align: center;
-}
-
-.success-popup {
-   visibility: hidden;
-   opacity: 0;
-   transition: all 0.6s ease-out 0s;
-
-   display: flex;
-   width: 100%;
-   height: 100%;
-   position: fixed;
-   left: 0;
-   top: 0;
-   z-index: 1000;
-   background-color: rgba(0, 0, 0, 0.2);
-   align-items: center;
-   justify-content: center;
-
-   &__body {
-      opacity: 0;
-      transition: all 0.6s ease-out 0s;
-      transform: translate(-100%, 0);
-
-      @media (max-width: 479px) {
-         align-items: flex-end;
-      }
+//3.Стили для попапа подтверждения
+.review-exit-popup {
+   z-index: 1001;
+   .review-popup__content {
+      max-width: 415px;
+      padding: 50px;
    }
-
-   &__content {
-      padding: 124px 77px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      background-color: #fff;
-
-      @media (max-width: 479px) {
-         padding: 128px 16px 16px 16px;
-      }
-   }
-
-   &__close {
-   }
-
-   &__icon {
-      width: 100px;
-      height: 100px;
-      min-width: 100px;
-      margin-bottom: 22px;
-
-      @media (max-width: 479px) {
-         width: 64px;
-         height: 64px;
-         min-width: 64px;
-         margin-bottom: 12px;
-      }
-   }
-
-   &__text {
-      font-size: 20px;
-      line-height: normal;
-      margin-bottom: 25px;
-      text-align: center;
-
-      @media (max-width: 479px) {
-         margin-bottom: 120px;
-         padding: 0 38px;
-      }
-   }
-
-   &__button {
-      padding: 11px 71px;
-
-      @media (max-width: 479px) {
-         width: 100%;
-         padding: 13px 0;
-      }
-   }
-}
-
-.success-popup.open {
-   visibility: visible;
-   opacity: 1;
-}
-
-.success-popup.open .success-popup__body {
-   opacity: 1;
-   transform: translate(0, 0);
-}
-
-.sure-popup {
-   visibility: hidden;
-   opacity: 0;
-   transition: all 0.6s ease-out 0s;
-
-   display: flex;
-   width: 100%;
-   height: 100%;
-   position: fixed;
-   left: 0;
-   top: 0;
-   z-index: 1000;
-   background-color: rgba(0, 0, 0, 0.2);
-   align-items: center;
-   justify-content: center;
-
-   &__body {
-      display: flex;
-
-      opacity: 0;
-      transition: all 0.6s ease-out 0s;
-      transform: translate(-100%, 0);
-
-      @media (max-width: 479px) {
-         padding: 0 10px;
-      }
-   }
-
-   &__content {
-      position: relative;
-      padding: 48px 53px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      max-width: 414px;
-      background-color: #fff;
-
-      @media (max-width: 479px) {
-         min-width: 300px;
-         padding: 32px 16px;
-      }
-   }
-
-   &__close {
-   }
-
    &__ask {
       display: flex;
       flex-direction: column;
@@ -1265,23 +1112,71 @@
    &__button {
       padding: 11px 47px;
       font-weight: 500;
+
+      &_next {
+         background-color: #94c05b;
+         color: #ffffff;
+         font-size: 14px;
+         font-weight: 500;
+         line-height: normal;
+         text-align: center;
+      }
+
+      &_back {
+         color: #373737;
+         font-weight: 500;
+         border: 1px solid #94c05b;
+         font-size: 14px;
+         padding: 10px 47px;
+      }
    }
 }
+//4.Стили для попапа об успешном редактировании
+.review-success-popup {
+   .review-popup__content {
+      padding: 125px 75px;
+   }
+   &__icon {
+      width: 100px;
+      height: 100px;
+      min-width: 100px;
+      margin: 0px auto 22px;
 
-.sure-popup.open {
-   opacity: 1;
-   visibility: visible;
-}
+      @media (max-width: 479px) {
+         width: 64px;
+         height: 64px;
+         min-width: 64px;
+         margin-bottom: 12px;
+      }
+   }
 
-.sure-popup.open .sure-popup__body {
-   opacity: 1;
-   transform: translate(0, 0);
-}
+   &__text {
+      font-size: 20px;
+      line-height: normal;
+      margin-bottom: 25px;
+      text-align: center;
 
-.sure-button {
-   color: #373737;
-   font-weight: 500;
-   border: 1px solid #94c05b;
-   font-size: 14px;
-   padding: 10px 47px;
+      @media (max-width: 479px) {
+         margin-bottom: 120px;
+         padding: 0 38px;
+      }
+   }
+
+   &__button {
+      display: block;
+      padding: 11px 71px;
+      background-color: #94c05b;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: normal;
+      text-align: center;
+      max-width: 170px;
+      margin: auto;
+      width: 100%;
+      @media (max-width: 479px) {
+         width: 100%;
+         padding: 13px 0;
+      }
+   }
 }

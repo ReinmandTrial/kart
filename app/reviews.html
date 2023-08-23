@@ -255,63 +255,49 @@
           </div>
         </div>
       </div>
-      <div class="review-popup">
+      <!-- _open-popup -->
+      <div class="review-popup review-edit-popup">
         <div class="review-popup__body">
           <div class="review-popup__content">
-            <button type="button" class="review-popup__close review-close">
+            <button type="button" class="review-popup__close-button ">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.4008 4.80078L4.80078 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
                 <path d="M4.80078 4.80078L14.4008 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
-
-            <form class="review-popup__form" method="">
-              <h3 class="review-popup__title">הוספת ביקורת</h3>
-              <div class="review-popup__row">
-                <div class="review-popup__product">
-                  <div class="review-popup__image">
+            <form class="review-edit-popup__form">
+              <h3 class="review-edit-popup__title">הוספת ביקורת</h3>
+              <div class="review-edit-popup__row">
+                <div class="review-edit-popup__product">
+                  <div class="review-edit-popup__image">
                     <img src="./images/review/product.png" alt="product" />
                   </div>
-                  <div class="review-popup__name">
+                  <div class="review-edit-popup__name">
                     סבון טיפולי Soa Treatment
                   </div>
                 </div>
-                <div class="review-popup__diamonds">
+                <div class="review-edit-popup__diamonds">
                   <div class="review-diamonds _gold">
                     <img src="./images/review/icons/diamond.svg" alt="diamond" />
                     <span class="diamond__amount">23 +</span>
                   </div>
                 </div>
               </div>
-              <div class="review-popup__row">
-                <div class="review-popup__text">הוספת תמונה לביקורת</div>
-                <div class="review-popup__diamonds">
+              <div class="review-edit-popup__row">
+                <div class="review-edit-popup__text">הוספת תמונה לביקורת</div>
+                <div class="review-edit-popup__diamonds">
                   <div class="review-diamonds">
                     <img src="./images/review/icons/diamond.svg" alt="diamond" />
                     <span class="diamond__amount">13 +</span>
                   </div>
                 </div>
               </div>
-
-              <!-- При добавлении фото на class=review-popup__load добавляется
-                class=reduced -->
-
-              <div class="review-popup__load">
-                <div class="review-popup__load-images">
-                  <!-- При отсутствии загруженного фото добавляется модификатор review-popup__load-image_hidden -->
-
-                  <div class="review-popup__load-image review-popup__load-image_hidden">
-                    <button type="button" class="review-popup__close review-close">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.4008 4.80078L4.80078 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M4.80078 4.80078L14.4008 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </button>
-
-                    <img src="./images/review/product-big.png" alt="photo" />
-                  </div>
-                  <div class="review-popup__load-image review-popup__load-image_hidden">
-                    <button type="button" class="review-popup__close review-close">
+              <!-- При добавлении фото на class=review-edit-popup__load добавляется class=reduced -->
+              <div class="review-edit-popup__load">
+                <div class="review-edit-popup__load-images">
+                  <!-- При отсутствии загруженного фото добавляется модификатор review-edit-popup__load-image_hidden -->
+                  <div class="review-edit-popup__load-image review-edit-popup__load-image_hidden">
+                    <button type="button" class="review-edit-popup__close review-close">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.4008 4.80078L4.80078 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M4.80078 4.80078L14.4008 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
@@ -319,8 +305,17 @@
                     </button>
                     <img src="./images/review/product-big.png" alt="photo" />
                   </div>
-                  <div class="review-popup__load-image review-popup__load-image_hidden">
-                    <button type="button" class="review-popup__close review-close">
+                  <div class="review-edit-popup__load-image review-edit-popup__load-image_hidden">
+                    <button type="button" class="review-edit-popup__close review-close">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.4008 4.80078L4.80078 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4.80078 4.80078L14.4008 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                    <img src="./images/review/product-big.png" alt="photo" />
+                  </div>
+                  <div class="review-edit-popup__load-image review-edit-popup__load-image_hidden">
+                    <button type="button" class="review-edit-popup__close review-close">
                       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.4008 4.80078L4.80078 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M4.80078 4.80078L14.4008 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
@@ -329,121 +324,109 @@
                     <img src="./images/review/product-big.png" alt="photo" />
                   </div>
                 </div>
-
-                <!-- При добавлении фото на class=review-popup__inputs добавляется
-                class=reduced -->
-
-                <div class="review-popup__inputs">
-                  <!-- При добавлении фото на class=review-popup__description-inside добавляется    class=reduced -->
-                  <div class="review-popup__description-inside">
+                <!-- При добавлении фото на class=review-edit-popup__inputs добавляется class=reduced -->
+                <div class="review-edit-popup__inputs">
+                  <!-- При добавлении фото на class=review-edit-popup__description-inside добавляется    class=reduced -->
+                  <div class="review-edit-popup__description-inside">
                     ניתן להפעיל מצלמה או להעלות מהגלרייה
                   </div>
-
-                  <!-- При добавлении фото на class=review-popup__input-wrapper добавляется class=reduced -->
-                  <div class="review-popup__input-wrapper">
-                    <label for="load-photo" name="load-photo" class="review-popup__label">
-                      <!-- При добавлении фото на class=review-popup__file-icon-wrapper добавляется
-                class=reduced -->
-                      <span class="review-popup__file-icon-wrapper"><img class="review-popup__file-icon" src="./images/review/icons/upload.svg"
+                  <!-- При добавлении фото на class=review-edit-popup__input-wrapper добавляется class=reduced -->
+                  <div class="review-edit-popup__input-wrapper">
+                    <label for="load-photo" name="load-photo" class="review-edit-popup__label">
+                      <!-- При добавлении фото на class=review-edit-popup__file-icon-wrapper добавляется class=reduced -->
+                      <span class="review-edit-popup__file-icon-wrapper"><img class="review-edit-popup__file-icon" src="./images/review/icons/upload.svg"
                           alt="Выбрать файл" width="24" /></span>
                     </label>
-                    <input type="file" id="load-photo" class="review-popup__input" />
+                    <input type="file" id="load-photo" class="review-edit-popup__input" />
                   </div>
-
-                  <!-- При добавлении фото на class=review-popup__input-wrapper добавляется class=reduced -->
-                  <div class="review-popup__input-wrapper">
-                    <label for="load-photo" name="load-photo" class="review-popup__label">
-                      <!-- При добавлении фото на class=review-popup__file-icon-wrapper добавляется
-                class=reduced -->
-                      <span class="review-popup__file-icon-wrapper"><img class="review-popup__file-icon" src="./images/review/icons/camera.svg"
+                  <!-- При добавлении фото на class=review-edit-popup__input-wrapper добавляется class=reduced -->
+                  <div class="review-edit-popup__input-wrapper">
+                    <label for="load-photo" name="load-photo" class="review-edit-popup__label">
+                      <!-- При добавлении фото на class=review-edit-popup__file-icon-wrapper добавляется class=reduced -->
+                      <span class="review-edit-popup__file-icon-wrapper"><img class="review-edit-popup__file-icon" src="./images/review/icons/camera.svg"
                           alt="Выбрать файл" width="24" /></span>
                     </label>
-                    <input type="file" id="load-photo" class="review-popup__input" />
+                    <input type="file" id="load-photo" class="review-edit-popup__input" />
                   </div>
                 </div>
-
-                <!-- При добавлении фото на class=review-popup__description добавляется
-                class=reduced -->
-                <div class="review-popup__description">
+                <!-- При добавлении фото на class=review-edit-popup__description добавляется class=reduced -->
+                <div class="review-edit-popup__description">
                   ניתן להפעיל מצלמה או להעלות מהגלרייה
                 </div>
               </div>
-
-              <div class="review-popup__row">
-                <div class="review-popup__text">נשמח לשמוע את דעתך</div>
-                <div class="review-popup__diamonds">
+              <div class="review-edit-popup__row">
+                <div class="review-edit-popup__text">נשמח לשמוע את דעתך</div>
+                <div class="review-edit-popup__diamonds">
                   <div class="review-diamonds green">
                     <img src="./images/review/icons/diamond.svg" alt="diamond" />
                     <span class="diamond__amount">10 +</span>
                   </div>
                 </div>
               </div>
-
-              <textarea class="review-popup__comment" placeholder="את הביקורת ניתן לרשום כאן" name="" id=""></textarea>
-
-              <div class="review-popup__progressbar">
-                <div class="review-popup__progress">
-                  <div class="review-popup__percent">76%</div>
-                  <div class="review-popup__progresstext">
+              <textarea class="review-edit-popup__comment" placeholder="את הביקורת ניתן לרשום כאן" name="" id=""></textarea>
+              <div class="review-edit-popup__progressbar">
+                <div class="review-edit-popup__progress">
+                  <div class="review-edit-popup__percent">76%</div>
+                  <div class="review-edit-popup__progresstext">
                     תרוקיבה לש המלשה
                   </div>
                 </div>
-
-                <div class="review-popup__progressline">
-                  <span class="review-popup__progressthumb"></span>
+                <div class="review-edit-popup__progressline">
+                  <span class="review-edit-popup__progressthumb"></span>
                 </div>
               </div>
-
-              <button type="button" class="review-popup__button review-button">
+              <button type="button" class="review-edit-popup__button review-popup__action-button">
                 שיתוף
               </button>
             </form>
           </div>
         </div>
       </div>
-      <div class="sure-popup">
-        <div class="sure-popup__body">
-          <div class="sure-popup__content">
-            <button type="button" class="review-close sure-popup__close">
+      <!-- _open-popup -->
+      <div class="review-popup review-exit-popup">
+        <div class="review-popup__body">
+          <div class="review-popup__content">
+            <button type="button" class="review-popup__close-button">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.4008 4.80078L4.80078 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
                 <path d="M4.80078 4.80078L14.4008 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
-            <div class="sure-popup__ask">
-              <div class="sure-popup__question">
+            <div class="review-exit-popup__ask">
+              <div class="review-exit-popup__question">
                 האם לצאת ללא שמירה של השינויים שבוצעו?
               </div>
-              <div class="sure-popup__desc">ורמשי אל ועצובש םייונישה</div>
+              <div class="review-exit-popup__desc">ורמשי אל ועצובש םייונישה</div>
             </div>
-            <div class="sure-popup__buttons">
-              <button type="button" class="sure-popup__button review-button">
+            <div class="review-exit-popup__buttons">
+              <button type="button" class="review-exit-popup__button review-exit-popup__button_next">
                 האיצי
               </button>
-              <button type="button" class="sure-popup__button sure-button">
+              <button type="button" class="review-exit-popup__button review-exit-popup__button_back">
                 לוטיב
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div class="success-popup">
-        <div class="success-popup__body">
-          <div class="success-popup__content">
-            <button type="button" class="review-close success-popup__close">
+      <!-- _open-popup -->
+      <div class="review-popup review-success-popup">
+        <div class="review-popup__body">
+          <div class="review-popup__content">
+            <button type="button" class="review-popup__close-button">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.4008 4.80078L4.80078 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
                 <path d="M4.80078 4.80078L14.4008 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
 
-            <div class="success-popup__icon">
+            <div class="review-success-popup__icon">
               <img src="./images/review/icons/success.svg" alt="success" />
             </div>
-            <div class="success-popup__text">
+            <div class="review-success-popup__text">
               החלצהב הלבקתה תרוקיבה ,הבר הדות
             </div>
-            <button class="success-popup__button review-button">םויס</button>
+            <button class="review-success-popup__button">םויס</button>
           </div>
         </div>
       </div>
