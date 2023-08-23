@@ -1,7 +1,61 @@
+// Решение проблемы с дерганием страницы при появлении скролла??
+html {
+  margin-right: calc(-1 * (100vw - 100%));
+  overflow-x: hidden;
+}
+
 %flex-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+//_______________________________EMPTY PAGE____________________________//
+
+.empty-personal {
+  margin: 0 auto;
+  padding: 156px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 992px) {
+    padding: 144px 0;
+  }
+
+  @media (max-width: 767px) {
+    padding: 136px 0;
+  }
+
+  @media (max-width: 479px) {
+    padding: 124px 0;
+  }
+  // .empty-personal__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .empty-personal__image
+
+  &__image {
+    width: 107px;
+    height: 107px;
+  }
+
+  // .empty-personal__text
+
+  &__text {
+    font-size: 16px;
+    line-height: 134.875%;
+    margin-top: 34px;
+  }
+}
+
+.content-empty__tab1 {
 }
 
 .personal-area {
@@ -9,7 +63,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   text-align: right;
-  font-family: Heebo;
+  font-family: inherit;
   font-style: normal;
   font-weight: 300;
   text-transform: uppercase;
@@ -169,21 +223,6 @@
         margin-left: 14px;
       }
     }
-
-    // &:hover {
-    //   color: #373737;
-
-    //   &::after {
-    //     display: block;
-    //     content: '';
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 1px;
-    //     background-color: #101423;
-    //     bottom: 0;
-    //     left: 0;
-    //   }
-    // }
   }
 
   // .personal-area__items
@@ -194,11 +233,10 @@
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
-    height: 525px;
+    max-height: 525px;
     overflow-y: auto;
     overflow-x: hidden;
     display: flex;
-    cursor: pointer;
 
     .mCustomScrollBox {
       width: 100%;
@@ -331,20 +369,6 @@
       align-items: center;
       justify-content: flex-end;
       margin-left: 34px;
-
-      .diamonds-wrapper {
-        background-color: #fdda9e;
-        font-size: 12.273px;
-        padding: 5px 5px 5px 7px;
-        color: #101423;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      img {
-        margin-left: 4px;
-      }
     }
 
     // .feedback-card__status
@@ -405,6 +429,7 @@
     padding: 12px 0 12px 0;
     width: 100%;
     border-bottom: 1px solid #ececec;
+    cursor: pointer;
 
     @media (max-width: 1200px) {
     }
@@ -513,7 +538,7 @@
     flex: 0 0 25%;
 
     @media (max-width: 1200px) {
-      flex: 0 0 18%;
+      flex: 0 0 20%;
     }
 
     @media (max-width: 992px) {
@@ -535,6 +560,8 @@
     flex: 0 0 13%;
 
     @media (max-width: 1200px) {
+      flex: 0 0 11%;
+      margin-right: 4px;
     }
 
     @media (max-width: 992px) {
@@ -555,6 +582,7 @@
     flex: 0 0 25%;
 
     @media (max-width: 1200px) {
+      flex: 0 0 26%;
     }
 
     @media (max-width: 992px) {
@@ -575,9 +603,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex: 0 0 15%;
+    flex: 0 0 12.5%;
 
     @media (max-width: 1200px) {
+      flex: 0 0 14%;
     }
 
     @media (max-width: 992px) {
@@ -588,16 +617,6 @@
     }
     @media (max-width: 479px) {
       align-self: end;
-    }
-
-    .diamonds-wrapper {
-      background-color: #fdda9e;
-      font-size: 12.273px;
-      padding: 5px 5px 5px 7px;
-      color: #101423;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     img {
@@ -612,13 +631,13 @@
     font-size: 10px;
     font-weight: 400;
     line-height: normal;
-    flex: 0 0 10%;
+    flex: 0 0 12.5%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
     @media (max-width: 1200px) {
-      flex: 0 0 14%;
+      flex: 0 0 12%;
     }
 
     @media (max-width: 992px) {
@@ -654,7 +673,7 @@
     justify-content: flex-end;
 
     @media (max-width: 1200px) {
-      flex: 0 0 8%;
+      flex: 0 0 7%;
     }
 
     @media (max-width: 992px) {
@@ -723,7 +742,7 @@
     flex: 0 0 25%;
 
     @media (max-width: 1200px) {
-      flex: 0 0 18%;
+      flex: 0 0 20%;
     }
 
     @media (max-width: 992px) {
@@ -744,6 +763,8 @@
     flex: 0 0 13%;
 
     @media (max-width: 1200px) {
+      flex: 0 0 11%;
+      margin-right: 4px;
     }
 
     @media (max-width: 992px) {
@@ -763,6 +784,7 @@
     flex: 0 0 25%;
 
     @media (max-width: 1200px) {
+      flex: 0 0 25%;
     }
 
     @media (max-width: 992px) {
@@ -782,9 +804,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex: 0 0 15%;
+    flex: 0 0 12.5%;
 
     @media (max-width: 1200px) {
+      flex: 0 0 14%;
     }
 
     @media (max-width: 992px) {
@@ -795,20 +818,6 @@
     }
     @media (max-width: 479px) {
     }
-
-    .diamonds-wrapper {
-      background-color: #fdda9e;
-      font-size: 12.273px;
-      padding: 5px 12.5px 5px 7px;
-      color: #101423;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    img {
-      margin-right: 4px;
-    }
   }
 
   // .product-personal__label
@@ -816,8 +825,10 @@
   &__label {
     font-size: 12px;
     font-weight: 400;
-    flex: 0 0 14%;
     text-align: left;
+    margin-left: 12px;
+    @media (max-width: 1200px) {
+    }
     @media (max-width: 992px) {
       display: none;
     }
@@ -831,10 +842,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex: 0 0 5%;
+    flex: 0 0 17.5%;
 
     @media (max-width: 1200px) {
-      flex: 0 0 8%;
+      flex: 0 0 20%;
     }
 
     @media (max-width: 992px) {
@@ -886,12 +897,58 @@
   }
 }
 
+// -----------Diamonds компонент------------------
+
+.diamonds-wrapper {
+  background-color: #e5e5e5;
+  font-size: 12.273px;
+  padding: 2px 5px 2px 5px;
+  color: #101423;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    margin-right: 4px;
+    min-width: 13.513px;
+  }
+}
+
+.diamonds-wrapper.gold {
+  background-color: #fdda9e;
+}
+
+.diamonds-wrapper.green {
+  background-color: rgba(147, 192, 91, 0.3);
+  padding-right: 32px;
+
+  &:after {
+    position: absolute;
+    content: url(../images/review/icons/check.svg);
+    display: block;
+    width: 10px;
+    height: 9px;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-100%);
+  }
+}
+
+.feedback-card__diamond {
+  .diamonds-wrapper {
+    img {
+      margin-left: 4px;
+      margin-right: 0;
+    }
+  }
+}
+
 .status-order {
   font-size: 12px;
   font-weight: 100;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
   padding: 0 8px;
   @media (max-width: 767px) {
     padding: 0;
@@ -971,63 +1028,34 @@
     padding-top: 12px;
   }
 }
-//_______________________________EMPTY PAGE____________________________//
-
-.empty-personal {
-  margin: 0 auto;
-  padding: 156px 0;
-
-  @media (max-width: 992px) {
-    padding: 144px 0;
-  }
-
-  @media (max-width: 767px) {
-    padding: 136px 0;
-  }
-
-  @media (max-width: 479px) {
-    padding: 124px 0;
-  }
-  // .empty-personal__content
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  // .empty-personal__image
-
-  &__image {
-    width: 107px;
-    height: 107px;
-  }
-
-  // .empty-personal__text
-
-  &__text {
-    font-size: 16px;
-    line-height: 134.875%;
-    margin-top: 34px;
-  }
-}
-
-.content-empty__tab1 {
-  display: none;
-}
 
 //_____________________________POPUP_____________________//
 
 .review-popup {
-  display: none;
-  // display: flex;
-  // .review-popup__body
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.6s ease-out 0s;
 
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: center;
+
+  // .review-popup__body
   &__body {
     align-items: flex-start;
-    overflow-y: scroll;
+    overflow-y: auto;
     justify-content: center;
+
+    opacity: 0;
+    transition: all 0.6s ease-out 0s;
+    transform: translate(-100%, 0);
   }
 
   // .review-popup__content
@@ -1045,6 +1073,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     max-height: 899px;
+    background-color: #fff;
 
     @media (max-width: 479px) {
       width: 100%;
@@ -1071,6 +1100,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: stretch;
+
+    @media (max-width: 479px) {
+      width: 100%;
+    }
   }
 
   // .review-popup__row
@@ -1110,52 +1143,20 @@
     font-size: 13px;
   }
 
-  // .review-popup__bonus
-
-  &__bonus {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 7px;
-    background-color: #e5e5e5;
-    font-size: 12.273px;
-    position: relative;
-
-    img {
-      margin-left: 4px;
-      min-width: 13.513px;
-    }
-    // .review-popup__bonus_gold
-
-    &_gold {
-      background-color: #fdda9e;
-    }
-
-    &_active {
-      background-color: rgba(147, 192, 91, 0.3);
-      padding-right: 32px;
-
-      &:after {
-        position: absolute;
-        content: url(../images/review/icons/check.svg);
-        display: block;
-        width: 10px;
-        height: 9px;
-        top: 50%;
-        right: 10px;
-        transform: translateY(-100%);
-      }
-    }
-  }
-
-  // .review-popup__points
-
-  &__points {
-  }
-
   // .review-popup__diamonds
 
   &__diamonds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .diamonds-wrapper {
+      img {
+        margin-left: 4px;
+        margin-right: 0;
+      }
+    }
   }
 
   // .review-popup__text
@@ -1414,6 +1415,16 @@
   }
 }
 
+.review-popup.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.review-popup.open .review-popup__body {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 .review-close {
   position: absolute;
   top: 10px;
@@ -1437,11 +1448,30 @@
 //_____________________________POPUP SUCCESS_____________________//
 
 .success-popup {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.6s ease-out 0s;
+
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: center;
 
   // .success-popup__body
 
   &__body {
+    overflow-y: auto;
+
+    opacity: 0;
+    transition: all 0.6s ease-out 0s;
+    transform: translate(-100%, 0);
+
     @media (max-width: 479px) {
       align-items: flex-end;
     }
@@ -1456,6 +1486,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    background-color: #fff;
 
     @media (max-width: 479px) {
       padding: 128px 16px 16px 16px;
@@ -1509,16 +1540,43 @@
   }
 }
 
+.success-popup.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.success-popup.open .success-popup__body {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 //_____________________________POPUP SUCCESS_____________________//
 
 //____________________________POPUP SURE________________________//
 
 .sure-popup {
   // .sure-popup__body
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.6s ease-out 0s;
+
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: center;
 
   &__body {
     display: flex;
+
+    opacity: 0;
+    transition: all 0.6s ease-out 0s;
+    transform: translate(-100%, 0);
 
     @media (max-width: 479px) {
       padding: 0 10px;
@@ -1535,6 +1593,7 @@
     align-items: center;
     justify-content: center;
     max-width: 414px;
+    background-color: #fff;
 
     @media (max-width: 479px) {
       min-width: 300px;
@@ -1599,6 +1658,16 @@
     padding: 11px 47px;
     font-weight: 500;
   }
+}
+
+.sure-popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sure-popup.open .sure-popup__body {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .sure-button {

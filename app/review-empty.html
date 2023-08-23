@@ -154,40 +154,49 @@
                 <div class="personal-area__body">
                   <h2 class="personal-area__title">הביקורות שלי</h2>
 
-                  <div class="personal-area__tabs">
-                    <button
-                      class="personal-area__tab personal-area__tab_active"
-                    >
-                      ביקורות בהמתנה
-                    </button>
-                    <button class="personal-area__tab">
-                      היסטוריית ביקורות
-                    </button>
-                  </div>
+                 <div class="personal-area__tabs">
+                      <button data-tab="tab-1" class="personal-area__tab">
+                        ביקורות בהמתנה
+                      </button>
+                      <button data-tab="tab-2" class="personal-area__tab">
+                        היסטוריית ביקורות
+                      </button>
+                    </div>
 
-                  <div class="personal-area__empty empty-personal">
-                    <div class="empty-personal__content content-empty__tab2">
-                        <div class="empty-personal__image">
+
+
+                    <div class="tabs-wrapper">
+                        
+
+                      <div id="tab-1" class="personal-area__tab-content personal-area__tab-content-hidden empty-personal">
+                          <button class="empty-personal__content">
+                              <div class="empty-personal__image">
                             <img src="./images/review/empty-page.svg" alt="empty">
                         </div>
                         <div class="empty-personal__text">
                             בושמ ןיידע ךל ןיא
                         </div>
-                        
+                      </button>
                     </div>
 
-                     <div class="empty-personal__content content-empty__tab1">
-                        <div class="empty-personal__image">
+                    <div id="tab-2" class="personal-area__tab-content personal-area__tab-content-hidden empty-personal">
+                          <button class="empty-personal__content">
+                              <div class="empty-personal__image">
                             <img src="./images/review/empty-page.svg" alt="empty">
                         </div>
                         <div class="empty-personal__text">
                             בושמ ןיידע ךל ןיא
                         </div>
-                        
+                      </button>
                     </div>
-                    
-                  </div>
-                  
+
+
+                     
+                    </div>
+
+
+
+
                 <!-- END Reviews Content -->
               </section>
 
