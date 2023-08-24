@@ -671,7 +671,9 @@ html:has(.reviews-page) {
       display: flex;
       align-items: center;
       justify-content: center;
-
+      > * {
+         pointer-events: none;
+      }
       @media (max-width: 479px) {
          top: 12px;
          width: 24px;
