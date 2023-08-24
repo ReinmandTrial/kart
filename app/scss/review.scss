@@ -522,7 +522,6 @@ html:has(.reviews-page) {
 
    @media (max-width: 479px) {
       padding-left: 0;
-      margin-bottom: 12px;
    }
 
    &__wrapper {
@@ -609,16 +608,14 @@ html:has(.reviews-page) {
       width: 95px;
       height: 95px;
       margin-left: 8px;
-
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
       @media (max-width: 767px) {
          width: 90px;
          height: 71px;
-
-         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-         }
       }
    }
    &__correct {
