@@ -106,3 +106,58 @@ lightbox.option({
 });
 
 //Попапы========================================================================================================================================================
+
+!(function initReviewPopup() {
+   const POPUP = {
+      OPEN: '_popup-open',
+   };
+   const dataPopupEdit = document.querySelector('[data-popup="edit"]');
+   const dataPopupExit = document.querySelector('[data-popup="exit"]');
+   const dataPopupSuccess = document.querySelector('[data-popup="success"]');
+   const popupButtonsList = document.querySelectorAll('[data-popup-button]');
+
+   popupButtonsList.length &&
+      popupButtonsList.forEach((button) => initButtonHandler(button));
+
+   function initButtonHandler(button) {
+      button.addEventListener('click', onClickPopupButton);
+   }
+   dataPopupEdit.addEventListener('click', onCloseEditPopup);
+   dataPopupExit.addEventListener('click', onCloseExitPopup);
+   dataPopupSuccess.addEventListener('click', onCloseSuccessPopup);
+
+   function onCloseEditPopup(e) {
+      if (e.target.hasAttribute('data-popup-close')) {
+         dataPopupExit.classList.add(POPUP.OPEN);
+      }
+      if (e.target.hasAttribute('data-popup-success')) {
+         dataPopupEdit.classList.remove(POPUP.OPEN);
+         dataPopupSuccess.classList.add(POPUP.OPEN);
+      }
+   }
+   function onCloseExitPopup(e) {
+      if (e.target.hasAttribute('data-popup-close')) {
+         dataPopupExit.classList.remove(POPUP.OPEN);
+      }
+      if (e.target.hasAttribute('data-popup-close-all')) {
+         dataPopupEdit.classList.remove(POPUP.OPEN);
+         dataPopupExit.classList.remove(POPUP.OPEN);
+         document.documentElement.style.overflow = '';
+      }
+   }
+
+   function onCloseSuccessPopup(e) {
+      if (e.target.hasAttribute('data-popup-close')) {
+         dataPopupSuccess.classList.remove(POPUP.OPEN);
+         document.documentElement.style.overflow = '';
+      }
+   }
+
+   function onClickPopupButton(e) {
+      const currentPopup = document.querySelector(
+         `[data-popup='${e.target.dataset.popupButton}']`
+      );
+      currentPopup.classList.add(POPUP.OPEN);
+      document.documentElement.style.overflow = 'hidden';
+   }
+})();

@@ -478,7 +478,9 @@ html:has(.reviews-page) {
       justify-content: flex-end;
       flex: 0 0 17%;
       margin-right: 2%;
-
+      > * {
+         pointer-events: none;
+      }
       @media (max-width: 1200px) {
          flex: 0 0 21%;
       }
@@ -487,10 +489,6 @@ html:has(.reviews-page) {
          align-self: end;
          justify-content: center;
          grid-area: 4 / 1 / 5 / 4;
-      }
-
-      span {
-         display: none;
       }
    }
    &__label {
@@ -524,6 +522,7 @@ html:has(.reviews-page) {
       }
 
       span {
+         display: none;
          @media (max-width: 992px) {
             display: block;
             font-weight: 400;
@@ -827,6 +826,9 @@ html:has(.reviews-page) {
       position: absolute;
       top: 10px;
       right: 10px;
+      > * {
+         pointer-events: none;
+      }
    }
    &__action-button {
       background-color: #94c05b;
