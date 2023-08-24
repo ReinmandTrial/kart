@@ -68,8 +68,11 @@
 
       for (let i = 0; i < 3; i++) {
          const element = childrens[i];
-         if (!element) break;
-         height += element.scrollHeight;
+         if (!element) {
+            height = 99999999;
+            break;
+         }
+         height += element.scrollHeight + 1;
       }
       return height;
    }
@@ -84,7 +87,9 @@
       const maxHeight = calcMaxHeight(body);
       item.classList.add(SPOILER.ACTIVE);
       body.style.height = `${
-         (body.scrollHeight > maxHeight ? maxHeight : body.scrollHeight) + 1
+         body.scrollHeight > maxHeight
+            ? maxHeight
+            : body.scrollHeight + body.children.length
       }px`;
    }
    function closeSpoiler(item) {
