@@ -99,7 +99,7 @@
       position: relative;
       transition: all 0.1s ease-in 0s;
       padding-bottom: 22px;
-      &._active {
+      &._active-tab-button {
          color: #373737;
          &::after {
             display: block;
@@ -135,7 +135,7 @@
       justify-content: flex-start;
       width: 100%;
       display: none;
-      &._active {
+      &._active-tab-body {
          display: flex;
       }
    }
@@ -150,6 +150,9 @@
       width: 100%;
       border-bottom: 1px solid #ececec;
       cursor: pointer;
+      > * {
+         pointer-events: none;
+      }
       @media (max-width: 992px) {
          display: grid;
 
@@ -308,7 +311,11 @@
       flex: 0 0 5%;
       display: flex;
       justify-content: flex-end;
-
+      transition: all 0.3s ease 0s;
+      ._active-spoiler & {
+         transition: all 0.3s ease 0s;
+         rotate: x -180deg;
+      }
       @media (max-width: 1200px) {
          flex: 0 0 7%;
       }
@@ -321,6 +328,23 @@
    }
 
    &__body {
+      transition: all 0.5s ease 0s;
+      height: 0;
+      overflow: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: #c4c4c4 transparent;
+      &::-webkit-scrollbar {
+         width: 3px;
+      }
+      &::-webkit-scrollbar-track {
+         background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+         border-left: 3px solid #c4c4c4;
+      }
+      ._active-spoiler & {
+         overflow-y: scroll;
+      }
    }
 }
 .review-new-feetback {
@@ -486,7 +510,6 @@
    position: relative;
    border-bottom: 1px solid #ececec;
    padding-left: 175px;
-   margin-bottom: 39px;
 
    @media (max-width: 767px) {
       padding-left: 50px;
