@@ -239,12 +239,11 @@ html:has(.reviews-page) {
       @media (max-width: 992px) {
          grid-area: 2 / 2 / 3 / 4;
          margin-right: 0;
-         align-self: flex-end;
+         align-self: center;
       }
 
       @media (max-width: 479px) {
          font-size: 12px;
-         align-self: flex-end;
       }
    }
 
@@ -348,6 +347,7 @@ html:has(.reviews-page) {
       overflow: hidden;
       scrollbar-width: thin;
       scrollbar-color: #c4c4c4 transparent;
+
       &::-webkit-scrollbar {
          width: 3px;
       }
@@ -434,6 +434,7 @@ html:has(.reviews-page) {
 
       @media (max-width: 992px) {
          grid-area: 3 / 2 / 4 / 3;
+         align-self: center;
       }
       @media (max-width: 479px) {
          font-size: 12px;
@@ -542,8 +543,20 @@ html:has(.reviews-page) {
 }
 .review-edit-feetback {
    position: relative;
-   border-bottom: 1px solid #ececec;
    padding-left: 175px;
+   padding-bottom: 39px;
+
+   &:first-child {
+      padding-top: 29px;
+
+      @media (max-width: 479px) {
+         padding-top: 11px;
+      }
+   }
+
+   &:last-child {
+      border-bottom: 1px solid #ececec;
+   }
 
    @media (max-width: 767px) {
       padding-left: 50px;
@@ -551,6 +564,7 @@ html:has(.reviews-page) {
 
    @media (max-width: 479px) {
       padding-left: 0;
+      padding-bottom: 11px;
    }
 
    &__wrapper {
@@ -733,6 +747,9 @@ html:has(.reviews-page) {
       flex-direction: column;
       align-items: flex-start;
       width: 100%;
+      @media (max-width: 575px) {
+         padding-top: 29px;
+      }
       @media (max-width: 479px) {
          padding: 0px 0 48px 0;
       }
