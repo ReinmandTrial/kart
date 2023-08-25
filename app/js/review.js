@@ -122,9 +122,10 @@ lightbox.option({
    function initButtonHandler(button) {
       button.addEventListener('click', onClickPopupButton);
    }
-   dataPopupEdit.addEventListener('click', onCloseEditPopup);
-   dataPopupExit.addEventListener('click', onCloseExitPopup);
-   dataPopupSuccess.addEventListener('click', onCloseSuccessPopup);
+   dataPopupEdit && dataPopupEdit.addEventListener('click', onCloseEditPopup);
+   dataPopupExit && dataPopupExit.addEventListener('click', onCloseExitPopup);
+   dataPopupSuccess &&
+      dataPopupSuccess.addEventListener('click', onCloseSuccessPopup);
 
    function onCloseEditPopup(e) {
       if (e.target.hasAttribute('data-popup-close')) {
@@ -187,10 +188,10 @@ lightbox.option({
    const progressBar = document.getElementById('reviewProgressBar');
    let data = [];
 
-   loadFileInput.addEventListener('change', onLoadFile);
-   loadPhotoInput.addEventListener('change', onLoadFile);
-   imgsBlock.addEventListener('click', onRemovePhoto);
-   textArea.addEventListener('input', setPersent);
+   loadFileInput && loadFileInput.addEventListener('change', onLoadFile);
+   loadPhotoInput && loadPhotoInput.addEventListener('change', onLoadFile);
+   imgsBlock && imgsBlock.addEventListener('click', onRemovePhoto);
+   textArea && textArea.addEventListener('input', setPersent);
 
    function onLoadFile(e) {
       const inputFiles = Array.from(e.target.files);
