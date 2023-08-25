@@ -343,11 +343,7 @@
                   </div>
                 </div>
               </div>
-
-
               <div class="review-edit-popup__load">
-
-
                 <div class="review-edit-popup__row">
                   <div class="review-edit-popup__text">הוספת תמונה לביקורת</div>
                   <div class="review-edit-popup__diamonds">
@@ -357,69 +353,30 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="review-edit-popup__load-images">
-
-                  <!-- <div class="review-edit-popup__load-image ">
-                    <button type="button" class="review-popup__close-button ">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.4008 4.80078L4.80078 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M4.80078 4.80078L14.4008 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                    <img src="./images/review/product-big.png" alt="photo" />
-                  </div> -->
-
-                  <!-- <div class="review-edit-popup__load-image">
-                    <button type="button" class="review-popup__close-button ">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.4008 4.80078L4.80078 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M4.80078 4.80078L14.4008 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                    <img src="./images/review/product-big.png" alt="photo" />
-                  </div> -->
-
-                  <!-- <div class="review-edit-popup__load-image">
-                    <button type="button" class="review-popup__close-button ">
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.4008 4.80078L4.80078 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M4.80078 4.80078L14.4008 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                    <img src="./images/review/product-big.png" alt="photo" />
-                  </div> -->
+                <div id='reviewImgsBlock'>
                 </div>
-
-                <!-- При добавлении фото _on-img -->
-                <!-- При добавлении 3 фото _hide-->
-                <div class="review-edit-popup__inputs _on-img">
-
+                <!-- '' ||  _on-img || _hide-->
+                <div id='inputsBlock' class="review-edit-popup__inputs">
                   <div class="review-edit-popup__description-inside">
                     ניתן להפעיל מצלמה או להעלות מהגלרייה
                   </div>
-
                   <div class="review-edit-popup__input-wrapper">
-                    <label for="load-photo" name="load-photo" class="review-edit-popup__label">
-
+                    <label class="review-edit-popup__label">
                       <span class="review-edit-popup__file-icon-wrapper"><img class="review-edit-popup__file-icon" src="./images/review/icons/upload.svg"
                           alt="Выбрать файл" width="24" /></span>
+                      <input id="loadFile" multiple accept="image/*" type="file" class="review-edit-popup__input" />
                     </label>
-                    <input type="file" id="load-photo" class="review-edit-popup__input" />
                   </div>
-
                   <div class="review-edit-popup__input-wrapper">
-                    <label for="load-photo" name="load-photo" class="review-edit-popup__label">
-
-                      <span class="review-edit-popup__file-icon-wrapper"><img class="review-edit-popup__file-icon" src="./images/review/icons/camera.svg"
-                          alt="Выбрать файл" width="24" /></span>
+                    <label class="review-edit-popup__label">
+                      <span class="review-edit-popup__file-icon-wrapper">
+                        <img class="review-edit-popup__file-icon" src="./images/review/icons/camera.svg" alt="Выбрать файл" width="24" />
+                      </span>
+                      <input capture="environment" accept="image/*" type="file" id="loadPhoto" class="review-edit-popup__input" />
                     </label>
-                    <input type="file" id="load-photo" class="review-edit-popup__input" />
                   </div>
                 </div>
-
               </div>
-
               <div class='review-edit-popup__feedback'>
                 <div class="review-edit-popup__row">
                   <div class="review-edit-popup__text">נשמח לשמוע את דעתך</div>
@@ -430,20 +387,17 @@
                     </div>
                   </div>
                 </div>
-
-                <textarea class="review-edit-popup__comment" placeholder="את הביקורת ניתן לרשום כאן" name="" id=""></textarea>
+                <textarea id='reviewTextarea' class="review-edit-popup__comment" placeholder="את הביקורת ניתן לרשום כאן" name="" id=""></textarea>
               </div>
-
-
               <div class="review-edit-popup__progressbar">
                 <div class="review-edit-popup__progress">
-                  <div class="review-edit-popup__percent">76%</div>
+                  <div id='reviewProgressPercent' class="review-edit-popup__percent">0%</div>
                   <div class="review-edit-popup__progresstext">
                     תרוקיבה לש המלשה
                   </div>
                 </div>
                 <div class="review-edit-popup__progressline">
-                  <span class="review-edit-popup__progressthumb"></span>
+                  <span id='reviewProgressBar' class="review-edit-popup__progressthumb"></span>
                 </div>
               </div>
               <button data-popup-success type="button" class="review-edit-popup__button review-popup__action-button">
@@ -509,5 +463,17 @@
     </footer>
   </div>
 </body>
+
+<!-- <div class="review-edit-popup__load-images">
+  <div class="review-edit-popup__load-image ">
+    <button data-remove-photo type="button" class="review-popup__close-button">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.4008 4.80078L4.80078 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M4.80078 4.80078L14.4008 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+    <img src="./images/review/product-big.png" alt="photo" />
+  </div>
+</div> -->
 
 </html>

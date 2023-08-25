@@ -161,3 +161,91 @@ lightbox.option({
       document.documentElement.style.overflow = 'hidden';
    }
 })();
+
+!(function initEditPopup() {
+   const FORM = {
+      IMG_SELECTED: '_on-img',
+      IMG_FULL: '_hide',
+      TEMPLATE: `<div class="review-edit-popup__load-images">
+                    <div class="review-edit-popup__load-image ">
+                      <button data-remove-photo = {{ID}} type="button" class="review-popup__close-button">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.4008 4.80078L4.80078 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                          <path d="M4.80078 4.80078L14.4008 14.4008" stroke="#373737" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <img src="{{IMG}}" alt="photo" />
+                    </div>
+                  </div>`,
+   };
+   const inputsBlock = document.getElementById('inputsBlock');
+   const loadFileInput = document.getElementById('loadFile');
+   const loadPhotoInput = document.getElementById('loadPhoto');
+   const imgsBlock = document.getElementById('reviewImgsBlock');
+   const textArea = document.getElementById('reviewTextarea');
+   const progressPercent = document.getElementById('reviewProgressPercent');
+   const progressBar = document.getElementById('reviewProgressBar');
+   let data = [];
+
+   loadFileInput.addEventListener('change', onLoadFile);
+   loadPhotoInput.addEventListener('change', onLoadFile);
+   imgsBlock.addEventListener('click', onRemovePhoto);
+   textArea.addEventListener('input', setPersent);
+
+   function onLoadFile(e) {
+      const inputFiles = Array.from(e.target.files);
+      inputFiles.forEach((file) => onRead(file));
+   }
+
+   function onRead(file) {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+         if (data.length >= 3) return;
+         data.push(reader.result);
+         photoLoaderStatus();
+         renderPhotos();
+      };
+   }
+
+   function renderPhotos() {
+      const renderData = data
+         .map((item, index) =>
+            FORM.TEMPLATE.replace('{{IMG}}', item).replace('{{ID}}', index)
+         )
+         .join('');
+      imgsBlock.innerHTML = renderData;
+      setPersent();
+   }
+
+   function onRemovePhoto(e) {
+      if (e.target.hasAttribute('data-remove-photo')) {
+         data = data.filter(
+            (i, index) => index !== +e.target.dataset.removePhoto
+         );
+         renderPhotos();
+         photoLoaderStatus();
+      }
+   }
+
+   function photoLoaderStatus() {
+      if (data.length > 0) {
+         inputsBlock.classList.add(FORM.IMG_SELECTED);
+      }
+      if (data.length >= 3) {
+         inputsBlock.classList.add(FORM.IMG_FULL);
+      }
+      if (data.length === 0) {
+         inputsBlock.classList.remove(FORM.IMG_SELECTED);
+      }
+      if (data.length < 3) {
+         inputsBlock.classList.remove(FORM.IMG_FULL);
+      }
+   }
+
+   function setPersent() {
+      let percent = data.length * 25 + (textArea.value.trim() !== '' ? 25 : 0);
+      progressPercent.textContent = percent + '%';
+      progressBar.style.width = percent + '%';
+   }
+})();
