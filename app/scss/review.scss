@@ -247,20 +247,6 @@ html:has(.reviews-page) {
       }
    }
 
-   // &__status {
-   //    flex: 0 0 35%;
-
-   //    @media (max-width: 1200px) {
-   //       flex: 0 0 26%;
-   //    }
-
-   //    @media (max-width: 992px) {
-   //       padding: 0 0px;
-   //       grid-area: 2 / 2 / 3 / 5;
-   //       align-self: center;
-   //    }
-   // }
-
    &__diamonds {
       display: flex;
       align-items: center;
@@ -278,10 +264,6 @@ html:has(.reviews-page) {
 
       @media (max-width: 479px) {
          align-self: end;
-      }
-
-      img {
-         margin-right: 4px;
       }
    }
 
