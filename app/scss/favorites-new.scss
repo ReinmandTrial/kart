@@ -94,6 +94,23 @@
    &__pagination {
    }
 }
+.favorites-new-empty {
+   padding: 190px 0px;
+   display: flex;
+   flex-direction: column;
+   gap: 34px;
+   align-items: center;
+   &__image {
+   }
+
+   &__text {
+      font-size: 16px;
+      span {
+         color: #94c05b;
+         text-align: center;
+      }
+   }
+}
 
 .new-favorites-item {
    position: relative;
@@ -143,15 +160,14 @@
       .new-favorites-item__add-to-favorites {
          animation: favorite 0.3s 1 ease-in-out;
          background: #e64646;
-         g {
+         path {
             fill: #e64646;
             stroke: #ffffff;
             transition: all 0.3s ease 0s;
          }
          &:hover {
-            g {
-               fill: #000;
-               stroke: #000;
+            path {
+               stroke: #ffffff;
             }
          }
       }
@@ -272,12 +288,12 @@
          background: #93c05b;
       }
       svg {
-         width: 22px;
+         width: 24px;
          pointer-events: none;
          @media (max-width: 767.98px) {
             width: 16px;
          }
-         g {
+         path {
             fill: #f5f5f5;
             stroke: #000;
             transition: all 0.3s ease 0s;
@@ -289,7 +305,7 @@
       &:hover {
          background: #93c05b;
          box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.06);
-         g {
+         path {
             stroke: #fff;
             fill: #93c05b;
          }
@@ -346,7 +362,6 @@
       }
    }
 }
-
 @keyframes favorite {
    0% {
       transform: scale(1);
