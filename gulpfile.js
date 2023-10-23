@@ -1,12 +1,15 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 
-const scss = require('gulp-sass');
+const sass = require('sass');
+const gulpSass = require('gulp-sass');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
+
+const scss = gulpSass(sass);
 
 function browsersync() {
    browserSync.init({
@@ -98,10 +101,7 @@ function stylesSearch() {
 }
 
 function stylesReview() {
-   return src([
-      'app/scss/review.scss',
-      'node_modules/lightbox2/dist/css/lightbox.min.css',
-   ])
+   return src(['app/scss/review.scss', 'node_modules/lightbox2/dist/css/lightbox.min.css'])
       .pipe(scss({ outputStyle: 'compressed' }))
       .pipe(concat('review.min.css'))
       .pipe(
@@ -115,15 +115,9 @@ function stylesReview() {
 }
 
 function build() {
-   return src(
-      [
-         'app/css/style.min.css',
-         'app/fonts/**/*',
-         'app/js/main.min.js',
-         'app/*.html',
-      ],
-      { base: 'app' }
-   ).pipe(dest('dist'));
+   return src(['app/css/style.min.css', 'app/fonts/**/*', 'app/js/main.min.js', 'app/*.html'], {
+      base: 'app',
+   }).pipe(dest('dist'));
 }
 
 function watching() {

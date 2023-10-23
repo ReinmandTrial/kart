@@ -1,45 +1,52 @@
 @font-face {
    font-family: 'Heebo';
-   src: url('../fonts/Heebo-Bold.woff2') format('woff2'), url('../fonts/Heebo-Bold.woff') format('woff');
+   src: url('../fonts/Heebo-Bold.woff2') format('woff2'),
+      url('../fonts/Heebo-Bold.woff') format('woff');
    font-weight: bold;
    font-style: normal;
    font-display: swap;
 }
 @font-face {
    font-family: 'Heebo';
-   src: url('../fonts/Heebo-Medium.woff2') format('woff2'), url('../fonts/Heebo-Medium.woff') format('woff');
+   src: url('../fonts/Heebo-Medium.woff2') format('woff2'),
+      url('../fonts/Heebo-Medium.woff') format('woff');
    font-weight: 500;
    font-style: normal;
    font-display: swap;
 }
 @font-face {
    font-family: 'Heebo';
-   src: url('../fonts/Heebo-Light.woff2') format('woff2'), url('../fonts/Heebo-Light.woff') format('woff');
+   src: url('../fonts/Heebo-Light.woff2') format('woff2'),
+      url('../fonts/Heebo-Light.woff') format('woff');
    font-weight: 300;
    font-style: normal;
    font-display: swap;
 }
 @font-face {
    font-family: 'Heebo';
-   src: url('../fonts/Heebo-Regular.woff2') format('woff2'), url('../fonts/Heebo-Regular.woff') format('woff');
+   src: url('../fonts/Heebo-Regular.woff2') format('woff2'),
+      url('../fonts/Heebo-Regular.woff') format('woff');
    font-weight: normal;
    font-style: normal;
    font-display: swap;
 }
 @font-face {
    font-family: 'Heebo';
-   src: url('../fonts/Heebo-Thin.woff2') format('woff2'), url('../fonts/Heebo-Thin.woff') format('woff');
+   src: url('../fonts/Heebo-Thin.woff2') format('woff2'),
+      url('../fonts/Heebo-Thin.woff') format('woff');
    font-weight: 100;
    font-style: normal;
    font-display: swap;
 }
 @font-face {
    font-family: 'Lato';
-   src: url('../fonts/Lato-Light.woff2') format('woff2'), url('../fonts/Lato-Light.woff') format('woff');
+   src: url('../fonts/Lato-Light.woff2') format('woff2'),
+      url('../fonts/Lato-Light.woff') format('woff');
    font-weight: 300;
    font-style: normal;
    font-display: swap;
 }
+
 html,
 body {
    direction: rtl;
@@ -123,7 +130,8 @@ button {
 }
 @font-face {
    font-family: 'icon';
-   src: url('../fonts/icon/fonts/icon.ttf?1cesu3') format('truetype'), url('../fonts/icon/fonts/icon.woff?1cesu3') format('woff'),
+   src: url('../fonts/icon/fonts/icon.ttf?1cesu3') format('truetype'),
+      url('../fonts/icon/fonts/icon.woff?1cesu3') format('woff'),
       url('../fonts/icon/fonts/icon.svg?1cesu3#icon') format('svg');
    font-weight: normal;
    font-style: normal;
@@ -440,22 +448,46 @@ button {
 }
 .swiper-container-3d .swiper-slide-shadow-left {
    background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-   background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+   background-image: -webkit-gradient(
+      linear,
+      right top,
+      left top,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0))
+   );
    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 .swiper-container-3d .swiper-slide-shadow-right {
    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+   background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0))
+   );
    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 .swiper-container-3d .swiper-slide-shadow-top {
    background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+   background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0))
+   );
    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 .swiper-container-3d .swiper-slide-shadow-bottom {
    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+   background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0))
+   );
    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 .swiper-container-css-mode > .swiper-wrapper {
@@ -565,12 +597,21 @@ button {
    border-radius: 16px;
    text-align: center;
 }
-.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
-.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   .mCSB_dragger_bar,
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_dragger
+   .mCSB_dragger_bar {
    width: 12px;
 }
-.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
-.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   + .mCSB_draggerRail,
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_draggerRail {
    width: 8px;
 }
 .mCSB_scrollTools .mCSB_buttonUp,
@@ -626,13 +667,22 @@ button {
    height: 4px;
    margin: 6px auto;
 }
-.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
-.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   .mCSB_dragger_bar,
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_dragger
+   .mCSB_dragger_bar {
    height: 12px;
    margin: 2px auto;
 }
-.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
-.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   + .mCSB_draggerRail,
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_draggerRail {
    height: 8px;
    margin: 4px 0;
 }
@@ -676,14 +726,21 @@ button {
 .mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
    right: 20px;
 }
-.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical {
+.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden
+   + .mCSB_scrollTools.mCSB_scrollTools_vertical {
    bottom: 0;
 }
-.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal,
-.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden
+   + .mCSB_scrollTools
+   ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.mCS-dir-rtl
+   > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside
+   > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
    right: 0;
 }
-.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+.mCS-dir-rtl
+   > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside
+   > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
    left: 20px;
 }
 .mCS-dir-rtl
@@ -703,11 +760,13 @@ button {
 .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container {
    padding-bottom: 0;
 }
-.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden {
+.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside
+   > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden {
    margin-right: 0;
    margin-left: 0;
 }
-.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden {
+.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside
+   > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden {
    margin-bottom: 0;
 }
 .mCSB_scrollTools,
@@ -724,12 +783,15 @@ button {
 .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail,
 .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar,
 .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail {
-   -webkit-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s,
-      margin-top 0.2s ease-out 0.2s, margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
-   -o-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s,
-      margin-top 0.2s ease-out 0.2s, margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
-   transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s,
-      margin-top 0.2s ease-out 0.2s, margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+   -webkit-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s,
+      margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s, margin-top 0.2s ease-out 0.2s,
+      margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+   -o-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s,
+      margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s, margin-top 0.2s ease-out 0.2s,
+      margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+   transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s,
+      margin-right 0.2s ease-out 0.2s, margin-top 0.2s ease-out 0.2s,
+      margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 .mCSB_scrollTools {
    opacity: 0.75;
@@ -1071,32 +1133,68 @@ button {
    height: 14px;
    margin: 1px 0;
 }
-.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
-.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar,
-.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
-.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   .mCSB_dragger_bar,
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_dragger
+   .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_dragger
+   .mCSB_dragger_bar {
    width: 16px;
    height: 16px;
    margin: -1px 0;
 }
-.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
-.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
-.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
-.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   + .mCSB_draggerRail,
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_draggerRail,
+.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   + .mCSB_draggerRail,
+.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_draggerRail {
    width: 4px;
 }
-.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
-.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar,
-.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
-.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   .mCSB_dragger_bar,
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_dragger
+   .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_dragger
+   .mCSB_dragger_bar {
    height: 16px;
    width: 16px;
    margin: 0 -1px;
 }
-.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
-.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
-.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
-.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   + .mCSB_draggerRail,
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_draggerRail,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   + .mCSB_draggerRail,
+.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_draggerRail {
    height: 4px;
    margin: 6px 0;
 }
@@ -1202,18 +1300,46 @@ button {
 .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
 .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
    background-repeat: repeat-y;
-   background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
-   background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
-   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+   background-image: -o-linear-gradient(
+      left,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+   );
+   background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(rgba(255, 255, 255, 0.5)),
+      to(rgba(255, 255, 255, 0))
+   );
+   background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+   );
 }
 .mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
 .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
 .mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
 .mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
    background-repeat: repeat-x;
-   background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
-   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
-   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+   background-image: -o-linear-gradient(
+      top,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+   );
+   background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(255, 255, 255, 0.5)),
+      to(rgba(255, 255, 255, 0))
+   );
+   background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+   );
 }
 .mCS-3d.mCSB_scrollTools_vertical .mCSB_dragger,
 .mCS-3d-dark.mCSB_scrollTools_vertical .mCSB_dragger {
@@ -1437,7 +1563,9 @@ button {
 .mCustomScrollBox.mCS-minimal + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
 .mCustomScrollBox.mCS-minimal + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
 .mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
-.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+.mCustomScrollBox.mCS-minimal-dark
+   + .mCSB_scrollTools
+   + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
    bottom: 0;
    margin: 0 12px;
 }
@@ -1502,16 +1630,32 @@ button {
    height: 6px;
    margin: 5px 0;
 }
-.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
-.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
-.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
-.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   + .mCSB_draggerRail,
+.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   + .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_draggerRail {
    width: 12px;
 }
-.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
-.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
-.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
-.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   + .mCSB_draggerRail,
+.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_dragger.mCSB_dragger_onDrag_expanded
+   + .mCSB_draggerRail,
+.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand
+   .mCSB_draggerContainer:hover
+   .mCSB_draggerRail {
    height: 12px;
    margin: 2px 0;
 }
@@ -6914,9 +7058,7 @@ header__profile-exit {
    margin-bottom: 40px;
    padding-top: 98px;
 }
-@media (max-width: 1100px) {
-   padding-top: unset;
-}
+
 @media (max-width: 575.98px) {
    .innovation-post-left__title {
       margin-bottom: 15px;
@@ -13785,9 +13927,7 @@ header__profile-exit {
 .page-dimonds__title {
    margin-bottom: 33px;
 }
-@media (max-width: 768px) {
-   font-size: 24px;
-}
+
 @media (max-width: 575.98px) {
    .page-dimonds__title {
       margin-bottom: 8px;
@@ -15075,18 +15215,24 @@ a.page-news__post:nth-child(1) {
    -ms-flex-order: 1;
    order: 1;
 }
-.page-marketing-post:nth-child(2n) .page-marketing-post__container .page-marketing-post__text-block {
+.page-marketing-post:nth-child(2n)
+   .page-marketing-post__container
+   .page-marketing-post__text-block {
    -webkit-box-ordinal-group: 3;
    -ms-flex-order: 2;
    order: 2;
 }
 @media (max-width: 991.98px) {
-   .page-marketing-post:nth-child(2n) .page-marketing-post__container .page-marketing-post__img-wrap {
+   .page-marketing-post:nth-child(2n)
+      .page-marketing-post__container
+      .page-marketing-post__img-wrap {
       -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
       order: 2;
    }
-   .page-marketing-post:nth-child(2n) .page-marketing-post__container .page-marketing-post__text-block {
+   .page-marketing-post:nth-child(2n)
+      .page-marketing-post__container
+      .page-marketing-post__text-block {
       -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
       order: 1;
@@ -16001,6 +16147,7 @@ a.page-news__post:nth-child(1) .card-post-banner__btn {
    line-height: 150%;
    color: #ffffff;
 }
+
 @media (max-width: 575.98px) {
    .coupons__descr {
       font-weight: 500;
