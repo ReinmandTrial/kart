@@ -9,7 +9,7 @@
    function initialTab(tab) {
       const tabsTitle = tab.querySelectorAll('[data-tab-button]');
       tabsTitle.forEach((tabButton) =>
-         tabButton.addEventListener('click', (e) => onTabButtonClick(e, tab))
+         tabButton.addEventListener('click', (e) => onTabButtonClick(e, tab)),
       );
    }
 
@@ -19,9 +19,7 @@
       removeTabActiveClass(ACTIVE_CLASS.BUTTON, tab);
       removeTabActiveClass(ACTIVE_CLASS.BODY, tab);
       target.classList.add(ACTIVE_CLASS.BUTTON);
-      const activeBody = tab.querySelector(
-         `[data-tab-body='${target.dataset.tabButton}']`
-      );
+      const activeBody = tab.querySelector(`[data-tab-body='${target.dataset.tabButton}']`);
       activeBody.classList.add(ACTIVE_CLASS.BODY);
    }
 
@@ -38,8 +36,7 @@
 
    const spoilerListEl = document.querySelectorAll('[data-spoiler]');
 
-   spoilerListEl.length &&
-      spoilerListEl.forEach((spoilerList) => initSpoiler(spoilerList));
+   spoilerListEl.length && spoilerListEl.forEach((spoilerList) => initSpoiler(spoilerList));
 
    function initSpoiler(list) {
       list.addEventListener('click', (e) => onSpoilerClick(e, list));
@@ -77,9 +74,7 @@
       return height;
    }
    function closeAllSpoilers(list) {
-      const itemList = list.querySelectorAll(
-         `[data-spoiler-item].${SPOILER.ACTIVE}`
-      );
+      const itemList = list.querySelectorAll(`[data-spoiler-item].${SPOILER.ACTIVE}`);
       itemList.length && itemList.forEach((item) => closeSpoiler(item));
    }
    function openSpoiler(item) {
@@ -87,9 +82,7 @@
       const maxHeight = calcMaxHeight(body);
       item.classList.add(SPOILER.ACTIVE);
       body.style.height = `${
-         body.scrollHeight > maxHeight
-            ? maxHeight
-            : body.scrollHeight + body.children.length
+         body.scrollHeight > maxHeight ? maxHeight : body.scrollHeight + body.children.length
       }px`;
    }
    function closeSpoiler(item) {
@@ -114,18 +107,16 @@ lightbox.option({
    const dataPopupEdit = document.querySelector('[data-popup="edit"]');
    const dataPopupExit = document.querySelector('[data-popup="exit"]');
    const dataPopupSuccess = document.querySelector('[data-popup="success"]');
-   const popupButtonsList = document.querySelectorAll('[data-popup-button]');
+   const popupItemList = document.querySelectorAll('[data-popup-item]');
 
-   popupButtonsList.length &&
-      popupButtonsList.forEach((button) => initButtonHandler(button));
+   popupItemList.length && popupItemList.forEach((item) => initButtonHandler(item));
 
-   function initButtonHandler(button) {
-      button.addEventListener('click', onClickPopupButton);
+   function initButtonHandler(item) {
+      item.addEventListener('click', (e) => onClickPopupButton(e, item));
    }
    dataPopupEdit && dataPopupEdit.addEventListener('click', onCloseEditPopup);
    dataPopupExit && dataPopupExit.addEventListener('click', onCloseExitPopup);
-   dataPopupSuccess &&
-      dataPopupSuccess.addEventListener('click', onCloseSuccessPopup);
+   dataPopupSuccess && dataPopupSuccess.addEventListener('click', onCloseSuccessPopup);
 
    function onCloseEditPopup(e) {
       if (e.target.hasAttribute('data-popup-close')) {
@@ -154,12 +145,18 @@ lightbox.option({
       }
    }
 
-   function onClickPopupButton(e) {
-      const currentPopup = document.querySelector(
-         `[data-popup='${e.target.dataset.popupButton}']`
-      );
-      currentPopup.classList.add(POPUP.OPEN);
-      document.documentElement.style.overflow = 'hidden';
+   function onClickPopupButton(e, item) {
+      if (e.target.hasAttribute('data-popup-item-button')) {
+         const curTitle = item.querySelector('[data-popup-item-title]').textContent;
+         const curImg = item.querySelector('[data-popup-item-img]').src;
+         const currentPopup = document.querySelector(
+            `[data-popup='${e.target.dataset.popupItemButton}']`,
+         );
+         currentPopup.classList.add(POPUP.OPEN);
+         currentPopup.querySelector('[data-popup-title]').textContent = curTitle;
+         currentPopup.querySelector('[data-popup-img]').src = curImg;
+         document.documentElement.style.overflow = 'hidden';
+      }
    }
 })();
 
@@ -211,9 +208,7 @@ lightbox.option({
 
    function renderPhotos() {
       const renderData = data
-         .map((item, index) =>
-            FORM.TEMPLATE.replace('{{IMG}}', item).replace('{{ID}}', index)
-         )
+         .map((item, index) => FORM.TEMPLATE.replace('{{IMG}}', item).replace('{{ID}}', index))
          .join('');
       imgsBlock.innerHTML = renderData;
       setPersent();
@@ -221,9 +216,7 @@ lightbox.option({
 
    function onRemovePhoto(e) {
       if (e.target.hasAttribute('data-remove-photo')) {
-         data = data.filter(
-            (i, index) => index !== +e.target.dataset.removePhoto
-         );
+         data = data.filter((i, index) => index !== +e.target.dataset.removePhoto);
          renderPhotos();
          photoLoaderStatus();
       }
