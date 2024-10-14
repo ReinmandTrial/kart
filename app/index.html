@@ -1,1339 +1,2178 @@
 <!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0" />
+      <title>Главная</title>
+      <link
+         rel="stylesheet"
+         href="css/style.min.css" />
+   </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Главная</title>
-	<link rel="stylesheet" href="css/style.min.css">
-</head>
+   <body>
+      <!-- WRAPPER start -->
+      <div class="wrapper page-main">
+         <!-- HEADER start  -->
 
-<body>
+         <header
+            data-aos="fade-down"
+            data-aos-anchor-placement="center-bottom"
+            id="top"
+            class="header">
+            <div class="header__topline">
+               <div class="container">
+                  <div class="header__topline-content">
+                     <div class="header__topline-right">
+                        <div class="header__burger burger js-burger-block">
+                           <button
+                              type="button"
+                              class="burger__head js-burger burger-icon">
+                              <span class="burger-icon__line burger-icon__line-1"></span>
+                              <span class="burger-icon__line burger-icon__line-2"></span>
+                              <span class="burger-icon__line burger-icon__line-3"></span>
+                           </button>
+                           <div class="burger__body">
+                              <div class="container">
+                                 <div class="burger__content">
+                                    <div class="burger__links">
+                                       <div class="burger__column">
+                                          <a
+                                             href="#"
+                                             class="burger__link"
+                                             >דף הבית</a
+                                          >
+                                          <a
+                                             href="#"
+                                             class="burger__link"
+                                             >אזור אישי</a
+                                          >
+                                          <a
+                                             href="#"
+                                             class="burger__link"
+                                             >חנות</a
+                                          >
+                                          <a
+                                             href="#"
+                                             class="burger__link"
+                                             >שאלות ותשובות</a
+                                          >
+                                       </div>
+                                       <div class="burger__column">
+                                          <a
+                                             href="#"
+                                             class="burger__link"
+                                             >בלוג</a
+                                          >
+                                          <a
+                                             href="#"
+                                             class="burger__link"
+                                             >תקנון האתר</a
+                                          >
+                                          <a
+                                             href="#"
+                                             class="burger__link"
+                                             >יצירת קשר
+                                          </a>
+                                       </div>
+                                    </div>
+                                    <div class="burger__timetable">
+                                       <a
+                                          href="tel:03-5050660"
+                                          class="burger__timetable-num"
+                                          >03-5050660</a
+                                       >
+                                       <div class="burger__timetable-descr">
+                                          <p class="burger__timetable-text">
+                                             שירות לקוחות 9:00-17:00
+                                          </p>
+                                          <p class="burger__timetable-text">
+                                             ניתן <span>ללחוץ</span> כאן לשליחת הודעה בוואטסאפ
+                                          </p>
+                                       </div>
+                                       <a
+                                          href="#"
+                                          class="burger__timetable-call">
+                                          <span class="icon icon-call"></span>
+                                          פנייה בווצאפ
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <a
+                           href="#"
+                           class="header__topline-link"
+                           >אקדמיית KART</a
+                        >
+                        <a
+                           href="#"
+                           class="header__topline-link"
+                           >הדרכות LIVE</a
+                        >
+                        <a
+                           href="#"
+                           class="header__topline-link header__topline-link--gray"
+                           >מבצעים</a
+                        >
+                     </div>
+                     <div class="header__topline-left">
+                        <a
+                           href="#"
+                           class="header__topline-link"
+                           >אודות</a
+                        >
+                        <a
+                           href="#"
+                           class="header__topline-link"
+                           >יצירת קשר</a
+                        >
+                        <div class="header__topline-lang lang">
+                           <span class="icon icon-triangle-down"></span>
+                           <div class="flag">
+                              <img
+                                 src="images/flag-il.png"
+                                 alt="" />
+                           </div>
+                        </div>
+                        <p class="header__topline-call">
+                           לפרטים חייגו:
+                           <a
+                              href="tel:03-5050660"
+                              class="header__topline-call-num"
+                              >03-5050660</a
+                           >
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="header__main">
+               <div class="container">
+                  <div class="header__main-content">
+                     <div class="header__rightside">
+                        <div class="header__icons">
+                           <div class="header__burger burger-mobile --mobile js-burger-block">
+                              <button
+                                 type="button"
+                                 class="burger-mobile__head js-burger icon icon-burger"></button>
+                              <div class="burger-mobile__body">
+                                 <div class="burger-mobile__content">
+                                    <div class="header__notification notification js-notification">
+                                       <div class="notification__head icon icon-bell">
+                                          <span class="notification__counter counter"></span>
+                                       </div>
+                                    </div>
+                                    <div class="burger-mobile__categories">
+                                       <a
+                                          href="#"
+                                          class="burger-mobile__link-large">
+                                          פתרונות קארט
+                                          <span class="icon icon-triangle-left"></span>
+                                       </a>
+                                       <a
+                                          href="#"
+                                          class="burger-mobile__link-large">
+                                          קטלוג
+                                       </a>
+                                       <a
+                                          href="#"
+                                          class="burger-mobile__link-large">
+                                          אקדמיית KART
+                                       </a>
+                                       <a
+                                          href="#"
+                                          class="burger-mobile__link-large">
+                                          הדרכות LIVE
+                                       </a>
+                                    </div>
+                                    <a
+                                       href="#"
+                                       class="header__topline-link header__topline-link--gray"
+                                       >מבצעים</a
+                                    >
+                                    <div class="burger-mobile__links">
+                                       <a
+                                          href="#"
+                                          class="burger-mobile__link"
+                                          >בלוג</a
+                                       >
+                                       <a
+                                          href="#"
+                                          class="burger-mobile__link"
+                                          >אודות</a
+                                       >
+                                       <a
+                                          href="#"
+                                          class="burger-mobile__link"
+                                          >שאלות ותשובות</a
+                                       >
+                                       <a
+                                          href="#"
+                                          class="burger-mobile__link"
+                                          >תמיכה</a
+                                       >
+                                       <a
+                                          href="#"
+                                          class="burger-mobile__link"
+                                          >אזור אישי</a
+                                       >
+                                       <a
+                                          href="#"
+                                          class="burger-mobile__link"
+                                          >דף הבית</a
+                                       >
+                                       <a
+                                          href="#"
+                                          class="burger-mobile__link"
+                                          >חנות</a
+                                       >
+                                       <a
+                                          href="#"
+                                          class="burger-mobile__link"
+                                          >אקדמיית KART</a
+                                       >
+                                       <a
+                                          href="#"
+                                          class="burger-mobile__link"
+                                          >אודות</a
+                                       >
+                                       <a
+                                          href="#"
+                                          class="burger-mobile__link"
+                                          >יצירת קשר</a
+                                       >
+                                    </div>
+                                 </div>
+                                 <div class="burger-mobile__bottom">
+                                    <div class="burger-mobile__lang lang">
+                                       <div class="flag">
+                                          <img
+                                             src="images/flag-il.png"
+                                             alt="" />
+                                       </div>
+                                       <span class="icon icon-triangle-down"></span>
+                                    </div>
+                                    <a
+                                       href="tel:03-5050660"
+                                       class="burger-mobile__phone-num"
+                                       >03-5050660</a
+                                    >
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="header__cart cart-small">
+                              <div class="cart-small__head icon icon-cart">
+                                 <div class="cart-small__counter-num counter-num">2</div>
+                              </div>
+                           </div>
+                           <a
+                              href="#"
+                              class="header__favorites icon icon-heart-blank"></a>
+                           <button
+                              class="header__search btn-popup btn-popup-search icon icon-search"></button>
+                        </div>
+                        <div class="header__select select-header js-select">
+                           <div class="select-header__head js-select-head">
+                              <span class="select-header__icon icon icon-triangle-down"></span>
+                              חנות
+                           </div>
+                           <div class="select-header__body js-select-body">
+                              <div class="select-header__categories">
+                                 <div class="select-header__categories-wrapper">
+                                    <p class="select-header__categories-item">קוסמטיקה</p>
+                                    <p class="select-header__categories-item">פדיקור</p>
+                                 </div>
+                              </div>
+                              <div class="select-header__main">
+                                 <div class="select-header__subcategories">
+                                    <div class="select-header__subcategories-wrapper">
+                                       <p class="select-header__subcategories-item">Innovation</p>
+                                       <p class="select-header__subcategories-item">
+                                          Clear & Matte
+                                       </p>
+                                       <p class="select-header__subcategories-item">
+                                          Natural Medicare
+                                       </p>
+                                       <p class="select-header__subcategories-item">M-Balance</p>
+                                       <p class="select-header__subcategories-item">Unicare</p>
+                                       <p class="select-header__subcategories-item">Timeless</p>
+                                       <p class="select-header__subcategories-item">
+                                          Professional Feet
+                                       </p>
+                                       <p class="select-header__subcategories-item">Feeto Care</p>
+                                    </div>
+                                 </div>
+                                 <div class="select-header__content">
+                                    <div class="select-header__columns-block">
+                                       <div class="select-header__column">
+                                          <a
+                                             href="#"
+                                             class="select-header__column-title"
+                                             >Innovation</a
+                                          >
+                                          <div class="select-header__column-body">
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Clear & Matte</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Natural Medicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >M-Balance</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Unicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Timeless</a
+                                             >
+                                          </div>
+                                       </div>
+                                       <div class="select-header__column">
+                                          <a
+                                             href="#"
+                                             class="select-header__column-title"
+                                             >Innovation</a
+                                          >
+                                          <div class="select-header__column-body">
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Clear & Matte</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Natural Medicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >M-Balance</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Unicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Timeless</a
+                                             >
+                                          </div>
+                                       </div>
+                                       <div class="select-header__column">
+                                          <a
+                                             href="#"
+                                             class="select-header__column-title"
+                                             >Innovation</a
+                                          >
+                                          <div class="select-header__column-body">
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Clear & Matte</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Natural Medicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >M-Balance</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Unicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Timeless</a
+                                             >
+                                          </div>
+                                       </div>
+                                       <div class="select-header__column">
+                                          <a
+                                             href="#"
+                                             class="select-header__column-title"
+                                             >Innovation</a
+                                          >
+                                          <div class="select-header__column-body">
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Clear & Matte</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Natural Medicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >M-Balance</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Unicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Timeless</a
+                                             >
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="select-header__img">
+                                       <img
+                                          src="images/header-select-img1.png"
+                                          alt="" />
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="header__select select-header js-select">
+                           <div class="select-header__head js-select-head">
+                              <span class="select-header__icon icon icon-triangle-down"></span>
+                              פתרונות קארט
+                           </div>
+                           <div class="select-header__body js-select-body">
+                              <div class="select-header__categories">
+                                 <div class="select-header__categories-wrapper">
+                                    <p class="select-header__categories-item">קוסמטיקה</p>
+                                    <p class="select-header__categories-item">פדיקור</p>
+                                 </div>
+                              </div>
+                              <div class="select-header__main">
+                                 <div class="select-header__subcategories">
+                                    <div class="select-header__subcategories-wrapper">
+                                       <p class="select-header__subcategories-item">Innovation</p>
+                                       <p class="select-header__subcategories-item">
+                                          Clear & Matte
+                                       </p>
+                                       <p class="select-header__subcategories-item">
+                                          Natural Medicare
+                                       </p>
+                                       <p class="select-header__subcategories-item">M-Balance</p>
+                                       <p class="select-header__subcategories-item">Unicare</p>
+                                       <p class="select-header__subcategories-item">Timeless</p>
+                                       <p class="select-header__subcategories-item">
+                                          Professional Feet
+                                       </p>
+                                       <p class="select-header__subcategories-item">Feeto Care</p>
+                                    </div>
+                                 </div>
+                                 <div class="select-header__content">
+                                    <div class="select-header__columns-block">
+                                       <div class="select-header__column">
+                                          <a
+                                             href="#"
+                                             class="select-header__column-title"
+                                             >Innovation</a
+                                          >
+                                          <div class="select-header__column-body">
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Clear & Matte</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Natural Medicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >M-Balance</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Unicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Timeless</a
+                                             >
+                                          </div>
+                                       </div>
+                                       <div class="select-header__column">
+                                          <a
+                                             href="#"
+                                             class="select-header__column-title"
+                                             >Innovation</a
+                                          >
+                                          <div class="select-header__column-body">
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Clear & Matte</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Natural Medicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >M-Balance</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Unicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Timeless</a
+                                             >
+                                          </div>
+                                       </div>
+                                       <div class="select-header__column">
+                                          <a
+                                             href="#"
+                                             class="select-header__column-title"
+                                             >Innovation</a
+                                          >
+                                          <div class="select-header__column-body">
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Clear & Matte</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Natural Medicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >M-Balance</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Unicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Timeless</a
+                                             >
+                                          </div>
+                                       </div>
+                                       <div class="select-header__column">
+                                          <a
+                                             href="#"
+                                             class="select-header__column-title"
+                                             >Innovation</a
+                                          >
+                                          <div class="select-header__column-body">
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Clear & Matte</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Natural Medicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >M-Balance</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Unicare</a
+                                             >
+                                             <a
+                                                href="#"
+                                                class="select-header__column-item"
+                                                >Timeless</a
+                                             >
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="select-header__img">
+                                       <img
+                                          src="images/header-select-img1.png"
+                                          alt="" />
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="header__logo logo">
+                        <img
+                           src="images/logo.png"
+                           alt="" />
+                     </div>
+                     <div class="header__leftside">
+                        <div class="header__profile js-select">
+                           <div class="header__profile-head js-select-head">
+                              <p class="header__profile-name">Leslie Alexander</p>
+                              <span class="icon icon-person"></span>
+                           </div>
+                           <div class="header__profile-body js-select-body">
+                              <div class="header__profile-diamond">
+                                 <div class="header__profile-diamond-elem">
+                                    <div
+                                       class="header__profile-diamond-icon icon icon-diamond"></div>
+                                    <p
+                                       type="text"
+                                       class="header__profile-diamond-value">
+                                       2344
+                                    </p>
+                                 </div>
+                              </div>
+                              <div class="header__profile-list">
+                                 <a
+                                    href="#"
+                                    class="header__profile-item"
+                                    >היסטוריית הזמנות</a
+                                 >
+                                 <a
+                                    href="#"
+                                    class="header__profile-item"
+                                    >סלים שמורים</a
+                                 >
+                                 <a
+                                    href="#"
+                                    class="header__profile-item"
+                                    >מועדפים</a
+                                 >
+                                 <a
+                                    href="#"
+                                    class="header__profile-item"
+                                    >קופונים ויהלומים</a
+                                 >
+                                 <a
+                                    href="#"
+                                    class="header__profile-item"
+                                    >אקדמיית KART</a
+                                 >
+                                 <a
+                                    href="#"
+                                    class="header__profile-item"
+                                    >פרוטוקולים</a
+                                 >
+                                 <a
+                                    href="#"
+                                    class="header__profile-item"
+                                    >הביקורות שלי</a
+                                 >
+                                 <a
+                                    href="#"
+                                    class="header__profile-item"
+                                    >פרטי חשבון</a
+                                 >
+                              </div>
+                              <button
+                                 type="button"
+                                 class="header__profile-exit">
+                                 <span class="icon icon-exit"></span>
+                                 להתנתק
+                              </button>
+                           </div>
+                        </div>
+                        <div class="header__notification notification --desktop js-notification">
+                           <div class="notification__head icon icon-bell js-notification-head">
+                              <span class="notification__counter counter"></span>
+                           </div>
+                        </div>
+                     </div>
 
-	<!-- WRAPPER start -->
-	<div class="wrapper page-main">
+                     <div class="notification__body js-notification-body">
+                        <div class="notification__wrapper">
+                           <a
+                              href="#"
+                              class="notification__item">
+                              <span class="notification__item-icon icon icon-email"></span>
+                              <div class="notification__item-text-block">
+                                 <p class="notification__item-title">הודעות מערכת</p>
+                                 <p class="notification__item-descr">
+                                    חברת קארט עוסקת במחקר, פיתוח וייצור מוצרי קוסמטיקה ופדיקור
+                                    המעניקים פתרונות ייחודיים למגוון צרכי העור המשווקים ברחבי העולם
+                                 </p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="notification__item">
+                              <span class="notification__item-icon icon icon-gift"></span>
+                              <div class="notification__item-text-block">
+                                 <p class="notification__item-title">חגים, ימי הולדת וכו</p>
+                                 <p class="notification__item-descr">
+                                    חברת קארט עוסקת במחקר, פיתוח וייצור מוצרי קוסמטיקה ופדיקור
+                                    המעניקים פתרונות ייחודיים למגוון צרכי העור המשווקים ברחבי העולם
+                                 </p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="notification__item">
+                              <span class="notification__item-icon icon icon-diamond"></span>
+                              <div class="notification__item-text-block">
+                                 <p class="notification__item-title">יהלומים, קופונים וכו</p>
+                                 <p class="notification__item-descr">
+                                    חברת קארט עוסקת במחקר, פיתוח וייצור מוצרי קוסמטיקה ופדיקור
+                                    המעניקים פתרונות ייחודיים למגוון צרכי העור המשווקים ברחבי העולם
+                                 </p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="notification__item">
+                              <span class="notification__item-icon icon icon-diamond"></span>
+                              <div class="notification__item-text-block">
+                                 <p class="notification__item-title">יהלומים, קופונים וכו</p>
+                                 <p class="notification__item-descr">
+                                    חברת קארט עוסקת במחקר, פיתוח וייצור מוצרי קוסמטיקה ופדיקור
+                                    המעניקים פתרונות ייחודיים למגוון צרכי העור המשווקים ברחבי העולם
+                                 </p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="notification__item">
+                              <span class="notification__item-icon icon icon-diamond"></span>
+                              <div class="notification__item-text-block">
+                                 <p class="notification__item-title">יהלומים, קופונים וכו</p>
+                                 <p class="notification__item-descr">
+                                    חברת קארט עוסקת במחקר, פיתוח וייצור מוצרי קוסמטיקה ופדיקור
+                                    המעניקים פתרונות ייחודיים למגוון צרכי העור המשווקים ברחבי העולם
+                                 </p>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
 
-		<!-- HEADER start  -->
+         <!-- HEADER end  -->
 
-		<header data-aos="fade-down" data-aos-anchor-placement="center-bottom" id="top" class="header">
-			<div class="header__topline">
-				<div class="container">
-					<div class="header__topline-content">
-						<div class="header__topline-right">
-							<div class="header__burger burger js-burger-block">
-								<button type="button" class="burger__head js-burger burger-icon">
-									<span class="burger-icon__line burger-icon__line-1"></span>
-									<span class="burger-icon__line burger-icon__line-2"></span>
-									<span class="burger-icon__line burger-icon__line-3"></span>
-								</button>
-								<div class="burger__body">
-									<div class="container">
-										<div class="burger__content">
-											<div class="burger__links">
-												<div class="burger__column">
-													<a href="#" class="burger__link">דף הבית</a>
-													<a href="#" class="burger__link">אזור אישי</a>
-													<a href="#" class="burger__link">חנות</a>
-													<a href="#" class="burger__link">שאלות ותשובות</a>
-												</div>
-												<div class="burger__column">
-													<a href="#" class="burger__link">בלוג</a>
-													<a href="#" class="burger__link">תקנון האתר</a>
-													<a href="#" class="burger__link">יצירת קשר </a>
-												</div>
-											</div>
-											<div class="burger__timetable">
-												<a href="tel:03-5050660" class="burger__timetable-num">03-5050660</a>
-												<div class="burger__timetable-descr">
-													<p class="burger__timetable-text">שירות לקוחות 9:00-17:00</p>
-													<p class="burger__timetable-text">ניתן <span>ללחוץ</span> כאן לשליחת הודעה
-														בוואטסאפ</p>
-												</div>
-												<a href="#" class="burger__timetable-call">
-													<span class="icon icon-call"></span>
-													פנייה בווצאפ
-												</a>
-											</div>
-										</div>
-									</div>
+         <!-- MAIN start  -->
+         <main class="main">
+            <!-- CONTENT start  -->
+            <div class="content">
+               <div class="page-main__banner banner">
+                  <div class="banner__content">
+                     <div class="banner__text-block">
+                        <h1
+                           data-aos="fade-down"
+                           class="banner__title">
+                           YOUR SKIN <br />
+                           DESERVES <br />
+                           KART
+                        </h1>
+                        <p
+                           data-aos="fade-down"
+                           class="banner__descr">
+                           להרגיש את העור שלך מחדש
+                        </p>
+                        <a
+                           data-aos="fade-up"
+                           href="#"
+                           class="banner__btn btn btn-primary"
+                           >גולטקל רבעמ</a
+                        >
+                     </div>
+                  </div>
+                  <div class="banner__slider slider-banner swiper-container">
+                     <div class="slider-banner__wrapper swiper-wrapper">
+                        <div class="slider-banner__slide swiper-slide">
+                           <div class="slider-banner__item slider-banner__item-right">
+                              <img
+                                 src="images/slider-banner__img1-2.png"
+                                 alt="" />
+                           </div>
+                           <div class="slider-banner__item slider-banner__item-left">
+                              <img
+                                 src="images/slider-banner__img1-1.png"
+                                 alt="" />
+                           </div>
+                        </div>
+                        <div class="slider-banner__slide swiper-slide">
+                           <div class="slider-banner__item slider-banner__item-right">
+                              <img
+                                 src="images/slider-banner__img1-2.png"
+                                 alt="" />
+                           </div>
+                           <div class="slider-banner__item slider-banner__item-left">
+                              <img
+                                 src="images/slider-banner__img2-2.png"
+                                 alt="" />
+                           </div>
+                        </div>
+                        <div class="slider-banner__slide swiper-slide">
+                           <div class="slider-banner__item slider-banner__item-right">
+                              <img
+                                 src="images/slider-banner__img1-2.png"
+                                 alt="" />
+                           </div>
+                           <div class="slider-banner__item slider-banner__item-left">
+                              <img
+                                 src="images/slider-banner__img3-2.png"
+                                 alt="" />
+                           </div>
+                        </div>
+                        <div class="slider-banner__slide swiper-slide">
+                           <div class="slider-banner__item slider-banner__item-right">
+                              <img
+                                 src="images/slider-banner__img1-2.png"
+                                 alt="" />
+                           </div>
+                           <div class="slider-banner__item slider-banner__item-left">
+                              <img
+                                 src="images/slider-banner__img4-2.png"
+                                 alt="" />
+                           </div>
+                        </div>
+                        <div class="slider-banner__slide swiper-slide">
+                           <div class="slider-banner__item slider-banner__item-right">
+                              <img
+                                 src="images/slider-banner__img1-2.png"
+                                 alt="" />
+                           </div>
+                           <div class="slider-banner__item slider-banner__item-left">
+                              <img
+                                 src="images/slider-banner__img5-2.png"
+                                 alt="" />
+                           </div>
+                        </div>
+                        <div class="slider-banner__slide swiper-slide">
+                           <div class="slider-banner__item slider-banner__item-right">
+                              <img
+                                 src="images/slider-banner__img1-2.png"
+                                 alt="" />
+                           </div>
+                           <div class="slider-banner__item slider-banner__item-left">
+                              <img
+                                 src="images/slider-banner__img6-2.png"
+                                 alt="" />
+                           </div>
+                        </div>
+                        <div class="slider-banner__slide swiper-slide">
+                           <div class="slider-banner__item slider-banner__item-right">
+                              <img
+                                 src="images/slider-banner__img1-2.png"
+                                 alt="" />
+                           </div>
+                           <div class="slider-banner__item slider-banner__item-left">
+                              <img
+                                 src="images/slider-banner__img7-2.png"
+                                 alt="" />
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
 
-								</div>
-							</div>
-							<a href="#" class="header__topline-link">אקדמיית KART</a>
-							<a href="#" class="header__topline-link">הדרכות LIVE</a>
-							<a href="#" class="header__topline-link header__topline-link--gray">מבצעים</a>
-						</div>
-						<div class="header__topline-left">
-							<a href="#" class="header__topline-link">אודות</a>
-							<a href="#" class="header__topline-link">יצירת קשר</a>
-							<div class="header__topline-lang lang">
-								<span class="icon icon-triangle-down"></span>
-								<div class="flag">
-									<img src="images/flag-il.png" alt="">
-								</div>
-							</div>
-							<p class="header__topline-call">
-								לפרטים חייגו:
-								<a href="tel:03-5050660" class="header__topline-call-num">03-5050660</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="header__main">
-				<div class="container">
-					<div class="header__main-content">
-						<div class="header__rightside">
-							<div class="header__icons">
-								<div class="header__burger burger-mobile --mobile js-burger-block">
-									<button type="button" class="burger-mobile__head js-burger icon icon-burger"></button>
-									<div class="burger-mobile__body">
-										<div class="burger-mobile__content">
-											<div class="header__notification notification js-notification">
-												<div class="notification__head icon icon-bell">
-													<span class="notification__counter counter"></span>
-												</div>
-											</div>
-											<div class="burger-mobile__categories">
-												<a href="#" class="burger-mobile__link-large">
-													פתרונות קארט
-													<span class="icon icon-triangle-left"></span>
-												</a>
-												<a href="#" class="burger-mobile__link-large">
-													קטלוג
-												</a>
-												<a href="#" class="burger-mobile__link-large">
-													אקדמיית KART
-												</a>
-												<a href="#" class="burger-mobile__link-large">
-													הדרכות LIVE
-												</a>
-											</div>
-											<a href="#" class="header__topline-link header__topline-link--gray">מבצעים</a>
-											<div class="burger-mobile__links">
-												<a href="#" class="burger-mobile__link">בלוג</a>
-												<a href="#" class="burger-mobile__link">אודות</a>
-												<a href="#" class="burger-mobile__link">שאלות ותשובות</a>
-												<a href="#" class="burger-mobile__link">תמיכה</a>
-												<a href="#" class="burger-mobile__link">אזור אישי</a>
-												<a href="#" class="burger-mobile__link">דף הבית</a>
-												<a href="#" class="burger-mobile__link">חנות</a>
-												<a href="#" class="burger-mobile__link">אקדמיית KART</a>
-												<a href="#" class="burger-mobile__link">אודות</a>
-												<a href="#" class="burger-mobile__link">יצירת קשר</a>
-											</div>
-										</div>
-										<div class="burger-mobile__bottom">
-											<div class="burger-mobile__lang lang">
-												<div class="flag">
-													<img src="images/flag-il.png" alt="">
-												</div>
-												<span class="icon icon-triangle-down"></span>
-											</div>
-											<a href="tel:03-5050660" class="burger-mobile__phone-num">03-5050660</a>
-										</div>
-									</div>
-								</div>
-								<div class="header__cart cart-small">
-									<div class="cart-small__head icon icon-cart">
-										<div class="cart-small__counter-num counter-num">2</div>
-									</div>
-								</div>
-								<a href="#" class="header__favorites icon icon-heart-blank"></a>
-								<button class="header__search btn-popup btn-popup-search icon icon-search"></button>
-							</div>
-							<div class="header__select select-header js-select">
-								<div class="select-header__head js-select-head">
-									<span class="select-header__icon icon icon-triangle-down"></span>
-									חנות
-								</div>
-								<div class="select-header__body js-select-body">
-									<div class="select-header__categories">
-										<div class="select-header__categories-wrapper">
-											<p class="select-header__categories-item">קוסמטיקה</p>
-											<p class="select-header__categories-item">פדיקור</p>
-										</div>
-									</div>
-									<div class="select-header__main">
-										<div class="select-header__subcategories">
-											<div class="select-header__subcategories-wrapper">
-												<p class="select-header__subcategories-item">Innovation</p>
-												<p class="select-header__subcategories-item">Clear & Matte</p>
-												<p class="select-header__subcategories-item">Natural Medicare</p>
-												<p class="select-header__subcategories-item">M-Balance</p>
-												<p class="select-header__subcategories-item">Unicare</p>
-												<p class="select-header__subcategories-item">Timeless</p>
-												<p class="select-header__subcategories-item">Professional Feet</p>
-												<p class="select-header__subcategories-item">Feeto Care</p>
-											</div>
-										</div>
-										<div class="select-header__content">
-											<div class="select-header__columns-block">
-												<div class="select-header__column">
-													<a href="#" class="select-header__column-title">Innovation</a>
-													<div class="select-header__column-body">
-														<a href="#" class="select-header__column-item">Clear & Matte</a>
-														<a href="#" class="select-header__column-item">Natural Medicare</a>
-														<a href="#" class="select-header__column-item">M-Balance</a>
-														<a href="#" class="select-header__column-item">Unicare</a>
-														<a href="#" class="select-header__column-item">Timeless</a>
-													</div>
-												</div>
-												<div class="select-header__column">
-													<a href="#" class="select-header__column-title">Innovation</a>
-													<div class="select-header__column-body">
-														<a href="#" class="select-header__column-item">Clear & Matte</a>
-														<a href="#" class="select-header__column-item">Natural Medicare</a>
-														<a href="#" class="select-header__column-item">M-Balance</a>
-														<a href="#" class="select-header__column-item">Unicare</a>
-														<a href="#" class="select-header__column-item">Timeless</a>
-													</div>
-												</div>
-												<div class="select-header__column">
-													<a href="#" class="select-header__column-title">Innovation</a>
-													<div class="select-header__column-body">
-														<a href="#" class="select-header__column-item">Clear & Matte</a>
-														<a href="#" class="select-header__column-item">Natural Medicare</a>
-														<a href="#" class="select-header__column-item">M-Balance</a>
-														<a href="#" class="select-header__column-item">Unicare</a>
-														<a href="#" class="select-header__column-item">Timeless</a>
-													</div>
-												</div>
-												<div class="select-header__column">
-													<a href="#" class="select-header__column-title">Innovation</a>
-													<div class="select-header__column-body">
-														<a href="#" class="select-header__column-item">Clear & Matte</a>
-														<a href="#" class="select-header__column-item">Natural Medicare</a>
-														<a href="#" class="select-header__column-item">M-Balance</a>
-														<a href="#" class="select-header__column-item">Unicare</a>
-														<a href="#" class="select-header__column-item">Timeless</a>
-													</div>
-												</div>
-											</div>
-											<div class="select-header__img">
-												<img src="images/header-select-img1.png" alt="">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="header__select select-header js-select">
-								<div class="select-header__head js-select-head">
-									<span class="select-header__icon icon icon-triangle-down"></span>
-									פתרונות קארט
-								</div>
-								<div class="select-header__body js-select-body">
-									<div class="select-header__categories">
-										<div class="select-header__categories-wrapper">
-											<p class="select-header__categories-item">קוסמטיקה</p>
-											<p class="select-header__categories-item">פדיקור</p>
-										</div>
-									</div>
-									<div class="select-header__main">
-										<div class="select-header__subcategories">
-											<div class="select-header__subcategories-wrapper">
-												<p class="select-header__subcategories-item">Innovation</p>
-												<p class="select-header__subcategories-item">Clear & Matte</p>
-												<p class="select-header__subcategories-item">Natural Medicare</p>
-												<p class="select-header__subcategories-item">M-Balance</p>
-												<p class="select-header__subcategories-item">Unicare</p>
-												<p class="select-header__subcategories-item">Timeless</p>
-												<p class="select-header__subcategories-item">Professional Feet</p>
-												<p class="select-header__subcategories-item">Feeto Care</p>
-											</div>
-										</div>
-										<div class="select-header__content">
-											<div class="select-header__columns-block">
-												<div class="select-header__column">
-													<a href="#" class="select-header__column-title">Innovation</a>
-													<div class="select-header__column-body">
-														<a href="#" class="select-header__column-item">Clear & Matte</a>
-														<a href="#" class="select-header__column-item">Natural Medicare</a>
-														<a href="#" class="select-header__column-item">M-Balance</a>
-														<a href="#" class="select-header__column-item">Unicare</a>
-														<a href="#" class="select-header__column-item">Timeless</a>
-													</div>
-												</div>
-												<div class="select-header__column">
-													<a href="#" class="select-header__column-title">Innovation</a>
-													<div class="select-header__column-body">
-														<a href="#" class="select-header__column-item">Clear & Matte</a>
-														<a href="#" class="select-header__column-item">Natural Medicare</a>
-														<a href="#" class="select-header__column-item">M-Balance</a>
-														<a href="#" class="select-header__column-item">Unicare</a>
-														<a href="#" class="select-header__column-item">Timeless</a>
-													</div>
-												</div>
-												<div class="select-header__column">
-													<a href="#" class="select-header__column-title">Innovation</a>
-													<div class="select-header__column-body">
-														<a href="#" class="select-header__column-item">Clear & Matte</a>
-														<a href="#" class="select-header__column-item">Natural Medicare</a>
-														<a href="#" class="select-header__column-item">M-Balance</a>
-														<a href="#" class="select-header__column-item">Unicare</a>
-														<a href="#" class="select-header__column-item">Timeless</a>
-													</div>
-												</div>
-												<div class="select-header__column">
-													<a href="#" class="select-header__column-title">Innovation</a>
-													<div class="select-header__column-body">
-														<a href="#" class="select-header__column-item">Clear & Matte</a>
-														<a href="#" class="select-header__column-item">Natural Medicare</a>
-														<a href="#" class="select-header__column-item">M-Balance</a>
-														<a href="#" class="select-header__column-item">Unicare</a>
-														<a href="#" class="select-header__column-item">Timeless</a>
-													</div>
-												</div>
-											</div>
-											<div class="select-header__img">
-												<img src="images/header-select-img1.png" alt="">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="header__logo logo">
-							<img src="images/logo.png" alt="">
-						</div>
-						<div class="header__leftside">
-							<div class="header__profile js-select">
-								<div class="header__profile-head js-select-head">
-									<p class="header__profile-name">Leslie Alexander</p>
-									<span class="icon icon-person"></span>
-								</div>
-								<div class="header__profile-body js-select-body">
-									<div class="header__profile-diamond">
-										<div class="header__profile-diamond-elem">
-											<div class="header__profile-diamond-icon icon icon-diamond"></div>
-											<p type="text" class="header__profile-diamond-value">2344</p>
-										</div>
-									</div>
-									<div class="header__profile-list">
-										<a href="#" class="header__profile-item">היסטוריית הזמנות</a>
-										<a href="#" class="header__profile-item">סלים שמורים</a>
-										<a href="#" class="header__profile-item">מועדפים</a>
-										<a href="#" class="header__profile-item">קופונים ויהלומים</a>
-										<a href="#" class="header__profile-item">אקדמיית KART</a>
-										<a href="#" class="header__profile-item">פרוטוקולים</a>
-										<a href="#" class="header__profile-item">הביקורות שלי</a>
-										<a href="#" class="header__profile-item">פרטי חשבון</a>
-									</div>
-									<button type="button" class="header__profile-exit">
-										<span class="icon icon-exit"></span>
-										להתנתק
-									</button>
-								</div>
-							</div>
-							<div class="header__notification notification --desktop js-notification">
-								<div class="notification__head icon icon-bell js-notification-head">
-									<span class="notification__counter counter"></span>
-								</div>
+               <div
+                  data-aos="fade-up"
+                  class="page-main__tags-circles tags-circles">
+                  <div class="container">
+                     <div class="tags-circles__content">
+                        <a
+                           href="#"
+                           class="tags-circles__item">
+                           <div class="tags-circles__img">
+                              <img
+                                 src="images/tags-circles__img1.png"
+                                 alt="" />
+                           </div>
+                           <p class="tags-circles__text">Feeto Care</p>
+                        </a>
+                        <a
+                           href="#"
+                           class="tags-circles__item">
+                           <div class="tags-circles__img">
+                              <img
+                                 src="images/tags-circles__img2.png"
+                                 alt="" />
+                           </div>
+                           <p class="tags-circles__text">Professional Feet</p>
+                        </a>
+                        <a
+                           href="#"
+                           class="tags-circles__item">
+                           <div class="tags-circles__img">
+                              <img
+                                 src="images/tags-circles__img3.png"
+                                 alt="" />
+                           </div>
+                           <p class="tags-circles__text">Timeless</p>
+                        </a>
+                        <a
+                           href="#"
+                           class="tags-circles__item">
+                           <div class="tags-circles__img">
+                              <img
+                                 src="images/tags-circles__img4.png"
+                                 alt="" />
+                           </div>
+                           <p class="tags-circles__text">Unicare</p>
+                        </a>
+                        <a
+                           href="#"
+                           class="tags-circles__item">
+                           <div class="tags-circles__img">
+                              <img
+                                 src="images/tags-circles__img5.png"
+                                 alt="" />
+                           </div>
+                           <p class="tags-circles__text">M-Balance</p>
+                        </a>
+                        <a
+                           href="#"
+                           class="tags-circles__item">
+                           <div class="tags-circles__img">
+                              <img
+                                 src="images/tags-circles__img6.png"
+                                 alt="" />
+                           </div>
+                           <p class="tags-circles__text">Natural Medicare</p>
+                        </a>
+                        <a
+                           href="#"
+                           class="tags-circles__item">
+                           <div class="tags-circles__img">
+                              <img
+                                 src="images/tags-circles__img7.png"
+                                 alt="" />
+                           </div>
+                           <p class="tags-circles__text">Clear & Matte</p>
+                        </a>
+                        <a
+                           href="#"
+                           class="tags-circles__item">
+                           <div class="tags-circles__img">
+                              <img
+                                 src="images/tags-circles__img8.png"
+                                 alt="" />
+                           </div>
+                           <p class="tags-circles__text">Innovation</p>
+                        </a>
+                     </div>
+                  </div>
+               </div>
 
-							</div>
-						</div>
+               <div class="novelty">
+                  <div class="container">
+                     <h3
+                        data-aos="fade-up"
+                        class="novelty__title">
+                        מגוון מוצריםלפי תחומים
+                     </h3>
+                     <p
+                        data-aos="fade-up"
+                        class="novelty__description">
+                        קארט קוסמטיקס מזמינה אותך להכיר מוצרים חדשניים עם תוצאות מוכחות
+                     </p>
+                     <div class="novelty__content">
+                        <div
+                           data-aos="fade-up"
+                           class="novelty__card novelty__card--legs">
+                           <div class="novelty__card-content">
+                              <h4 class="novelty__card-title">פדיקור</h4>
+                              <div class="novelty__card-img">
+                                 <img
+                                    src="images/novelty1.svg"
+                                    alt="" />
+                              </div>
+                           </div>
+                           <div class="novelty__bg">
+                              <img
+                                 src="images/novelty1.png"
+                                 alt="" />
+                           </div>
+                        </div>
+                        <div
+                           data-aos="fade-up"
+                           data-aos-delay="100"
+                           class="novelty__card novelty__card--face">
+                           <div class="novelty__card-content">
+                              <h4 class="novelty__card-title">קוסמטיקה</h4>
+                              <div class="novelty__card-img">
+                                 <img
+                                    src="images/novelty2.svg"
+                                    alt="" />
+                              </div>
+                           </div>
+                           <div class="novelty__bg novelty__bg--not-mobile">
+                              <img
+                                 src="images/novelty2.png"
+                                 alt="" />
+                           </div>
+                           <div class="novelty__bg novelty__bg--mobile">
+                              <img
+                                 src="images/novelty2--mobile.png"
+                                 alt="" />
+                           </div>
+                        </div>
+                        <div
+                           data-aos="fade-up"
+                           data-aos-delay="200"
+                           class="novelty__card novelty__card--hands">
+                           <div class="novelty__card-content">
+                              <h4 class="novelty__card-title">מניקור</h4>
+                              <div class="novelty__card-img">
+                                 <img
+                                    src="images/novelty.svg"
+                                    alt="" />
+                              </div>
+                           </div>
+                           <div class="novelty__bg">
+                              <img
+                                 src="images/novelty3.png"
+                                 alt="" />
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
 
-						<div class="notification__body js-notification-body">
-							<div class="notification__wrapper">
-								<a href="#" class="notification__item">
-									<span class="notification__item-icon icon icon-email"></span>
-									<div class="notification__item-text-block">
-										<p class="notification__item-title">הודעות מערכת</p>
-										<p class="notification__item-descr">חברת קארט עוסקת במחקר, פיתוח וייצור מוצרי
-											קוסמטיקה
-											ופדיקור המעניקים פתרונות ייחודיים למגוון צרכי העור המשווקים ברחבי העולם</p>
-									</div>
-								</a>
-								<a href="#" class="notification__item">
-									<span class="notification__item-icon icon icon-gift"></span>
-									<div class="notification__item-text-block">
-										<p class="notification__item-title">חגים, ימי הולדת וכו</p>
-										<p class="notification__item-descr">חברת קארט עוסקת במחקר, פיתוח וייצור מוצרי
-											קוסמטיקה
-											ופדיקור המעניקים פתרונות ייחודיים למגוון צרכי העור המשווקים ברחבי העולם</p>
-									</div>
-								</a>
-								<a href="#" class="notification__item">
-									<span class="notification__item-icon icon icon-diamond"></span>
-									<div class="notification__item-text-block">
-										<p class="notification__item-title">יהלומים, קופונים וכו</p>
-										<p class="notification__item-descr">חברת קארט עוסקת במחקר, פיתוח וייצור מוצרי
-											קוסמטיקה
-											ופדיקור המעניקים פתרונות ייחודיים למגוון צרכי העור המשווקים ברחבי העולם</p>
-									</div>
-								</a>
-								<a href="#" class="notification__item">
-									<span class="notification__item-icon icon icon-diamond"></span>
-									<div class="notification__item-text-block">
-										<p class="notification__item-title">יהלומים, קופונים וכו</p>
-										<p class="notification__item-descr">חברת קארט עוסקת במחקר, פיתוח וייצור מוצרי
-											קוסמטיקה
-											ופדיקור המעניקים פתרונות ייחודיים למגוון צרכי העור המשווקים ברחבי העולם</p>
-									</div>
-								</a>
-								<a href="#" class="notification__item">
-									<span class="notification__item-icon icon icon-diamond"></span>
-									<div class="notification__item-text-block">
-										<p class="notification__item-title">יהלומים, קופונים וכו</p>
-										<p class="notification__item-descr">חברת קארט עוסקת במחקר, פיתוח וייצור מוצרי
-											קוסמטיקה
-											ופדיקור המעניקים פתרונות ייחודיים למגוון צרכי העור המשווקים ברחבי העולם</p>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
+               <div
+                  data-aos="fade-up"
+                  class="page-main__slider-right slider-right">
+                  <div class="container">
+                     <div class="slider-right__content">
+                        <div class="slider-right__container swiper-container">
+                           <div class="slider-right__wrapper swiper-wrapper">
+                              <div class="slider-right__slide swiper-slide">
+                                 <div class="slider-right__slide-img">
+                                    <img
+                                       src="images/slider-right__img1.png"
+                                       alt="" />
+                                 </div>
+                                 <p class="slider-right__slide-name h4">Innovation</p>
+                                 <p class="slider-right__slide-amount h7">34 מוצרים</p>
+                              </div>
+                              <div class="slider-right__slide swiper-slide">
+                                 <div class="slider-right__slide-img">
+                                    <img
+                                       src="images/slider-right__img2.png"
+                                       alt="" />
+                                 </div>
+                                 <p class="slider-right__slide-name h4">Clear & Matte</p>
+                                 <p class="slider-right__slide-amount h7">14 מוצרים</p>
+                              </div>
+                              <div class="slider-right__slide swiper-slide">
+                                 <div class="slider-right__slide-img">
+                                    <img
+                                       src="images/slider-right__img3.png"
+                                       alt="" />
+                                 </div>
+                                 <p class="slider-right__slide-name h4">Natural Medicare</p>
+                                 <p class="slider-right__slide-amount h7">12 מוצרים</p>
+                              </div>
+                           </div>
+                           <div class="slider-right__pagination"></div>
+                        </div>
+                        <div class="slider-right__text-block">
+                           <h2 class="slider-right__title h2">הסדרות המובילות הכירו את</h2>
+                           <p class="slider-right__descr">
+                              מגוון פתרונות ייחודיים בתחום הקוסמטיקה, פדיקור ומניקור
+                           </p>
+                           <div class="slider-right__btns-block">
+                              <button
+                                 type="button"
+                                 class="slider-right__btn slider-right__btn-next icon icon-triangle-right">
+                                 <span class="timer again">
+                                    <span class="timer__bd-white"></span>
+                                    <span class="timer__bd-gray"></span>
+                                    <span class="timer__bd-fixed"></span>
+                                    <span class="timer__line"></span>
+                                    <span class="timer__body icon icon-triangle-right"></span>
+                                 </span>
+                              </button>
+                              <button
+                                 type="button"
+                                 class="slider-right__btn slider-right__btn-prev icon icon-triangle-left"></button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
 
-				</div>
-			</div>
+               <div
+                  data-aos="fade-up"
+                  data-aos-offset="-500"
+                  class="page-main__products page-main-products">
+                  <div class="container">
+                     <div class="page-main-products__content">
+                        <h2 class="page-main-products__title">קטלוג מוצרי KART</h2>
+                        <p class="page-main-products__descr">
+                           םלועה יבחרב םתוא תקוושמו רועה יכרצ ןווגמל םיידוחיי תונורתפ םיקינעמה
+                           רוקידפו הקיטמסוק ירצומ רוצייו חותיפ ,רקחמב תקסוע טראק תרבח
+                        </p>
+                        <div class="page-main-products__grid-wrapper">
+                           <a
+                              href="#"
+                              class="page-main-products__item product-card-row">
+                              <div class="product-card-row__img-block">
+                                 <div class="product-card-row__img">
+                                    <img
+                                       src="images/product-card-row-img1.png"
+                                       alt="" />
+                                 </div>
+                                 <div class="product-card-row__banner">new</div>
+                              </div>
+                              <div class="product-card-row__text">
+                                 <p class="product-card-row__type">CARE FEETO</p>
+                                 <p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="product-card-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="page-main-products__item product-card-row">
+                              <div class="product-card-row__img-block">
+                                 <div class="product-card-row__img">
+                                    <img
+                                       src="images/product-card-row-img2.png"
+                                       alt="" />
+                                 </div>
+                                 <div class="product-card-row__banner">new</div>
+                              </div>
+                              <div class="product-card-row__text">
+                                 <p class="product-card-row__type">CARE FEETO</p>
+                                 <p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="product-card-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="page-main-products__item product-card-row">
+                              <div class="product-card-row__img-block">
+                                 <div class="product-card-row__img">
+                                    <img
+                                       src="images/product-card-row-img3.png"
+                                       alt="" />
+                                 </div>
+                                 <div class="product-card-row__banner">new</div>
+                              </div>
+                              <div class="product-card-row__text">
+                                 <p class="product-card-row__type">CARE FEETO</p>
+                                 <p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="product-card-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="page-main-products__item product-card-row">
+                              <div class="product-card-row__img-block">
+                                 <div class="product-card-row__img">
+                                    <img
+                                       src="images/product-card-row-img4.png"
+                                       alt="" />
+                                 </div>
+                                 <div class="product-card-row__banner">new</div>
+                              </div>
+                              <div class="product-card-row__text">
+                                 <p class="product-card-row__type">CARE FEETO</p>
+                                 <p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="product-card-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="page-main-products__item product-card-row">
+                              <div class="product-card-row__img-block">
+                                 <div class="product-card-row__img">
+                                    <img
+                                       src="images/product-card-row-img1.png"
+                                       alt="" />
+                                 </div>
+                              </div>
+                              <div class="product-card-row__text">
+                                 <p class="product-card-row__type">CARE FEETO</p>
+                                 <p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="product-card-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="page-main-products__item product-card-row">
+                              <div class="product-card-row__img-block">
+                                 <div class="product-card-row__img">
+                                    <img
+                                       src="images/product-card-row-img2.png"
+                                       alt="" />
+                                 </div>
+                                 <div class="product-card-row__banner">BEST SALER</div>
+                              </div>
+                              <div class="product-card-row__text">
+                                 <p class="product-card-row__type">CARE FEETO</p>
+                                 <p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="product-card-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="page-main-products__item product-card-row">
+                              <div class="product-card-row__img-block">
+                                 <div class="product-card-row__img">
+                                    <img
+                                       src="images/product-card-row-img3.png"
+                                       alt="" />
+                                 </div>
+                              </div>
+                              <div class="product-card-row__text">
+                                 <p class="product-card-row__type">CARE FEETO</p>
+                                 <p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="product-card-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="page-main-products__item product-card-row">
+                              <div class="product-card-row__img-block">
+                                 <div class="product-card-row__img">
+                                    <img
+                                       src="images/product-card-row-img4.png"
+                                       alt="" />
+                                 </div>
+                              </div>
+                              <div class="product-card-row__text">
+                                 <p class="product-card-row__type">CARE FEETO</p>
+                                 <p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="product-card-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="page-main-products__item product-card-row">
+                              <div class="product-card-row__img-block">
+                                 <div class="product-card-row__img">
+                                    <img
+                                       src="images/product-card-row-img1.png"
+                                       alt="" />
+                                 </div>
+                              </div>
+                              <div class="product-card-row__text">
+                                 <p class="product-card-row__type">CARE FEETO</p>
+                                 <p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="product-card-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="page-main-products__item product-card-row">
+                              <div class="product-card-row__img-block">
+                                 <div class="product-card-row__img">
+                                    <img
+                                       src="images/product-card-row-img2.png"
+                                       alt="" />
+                                 </div>
+                              </div>
+                              <div class="product-card-row__text">
+                                 <p class="product-card-row__type">CARE FEETO</p>
+                                 <p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="product-card-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="page-main-products__item product-card-row">
+                              <div class="product-card-row__img-block">
+                                 <div class="product-card-row__img">
+                                    <img
+                                       src="images/product-card-row-img3.png"
+                                       alt="" />
+                                 </div>
+                              </div>
+                              <div class="product-card-row__text">
+                                 <p class="product-card-row__type">CARE FEETO</p>
+                                 <p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="product-card-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="page-main-products__item product-card-row">
+                              <div class="product-card-row__img-block">
+                                 <div class="product-card-row__img">
+                                    <img
+                                       src="images/product-card-row-img4.png"
+                                       alt="" />
+                                 </div>
+                              </div>
+                              <div class="product-card-row__text">
+                                 <p class="product-card-row__type">CARE FEETO</p>
+                                 <p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="product-card-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                        </div>
+                        <a
+                           href="#"
+                           class="page-main-products__btn-to-kart btn btn-contour"
+                           >מעבר לקטלוג KART</a
+                        >
+                     </div>
+                  </div>
+               </div>
 
-		</header>
+               <div class="page-main__promotion-large promotion-large">
+                  <div
+                     data-aos="fade-left"
+                     data-aos-offset="-500"
+                     class="promotion-large__rightside">
+                     <div class="promotion-large__slider swiper-container">
+                        <div class="promotion-large__timer">
+                           <h6 class="promotion-large__timer-title">מוצרי החודש</h6>
+                           <p class="promotion-large__timer-nums">
+                              10
+                              <span class="promotion-large__timer-divide">:</span>
+                              30
+                              <span class="promotion-large__timer-divide">:</span>
+                              08
+                              <span class="promotion-large__timer-divide">:</span>
+                              43
+                           </p>
+                        </div>
+                        <div class="promotion-large__wrapper swiper-wrapper">
+                           <div class="promotion-large__slide swiper-slide">
+                              <div class="promotion-large__card product-card-promotion">
+                                 <div class="product-card-promotion__image-block">
+                                    <div class="product-card-promotion__img">
+                                       <img
+                                          src="images/card-product-row__img1.png"
+                                          alt="" />
+                                    </div>
+                                    <div class="product-card-promotion__discount">
+                                       <p class="product-card-promotion__discount-text">הנחה</p>
+                                       <p class="product-card-promotion__discount-amount">25%</p>
+                                    </div>
+                                    <div class="product-card-promotion__brand">UNICARE</div>
+                                 </div>
+                                 <div class="product-card-promotion__text-block">
+                                    <p class="product-card-promotion__type">פדיקור</p>
+                                    <p class="product-card-promotion__name">
+                                       Soa Treatment סבון טיפולי
+                                    </p>
+                                    <p class="product-card-promotion__price">
+                                       <span class="product-card-promotion__price-old">
+                                          5.00 ₪</span
+                                       >
+                                       <span class="product-card-promotion__price-new">
+                                          4.00 ₪</span
+                                       >
+                                    </p>
+                                 </div>
+                              </div>
+                              <button
+                                 type="button"
+                                 class="promotion-large__btn-add-to-cart btn btn-primary">
+                                 הוספה לסל
+                              </button>
+                           </div>
+                           <div class="promotion-large__slide swiper-slide">
+                              <div class="promotion-large__card product-card-promotion">
+                                 <div class="product-card-promotion__image-block">
+                                    <div class="product-card-promotion__img">
+                                       <img
+                                          src="images/product-card-row-img3.png"
+                                          alt="" />
+                                    </div>
+                                    <div class="product-card-promotion__discount">
+                                       <p class="product-card-promotion__discount-text">הנחה</p>
+                                       <p class="product-card-promotion__discount-amount">25%</p>
+                                    </div>
+                                    <div class="product-card-promotion__brand">UNICARE</div>
+                                 </div>
+                                 <div class="product-card-promotion__text-block">
+                                    <p class="product-card-promotion__type">פדיקור</p>
+                                    <p class="product-card-promotion__name">
+                                       Soa Treatment סבון טיפולי
+                                    </p>
+                                    <p class="product-card-promotion__price">
+                                       <span class="product-card-promotion__price-old">
+                                          5.00 ₪</span
+                                       >
+                                       <span class="product-card-promotion__price-new">
+                                          4.00 ₪</span
+                                       >
+                                    </p>
+                                 </div>
+                              </div>
+                              <button
+                                 type="button"
+                                 class="promotion-large__btn-add-to-cart btn btn-primary">
+                                 הוספה לסל
+                              </button>
+                           </div>
+                           <div class="promotion-large__slide swiper-slide">
+                              <div class="promotion-large__card product-card-promotion">
+                                 <div class="product-card-promotion__image-block">
+                                    <div class="product-card-promotion__img">
+                                       <img
+                                          src="images/product-card-row-img3.png"
+                                          alt="" />
+                                    </div>
+                                    <div class="product-card-promotion__discount">
+                                       <p class="product-card-promotion__discount-text">הנחה</p>
+                                       <p class="product-card-promotion__discount-amount">25%</p>
+                                    </div>
+                                    <div class="product-card-promotion__brand">UNICARE</div>
+                                 </div>
+                                 <div class="product-card-promotion__text-block">
+                                    <p class="product-card-promotion__type">פדיקור</p>
+                                    <p class="product-card-promotion__name">
+                                       Soa Treatment סבון טיפולי
+                                    </p>
+                                    <p class="product-card-promotion__price">
+                                       <span class="product-card-promotion__price-old">
+                                          5.00 ₪</span
+                                       >
+                                       <span class="product-card-promotion__price-new">
+                                          4.00 ₪</span
+                                       >
+                                    </p>
+                                 </div>
+                              </div>
+                              <button
+                                 type="button"
+                                 class="promotion-large__btn-add-to-cart btn btn-primary">
+                                 הוספה לסל
+                              </button>
+                           </div>
+                        </div>
+                        <div class="promotion-large__nav">
+                           <button
+                              type="button"
+                              class="promotion-large__btn promotion-large__btn-left icon icon-triangle-left"></button>
+                           <button
+                              type="button"
+                              class="promotion-large__btn promotion-large__btn-right icon icon-triangle-right">
+                              <span class="timer again">
+                                 <span class="timer__bd-white"></span>
+                                 <span class="timer__bd-gray"></span>
+                                 <span class="timer__bd-fixed"></span>
+                                 <span class="timer__line"></span>
+                                 <span class="timer__body icon icon-triangle-right"></span>
+                              </span>
+                           </button>
+                        </div>
+                        <div class="promotion-large__pagin swiper-pagination-main"></div>
+                     </div>
+                  </div>
+                  <div
+                     data-aos="fade-right"
+                     data-aos-offset="-500"
+                     class="promotion-large__leftside">
+                     <img
+                        src="images/promotion-large-img1.png"
+                        alt="" />
+                  </div>
+               </div>
 
-		<!-- HEADER end  -->
+               <div class="page-main__academy block-academy">
+                  <div class="container">
+                     <div class="block-academy__content">
+                        <div
+                           data-aos="fade-left"
+                           data-aos-offset="-500"
+                           class="block-academy__images-block">
+                           <div class="block-academy__img block-academy__img-small">
+                              <img
+                                 src="images/block-academy-img1.png"
+                                 alt="" />
+                           </div>
+                           <div class="block-academy__img block-academy__img-large">
+                              <img
+                                 src="images/block-academy-img2.png"
+                                 alt="" />
+                           </div>
+                        </div>
 
-		<!-- MAIN start  -->
-		<main class="main">
+                        <div
+                           data-aos="fade-up"
+                           data-aos-offset="-500"
+                           class="block-academy__text-block">
+                           <h2 class="block-academy__title h1">KART באקדמיית מתמקצעים</h2>
+                           <p class="block-academy__descr">
+                              מגוון הדרכות, הכשרות, השתלמויות וקורסים מחכים לך באתר
+                           </p>
+                           <a
+                              href="#"
+                              class="block-academy__btn block-academy__btn--desktop btn btn-primary"
+                              >מעבר להדרכות</a
+                           >
+                        </div>
 
+                        <div
+                           data-aos="fade-right"
+                           data-aos-offset="-500"
+                           class="block-academy__images-block">
+                           <div class="block-academy__img block-academy__img-large">
+                              <img
+                                 src="images/block-academy-img3.png"
+                                 alt="" />
+                           </div>
+                           <div class="block-academy__img block-academy__img-small">
+                              <img
+                                 src="images/block-academy-img4.png"
+                                 alt="" />
+                           </div>
+                        </div>
+                        <a
+                           href="#"
+                           class="block-academy__btn block-academy__btn--mobile btn btn-primary"
+                           >מעבר להדרכות</a
+                        >
+                     </div>
+                  </div>
+               </div>
 
-			<!-- CONTENT start  -->
-			<div class="content">
+               <div
+                  data-aos="flip-left"
+                  data-aos-offset="-500"
+                  class="rebate">
+                  <div class="rebate__bottle">
+                     <img
+                        src="images/rebate-bottle.png"
+                        alt="" />
+                  </div>
+                  <div class="container">
+                     <div class="rebate__content">
+                        <div class="rebate__ball">
+                           <div class="rebate__ball-content">
+                              <p class="rebate__ball-title">הנחה</p>
+                              <p class="rebate__ball-amount">25%</p>
+                           </div>
+                        </div>
+                        <div class="rebate__info">
+                           <div class="rebate__description">
+                              <div class="rebate__name">פדיקור</div>
+                              <div class="rebate__title">Treatment Soa ילופיט ןובס</div>
+                              <div class="rebate__amount">
+                                 <span class="rebate__real"> 5.00 ₪</span>
+                                 <span class="rebate__real-before">|</span>
+                                 <span class="rebate__now"> 4.00 ₪</span>
+                              </div>
+                           </div>
+                           <button class="btn btn-primary rebate__btn">הוספה לסל</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
 
-				<div class="page-main__banner banner">
-					<div class="banner__content">
-						<div class="banner__text-block">
-							<h1 data-aos="fade-down" class="banner__title">YOUR SKIN <br> DESERVES <br> KART</h1>
-							<p data-aos="fade-down" class="banner__descr"> להרגיש את העור שלך מחדש</p>
-							<a data-aos="fade-up" href="#" class="banner__btn btn btn-primary">גולטקל רבעמ</a>
-						</div>
-					</div>
-					<div class="banner__slider slider-banner swiper-container">
-						<div class="slider-banner__wrapper swiper-wrapper">
-							<div class="slider-banner__slide swiper-slide">
-								<!-- <img src="images/slider-banner__img1-1.png" alt=""> -->
+               <div
+                  data-aos="fade-up"
+                  data-aos-offset="-500"
+                  class="page-main__slider-articles slider-articles slider-articles--tabs">
+                  <div class="container">
+                     <div class="slider-articles__content">
+                        <div class="slider-articles__head">
+                           <div class="slider-articles__text-block">
+                              <h2 class="slider-articles__title h1">הדרכות מומלצות</h2>
+                              <p class="slider-articles__descr">
+                                 דוחל רוקידפו דוחל הקיטמסוקל הדרפה תושעל ךירצ
+                              </p>
+                           </div>
+                        </div>
+                        <div class="slider-articles__tabs js-tabs">
+                           <div class="slider-articles__tabs-head js-tabs-head">
+                              <button
+                                 type="button"
+                                 class="slider-articles__tabs-item js-tabs-item">
+                                 מניקור
+                              </button>
+                              <button
+                                 type="button"
+                                 class="slider-articles__tabs-item active js-tabs-item">
+                                 קוסמטיקה
+                              </button>
+                           </div>
+                           <div class="slider-articles__tabs-body js-tabs-body">
+                              <div class="slider-articles__tabs-body-item js-tabs-body-item">
+                                 <div class="slider-articles__swiper swiper-container">
+                                    <div class="slider-articles__nav">
+                                       <button
+                                          type="button"
+                                          class="slider-articles__btn slider-articles__btn-next icon icon-triangle-right">
+                                          <span class="timer again">
+                                             <span class="timer__bd-white"></span>
+                                             <span class="timer__bd-gray"></span>
+                                             <span class="timer__bd-fixed"></span>
+                                             <span class="timer__line"></span>
+                                             <span
+                                                class="timer__body icon icon-triangle-right"></span>
+                                          </span>
+                                       </button>
+                                       <button
+                                          type="button"
+                                          class="slider-articles__btn slider-articles__btn-prev icon icon-triangle-left"></button>
+                                    </div>
+                                    <div class="slider-articles__wrapper swiper-wrapper">
+                                       <div
+                                          class="slider-articles__slide swiper-slide card-article">
+                                          <div class="card-article__img">
+                                             <img
+                                                src="images/card-article-img1.png"
+                                                alt="" />
+                                          </div>
+                                          <div class="card-article__text-block">
+                                             <p class="card-article__name">
+                                                הכשרה לקוסמטיקאיות אונליין
+                                             </p>
+                                             <p class="card-article__time">
+                                                <span class="icon icon-clock"></span>
+                                                3.5 שעות הדרכה
+                                             </p>
+                                          </div>
+                                       </div>
+                                       <div
+                                          class="slider-articles__slide swiper-slide card-article">
+                                          <div class="card-article__img">
+                                             <img
+                                                src="images/card-article-img2.png"
+                                                alt="" />
+                                          </div>
+                                          <div class="card-article__text-block">
+                                             <p class="card-article__name">
+                                                הכשרה לקוסמטיקאיות אונליין
+                                             </p>
+                                             <p class="card-article__time">
+                                                <span class="icon icon-clock"></span>
+                                                3.5 שעות הדרכה
+                                             </p>
+                                          </div>
+                                       </div>
+                                       <div
+                                          class="slider-articles__slide swiper-slide card-article">
+                                          <div class="card-article__img">
+                                             <img
+                                                src="images/card-article-img3.png"
+                                                alt="" />
+                                          </div>
+                                          <div class="card-article__text-block">
+                                             <p class="card-article__name">
+                                                הכשרה לקוסמטיקאיות אונליין
+                                             </p>
+                                             <p class="card-article__time">
+                                                <span class="icon icon-clock"></span>
+                                                3.5 שעות הדרכה
+                                             </p>
+                                          </div>
+                                       </div>
+                                       <div
+                                          class="slider-articles__slide swiper-slide card-article">
+                                          <div class="card-article__img">
+                                             <img
+                                                src="images/card-article-img4.png"
+                                                alt="" />
+                                          </div>
+                                          <div class="card-article__text-block">
+                                             <p class="card-article__type">פדיקור</p>
+                                             <p class="card-article__name">
+                                                הכשרה לקוסמטיקאיות אונליין
+                                             </p>
+                                             <p class="card-article__time">
+                                                <span class="icon icon-clock"></span>
+                                                3.5 שעות הדרכה
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div
+                                       class="slider-articles__pagin swiper-pagination-main"></div>
+                                 </div>
+                              </div>
+                              <div class="slider-articles__tabs-body-item active js-tabs-body-item">
+                                 <div class="slider-articles__swiper swiper-container">
+                                    <div class="slider-articles__nav">
+                                       <button
+                                          type="button"
+                                          class="slider-articles__btn slider-articles__btn-next icon icon-triangle-right">
+                                          <span class="timer again">
+                                             <span class="timer__bd-white"></span>
+                                             <span class="timer__bd-gray"></span>
+                                             <span class="timer__bd-fixed"></span>
+                                             <span class="timer__line"></span>
+                                             <span
+                                                class="timer__body icon icon-triangle-right"></span>
+                                          </span>
+                                       </button>
+                                       <button
+                                          type="button"
+                                          class="slider-articles__btn slider-articles__btn-prev icon icon-triangle-left"></button>
+                                    </div>
+                                    <div class="slider-articles__wrapper swiper-wrapper">
+                                       <div
+                                          class="slider-articles__slide swiper-slide card-article">
+                                          <div class="card-article__img">
+                                             <img
+                                                src="images/card-article-img1.png"
+                                                alt="" />
+                                          </div>
+                                          <div class="card-article__text-block">
+                                             <p class="card-article__name">
+                                                הכשרה לקוסמטיקאיות אונליין
+                                             </p>
+                                             <p class="card-article__time">
+                                                <span class="icon icon-clock"></span>
+                                                3.5 שעות הדרכה
+                                             </p>
+                                          </div>
+                                       </div>
+                                       <div
+                                          class="slider-articles__slide swiper-slide card-article">
+                                          <div class="card-article__img">
+                                             <img
+                                                src="images/card-article-img2.png"
+                                                alt="" />
+                                          </div>
+                                          <div class="card-article__text-block">
+                                             <p class="card-article__name">
+                                                הכשרה לקוסמטיקאיות אונליין
+                                             </p>
+                                             <p class="card-article__time">
+                                                <span class="icon icon-clock"></span>
+                                                3.5 שעות הדרכה
+                                             </p>
+                                          </div>
+                                       </div>
+                                       <div
+                                          class="slider-articles__slide swiper-slide card-article">
+                                          <div class="card-article__img">
+                                             <img
+                                                src="images/card-article-img3.png"
+                                                alt="" />
+                                          </div>
+                                          <div class="card-article__text-block">
+                                             <p class="card-article__name">
+                                                הכשרה לקוסמטיקאיות אונליין
+                                             </p>
+                                             <p class="card-article__time">
+                                                <span class="icon icon-clock"></span>
+                                                3.5 שעות הדרכה
+                                             </p>
+                                          </div>
+                                       </div>
+                                       <div
+                                          class="slider-articles__slide swiper-slide card-article">
+                                          <div class="card-article__img">
+                                             <img
+                                                src="images/card-article-img4.png"
+                                                alt="" />
+                                          </div>
+                                          <div class="card-article__text-block">
+                                             <p class="card-article__type">פדיקור</p>
+                                             <p class="card-article__name">
+                                                הכשרה לקוסמטיקאיות אונליין
+                                             </p>
+                                             <p class="card-article__time">
+                                                <span class="icon icon-clock"></span>
+                                                3.5 שעות הדרכה
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div
+                                       class="slider-articles__pagin swiper-pagination-main"></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
 
-							</div>
-							<div class="slider-banner__slide swiper-slide">
-								<div class="slider-banner__item slider-banner__item-right">
-									<img src="images/slider-banner__img1-2.png" alt="">
-								</div>
-								<div class="slider-banner__item slider-banner__item-left">
-									<img src="images/slider-banner__img1-1.png" alt="">
-								</div>
-							</div>
-							<div class="slider-banner__slide swiper-slide">
-								<div class="slider-banner__item slider-banner__item-right">
-									<img src="images/slider-banner__img2-1.png" alt="">
-								</div>
-								<div class="slider-banner__item slider-banner__item-left">
-									<img src="images/slider-banner__img2-2.png" alt="">
-								</div>
-							</div>
-							<div class="slider-banner__slide swiper-slide">
-								<div class="slider-banner__item slider-banner__item-right">
-									<img src="images/slider-banner__img3-1.png" alt="">
-								</div>
-								<div class="slider-banner__item slider-banner__item-left">
-									<img src="images/slider-banner__img3-2.png" alt="">
-								</div>
-							</div>
-							<div class="slider-banner__slide swiper-slide">
-								<div class="slider-banner__item slider-banner__item-right">
-									<img src="images/slider-banner__img4-1.png" alt="">
-								</div>
-								<div class="slider-banner__item slider-banner__item-left">
-									<img src="images/slider-banner__img4-2.png" alt="">
-								</div>
-							</div>
-							<div class="slider-banner__slide swiper-slide">
-								<div class="slider-banner__item slider-banner__item-right">
-									<img src="images/slider-banner__img5-1.png" alt="">
-								</div>
-								<div class="slider-banner__item slider-banner__item-left">
-									<img src="images/slider-banner__img5-2.png" alt="">
-								</div>
-							</div>
-							<div class="slider-banner__slide swiper-slide">
-								<div class="slider-banner__item slider-banner__item-right">
-									<img src="images/slider-banner__img6-1.png" alt="">
-								</div>
-								<div class="slider-banner__item slider-banner__item-left">
-									<img src="images/slider-banner__img6-2.png" alt="">
-								</div>
-							</div>
-							<div class="slider-banner__slide swiper-slide">
-								<div class="slider-banner__item slider-banner__item-right">
-									<img src="images/slider-banner__img7-1.png" alt="">
-								</div>
-								<div class="slider-banner__item slider-banner__item-left">
-									<img src="images/slider-banner__img7-2.png" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+               <div
+                  data-aos="fade-up"
+                  data-aos-offset="-200"
+                  class="known">
+                  <div class="container">
+                     <div class="known__description">
+                        <h3 class="known__title h3">מועדון המקצועיות של KART</h3>
+                        <p class="known__subtitle">
+                           מקצועית יקרה, על המועדון של KART כבר שמעת? השאירי טלפון ונשמח לחזור אלייך
+                           עם כל הפרטים
+                        </p>
+                     </div>
+                     <div class="known__form">
+                        <input
+                           class="known__input"
+                           type="text"
+                           placeholder="טלפון" />
+                        <button
+                           class="btn btn-primary known__btn"
+                           type="text">
+                           שליחה<span class="icon icon-arrow-left --desktop"></span>
+                        </button>
+                     </div>
+                  </div>
+               </div>
 
-				<div data-aos="fade-up" class="page-main__tags-circles tags-circles">
-					<div class="container">
-						<div class="tags-circles__content">
-							<a href="#" class="tags-circles__item">
-								<div class="tags-circles__img">
-									<img src="images/tags-circles__img1.png" alt="">
-								</div>
-								<p class="tags-circles__text">Feeto Care</p>
-							</a>
-							<a href="#" class="tags-circles__item">
-								<div class="tags-circles__img">
-									<img src="images/tags-circles__img2.png" alt="">
-								</div>
-								<p class="tags-circles__text">Professional Feet</p>
-							</a>
-							<a href="#" class="tags-circles__item">
-								<div class="tags-circles__img">
-									<img src="images/tags-circles__img3.png" alt="">
-								</div>
-								<p class="tags-circles__text">Timeless</p>
-							</a>
-							<a href="#" class="tags-circles__item">
-								<div class="tags-circles__img">
-									<img src="images/tags-circles__img4.png" alt="">
-								</div>
-								<p class="tags-circles__text">Unicare</p>
-							</a>
-							<a href="#" class="tags-circles__item">
-								<div class="tags-circles__img">
-									<img src="images/tags-circles__img5.png" alt="">
-								</div>
-								<p class="tags-circles__text">M-Balance</p>
-							</a>
-							<a href="#" class="tags-circles__item">
-								<div class="tags-circles__img">
-									<img src="images/tags-circles__img6.png" alt="">
-								</div>
-								<p class="tags-circles__text">Natural Medicare</p>
-							</a>
-							<a href="#" class="tags-circles__item">
-								<div class="tags-circles__img">
-									<img src="images/tags-circles__img7.png" alt="">
-								</div>
-								<p class="tags-circles__text">Clear & Matte</p>
-							</a>
-							<a href="#" class="tags-circles__item">
-								<div class="tags-circles__img">
-									<img src="images/tags-circles__img8.png" alt="">
-								</div>
-								<p class="tags-circles__text">Innovation</p>
-							</a>
-						</div>
-					</div>
-				</div>
+               <a
+                  href="#top"
+                  class="btn-top icon icon-arrow-top"></a>
+            </div>
+            <!-- CONTENT end -->
 
-				<div class="novelty">
-					<div class="container">
-						<h3 data-aos="fade-up" class="novelty__title"> מגוון מוצריםלפי תחומים</h3>
-						<p data-aos="fade-up" class="novelty__description">קארט קוסמטיקס מזמינה אותך להכיר מוצרים חדשניים עם
-							תוצאות מוכחות </p>
-						<div class="novelty__content">
-							<div data-aos="fade-up" class="novelty__card novelty__card--legs">
-								<div class="novelty__card-content">
-									<h4 class="novelty__card-title">פדיקור</h4>
-									<div class="novelty__card-img"><img src="images/novelty1.svg" alt=""></div>
-								</div>
-								<div class="novelty__bg"><img src="images/novelty1.png" alt=""></div>
-							</div>
-							<div data-aos="fade-up" data-aos-delay="100" class="novelty__card novelty__card--face">
-								<div class="novelty__card-content">
-									<h4 class="novelty__card-title">קוסמטיקה</h4>
-									<div class="novelty__card-img"><img src="images/novelty2.svg" alt=""></div>
-								</div>
-								<div class="novelty__bg novelty__bg--not-mobile"><img src="images/novelty2.png" alt=""></div>
-								<div class="novelty__bg novelty__bg--mobile"><img src="images/novelty2--mobile.png" alt="">
-								</div>
-							</div>
-							<div data-aos="fade-up" data-aos-delay="200" class="novelty__card novelty__card--hands">
-								<div class="novelty__card-content">
-									<h4 class="novelty__card-title">מניקור</h4>
-									<div class="novelty__card-img"><img src="images/novelty.svg" alt=""></div>
-								</div>
-								<div class="novelty__bg"><img src="images/novelty3.png" alt=""></div>
-							</div>
-						</div>
-					</div>
-				</div>
+            <div class="aside-menu">
+               <div class="aside-menu__item">
+                  <a
+                     href="#"
+                     class="aside-menu__link icon icon-heart-blank"></a>
+               </div>
+               <div class="aside-menu__item">
+                  <a
+                     href="#"
+                     class="aside-menu__link icon icon-cart"></a>
+               </div>
+            </div>
 
+            <!-- POPUP  -->
+            <div class="popup popup-search">
+               <div class="popup__body">
+                  <div class="popup__content">
+                     <div class="popup-search__head">
+                        <div class="container">
+                           <button
+                              type="button"
+                              class="popup-search__close popup-close icon icon-close"></button>
+                           <label class="popup-search__input-box">
+                              <input
+                                 type="text"
+                                 class="popup-search__input"
+                                 placeholder="חיפוש" />
+                              <span class="icon icon-search"></span>
+                              <button
+                                 type="button"
+                                 class="popup-search__input-to-clear icon icon-close"></button>
+                           </label>
+                        </div>
+                     </div>
+                     <div class="popup-search__body">
+                        <div class="container">
+                           <a
+                              href="#"
+                              class="popup-search__item card-product-row">
+                              <div class="card-product-row__img">
+                                 <img
+                                    src="images/card-product-row__img1.png"
+                                    alt="" />
+                              </div>
+                              <div class="card-product-row__text-block">
+                                 <p class="card-product-row__type">FEETO CARE</p>
+                                 <p class="card-product-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="card-product-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="popup-search__item card-product-row">
+                              <div class="card-product-row__img">
+                                 <img
+                                    src="images/card-product-row__img1.png"
+                                    alt="" />
+                              </div>
+                              <div class="card-product-row__text-block">
+                                 <p class="card-product-row__type">FEETO CARE</p>
+                                 <p class="card-product-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="card-product-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                           <a
+                              href="#"
+                              class="popup-search__item card-product-row">
+                              <div class="card-product-row__img">
+                                 <img
+                                    src="images/card-product-row__img1.png"
+                                    alt="" />
+                              </div>
+                              <div class="card-product-row__text-block">
+                                 <p class="card-product-row__type">FEETO CARE</p>
+                                 <p class="card-product-row__name">Soa Treatment ילופיט ןובס</p>
+                                 <p class="card-product-row__price">4.00 ₪</p>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- POPUP END  -->
 
-				<div data-aos="fade-up" class="page-main__slider-right slider-right">
-					<div class="container">
-						<div class="slider-right__content">
-							<div class="slider-right__container swiper-container">
-								<div class="slider-right__wrapper swiper-wrapper">
-									<div class="slider-right__slide swiper-slide">
-										<div class="slider-right__slide-img">
-											<img src="images/slider-right__img1.png" alt="">
-										</div>
-										<p class="slider-right__slide-name h4">Innovation</p>
-										<p class="slider-right__slide-amount h7">34 מוצרים</p>
-									</div>
-									<div class="slider-right__slide swiper-slide">
-										<div class="slider-right__slide-img">
-											<img src="images/slider-right__img2.png" alt="">
-										</div>
-										<p class="slider-right__slide-name h4">Clear & Matte</p>
-										<p class="slider-right__slide-amount h7">14 מוצרים</p>
-									</div>
-									<div class="slider-right__slide swiper-slide">
-										<div class="slider-right__slide-img">
-											<img src="images/slider-right__img3.png" alt="">
-										</div>
-										<p class="slider-right__slide-name h4">Natural Medicare</p>
-										<p class="slider-right__slide-amount h7">12 מוצרים</p>
-									</div>
-								</div>
-								<div class="slider-right__pagination"></div>
-							</div>
-							<div class="slider-right__text-block">
-								<h2 class="slider-right__title h2">הסדרות המובילות הכירו את </h2>
-								<p class="slider-right__descr">מגוון פתרונות ייחודיים בתחום הקוסמטיקה, פדיקור ומניקור</p>
-								<div class="slider-right__btns-block">
-									<button type="button"
-										class="slider-right__btn slider-right__btn-next icon icon-triangle-right">
-										<span class="timer again">
-											<span class="timer__bd-white"></span>
-											<span class="timer__bd-gray"></span>
-											<span class="timer__bd-fixed"></span>
-											<span class="timer__line"></span>
-											<span class="timer__body icon icon-triangle-right"></span>
-										</span>
-									</button>
-									<button type="button"
-										class="slider-right__btn slider-right__btn-prev icon icon-triangle-left"></button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+            <!-- POPUP  -->
+            <div class="popup">
+               <div class="popup__body">
+                  <div class="popup__content"></div>
+               </div>
+            </div>
+            <!-- POPUP END  -->
+         </main>
+         <!-- MAIN end -->
 
-				<div data-aos="fade-up" data-aos-offset="-500" class="page-main__products page-main-products">
-					<div class="container">
-						<div class="page-main-products__content">
-							<h2 class="page-main-products__title">קטלוג מוצרי KART</h2>
-							<p class="page-main-products__descr"> םלועה יבחרב םתוא תקוושמו רועה יכרצ ןווגמל םיידוחיי תונורתפ
-								םיקינעמה
-								רוקידפו הקיטמסוק ירצומ רוצייו חותיפ ,רקחמב תקסוע טראק תרבח</p>
-							<div class="page-main-products__grid-wrapper">
-								<a href="#" class="page-main-products__item product-card-row">
-									<div class="product-card-row__img-block">
-										<div class="product-card-row__img">
-											<img src="images/product-card-row-img1.png" alt="">
-										</div>
-										<div class="product-card-row__banner">new</div>
-									</div>
-									<div class="product-card-row__text">
-										<p class="product-card-row__type">CARE FEETO</p>
-										<p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="product-card-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-								<a href="#" class="page-main-products__item product-card-row">
-									<div class="product-card-row__img-block">
-										<div class="product-card-row__img">
-											<img src="images/product-card-row-img2.png" alt="">
-										</div>
-										<div class="product-card-row__banner">new</div>
-									</div>
-									<div class="product-card-row__text">
-										<p class="product-card-row__type">CARE FEETO</p>
-										<p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="product-card-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-								<a href="#" class="page-main-products__item product-card-row">
-									<div class="product-card-row__img-block">
-										<div class="product-card-row__img">
-											<img src="images/product-card-row-img3.png" alt="">
-										</div>
-										<div class="product-card-row__banner">new</div>
-									</div>
-									<div class="product-card-row__text">
-										<p class="product-card-row__type">CARE FEETO</p>
-										<p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="product-card-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-								<a href="#" class="page-main-products__item product-card-row">
-									<div class="product-card-row__img-block">
-										<div class="product-card-row__img">
-											<img src="images/product-card-row-img4.png" alt="">
-										</div>
-										<div class="product-card-row__banner">new</div>
-									</div>
-									<div class="product-card-row__text">
-										<p class="product-card-row__type">CARE FEETO</p>
-										<p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="product-card-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-								<a href="#" class="page-main-products__item product-card-row">
-									<div class="product-card-row__img-block">
-										<div class="product-card-row__img">
-											<img src="images/product-card-row-img1.png" alt="">
-										</div>
-									</div>
-									<div class="product-card-row__text">
-										<p class="product-card-row__type">CARE FEETO</p>
-										<p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="product-card-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-								<a href="#" class="page-main-products__item product-card-row">
-									<div class="product-card-row__img-block">
-										<div class="product-card-row__img">
-											<img src="images/product-card-row-img2.png" alt="">
-										</div>
-										<div class="product-card-row__banner">BEST SALER</div>
-									</div>
-									<div class="product-card-row__text">
-										<p class="product-card-row__type">CARE FEETO</p>
-										<p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="product-card-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-								<a href="#" class="page-main-products__item product-card-row">
-									<div class="product-card-row__img-block">
-										<div class="product-card-row__img">
-											<img src="images/product-card-row-img3.png" alt="">
-										</div>
-									</div>
-									<div class="product-card-row__text">
-										<p class="product-card-row__type">CARE FEETO</p>
-										<p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="product-card-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-								<a href="#" class="page-main-products__item product-card-row">
-									<div class="product-card-row__img-block">
-										<div class="product-card-row__img">
-											<img src="images/product-card-row-img4.png" alt="">
-										</div>
-									</div>
-									<div class="product-card-row__text">
-										<p class="product-card-row__type">CARE FEETO</p>
-										<p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="product-card-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-								<a href="#" class="page-main-products__item product-card-row">
-									<div class="product-card-row__img-block">
-										<div class="product-card-row__img">
-											<img src="images/product-card-row-img1.png" alt="">
-										</div>
-									</div>
-									<div class="product-card-row__text">
-										<p class="product-card-row__type">CARE FEETO</p>
-										<p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="product-card-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-								<a href="#" class="page-main-products__item product-card-row">
-									<div class="product-card-row__img-block">
-										<div class="product-card-row__img">
-											<img src="images/product-card-row-img2.png" alt="">
-										</div>
-									</div>
-									<div class="product-card-row__text">
-										<p class="product-card-row__type">CARE FEETO</p>
-										<p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="product-card-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-								<a href="#" class="page-main-products__item product-card-row">
-									<div class="product-card-row__img-block">
-										<div class="product-card-row__img">
-											<img src="images/product-card-row-img3.png" alt="">
-										</div>
-									</div>
-									<div class="product-card-row__text">
-										<p class="product-card-row__type">CARE FEETO</p>
-										<p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="product-card-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-								<a href="#" class="page-main-products__item product-card-row">
-									<div class="product-card-row__img-block">
-										<div class="product-card-row__img">
-											<img src="images/product-card-row-img4.png" alt="">
-										</div>
-									</div>
-									<div class="product-card-row__text">
-										<p class="product-card-row__type">CARE FEETO</p>
-										<p class="product-card-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="product-card-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-							</div>
-							<a href="#" class="page-main-products__btn-to-kart btn btn-contour">מעבר לקטלוג KART</a>
-						</div>
-					</div>
-				</div>
+         <!-- FOOTER start  -->
+         <footer class="footer">
+            <div class="footer__app">
+               <div class="container">
+                  <div class="footer__app-img">
+                     <img
+                        src="images/footer-app__img--desktop.png"
+                        alt="" />
+                  </div>
+                  <div class="footer__app-img--mobile">
+                     <img
+                        src="images/footer-app__img--mobile.png"
+                        alt="" />
+                  </div>
+                  <div class="footer__app-text-block">
+                     <p class="footer__app-title">אפליקציית KART</p>
+                     <p class="footer__app-descr">
+                        מעכשיו הכל פשוט יותר - ”אפליקציית קארט למקצועיות“ זמינה לאיפון ולאנדראיד
+                     </p>
+                  </div>
+                  <div class="footer__app-stores">
+                     <div class="footer__app-gplay">
+                        <img
+                           src="images/gplay.png"
+                           alt="" />
+                     </div>
+                     <span class="footer__app-divide"></span>
+                     <div class="footer__app-appstore">
+                        <img
+                           src="images/appstore.png"
+                           alt="" />
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer__main">
+               <div class="container">
+                  <div class="footer__content">
+                     <div class="footer__rightside">
+                        <div class="footer__block">
+                           <a
+                              href="#"
+                              class="footer__block-title"
+                              >סדרות מובילות</a
+                           >
+                           <div class="footer__block-body">
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >Innovation</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >Clear & Matte</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >Natural Medicare</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >M-Balance</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >Unicare</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >Timeless</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >Feeto Care</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >Professional Feet</a
+                              >
+                           </div>
+                        </div>
+                        <div class="footer__block">
+                           <a
+                              href="#"
+                              class="footer__block-title"
+                              >מקצועיות KART</a
+                           >
+                           <div class="footer__block-body">
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >אזור אישי</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >הדרכות קרובות</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >הדרכות מוקלטות</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >שאלות ותשובות</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >אפליקציה למקצועית</a
+                              >
+                           </div>
+                        </div>
+                     </div>
 
-				<div class="page-main__promotion-large promotion-large">
-					<div data-aos="fade-left" data-aos-offset="-500" class="promotion-large__rightside">
+                     <div class="footer__block footer__block--large">
+                        <div class="footer__logo logo">
+                           <img
+                              src="images/logo.png"
+                              alt="" />
+                        </div>
+                        <div class="footer__socials">
+                           <a
+                              href="#"
+                              class="footer__socials-link socials-link icon icon-inst"></a>
+                           <a
+                              href="#"
+                              class="footer__socials-link socials-link icon icon-facebook"></a>
+                           <a
+                              href="#"
+                              class="footer__socials-link socials-link icon icon-youtube"></a>
+                        </div>
+                        <p class="footer__rights">
+                           © כל הזכויות שמורות ל:<br />
+                           2005-2022 Israel ,Ltd Cosmetics KART
+                        </p>
+                     </div>
 
-						<div class="promotion-large__slider swiper-container">
-							<div class="promotion-large__timer">
-								<h6 class="promotion-large__timer-title">מוצרי החודש</h6>
-								<p class="promotion-large__timer-nums">
-									10
-									<span class="promotion-large__timer-divide">:</span>
-									30
-									<span class="promotion-large__timer-divide">:</span>
-									08
-									<span class="promotion-large__timer-divide">:</span>
-									43
-								</p>
-							</div>
-							<div class="promotion-large__wrapper swiper-wrapper">
-								<div class="promotion-large__slide swiper-slide">
-									<div class="promotion-large__card product-card-promotion">
-										<div class="product-card-promotion__image-block">
-											<div class="product-card-promotion__img">
-												<img src="images/card-product-row__img1.png" alt="">
-											</div>
-											<div class="product-card-promotion__discount">
-												<p class="product-card-promotion__discount-text">הנחה</p>
-												<p class="product-card-promotion__discount-amount">25%</p>
-											</div>
-											<div class="product-card-promotion__brand">UNICARE
-											</div>
-										</div>
-										<div class="product-card-promotion__text-block">
-											<p class="product-card-promotion__type">פדיקור</p>
-											<p class="product-card-promotion__name">Soa Treatment סבון טיפולי </p>
-											<p class="product-card-promotion__price">
-												<span class="product-card-promotion__price-old"> 5.00 ₪</span>
-												<span class="product-card-promotion__price-new"> 4.00 ₪</span>
-											</p>
-										</div>
-									</div>
-									<button type="button" class="promotion-large__btn-add-to-cart btn btn-primary">הוספה
-										לסל</button>
-								</div>
-								<div class="promotion-large__slide swiper-slide">
-									<div class="promotion-large__card product-card-promotion">
-										<div class="product-card-promotion__image-block">
-											<div class="product-card-promotion__img">
-												<img src="images/product-card-row-img3.png" alt="">
-											</div>
-											<div class="product-card-promotion__discount">
-												<p class="product-card-promotion__discount-text">הנחה</p>
-												<p class="product-card-promotion__discount-amount">25%</p>
-											</div>
-											<div class="product-card-promotion__brand">UNICARE
-											</div>
-										</div>
-										<div class="product-card-promotion__text-block">
-											<p class="product-card-promotion__type">פדיקור</p>
-											<p class="product-card-promotion__name">Soa Treatment סבון טיפולי </p>
-											<p class="product-card-promotion__price">
-												<span class="product-card-promotion__price-old"> 5.00 ₪</span>
-												<span class="product-card-promotion__price-new"> 4.00 ₪</span>
-											</p>
-										</div>
-									</div>
-									<button type="button" class="promotion-large__btn-add-to-cart btn btn-primary">הוספה
-										לסל</button>
-								</div>
-								<div class="promotion-large__slide swiper-slide">
-									<div class="promotion-large__card product-card-promotion">
-										<div class="product-card-promotion__image-block">
-											<div class="product-card-promotion__img">
-												<img src="images/product-card-row-img3.png" alt="">
-											</div>
-											<div class="product-card-promotion__discount">
-												<p class="product-card-promotion__discount-text">הנחה</p>
-												<p class="product-card-promotion__discount-amount">25%</p>
-											</div>
-											<div class="product-card-promotion__brand">UNICARE
-											</div>
-										</div>
-										<div class="product-card-promotion__text-block">
-											<p class="product-card-promotion__type">פדיקור</p>
-											<p class="product-card-promotion__name">Soa Treatment סבון טיפולי </p>
-											<p class="product-card-promotion__price">
-												<span class="product-card-promotion__price-old"> 5.00 ₪</span>
-												<span class="product-card-promotion__price-new"> 4.00 ₪</span>
-											</p>
-										</div>
-									</div>
-									<button type="button" class="promotion-large__btn-add-to-cart btn btn-primary">הוספה
-										לסל</button>
-								</div>
-							</div>
-							<div class="promotion-large__nav">
-								<button type="button"
-									class="promotion-large__btn promotion-large__btn-left icon icon-triangle-left"></button>
-								<button type="button"
-									class="promotion-large__btn promotion-large__btn-right icon icon-triangle-right">
-									<span class="timer again">
-										<span class="timer__bd-white"></span>
-										<span class="timer__bd-gray"></span>
-										<span class="timer__bd-fixed"></span>
-										<span class="timer__line"></span>
-										<span class="timer__body icon icon-triangle-right"></span>
-									</span>
-								</button>
-							</div>
-							<div class="promotion-large__pagin swiper-pagination-main"></div>
-						</div>
-					</div>
-					<div data-aos="fade-right" data-aos-offset="-500" class="promotion-large__leftside">
-						<img src="images/promotion-large-img1.png" alt="">
-					</div>
-				</div>
+                     <div class="footer__leftside">
+                        <div class="footer__block">
+                           <a
+                              href="#"
+                              class="footer__block-title"
+                              >כללי</a
+                           >
+                           <div class="footer__block-body">
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >אודות KART</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >חנות</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >בלוג</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >תקנון האתר</a
+                              >
+                              <a
+                                 href="#"
+                                 class="footer__item"
+                                 >חיפוש מומחית בסביבתך</a
+                              >
+                           </div>
+                        </div>
+                        <div class="footer__block footer__timetable">
+                           <a
+                              href="tel:03-5050660"
+                              class="footer__timetable-num"
+                              >03-5050660</a
+                           >
+                           <div class="footer__timetable-descr">
+                              <p class="footer__timetable-text">שירות לקוחות 9:00-17:00</p>
+                              <p class="footer__timetable-text">
+                                 לשליחת הודעה בוואטסאפ ניתן <span>ללחוץ</span> כאן
+                              </p>
+                           </div>
+                           <button
+                              type="button"
+                              class="footer__timetable-btn btn btn-contour">
+                              יצירת קשר
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer__bottom">
+               <div class="container">
+                  <p class="footer__bottom-text">עיצוב ובניית אתרים: technologies Exit</p>
+                  <div class="footer__payment">
+                     <div class="footer__payment-item">
+                        <img
+                           src="images/surface.png"
+                           alt="" />
+                     </div>
+                     <div class="footer__payment-item">
+                        <img
+                           src="images/visa.png"
+                           alt="" />
+                     </div>
+                     <div class="footer__payment-item">
+                        <img
+                           src="images/mastercard.png"
+                           alt="" />
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <!-- FOOTER end -->
+      </div>
+      <!-- WRAPPER end -->
 
-				<div class="page-main__academy block-academy">
-					<div class="container">
-						<div class="block-academy__content">
-							<div data-aos="fade-left" data-aos-offset="-500" class="block-academy__images-block">
-								<div class="block-academy__img block-academy__img-small">
-									<img src="images/block-academy-img1.png" alt="">
-								</div>
-								<div class="block-academy__img block-academy__img-large">
-									<img src="images/block-academy-img2.png" alt="">
-								</div>
-							</div>
-
-							<div data-aos="fade-up" data-aos-offset="-500" class="block-academy__text-block">
-								<h2 class="block-academy__title h1">KART באקדמיית מתמקצעים </h2>
-								<p class="block-academy__descr">מגוון הדרכות, הכשרות, השתלמויות וקורסים מחכים לך באתר</p>
-								<a href="#" class="block-academy__btn block-academy__btn--desktop btn btn-primary">מעבר
-									להדרכות</a>
-							</div>
-
-							<div data-aos="fade-right" data-aos-offset="-500" class="block-academy__images-block">
-								<div class="block-academy__img block-academy__img-large">
-									<img src="images/block-academy-img3.png" alt="">
-								</div>
-								<div class="block-academy__img block-academy__img-small">
-									<img src="images/block-academy-img4.png" alt="">
-								</div>
-							</div>
-							<a href="#" class="block-academy__btn block-academy__btn--mobile btn btn-primary">מעבר להדרכות</a>
-						</div>
-					</div>
-				</div>
-
-
-
-
-
-				<div data-aos="flip-left" data-aos-offset="-500" class="rebate">
-					<div class="rebate__bottle"><img src="images/rebate-bottle.png" alt=""></div>
-					<div class="container">
-						<div class="rebate__content">
-							<div class="rebate__ball">
-								<div class="rebate__ball-content">
-									<p class="rebate__ball-title">הנחה</p>
-									<p class="rebate__ball-amount">25%</p>
-								</div>
-							</div>
-							<div class="rebate__info">
-								<div class="rebate__description">
-									<div class="rebate__name">פדיקור</div>
-									<div class="rebate__title"> Treatment Soa ילופיט ןובס</div>
-									<div class="rebate__amount">
-										<span class="rebate__real"> 5.00 ₪</span>
-										<span class="rebate__real-before">|</span>
-										<span class="rebate__now"> 4.00 ₪</span>
-									</div>
-								</div>
-								<button class="btn btn-primary rebate__btn">הוספה לסל</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div data-aos="fade-up" data-aos-offset="-500"
-					class="page-main__slider-articles slider-articles slider-articles--tabs">
-					<div class="container">
-						<div class="slider-articles__content">
-							<div class="slider-articles__head">
-								<div class="slider-articles__text-block">
-									<h2 class="slider-articles__title h1">הדרכות מומלצות</h2>
-									<p class="slider-articles__descr"> דוחל רוקידפו דוחל הקיטמסוקל הדרפה תושעל ךירצ</p>
-								</div>
-							</div>
-							<div class="slider-articles__tabs js-tabs">
-								<div class="slider-articles__tabs-head js-tabs-head">
-									<button type="button" class="slider-articles__tabs-item js-tabs-item">מניקור</button>
-									<button type="button"
-										class="slider-articles__tabs-item active js-tabs-item">קוסמטיקה</button>
-								</div>
-								<div class="slider-articles__tabs-body js-tabs-body">
-									<div class="slider-articles__tabs-body-item js-tabs-body-item">
-										<div class="slider-articles__swiper	swiper-container">
-											<div class="slider-articles__nav">
-												<button type="button"
-													class="slider-articles__btn slider-articles__btn-next icon icon-triangle-right">
-													<span class="timer again">
-														<span class="timer__bd-white"></span>
-														<span class="timer__bd-gray"></span>
-														<span class="timer__bd-fixed"></span>
-														<span class="timer__line"></span>
-														<span class="timer__body icon icon-triangle-right"></span>
-													</span>
-												</button>
-												<button type="button"
-													class="slider-articles__btn slider-articles__btn-prev icon icon-triangle-left"></button>
-											</div>
-											<div class="slider-articles__wrapper swiper-wrapper">
-												<div class="slider-articles__slide swiper-slide card-article">
-													<div class="card-article__img">
-														<img src="images/card-article-img1.png" alt="">
-													</div>
-													<div class="card-article__text-block">
-														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
-														<p class="card-article__time">
-															<span class="icon icon-clock"></span>
-															3.5 שעות הדרכה
-														</p>
-													</div>
-												</div>
-												<div class="slider-articles__slide swiper-slide card-article">
-													<div class="card-article__img">
-														<img src="images/card-article-img2.png" alt="">
-													</div>
-													<div class="card-article__text-block">
-														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
-														<p class="card-article__time">
-															<span class="icon icon-clock"></span>
-															3.5 שעות הדרכה
-														</p>
-													</div>
-												</div>
-												<div class="slider-articles__slide swiper-slide card-article">
-													<div class="card-article__img">
-														<img src="images/card-article-img3.png" alt="">
-													</div>
-													<div class="card-article__text-block">
-														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
-														<p class="card-article__time">
-															<span class="icon icon-clock"></span>
-															3.5 שעות הדרכה
-														</p>
-													</div>
-												</div>
-												<div class="slider-articles__slide swiper-slide card-article">
-													<div class="card-article__img">
-														<img src="images/card-article-img4.png" alt="">
-													</div>
-													<div class="card-article__text-block">
-														<p class="card-article__type">פדיקור</p>
-														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
-														<p class="card-article__time">
-															<span class="icon icon-clock"></span>
-															3.5 שעות הדרכה
-														</p>
-													</div>
-												</div>
-											</div>
-											<div class="slider-articles__pagin swiper-pagination-main"></div>
-										</div>
-									</div>
-									<div class="slider-articles__tabs-body-item active js-tabs-body-item">
-										<div class="slider-articles__swiper	swiper-container">
-											<div class="slider-articles__nav">
-												<button type="button"
-													class="slider-articles__btn slider-articles__btn-next icon icon-triangle-right">
-													<span class="timer again">
-														<span class="timer__bd-white"></span>
-														<span class="timer__bd-gray"></span>
-														<span class="timer__bd-fixed"></span>
-														<span class="timer__line"></span>
-														<span class="timer__body icon icon-triangle-right"></span>
-													</span>
-												</button>
-												<button type="button"
-													class="slider-articles__btn slider-articles__btn-prev icon icon-triangle-left"></button>
-											</div>
-											<div class="slider-articles__wrapper swiper-wrapper">
-												<div class="slider-articles__slide swiper-slide card-article">
-													<div class="card-article__img">
-														<img src="images/card-article-img1.png" alt="">
-													</div>
-													<div class="card-article__text-block">
-														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
-														<p class="card-article__time">
-															<span class="icon icon-clock"></span>
-															3.5 שעות הדרכה
-														</p>
-													</div>
-												</div>
-												<div class="slider-articles__slide swiper-slide card-article">
-													<div class="card-article__img">
-														<img src="images/card-article-img2.png" alt="">
-													</div>
-													<div class="card-article__text-block">
-														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
-														<p class="card-article__time">
-															<span class="icon icon-clock"></span>
-															3.5 שעות הדרכה
-														</p>
-													</div>
-												</div>
-												<div class="slider-articles__slide swiper-slide card-article">
-													<div class="card-article__img">
-														<img src="images/card-article-img3.png" alt="">
-													</div>
-													<div class="card-article__text-block">
-														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
-														<p class="card-article__time">
-															<span class="icon icon-clock"></span>
-															3.5 שעות הדרכה
-														</p>
-													</div>
-												</div>
-												<div class="slider-articles__slide swiper-slide card-article">
-													<div class="card-article__img">
-														<img src="images/card-article-img4.png" alt="">
-													</div>
-													<div class="card-article__text-block">
-														<p class="card-article__type">פדיקור</p>
-														<p class="card-article__name">הכשרה לקוסמטיקאיות אונליין</p>
-														<p class="card-article__time">
-															<span class="icon icon-clock"></span>
-															3.5 שעות הדרכה
-														</p>
-													</div>
-												</div>
-											</div>
-											<div class="slider-articles__pagin swiper-pagination-main"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<div data-aos="fade-up" data-aos-offset="-200" class="known">
-					<div class="container">
-						<div class="known__description">
-							<h3 class="known__title h3">מועדון המקצועיות של KART</h3>
-							<p class="known__subtitle">מקצועית יקרה, על המועדון של KART כבר שמעת? השאירי טלפון ונשמח לחזור
-								אלייך עם כל הפרטים</p>
-						</div>
-						<div class="known__form">
-							<input class="known__input" type="text" placeholder="טלפון">
-							<button class="btn btn-primary known__btn" type="text">שליחה<span
-									class="icon icon-arrow-left --desktop"></span></button>
-						</div>
-					</div>
-				</div>
-
-				<a href="#top" class="btn-top icon icon-arrow-top"></a>
-
-			</div>
-			<!-- CONTENT end -->
-
-			<div class="aside-menu">
-				<div class="aside-menu__item">
-					<a href="#" class="aside-menu__link icon icon-heart-blank"></a>
-				</div>
-				<div class="aside-menu__item">
-					<a href="#" class="aside-menu__link icon icon-cart"></a>
-				</div>
-			</div>
-
-			<!-- POPUP  -->
-			<div class="popup popup-search">
-				<div class="popup__body">
-					<div class="popup__content">
-						<div class="popup-search__head">
-							<div class="container">
-								<button type="button" class="popup-search__close popup-close icon icon-close"></button>
-								<label class="popup-search__input-box">
-									<input type="text" class="popup-search__input" placeholder="חיפוש">
-									<span class="icon icon-search"></span>
-									<button type="button" class="popup-search__input-to-clear icon icon-close"></button>
-								</label>
-							</div>
-						</div>
-						<div class="popup-search__body">
-							<div class="container">
-								<a href="#" class="popup-search__item card-product-row">
-									<div class="card-product-row__img">
-										<img src="images/card-product-row__img1.png" alt="">
-									</div>
-									<div class="card-product-row__text-block">
-										<p class="card-product-row__type">FEETO CARE</p>
-										<p class="card-product-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="card-product-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-								<a href="#" class="popup-search__item card-product-row">
-									<div class="card-product-row__img">
-										<img src="images/card-product-row__img1.png" alt="">
-									</div>
-									<div class="card-product-row__text-block">
-										<p class="card-product-row__type">FEETO CARE</p>
-										<p class="card-product-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="card-product-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-								<a href="#" class="popup-search__item card-product-row">
-									<div class="card-product-row__img">
-										<img src="images/card-product-row__img1.png" alt="">
-									</div>
-									<div class="card-product-row__text-block">
-										<p class="card-product-row__type">FEETO CARE</p>
-										<p class="card-product-row__name">Soa Treatment ילופיט ןובס</p>
-										<p class="card-product-row__price"> 4.00 ₪</p>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- POPUP END  -->
-
-			<!-- POPUP  -->
-			<div class="popup">
-				<div class="popup__body">
-					<div class="popup__content">
-					</div>
-				</div>
-			</div>
-			<!-- POPUP END  -->
-
-		</main>
-		<!-- MAIN end -->
-
-		<!-- FOOTER start  -->
-		<footer class="footer">
-			<div class="footer__app">
-				<div class="container">
-					<div class="footer__app-img">
-						<img src="images/footer-app__img--desktop.png" alt="">
-					</div>
-					<div class="footer__app-img--mobile">
-						<img src="images/footer-app__img--mobile.png" alt="">
-					</div>
-					<div class="footer__app-text-block">
-						<p class="footer__app-title">אפליקציית KART</p>
-						<p class="footer__app-descr">מעכשיו הכל פשוט יותר - ”אפליקציית קארט למקצועיות“ זמינה לאיפון ולאנדראיד
-						</p>
-					</div>
-					<div class="footer__app-stores">
-						<div class="footer__app-gplay">
-							<img src="images/gplay.png" alt="">
-						</div>
-						<span class="footer__app-divide"></span>
-						<div class="footer__app-appstore">
-							<img src="images/appstore.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer__main">
-				<div class="container">
-					<div class="footer__content">
-						<div class="footer__rightside">
-							<div class="footer__block">
-								<a href="#" class="footer__block-title">סדרות מובילות</a>
-								<div class="footer__block-body">
-									<a href="#" class="footer__item">Innovation</a>
-									<a href="#" class="footer__item">Clear & Matte</a>
-									<a href="#" class="footer__item">Natural Medicare</a>
-									<a href="#" class="footer__item">M-Balance</a>
-									<a href="#" class="footer__item">Unicare</a>
-									<a href="#" class="footer__item">Timeless</a>
-									<a href="#" class="footer__item">Feeto Care</a>
-									<a href="#" class="footer__item">Professional Feet</a>
-								</div>
-							</div>
-							<div class="footer__block">
-								<a href="#" class="footer__block-title">מקצועיות KART</a>
-								<div class="footer__block-body">
-									<a href="#" class="footer__item">אזור אישי</a>
-									<a href="#" class="footer__item">הדרכות קרובות</a>
-									<a href="#" class="footer__item">הדרכות מוקלטות</a>
-									<a href="#" class="footer__item">שאלות ותשובות</a>
-									<a href="#" class="footer__item">אפליקציה למקצועית</a>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="footer__block footer__block--large">
-							<div class="footer__logo logo">
-								<img src="images/logo.png" alt="">
-							</div>
-							<div class="footer__socials">
-								<a href="#" class="footer__socials-link socials-link icon icon-inst"></a>
-								<a href="#" class="footer__socials-link socials-link icon icon-facebook"></a>
-								<a href="#" class="footer__socials-link socials-link icon icon-youtube"></a>
-							</div>
-							<p class="footer__rights"> © כל הזכויות שמורות ל:<br>
-								2005-2022 Israel ,Ltd Cosmetics KART
-							</p>
-						</div>
-
-						<div class="footer__leftside">
-							<div class="footer__block">
-								<a href="#" class="footer__block-title">כללי</a>
-								<div class="footer__block-body">
-									<a href="#" class="footer__item">אודות KART</a>
-									<a href="#" class="footer__item">חנות</a>
-									<a href="#" class="footer__item">בלוג</a>
-									<a href="#" class="footer__item">תקנון האתר</a>
-									<a href="#" class="footer__item">חיפוש מומחית בסביבתך</a>
-								</div>
-							</div>
-							<div class="footer__block footer__timetable">
-								<a href="tel:03-5050660" class="footer__timetable-num">03-5050660</a>
-								<div class="footer__timetable-descr">
-									<p class="footer__timetable-text">שירות לקוחות 9:00-17:00</p>
-									<p class="footer__timetable-text">לשליחת הודעה בוואטסאפ
-										ניתן <span>ללחוץ</span> כאן</p>
-								</div>
-								<button type="button" class="footer__timetable-btn btn btn-contour">יצירת קשר</button>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-			<div class="footer__bottom">
-				<div class="container">
-					<p class="footer__bottom-text">עיצוב ובניית אתרים: technologies Exit</p>
-					<div class="footer__payment">
-						<div class="footer__payment-item">
-							<img src="images/surface.png" alt="">
-						</div>
-						<div class="footer__payment-item">
-							<img src="images/visa.png" alt="">
-						</div>
-						<div class="footer__payment-item">
-							<img src="images/mastercard.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<!-- FOOTER end -->
-
-	</div>
-	<!-- WRAPPER end -->
-
-
-
-	<!-- SCRIPTS start  -->
-	<script src="js/main.min.js"></script>
-
-
-
-</body>
-
+      <!-- SCRIPTS start  -->
+      <script src="js/main.min.js"></script>
+   </body>
 </html>
